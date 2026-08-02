@@ -118,6 +118,40 @@
     font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;opacity:.48;text-align:center;
     max-width:52vw;pointer-events:none;text-shadow:0 2px 10px rgba(0,0,0,.8)}
 
+  /* ---------- purse & arsenal ---------- */
+  .goldPlate{display:flex;align-items:center;gap:7px;padding:6px 11px}
+  .coin{width:11px;height:11px;flex:0 0 auto;border-radius:50%;
+    background:radial-gradient(circle at 33% 30%,#FFEFC0,#E8B04B 55%,#9C6612);
+    box-shadow:0 0 9px rgba(232,176,75,.5),inset 0 -1px 0 rgba(0,0,0,.35)}
+  .gold{font-size:13px;font-weight:700;letter-spacing:.06em;font-variant-numeric:tabular-nums;color:var(--gold-hi)}
+  .purse{display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:20px;
+    font-size:19px;font-weight:700;color:var(--gold-hi);font-variant-numeric:tabular-nums}
+  .purse .coin{width:15px;height:15px}
+  .purse i,.earned i{font-style:normal;font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+    opacity:.5;font-weight:400;color:var(--parch)}
+  .earned{display:flex;align-items:center;justify-content:center;gap:8px;margin:-8px 0 18px;
+    font-size:15px;font-weight:700;color:var(--gold-hi);font-variant-numeric:tabular-nums}
+  .upgList{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;text-align:left}
+  .upgRow{position:relative;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;
+    padding:11px 13px;border-radius:4px;border:1px solid rgba(242,231,207,.13);
+    background:linear-gradient(170deg,rgba(34,22,48,.72),rgba(10,7,16,.86))}
+  .upgRow.max{border-color:rgba(232,176,75,.45)}
+  .upgName{font-family:"Cinzel",Georgia,serif;font-size:12px;letter-spacing:.14em;color:var(--gold-hi)}
+  .upgDesc{font-size:10px;line-height:1.55;opacity:.62;margin-top:3px}
+  .upgTip{font-size:9px;line-height:1.5;opacity:.38;margin-top:4px}
+  .pips{display:flex;gap:3px;margin-top:6px}
+  .pips b{width:16px;height:3px;border-radius:2px;background:rgba(242,231,207,.16)}
+  .pips b.on{background:linear-gradient(90deg,var(--gold-hi),#B47C22);box-shadow:0 0 7px rgba(232,176,75,.5)}
+  .buy{pointer-events:auto;cursor:pointer;font-family:"Cinzel",Georgia,serif;font-size:10.5px;letter-spacing:.1em;
+    display:flex;align-items:center;gap:5px;white-space:nowrap;
+    background:linear-gradient(170deg,rgba(40,26,58,.85),rgba(12,8,19,.9));color:var(--parch);
+    border:1px solid rgba(232,176,75,.4);border-radius:3px;padding:8px 11px;
+    transition:transform .12s,border-color .2s,color .2s}
+  .buy:hover:not(:disabled){border-color:rgba(232,176,75,.85);color:var(--gold-hi)}
+  .buy:active:not(:disabled){transform:translateY(1px)}
+  .buy:disabled{opacity:.32;cursor:default}
+  .buy.done{border-color:rgba(232,176,75,.6);color:var(--gold);background:rgba(232,176,75,.12)}
+
   /* ---------- overlays ---------- */
   .sheet{position:fixed;inset:0;display:none;place-items:center;z-index:6;padding:22px;
     overflow-y:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y;
@@ -210,7 +244,20 @@
     .legend b{font-size:13px}
     .stars span{font-size:26px}
     .big{font-size:24px}
+    #upgSheet h1,#levelSheet h1{font-size:24px;margin-bottom:8px}
+    #upgSheet .rule,#levelSheet .rule{margin-bottom:11px}
+    .purse{font-size:15px;margin-bottom:11px}
+    .purse .coin{width:12px;height:12px}
+    .upgList{gap:6px;margin-bottom:13px}
+    .upgRow{padding:8px 10px;gap:8px}
+    .upgName{font-size:10.5px;letter-spacing:.1em}
+    .upgDesc{font-size:9px;margin-top:2px}
+    .pips{margin-top:4px}
+    .pips b{width:12px;height:2.5px}
+    .buy{font-size:9.5px;padding:6px 9px}
+    .earned{font-size:13px}
   }
+  @media (max-height:560px){ .upgTip{display:none} }
   @media (max-width:520px){
     .grid{grid-template-columns:repeat(3,1fr)}
     .am{width:44px}
@@ -239,6 +286,9 @@
       <div class="score" id="score">0000</div>
       <div class="rocks" id="rocks"></div>
     </div>
+    <div class="plate goldPlate">
+      <span class="coin"></span><span class="gold" id="gold">0</span>
+    </div>
     <div class="plate windPlate">
       <span class="windArrow" id="windArrow">•</span>
       <span class="wind" id="wind">VÂNT · CALM</span>
@@ -250,6 +300,7 @@
 
   <div class="tools">
     <button class="btn primary" id="btnArm">CATAPULTĂ</button>
+    <button class="btn" id="btnUpg">ARSENAL</button>
     <button class="btn" id="btnLevels">NIVELURI</button>
     <button class="btn" id="btnEditor">EDITOR</button>
     <button class="btn" id="btnReset">RELUARE</button>
@@ -290,8 +341,18 @@
   <div class="rule"></div>
   <div class="stars" id="ovStars"><span>★</span><span>★</span><span>★</span></div>
   <span class="big" id="ovScore">0000</span>
+  <div class="earned"><span class="coin"></span><span id="ovGold">+0</span><i>aur câștigat</i></div>
   <p id="ovText"></p>
-  <div class="row"><button class="btn primary" id="ovBtn">CONTINUĂ</button><button class="btn" id="ovBtn2">NIVELURI</button></div>
+  <div class="row"><button class="btn primary" id="ovBtn">CONTINUĂ</button><button class="btn" id="ovBtn3">ARSENAL</button><button class="btn" id="ovBtn2">NIVELURI</button></div>
+</div></div>
+
+<div class="sheet" id="upgSheet"><div class="panel"><div class="panelBg"></div>
+  <div class="kicker">TABĂRA DE ASEDIU</div>
+  <h1>Arsenal</h1>
+  <div class="rule"></div>
+  <div class="purse"><span class="coin"></span><span id="upgGold">0</span><i>aur strâns din prăzi</i></div>
+  <div class="upgList" id="upgList"></div>
+  <div class="row"><button class="btn primary" id="upgClose">ÎNAPOI LA ASEDIU</button></div>
 </div></div>
 
 <div class="sheet" id="levelSheet"><div class="panel"><div class="panelBg"></div>
@@ -321,7 +382,7 @@ const DT=1000/60, GRAV_SCALE=0.0018, G=1*GRAV_SCALE*DT*DT;
 const PIVOT={x:250,y:645}, ARM_LEN=155;
 const ARM_COCK=3.35, ARM_STOP=5.24;
 const LAUNCH={x:PIVOT.x+Math.cos(ARM_STOP)*ARM_LEN, y:PIVOT.y+Math.sin(ARM_STOP)*ARM_LEN};
-const MAX_PULL=270, POWER=0.135;
+const MAX_PULL=270, POWER_BASE=0.135;
 
 const MAT={
   stone :{d:.0011 ,f:.62,fs:.90,r:.06,br:105},
@@ -623,6 +684,50 @@ let blocks=[],targets=[],balls=[],parts=[],smoke=[],fires=[];
 const SEG_W=25, SEG_X0=-300, SEG_N=88, SEG_MAX=58;
 let segs=[], segD=new Float32Array(SEG_N);
 let level=0,shotsLeft=0,score=0,wind=0,unlocked=1,best=[],starsBest=[];
+let gold=0, upg={}, POWER=0.135;
+
+/* ============ CAMPAIGN PROGRESSION ============ */
+const UPG=[
+  {k:'pow' ,n:'FORȚA BRAȚULUI',max:5,cost:l=>140+l*180,
+   d:l=>'+'+(l*7)+'% putere de lansare',
+   t:'Frânghii mai groase și un braț mai lung. Trage mai departe cu aceeași tragere.'},
+  {k:'shot',n:'PROVIZII DE ASEDIU',max:3,cost:l=>260+l*320,
+   d:l=>'+'+l+' lovituri pe asediu',
+   t:'Care de aprovizionare în spatele liniei. Fiecare nivel îți dă o lovitură în plus.'},
+  {k:'ammo',n:'ARSENAL',max:4,cost:l=>180+l*220,
+   d:l=>'+'+l+' din fiecare muniție specială',
+   t:'Ghiulele, butoaie și triplete în plus la fiecare asediu.'},
+  {k:'brk' ,n:'PROIECTILE GRELE',max:4,cost:l=>200+l*260,
+   d:l=>'zidurile cedează cu '+(l*9)+'% mai ușor',
+   t:'Bolovani mai denși, ferecați. Piatra se sparge din mai puține lovituri.'},
+  {k:'aim' ,n:'OCHIREA MEȘTERULUI',max:3,cost:l=>220+l*240,
+   d:l=>'vântul te abate cu '+(l*25)+'% mai puțin',
+   t:'Un artilerist care citește vântul. Traiectoria ta suferă mai puțin de pe urma lui.'},
+  {k:'fire',n:'FOC GRECESC',max:3,cost:l=>300+l*380,
+   d:l=>l?'butoaiele aprind lemnul · foc '+['','slab','puternic','mistuitor'][l]:'butoaiele doar explodează',
+   t:'Butoaiele lasă în urmă foc care mistuie lemnul și topește gheața, mult după impact.'}
+];
+const uLv=k=>upg[k]||0;
+function upgCost(u){ return u.cost(uLv(u.k)); }
+function applyUpg(){
+  POWER=POWER_BASE*(1+uLv('pow')*.07);
+}
+const SKEY='asediu.save.v2';
+function saveGame(){
+  try{ localStorage.setItem(SKEY,JSON.stringify({
+    gold:gold, upg:upg, unlocked:unlocked,
+    stars:starsBest, best:best })); }catch(e){}
+}
+function loadGame(){
+  try{
+    const raw=localStorage.getItem(SKEY); if(!raw) return;
+    const d=JSON.parse(raw)||{};
+    gold=d.gold||0; upg=d.upg||{}; unlocked=d.unlocked||1;
+    starsBest=Array.isArray(d.stars)?d.stars:[]; best=Array.isArray(d.best)?d.best:[];
+  }catch(e){}
+  applyUpg();
+}
+function fmtGold(v){ return String(v); }
 let ammoLeft={},selected='stone';
 let state='aim',settleT=0,flyT=0,shake=0,tScale=1,flag=0,wheelSpin=0;
 let gustT=0,tick=0,flashT=0,nextFlash=150,bolt=null,floats=[],flashes=[];
@@ -733,14 +838,16 @@ function buildLevel(i,custom){
   currentL=L;
   const d = custom ? custom : L.build();
   d.blocks.forEach(addBlock); d.targets.forEach(addTarget);
-  shotsLeft=L.shots; wind=L.wind||0;
+  shotsLeft=L.shots+uLv('shot'); wind=L.wind||0;
   ammoLeft=Object.assign({iron:0,tar:0,triple:0},L.ammo||{}); ammoLeft.pierce=4;
+  const ab=uLv('ammo');
+  if(ab){ ammoLeft.iron+=ab; ammoLeft.tar+=ab; ammoLeft.triple+=ab; }
   gustT=0; flashT=0; nextFlash=120+Math.random()*180; floats=[]; flashes=[]; clearBake();
   selected=defAmmo(); state='aim'; armAngle=armTarget=pouchA=ARM_COCK; armVel=0; machX=machV=0; armK=.06; armD=.72; shake=0; tScale=1;
   skyGrad=null;
   buildRail(); setHint('trage înapoi de la catapultă · eliberează pentru a lansa');
 }
-let currentL=LEVELS[0];
+let currentL=LEVELS[0], lastEarned=0;
 
 /* ============ HUD ============ */
 const $=id=>document.getElementById(id);
@@ -748,7 +855,9 @@ function syncHUD(){
   $('lvNum').textContent=currentL.roman; $('lvName').textContent=currentL.name;
   $('score').textContent=String(score).padStart(4,'0');
   const r=$('rocks'); r.innerHTML='';
-  for(let i=0;i<currentL.shots;i++){const d=document.createElement('div');d.className='rock'+(i<currentL.shots-shotsLeft?' spent':'');r.appendChild(d);}
+  const tot=currentL.shots+uLv('shot');
+  for(let i=0;i<tot;i++){const d=document.createElement('div');d.className='rock'+(i<tot-shotsLeft?' spent':'');r.appendChild(d);}
+  $('gold').textContent=fmtGold(gold);
   paintWind();
   document.querySelectorAll('.am').forEach(b=>{
     const t=b.dataset.t,P=AMMO[t]&&AMMO[t].pool;
@@ -976,6 +1085,10 @@ function explode(x,y,src,RR){
     const d=Math.hypot(bd.position.x-x,bd.position.y-y);
     if(d<R*.62) shatter(bd,x,y); else if(d<R) bd.dmg=Math.min(3,bd.dmg+2.2);
   });
+  const fl=uLv('fire');
+  if(fl) blocks.forEach(bd=>{
+    if(Math.hypot(bd.position.x-x,bd.position.y-y)<R*.9) ignite(bd,fl);
+  });
   blocks.concat(targets,balls).forEach(bd=>{
     const dx=bd.position.x-x,dy=bd.position.y-y,d=Math.max(24,Math.hypot(dx,dy));
     if(d>R) return;
@@ -985,6 +1098,50 @@ function explode(x,y,src,RR){
   });
 }
 
+/* ---- fire spreads through timber, melts ice, dies out on stone ---- */
+function flammable(t){ return t==='wood'||t==='powder'; }
+function ignite(bd,pw){
+  if(!bd||bd.broken) return;
+  const t=bd.gType;
+  if(t==='powder'){ powderBoom(bd); return; }
+  if(t==='ice'){ bd.melt=(bd.melt||0)+.35*pw; return; }
+  if(!flammable(t)) return;
+  if(bd.burn===undefined) bd.burn=0;
+  bd.burning=true; bd.burnPw=Math.max(bd.burnPw||0,pw);
+}
+function stepFire(){
+  const anyFire=uLv('fire')>0;
+  for(let i=blocks.length-1;i>=0;i--){
+    const bd=blocks[i];
+    if(bd.melt){
+      bd.melt-=.004; bd.dmg=Math.min(3,bd.dmg+.012*bd.melt);
+      if(tick%9===0) puff(bd.position.x+(Math.random()-.5)*bd.bw,bd.position.y-bd.bh*.4,7+Math.random()*9);
+      if(bd.melt<=0) bd.melt=0;
+      else if(bd.dmg>2.5&&Math.random()<.02) shatter(bd,bd.position.x,bd.position.y);
+    }
+    if(!bd.burning) continue;
+    bd.burn+=.0032*(1+bd.burnPw*.5);
+    bd.dmg=Math.min(3,bd.dmg+.006*bd.burnPw);
+    if(tick%4===0&&fires.length<240&&inView(bd.position.x,bd.position.y,110)){
+      const w=bd.bw,h=bd.bh,a=bd.angle,ca=Math.cos(a),sa=Math.sin(a);
+      const lx=(Math.random()-.5)*w, ly=(Math.random()-.5)*h;
+      fires.push({x:bd.position.x+lx*ca-ly*sa, y:bd.position.y+lx*sa+ly*ca,
+        r:5+Math.random()*9, life:.55+Math.random()*.4, vy:-.5-Math.random()*.5});
+    }
+    if(tick%17===0&&smoke.length<170) puff(bd.position.x+(Math.random()-.5)*bd.bw, bd.position.y-bd.bh*.5, 8+Math.random()*12);
+    // spread to neighbours
+    if(anyFire&&tick%13===0){
+      const reach=44+bd.burnPw*16;
+      blocks.forEach(o=>{
+        if(o===bd||o.burning||o.broken) return;
+        if(Math.hypot(o.position.x-bd.position.x,o.position.y-bd.position.y)>reach+ (o.bw+o.bh)*.25) return;
+        if(flammable(o.gType)){ if(Math.random()<.5) ignite(o,Math.max(1,bd.burnPw-.4)); }
+        else if(o.gType==='ice') o.melt=(o.melt||0)+.2;
+      });
+    }
+    if(bd.burn>1){ shatter(bd,bd.position.x,bd.position.y); }
+  }
+}
 function powderBoom(bd){
   if(bd.broken) return; bd.broken=true;
   Composite.remove(world,bd); blocks=blocks.filter(x=>x!==bd);
@@ -1035,7 +1192,7 @@ function tryBreak(bd,other,rel,px,py){
   const om = other.isStatic ? 7 : Math.min(14,other.mass||1);
   const tip = (other.kind&&AMMO[other.kind]&&AMMO[other.kind].bolt)?1.4:1;
   const push = rel*om*tip;
-  const need = M.br*Math.max(.55,Math.min(1.4,(bd.bw*bd.bh)/4600));
+  const need = M.br*Math.max(.55,Math.min(1.4,(bd.bw*bd.bh)/4600))*(1-uLv('brk')*.09);
   if(push>need){ if(M.boom) powderBoom(bd); else shatter(bd,px,py); return true; }
   return false;
 }
@@ -1060,12 +1217,16 @@ function finish(won){
   state='done';
   const bonus=won?shotsLeft*300:0; if(won) score+=bonus;
   syncHUD();
+  const earned=Math.round(score/10)+(won?120:0);
+  gold+=earned; lastEarned=earned;
   const last=!customLevel&&level===LEVELS.length-1;
   const used=currentL.shots-shotsLeft, par=currentL.par||99;
   const st= !won?0 : (used<=par?3: used<=par+1?2:1);
   if(won&&!customLevel){ best[level]=Math.max(best[level]||0,score);
     starsBest[level]=Math.max(starsBest[level]||0,st);
     unlocked=Math.max(unlocked,level+2); }
+  saveGame();
+  $('ovGold').textContent='+'+fmtGold(earned);
   const sp=$('ovStars').children;
   for(let i=0;i<3;i++){ const el=sp[i]; el.className=''; void el.offsetWidth;
     el.style.animationDelay=(0.18+i*0.24)+'s'; el.className=(i<st?'on ':'')+'pop'; }
@@ -1114,6 +1275,38 @@ function openLevels(){
   });
   $('levelSheet').classList.add('show');
 }
+function openUpg(){
+  const L=$('upgList'); L.innerHTML='';
+  $('upgGold').textContent=fmtGold(gold);
+  UPG.forEach(u=>{
+    const lv=uLv(u.k), maxed=lv>=u.max, cost=u.cost(lv), afford=gold>=cost;
+    const row=document.createElement('div');
+    row.className='upgRow'+(maxed?' max':'');
+    let pips=''; for(let i=0;i<u.max;i++) pips+='<b class="'+(i<lv?'on':'')+'"></b>';
+    row.innerHTML='<div><div class="upgName">'+u.n+'</div>'+
+      '<div class="upgDesc">'+u.d(lv)+'</div>'+
+      '<div class="upgTip">'+u.t+'</div>'+
+      '<div class="pips">'+pips+'</div></div>';
+    const b=document.createElement('button');
+    b.className='buy'+(maxed?' done':'');
+    b.disabled=maxed||!afford;
+    b.innerHTML=maxed?'MAXIM':'<span class="coin"></span>'+fmtGold(cost);
+    b.addEventListener('click',()=>{
+      const c=u.cost(uLv(u.k));
+      if(uLv(u.k)>=u.max||gold<c) return;
+      gold-=c; upg[u.k]=uLv(u.k)+1; applyUpg(); saveGame(); sfx.ding();
+      openUpg(); syncHUD();
+    });
+    row.appendChild(b); L.appendChild(row);
+  });
+  $('upgSheet').classList.add('show');
+}
+$('btnUpg').addEventListener('click',openUpg);
+$('upgClose').addEventListener('click',()=>{
+  $('upgSheet').classList.remove('show');
+  if(state==='aim'&&!editing) buildLevel(level,customLevel);
+});
+$('ovBtn3').addEventListener('click',()=>{ $('overlay').classList.remove('show'); openUpg(); });
 $('btnLevels').addEventListener('click',openLevels);
 $('lvClose').addEventListener('click',()=>$('levelSheet').classList.remove('show'));
 $('lvRand').addEventListener('click',()=>{
@@ -1199,8 +1392,9 @@ function step(){
   if(editing||state==='edit') return;
 
   engine.timing.timeScale=tScale;
+  const wr=1-uLv('aim')*.25;
   balls.forEach(b=>{ const A=AMMO[b.kind];
-    if(wind) Body.applyForce(b,b.position,{x:wind*b.mass/(DT*DT),y:0});
+    if(wind) Body.applyForce(b,b.position,{x:wind*wr*b.mass/(DT*DT),y:0});
     if(A&&A.bolt) Body.applyForce(b,b.position,{x:0,y:-G*BOLT_LIFT*b.mass/(DT*DT)});
   });
   Engine.update(engine,DT);
@@ -1242,6 +1436,8 @@ function step(){
     Body.setAngularVelocity(t,0);
     if(Math.abs(t.angle)>.002) Body.setAngle(t,t.angle*.5);
   });
+  stepFire();
+
   targets.forEach(t=>{
     if(t.dead) return;
     const p=t.patrol;
@@ -1763,9 +1959,9 @@ function ironDetail(g,w,h,seed){
 /* ---- each block's surface is baked once, then only lit per frame ---- */
 const BAKE=new Map(), BS=1.3;
 function clearBake(){ BAKE.clear(); }
-function bakedBlock(type,w,h,seed,frag,dmg){
+function bakedBlock(type,w,h,seed,frag,dmg,char){
   const dl=dmg>1.7?2:(dmg>.75?1:0);
-  const key=type+'|'+Math.round(w)+'|'+Math.round(h)+'|'+Math.round(seed*64)+'|'+(frag?1:0)+'|'+dl;
+  const key=type+'|'+Math.round(w)+'|'+Math.round(h)+'|'+Math.round(seed*64)+'|'+(frag?1:0)+'|'+dl+'|'+(char||0);
   let cv=BAKE.get(key); if(cv) return cv;
   const T=TH(), fillW=(type==='fill'), M=texFor(fillW?'stone':type);
   const pad=5, CW=Math.ceil((w+pad*2)*BS), CH=Math.ceil((h+pad*2)*BS);
@@ -1814,6 +2010,7 @@ function bakedBlock(type,w,h,seed,frag,dmg){
       g.lineTo(Math.cos(q)*w*.3,Math.sin(q)*h*.3);
       g.lineTo(Math.cos(q+.7)*w*.45,Math.sin(q+.7)*h*.45); g.stroke(); }
   }
+  if(char){ g.fillStyle='rgba(14,10,10,'+(.22*char).toFixed(2)+')'; g.fillRect(-w/2-2,-h/2-2,w+4,h+4); }
   if(T.amb){ g.fillStyle=T.amb; g.fillRect(-w/2-2,-h/2-2,w+4,h+4); }
   g.restore();
   blockPathG(g,w,h,seed,frag);
@@ -1858,7 +2055,7 @@ function paintKeg(cx,cy,w,h,ang,alpha){
   ctx.beginPath(); ctx.moveTo(0,-h/2); ctx.quadraticCurveTo(9,-h/2-11,4,-h/2-19); ctx.stroke();
   ctx.restore();
 }
-function paintBlock(cx,cy,w,h,ang,type,dmg,seed,alpha,frag){
+function paintBlock(cx,cy,w,h,ang,type,dmg,seed,alpha,frag,burn){
   if(type==='powder'){ paintKeg(cx,cy,w,h,ang,alpha); return; }
   const T=TH(), fillW=(type==='fill'), M=texFor(fillW?'stone':type);
   const a=ang||0, area=w*h;
@@ -1874,7 +2071,7 @@ function paintBlock(cx,cy,w,h,ang,type,dmg,seed,alpha,frag){
   }
 
   ctx.save(); ctx.translate(cx,cy); ctx.rotate(a);
-  const cv=bakedBlock(type,w,h,seed,frag,dmg||0);
+  const cv=bakedBlock(type,w,h,seed,frag,dmg||0,burn?Math.min(3,Math.ceil(burn*3)):0);
   ctx.drawImage(cv,-cv.width/(2*BS),-cv.height/(2*BS),cv.width/BS,cv.height/BS);
 
   /* directional light, recomputed from the block's own rotation */
@@ -2292,6 +2489,10 @@ function emissiveWorld(c){
   flashes.forEach(f=>{ if(inView(f.x,f.y,f.r*1.8)) blit(c,SPR.flash,f.x,f.y,f.r*1.7,f.life*.7); });
   parts.forEach(p=>{ if(p.glow&&inView(p.x,p.y,22)) blit(c,SPR.fire,p.x,p.y,p.size*3.4,Math.max(0,p.life)*.42); });
   blocks.forEach(b=>{
+    if(b.burning&&inView(b.position.x,b.position.y,80)){
+      const fl=.5+Math.sin(flag*7+b.seed)*.2;
+      blit(c,SPR.fire,b.position.x,b.position.y,Math.max(b.bw,b.bh)*.55,Math.min(.5,b.burn*.9)*fl);
+    }
     if(b.gType!=='powder') return;
     const cs=Math.cos(b.angle), sn=Math.sin(b.angle), lx=4, ly=-b.bh/2-19;
     const fx=b.position.x+lx*cs-ly*sn, fy=b.position.y+lx*sn+ly*cs;
@@ -2341,9 +2542,10 @@ function drawAim(){
   ctx.strokeStyle='rgba(255,214,138,.85)'; ctx.lineWidth=2.5;
   ctx.beginPath(); ctx.moveTo(LP.x,LP.y); ctx.lineTo(LP.x-pull.x,LP.y-pull.y); ctx.stroke();
   ctx.setLineDash([]);
+  const wr=wind*(1-uLv('aim')*.25);
   let x=LP.x,y=LP.y,ux=vx,uy=vy;
   for(let i=0;i<62;i++){
-    ux*=(1-air); uy*=(1-air); uy+=gy; ux+=wind;
+    ux*=(1-air); uy*=(1-air); uy+=gy; ux+=wr;
     x+=ux; y+=uy;
     if(y>GROUND-4) break;
     if(i%3===0&&i<48){
@@ -2366,9 +2568,10 @@ function aimGlow(c){
   const A=AMMO[selected]||AMMO.stone, isB=!!A.bolt;
   const P=isB?POWER_B*(selected==='boltPierce'?1.12:1):POWER;
   const gy=isB?G*(1-BOLT_LIFT):G, air=isB?A.air:.001;
+  const wr=wind*(1-uLv('aim')*.25);
   let x=LP.x,y=LP.y,ux=pull.x*P,uy=pull.y*P;
   for(let i=0;i<62;i++){
-    ux*=(1-air); uy*=(1-air); uy+=gy; ux+=wind; x+=ux; y+=uy;
+    ux*=(1-air); uy*=(1-air); uy+=gy; ux+=wr; x+=ux; y+=uy;
     if(y>GROUND-4) break;
     if(i%3===0&&i<48) blit(c,SPR.gold,x,y,Math.max(3.5,11-i*.12),.34*(1-i/52));
   }
@@ -2473,7 +2676,7 @@ function render(){
     drawShadows();
     weapon==='cat'?drawCatapult():drawBallista();
     blocks.forEach(b=>{ const r=(b.bw+b.bh)*.6;
-      if(inView(b.position.x,b.position.y,r)) paintBlock(b.position.x,b.position.y,b.bw,b.bh,b.angle,b.gType,b.dmg,b.seed,1,b.frag); });
+      if(inView(b.position.x,b.position.y,r)) paintBlock(b.position.x,b.position.y,b.bw,b.bh,b.angle,b.gType,b.dmg,b.seed,1,b.frag,b.burn); });
     targets.forEach(t=>{ if(inView(t.position.x,t.position.y,130)) paintTarget(t.position.x,t.position.y,t.angle,t.dead,t.patrol); });
     balls.forEach(b=>{
       const R0=AMMO[b.kind].r, n=b.trail.length;
@@ -2536,7 +2739,7 @@ function loop(now){
   render();
 }
 $('rot').addEventListener('click',()=>{rotDismissed=true;$('rot').style.display='none';});
-buildMaterials(); resize(); buildLevel(0); requestAnimationFrame(loop);
+loadGame(); buildMaterials(); resize(); buildLevel(0); requestAnimationFrame(loop);
 })();
 </script>
 </body>

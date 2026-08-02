@@ -19,6 +19,11 @@ motorul fizic (`matter.min.js`) e inclus în repo, deci merge și offline.
 - **Materiale cu comportament propriu** — piatră, lemn, gheață, fier și butoaie
   cu praf de pușcă; zidurile se fisurează, se sparg în fragmente și lasă cratere.
 - **Editor** — construiește-ți propria cetate și asediaz-o.
+- **Campanie cu aur** — fiecare asediu îți lasă pradă, iar în *Arsenal* o dai pe
+  îmbunătățiri: putere de lansare, lovituri în plus, muniție, proiectile mai grele,
+  ochire pe vânt și foc grecesc. Progresul se salvează pe dispozitiv.
+- **Foc care se propagă** — cu foc grecesc, butoaiele aprind lemnul; focul trece
+  din grindă în grindă, topește gheața și mistuie cetatea mult după impact.
 
 ## Grafică
 
