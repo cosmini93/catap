@@ -1,0 +1,100 @@
+<title>Catapult — Asediu 3D</title>
+<style>
+  :root{ --parch:#F2E7CF; --gold:#E8B04B; --gold-hi:#FFDFA0; --ink:#0B0710; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;overflow:hidden;background:#0B0710}
+  :root[data-theme="light"] body,:root[data-theme="dark"] body{background:#0B0710;color:var(--parch)}
+  body{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;color:var(--parch);
+    -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;touch-action:none}
+  canvas{display:block;width:100%;height:100%;touch-action:none}
+  .hud{position:fixed;inset:0;pointer-events:none;z-index:2}
+  .plate{position:relative;background:linear-gradient(165deg,rgba(38,25,54,.62),rgba(11,7,17,.8));
+    border:1px solid rgba(232,176,75,.34);border-radius:4px;padding:7px 12px;
+    box-shadow:0 8px 26px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,225,175,.09);
+    backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
+  .tl{position:absolute;top:calc(12px + env(safe-area-inset-top));left:calc(12px + env(safe-area-inset-left));
+    display:flex;gap:8px;align-items:center}
+  .tr{position:absolute;top:calc(12px + env(safe-area-inset-top));right:calc(12px + env(safe-area-inset-right));
+    display:flex;gap:8px;align-items:center}
+  .coin{width:12px;height:12px;border-radius:50%;flex:0 0 auto;
+    background:radial-gradient(circle at 33% 30%,#FFEFC0,#E8B04B 55%,#9C6612);
+    box-shadow:0 0 9px rgba(232,176,75,.5)}
+  .val{font-size:13px;font-weight:700;letter-spacing:.05em;color:var(--gold-hi);font-variant-numeric:tabular-nums}
+  .lbl{font-family:"Cinzel",Georgia,serif;font-size:8.5px;letter-spacing:.28em;color:var(--gold);opacity:.75}
+  .row{display:flex;align-items:center;gap:7px}
+  .biome{position:absolute;top:calc(14px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);
+    font-family:"Cinzel",Georgia,serif;font-size:10px;letter-spacing:.34em;color:var(--gold);
+    opacity:.8;text-shadow:0 2px 12px rgba(0,0,0,.8);white-space:nowrap}
+  /* tension bar */
+  .tension{position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translateX(-50%);
+    width:min(340px,54vw);height:15px;border:1px solid rgba(232,176,75,.5);border-radius:3px;
+    background:rgba(10,6,16,.62);overflow:hidden;backdrop-filter:blur(6px)}
+  .tension i{position:absolute;inset:2px;width:0;border-radius:2px;
+    background:linear-gradient(90deg,#E8B04B,#F0803A);transition:none}
+  .tension i.hot{background:linear-gradient(90deg,#F0803A,#E8483A)}
+  .tension em{position:absolute;top:0;bottom:0;left:78%;width:14%;
+    border-left:1px solid rgba(255,240,200,.5);border-right:1px solid rgba(255,240,200,.5);
+    background:rgba(255,230,180,.13)}
+  .tHint{position:absolute;left:50%;bottom:calc(44px + env(safe-area-inset-bottom));transform:translateX(-50%);
+    font-size:9px;letter-spacing:.2em;text-transform:uppercase;opacity:.5;white-space:nowrap;
+    text-shadow:0 2px 8px rgba(0,0,0,.9)}
+  /* bottom corners */
+  .bl{position:absolute;left:calc(12px + env(safe-area-inset-left));bottom:calc(14px + env(safe-area-inset-bottom))}
+  .br{position:absolute;right:calc(12px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-inset-bottom));
+    display:flex;gap:8px;align-items:center}
+  .btn{pointer-events:auto;cursor:pointer;font-family:"Cinzel",Georgia,serif;letter-spacing:.14em;font-size:11px;
+    background:linear-gradient(170deg,rgba(40,26,58,.8),rgba(12,8,19,.88));color:var(--parch);
+    border:1px solid rgba(232,176,75,.42);border-radius:3px;padding:9px 13px;
+    box-shadow:0 6px 20px rgba(0,0,0,.45)}
+  .btn:active{transform:translateY(1px);background:linear-gradient(170deg,var(--gold),#B47C22);color:#150E20}
+  .shotBox{display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 13px}
+  .shotBox .val{font-size:17px}
+  /* floating score pops */
+  #pops{position:fixed;inset:0;pointer-events:none;z-index:3}
+  .pop{position:absolute;transform:translate(-50%,-50%);font-size:15px;font-weight:700;
+    color:var(--gold-hi);text-shadow:0 2px 10px rgba(0,0,0,.9),0 0 18px rgba(232,176,75,.5);
+    font-variant-numeric:tabular-nums}
+  /* banner */
+  .banner{position:fixed;inset:0;display:none;place-items:center;z-index:6;padding:24px;
+    background:radial-gradient(120% 90% at 50% 42%,rgba(40,26,58,.7),rgba(6,4,11,.94))}
+  .banner.show{display:grid;animation:fade .4s ease both}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .bPanel{text-align:center;max-width:420px}
+  .bPanel h1{font-family:"Cinzel",Georgia,serif;font-size:clamp(26px,7vw,42px);font-weight:900;line-height:1.05;
+    background:linear-gradient(180deg,#FFF6E2 10%,#E8B04B 60%,#A8701C);
+    -webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
+  .bPanel p{font-size:12px;line-height:1.8;opacity:.7;margin-bottom:22px}
+  @media (max-width:900px),(max-height:520px){
+    .tension{width:min(280px,58vw);height:13px}
+    .btn{font-size:9.5px;padding:7px 10px}
+    .val{font-size:12px}
+  }
+</style>
+
+<canvas id="gl"></canvas>
+
+<div class="hud">
+  <div class="tl">
+    <div class="plate row"><span class="coin"></span><span class="val" id="gold">0</span></div>
+    <div class="plate row"><span class="lbl">SCOR</span><span class="val" id="score">0</span></div>
+  </div>
+  <div class="biome" id="biome">DUNELE DE ARAMĂ</div>
+  <div class="tr">
+    <div class="plate shotBox"><span class="lbl">PROIECTILE</span><span class="val" id="shots">6</span></div>
+  </div>
+
+  <div class="tHint">ține apăsat ca să întinzi · trage cu degetul ca să ochești · eliberează la momentul potrivit</div>
+  <div class="tension" id="tension"><em></em><i id="tensionFill"></i></div>
+
+  <div class="br">
+    <button class="btn" id="ammoBtn">MUNIȚIE · <span id="ammoName">BOLOVAN</span></button>
+  </div>
+</div>
+
+<div id="pops"></div>
+
+<div class="banner" id="banner"><div class="bPanel">
+  <h1 id="bTitle">CETATE DĂRÂMATĂ</h1>
+  <p id="bText"></p>
+  <button class="btn" id="bBtn">ASEDIUL URMĂTOR</button>
+</div></div>

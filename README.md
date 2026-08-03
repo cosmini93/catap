@@ -47,3 +47,24 @@ stindardele se înclină după vântul din nivel.
 
 Butonul **FX** comută între `ULTRA`, `BOGAT` și `RAPID`. Calitatea coboară
 automat dacă rata de cadre scade, până când o fixezi manual din buton.
+
+## Varianta 3D (`catapult3d.html`)
+
+Un al doilea joc, pe altă tehnologie: WebGL (three.js) cu fizică 3D (cannon-es),
+cameră din spatele praștiei și forturi care se dezmembrează bloc cu bloc.
+
+Mecanica e pe tensiune: ții apăsat ca să întinzi praștia, tragi cu degetul ca să
+ochești, eliberezi la momentul potrivit. Bara urcă până sus și apoi coboară
+înapoi, deci momentul eliberării contează.
+
+Trei ținuturi (dune, creastă înghețată, câmpie de miez de noapte), gărzi cubice
+care se prăbușesc când le lovești, aur și scor salvate pe dispozitiv.
+
+Se construiește cu:
+
+```sh
+npm pack three@0.169.0 cannon-es@0.20.0     # sursele bibliotecilor
+sh src3d/build.sh <esbuild> <three.module.min.js> <cannon-es.js> catapult3d.html
+```
+
+Rezultatul e un singur fișier HTML, fără dependențe externe.
