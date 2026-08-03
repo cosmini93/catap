@@ -1,0 +1,7 @@
+en()}catch(e){showToast('Folosește „Add to Home Screen” pentru ecran complet',1800)}};
+addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();if(!charging)startCharge(e)}if(e.key==='1')selectAmmo('pebbles');if(e.key==='2')selectAmmo('stone');if(e.key==='3')selectAmmo('boulder');if(e.key==='ArrowUp'){angle=clamp(angle+.03,.31,1.26);updateUI()}if(e.key==='ArrowDown'){angle=clamp(angle-.03,.31,1.26);updateUI()}});addEventListener('keyup',e=>{if(e.code==='Space')endCharge(e)});
+showMenu();makeClouds();buildCastle('gate',3);
+})();
+</script>
+</body>
+</html>
