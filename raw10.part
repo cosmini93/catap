@@ -1,0 +1,19 @@
+ssList.remove('hidden');UI.hud.style.display='none';UI.controls.style.display='none';let html='<h2>Alege nivelul</h2><p>Patru regiuni, opt fortificații.</p><div class="levelgrid">';for(let i=0;i<LEVELS.length;i++){const locked=i>=unlocked;html+=`<button class="level ${locked?'locked':''}" data-i="${i}" ${locked?'disabled':''}><b>${Math.floor(i/2)+1}-${i%2+1}</b><span class="stars">${stars[i]?'★'.repeat(stars[i])+'☆'.repeat(3-stars[i]):'☆☆☆'}</span></button>`}html+='</div><button class="secondary" id="closeLevels">ÎNAPOI</button>';UI.modalCard.innerHTML=html;UI.modalCard.querySelectorAll('.level:not(.locked)').forEach(b=>b.onclick=()=>startLevel(Number(b.dataset.i)));$('closeLevels').onclick=showMenu}
+
+function drawBackground(t){const R=REGIONS[LEVELS[levelIndex]?.r||0],g=ctx.createLinearGradient(0,0,0,VH);g.addColorStop(0,R.sky[0]);g.addColorStop(.48,R.sky[1]);g.addColorStop(1,R.sky[2]);ctx.fillStyle=g;ctx.fillRect(0,0,VW,VH);
+ // sun/moon
+ const r=LEVELS[levelIndex]?.r||0;if(r===2){circle(1050,110,38,'rgba(233,248,255,.75)')}else{const sg=ctx.createRadialGradient(1100,155,5,1100,155,90);sg.addColorStop(0,'rgba(255,239,177,.9)');sg.addColorStop(.4,'rgba(255,190,88,.25)');sg.addColorStop(1,'rgba(255,180,60,0)');ctx.fillStyle=sg;ctx.fillRect(1000,55,200,200);circle(1100,155,28,'rgba(255,238,180,.9)')}
+ for(const c of clouds){ctx.globalAlpha=c.a;ctx.fillStyle='#e8f0f5';circle(c.x,c.y,35*c.s,'#e8f0f5');circle(c.x+35*c.s,c.y+8*c.s,28*c.s,'#e8f0f5');circle(c.x-32*c.s,c.y+10*c.s,24*c.s,'#e8f0f5');ctx.fillRect(c.x-38*c.s,c.y+8*c.s,78*c.s,25*c.s);ctx.globalAlpha=1}
+ // layered mountains
+ poly([[0,470],[120,310],[210,425],[330,250],[470,445],[620,305],[770,470],[0,470]],R.mount);ctx.globalAlpha=.45;poly([[410,490],[620,350],[740,430],[880,290],[1030,450],[1160,345],[1280,470],[1280,520],[410,520]],R.mount);ctx.globalAlpha=1;
+ // distant haze
+ const hg=ctx.createLinearGradient(0,400,0,650);hg.addColorStop(0,'rgba(220,236,238,.08)');hg.addColorStop(1,'rgba(0,0,0,.18)');ctx.fillStyle=hg;ctx.fillRect(0,400,VW,260);
+ // terrain
+ ctx.fillStyle=R.ground;ctx.fillRect(0,650,VW,70);poly([[0,610],[150,585],[310,600],[480,620],[650,635],[820,640],[1000,650],[1280,640],[1280,720],[0,720]],R.ground);ctx.strokeStyle=R.grass;ctx.lineWidth=12;ctx.beginPath();ctx.moveTo(0,608);ctx.quadraticCurveTo(320,575,650,635);ctx.quadraticCurveTo(950,655,1280,638);ctx.stroke();
+ // grass tufts
+ ctx.strokeStyle=R.grass;ctx.lineWidth=3;for(let x=0;x<VW;x+=23){const y=607+Math.sin(x*.014)*11+x*.025;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+rand(-3,4),y-rand(7,15));ctx.stroke()}
+}
+function drawCatapult(t){ctx.save();ctx.translate(205,590); // shadow
+ ctx.globalAlpha=.35;ctx.fillStyle='#05080d';ctx.beginPath();ctx.ellipse(0,54,145,22,0,0,TAU);ctx.fill();ctx.globalAlpha=1;
+ // wheels
+ for(const x of [-82,-10,72]){circle(x,37,34,'#28222a','#0d1118',7);circle(x,37,13,'#917049','#2a2020',5);for(let a=0;a<TAU;a+=Math.PI/4){ctx.strokeStyle='#11151c';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(x
