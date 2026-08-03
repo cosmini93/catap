@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#101a2b">
+  <title>Siegewind</title>
+  <style>
+    html,body{height:100%;margin:0;background:#08111f;color:#fff;font-family:system-ui,-apple-system,sans-serif}
+    body{display:grid;place-items:center;text-align:center;padding:24px;box-sizing:border-box}
+    .loader{width:min(86vw,420px)}
+    .title{font-size:36px;font-weight:900;letter-spacing:.04em;color:#ffd875}
+    .bar{height:12px;margin:18px 0;border-radius:99px;overflow:hidden;background:#1b2a40;border:1px solid #40506a}
+    .fill{height:100%;width:8%;background:linear-gradient(90deg,#e44f28,#ffd875);transition:width .18s}
+    #status{color:#cad7e9;line-height:1.45}
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <div class="title">SIEGEWIND</div>
+    <div class="bar"><div class="fill" id="fill"></div></div>
+    <div id="status">Se încarcă jocul…</div>
+  </div>
+  <script>
+  (async()=>{
+    const status=document.getElementById('status');
+    const fill=document.getElementById('fill');
+    try{
+      const parts=[];
+      for(let i=0;i<14;i++){
+        const response=await fetch(`raw${i}.part`,{cache:'no-store'});
+        if(!response.ok) throw new Error(`Lipsește raw${i}.part`);
+        parts.push(await response.text());
+        fill.style.width=`${Math.round(((i+1)/14)*100)}%`;
+      }
+      const game=parts.join('');
+      if(!game.startsWith('<!doctype html>')||!game.includes('</html>')) throw new Error('Fișierul jocului este incomplet');
+      document.open();
+      document.write(game);
+      document.close();
+    }catch(error){
+      console.error(error);
+      fill.style.width='100%';
+      status.innerHTML='Jocul nu s-a putut încărca.<br>Reîncarcă pagina din Safari.';
+    }
+  })();
+  </script>
+</body>
+</html>
