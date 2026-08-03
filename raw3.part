@@ -1,0 +1,50 @@
+plet">⛶</button>
+      <button class="iconbtn" id="menuBtn" aria-label="Meniu">☰</button>
+    </div>
+  </div>
+
+  <div id="controls">
+    <div id="ammoPanel">
+      <button class="ammo selected" data-ammo="pebbles" aria-label="Pietricele">•••<span id="countPebbles">2</span></button>
+      <button class="ammo" data-ammo="stone" aria-label="Piatră">●<span id="countStone">3</span></button>
+      <button class="ammo" data-ammo="boulder" aria-label="Bolovan">⬤<span id="countBoulder">1</span></button>
+    </div>
+    <div id="fireWrap">
+      <div id="angleDial"><div id="angleNeedle"></div><div id="angleText">45°</div></div>
+      <button id="fire">ȚINE<br>APĂSAT</button>
+    </div>
+  </div>
+  <div id="hint">Glisează pe cer pentru unghi • ține și eliberează FOC</div>
+  <div id="chargeBar"><div id="chargeFill"></div></div>
+  <div id="toast"></div>
+
+  <div id="centerCard">
+    <div class="card">
+      <div style="font-size:46px">🏰💨</div>
+      <div class="logo">SIEGE<br>WIND</div>
+      <div class="subtitle">Un joc original de asediu pentru telefon: încarcă mecanismul, compensează vântul și dărâmă fortificațiile.</div>
+      <button class="primary" id="playBtn">ÎNCEPE CAMPANIA</button>
+      <button class="secondary" id="levelsBtn">NIVELE</button>
+      <p style="font-size:11px;opacity:.68;margin:19px 0 0">Grafică vectorială și efecte audio generate local. Nu necesită internet.</p>
+    </div>
+  </div>
+
+  <div id="modal" class="hidden"><div class="card" id="modalCard"></div></div>
+  <div id="rotate" class="hidden"><div><span class="phone">📱</span><h2>Rotește telefonul</h2><p>Jocul este optimizat pentru modul peisaj.</p></div></div>
+</div>
+<script>
+(()=>{
+'use strict';
+const canvas=document.getElementById('game'),ctx=canvas.getContext('2d',{alpha:false});
+const $=id=>document.getElementById(id);
+const UI={hud:$('hud'),controls:$('controls'),center:$('centerCard'),modal:$('modal'),modalCard:$('modalCard'),toast:$('toast'),hint:$('hint'),chargeBar:$('chargeBar'),chargeFill:$('chargeFill'),fire:$('fire'),angleNeedle:$('angleNeedle'),angleText:$('angleText'),level:$('levelLabel'),score:$('scoreLabel'),targets:$('targetsLabel'),wind:$('windLabel'),windArrow:$('windArrow')};
+const TAU=Math.PI*2,clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),lerp=(a,b,t)=>a+(b-a)*t,rand=(a,b)=>a+Math.random()*(b-a);
+let W=0,H=0,DPR=1,S=1,OX=0,OY=0;const VW=1280,VH=720;
+function resize(){DPR=Math.min(2,devicePixelRatio||1);W=innerWidth;H=innerHeight;canvas.width=Math.round(W*DPR);canvas.height=Math.round(H*DPR);canvas.style.width=W+'px';canvas.style.height=H+'px';ctx.setTransform(DPR,0,0,DPR,0,0);S=Math.min(W/VW,H/VH);OX=(W-VW*S)/2;OY=(H-VH*S)/2}
+addEventListener('resize',resize,{passive:true});resize();
+function wx(x){return OX+x*S}function wy(y){return OY+y*S}
+function worldTransform(){ctx.setTransform(DPR*S,0,0,DPR*S,DPR*OX,DPR*OY)}
+function screenTransform(){ctx.setTransform(DPR,0,0,DPR,0,0)}
+
+const REGIONS=[
+ {name:'Valea de Smarald',sky:['#122b4b','#6ebbd3','#f5c77b'],ground:'#335b2
