@@ -1,0 +1,24 @@
+}
+function roundRect(c,x,y,w,h,r){r=Math.min(r,w/2,h/2);c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath()}
+function poly(points,fill,stroke=null,lw=1){ctx.beginPath();ctx.moveTo(points[0][0],points[0][1]);for(let i=1;i<points.length;i++)ctx.lineTo(points[i][0],points[i][1]);ctx.closePath();ctx.fillStyle=fill;ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=lw;ctx.stroke()}}
+function circle(x,y,r,fill,stroke=null,lw=1){ctx.beginPath();ctx.arc(x,y,r,0,TAU);ctx.fillStyle=fill;ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=lw;ctx.stroke()}}
+
+function makeClouds(){clouds=[];for(let i=0;i<9;i++)clouds.push({x:rand(0,VW),y:rand(65,300),s:rand(.5,1.4),v:rand(2,7),a:rand(.08,.22)})}
+function addBlock(x,y,w,h,type='stone',hp=100,angle=0){const b={x,y,w,h,type,hp,maxHp:hp,angle,vx:0,vy:0,va:0,dynamic:false,dead:false,sleep:0,flash:0};blocks.push(b);return b}
+function addEnemy(x,y,support=null,elite=false){enemies.push({x,y,vx:0,vy:0,r:elite?18:15,dead:false,falling:false,support,elite,blink:rand(0,3),hit:0})}
+function addBarrel(x,y,support=null){barrels.push({x,y,r:15,support,falling:false,vx:0,vy:0,dead:false})}
+function topOf(b){return b.y-b.h/2}
+function buildCastle(kind,count){blocks=[];enemies=[];barrels=[];const stone=REGIONS[LEVELS[levelIndex].r].accent;void stone;
+ const wall=(x,y,w,h,t='stone',hp=100)=>addBlock(x,y,w,h,t,hp);
+ const enemyOn=(b,off=0,elite=false)=>addEnemy(b.x+off,topOf(b)-16,b,elite);
+ if(kind==='gate'){
+  const p1=wall(930,570,70,210),p2=wall(1120,570,70,210),top=wall(1025,450,260,45,'wood',70);enemyOn(p1);enemyOn(p2);enemyOn(top);
+  wall(1025,590,90,170,'wood',55);addBarrel(1025,480,top);
+ }else if(kind==='towers'){
+  const a=wall(860,565,80,220),b=wall(1050,545,90,260),c=wall(1190,585,70,180);const ta=wall(860,440,120,35),tb=wall(1050,395,145,40),tc=wall(1190,480,110,35);enemyOn(ta);enemyOn(tb,-25);enemyOn(tb,28,true);enemyOn(tc);addBarrel(970,625);wall(970,570,120,34,'wood',60);addBarrel(970,535);
+ }else if(kind==='bridge'){
+  const l=wall(835,560,90,230),r=wall(1190,560,90,230),bridge=wall(1012,485,300,35,'wood',65);enemyOn(l);enemyOn(r);enemyOn(bridge,-75);enemyOn(bridge,20);enemyOn(bridge,92,true);addBarrel(1012,450,bridge);wall(1012,610,110,120,'stone',120);
+ }else if(kind==='keep'){
+  const base=wall(1030,615,390,80,'stone',180);const a=wall(900,510,70,170),b=wall(1160,510,70,170),mid=wall(1030,520,170,160,'wood',80);const roof=wall(1030,415,340,42,'stone',100);enemyOn(a);enemyOn(b);enemyOn(roof,-100);enemyOn(roof,0,true);enemyOn(roof,100);addBarrel(970,380,roof);addBarrel(1090,380,roof);void base;void mid;
+ }else if(kind==='icegate'){
+  const a=wall(840,560,70,220,'ice',75),b=wall(960,520,70,300,'ice',75),c=wall(1110,520,70,300,'ice',75),d=wall(1220,570,70,200,'ice',75);const t1=wall(900,425,190,32,'wood',60),t2=wall(1165,410,170,32,'wood',60);enemyOn(a);enemyOn(t1,20);enemyOn(b);enemyOn(c);enemyOn(t2,-15,true);enem
