@@ -1,21 +1,21 @@
-import { AmbientLight, BackSide, BoxGeometry, BufferAttribute, BufferGeometry, CanvasTexture, Color, ConeGeometry, CylinderGeometry, DirectionalLight, DoubleSide, Float32BufferAttribute, Fog, Group, HemisphereLight, IcosahedronGeometry, Mesh, MeshBasicMaterial, MeshLambertMaterial, NearestFilter, Object3D, PCFShadowMap, PCFSoftShadowMap, PerspectiveCamera, PlaneGeometry, Points, PointsMaterial, Quaternion, RepeatWrapping, RingGeometry, SRGBColorSpace, Scene, ShaderMaterial, SphereGeometry, Vector3, WebGLRenderer } from 'three';
-const THREE = { AmbientLight, BackSide, BoxGeometry, BufferAttribute, BufferGeometry, CanvasTexture, Color, ConeGeometry, CylinderGeometry, DirectionalLight, DoubleSide, Float32BufferAttribute, Fog, Group, HemisphereLight, IcosahedronGeometry, Mesh, MeshBasicMaterial, MeshLambertMaterial, NearestFilter, Object3D, PCFShadowMap, PCFSoftShadowMap, PerspectiveCamera, PlaneGeometry, Points, PointsMaterial, Quaternion, RepeatWrapping, RingGeometry, SRGBColorSpace, Scene, ShaderMaterial, SphereGeometry, Vector3, WebGLRenderer };
+import { ACESFilmicToneMapping, AmbientLight, BackSide, BoxGeometry, BufferAttribute, BufferGeometry, CanvasTexture, Color, ConeGeometry, CylinderGeometry, DirectionalLight, DoubleSide, Float32BufferAttribute, Fog, Group, HemisphereLight, IcosahedronGeometry, Mesh, MeshBasicMaterial, MeshLambertMaterial, MeshPhongMaterial, NearestFilter, Object3D, PCFShadowMap, PCFSoftShadowMap, PerspectiveCamera, PlaneGeometry, Points, PointsMaterial, Quaternion, RepeatWrapping, RingGeometry, SRGBColorSpace, Scene, ShaderMaterial, SphereGeometry, Vector3, WebGLRenderer } from 'three';
+const THREE = { ACESFilmicToneMapping, AmbientLight, BackSide, BoxGeometry, BufferAttribute, BufferGeometry, CanvasTexture, Color, ConeGeometry, CylinderGeometry, DirectionalLight, DoubleSide, Float32BufferAttribute, Fog, Group, HemisphereLight, IcosahedronGeometry, Mesh, MeshBasicMaterial, MeshLambertMaterial, MeshPhongMaterial, NearestFilter, Object3D, PCFShadowMap, PCFSoftShadowMap, PerspectiveCamera, PlaneGeometry, Points, PointsMaterial, Quaternion, RepeatWrapping, RingGeometry, SRGBColorSpace, Scene, ShaderMaterial, SphereGeometry, Vector3, WebGLRenderer };
 import * as CANNON from 'cannon-es';
 
 /* ================= BIOMES ================= */
 const BIOMES = {
   dune: { name:'DUNELE DE ARAMĂ',
     skyTop:0x4E8FCB, skyMid:0x9DC4E4, skyBot:0xF2DCB4, fog:0xE0C098, fogNear:70, fogFar:260,
-    ground:0xD9B383, groundEdge:0xC79A66, rock:0x9C8163, veg:0x8E8446, vegKind:'palm',
-    sun:0xFFF0D0, sunI:1.65, amb:0xC9DCF0, ambI:.62, hemi:0xFFE9C4 },
+    ground:0xC49A66, groundEdge:0xA87F4E, rock:0x8A7154, veg:0x7E7438, vegKind:'palm',
+    sun:0xFFE0AE, sunI:3.1, amb:0x7FA6CE, ambI:.20, hemi:0xFFD9A0 },
   frost:{ name:'CREASTA ÎNGHEȚATĂ',
     skyTop:0x2A6FB8, skyMid:0x8FC4E8, skyBot:0xE2F1FA, fog:0xC8E2F2, fogNear:60, fogFar:240,
-    ground:0xDCE9F5, groundEdge:0xA9C2DA, rock:0x8496A8, veg:0x6E7A5E, vegKind:'dead',
-    sun:0xFFFFFF, sunI:1.35, amb:0x9FC4E8, ambI:.5, hemi:0xD8ECFF },
+    ground:0xCADCEC, groundEdge:0x93B0CC, rock:0x74889C, veg:0x5E6B52, vegKind:'dead',
+    sun:0xFFF6E6, sunI:2.7, amb:0x8FB6DE, ambI:.28, hemi:0xC4E0FA },
   night:{ name:'CÂMPIA DE MIEZ DE NOAPTE',
     skyTop:0x0A1738, skyMid:0x1E3A66, skyBot:0x4E7098, fog:0x22385A, fogNear:55, fogFar:230,
-    ground:0x38495F, groundEdge:0x243146, rock:0x4C5B70, veg:0x2E4A34, vegKind:'pine',
-    sun:0xCFE0FF, sunI:1.15, amb:0x53709E, ambI:1.05, hemi:0x7C97C0, moon:true }
+    ground:0x2E3D52, groundEdge:0x1D2838, rock:0x40506A, veg:0x243A2A, vegKind:'pine',
+    sun:0xAFC8FF, sunI:1.9, amb:0x36507A, ambI:.5, hemi:0x5A76A4, moon:true }
 };
 
 /* ================= SETUP ================= */
@@ -25,6 +25,8 @@ const SMALL = Math.min(innerWidth, innerHeight) < 560 || /Mobi|Android|iPhone|iP
 renderer.setPixelRatio(Math.min(devicePixelRatio||1, SMALL?1.5:2));
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = SMALL ? THREE.PCFShadowMap : THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = .92;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(52, 1, .3, 900);
@@ -69,13 +71,15 @@ const TEX = {
   wood : grainTexture('#8a5f34', 70),
   crate: grainTexture('#9c6f3d', 50)
 };
+const surf=(color,map,shine,spec)=>new THREE.MeshPhongMaterial({
+  color, map, shininess:shine||6, specular:spec||0x1a1a18, reflectivity:0 });
 const MAT = {
-  stone: new THREE.MeshLambertMaterial({ color:0xcfcabd, map:TEX.stone }),
-  wood : new THREE.MeshLambertMaterial({ color:0xc99a5e, map:TEX.wood }),
-  beam : new THREE.MeshLambertMaterial({ color:0xa87a45, map:TEX.wood }),
-  crate: new THREE.MeshLambertMaterial({ color:0xb98a52, map:TEX.crate }),
-  iron : new THREE.MeshLambertMaterial({ color:0x5b6472 }),
-  cloth: new THREE.MeshLambertMaterial({ color:0x9d2f38 })
+  stone: surf(0xcfcabd, TEX.stone, 5,  0x161514),
+  wood : surf(0xc99a5e, TEX.wood , 9,  0x241a10),
+  beam : surf(0xa87a45, TEX.wood , 8,  0x201810),
+  crate: surf(0xb98a52, TEX.crate, 10, 0x241a10),
+  iron : surf(0x5b6472, null, 42, 0x8a94a4),
+  cloth: surf(0x9d2f38, null, 3,  0x120608)
 };
 const boxGeo = new THREE.BoxGeometry(1,1,1);
 
@@ -286,21 +290,22 @@ function applyBiome(B){
   sky.material.uniforms.bot.value.set(B.skyBot);
   sunLight.color.set(B.sun); sunLight.intensity=B.sunI;
   ambLight.color.set(B.amb); ambLight.intensity=B.ambI;
-  hemiLight.color.set(B.hemi); hemiLight.groundColor.set(B.ground);
+  hemiLight.color.set(B.hemi);
+  hemiLight.groundColor.set(new THREE.Color(B.ground).multiplyScalar(.5));
   buildGround(B); dressScene(B); buildClouds();
   TH_DUST=new THREE.Color(B.ground).offsetHSL(0,0,-.05).getHex();
   clouds.visible = !B.moon || true;
 }
 function buildLights(){
-  hemiLight=new THREE.HemisphereLight(0xffe9c4, 0xc09a6a, .55); scene.add(hemiLight);
+  hemiLight=new THREE.HemisphereLight(0xffe9c4, 0x5a4a38, .42); scene.add(hemiLight);
   ambLight=new THREE.AmbientLight(0xc9dcf0, .6); scene.add(ambLight);
   sunLight=new THREE.DirectionalLight(0xfff0d0, 1.6);
-  sunLight.position.set(38, 54, 16);
+  sunLight.position.set(30, 26, 22);
   sunLight.castShadow=true;
   sunLight.shadow.mapSize.set(SMALL?1024:2048, SMALL?1024:2048);
   const s=sunLight.shadow.camera;
-  s.left=-46; s.right=46; s.top=46; s.bottom=-30; s.near=1; s.far=170;
-  sunLight.shadow.bias=-0.0012; sunLight.shadow.normalBias=.03;
+  s.left=-34; s.right=34; s.top=36; s.bottom=-24; s.near=1; s.far=140;
+  sunLight.shadow.bias=-0.0009; sunLight.shadow.normalBias=.035;
   scene.add(sunLight); scene.add(sunLight.target);
   sunLight.target.position.set(0,0,-34);
 }
@@ -447,6 +452,16 @@ function makeGuard(x,y,z, facing){
   guards.push(gd); return gd;
 }
 
+function wakeAround(x,y,z,R){
+  const R2=R*R;
+  for(const p of props){ const d=p.body.position;
+    const dx=d.x-x, dy=d.y-y, dz=d.z-z;
+    if(dx*dx+dy*dy+dz*dz<R2) p.body.wakeUp(); }
+  for(const g of guards){ if(g.dead) continue; const d=g.body.position;
+    const dx=d.x-x, dy=d.y-y, dz=d.z-z;
+    if(dx*dx+dy*dy+dz*dz<R2) g.body.wakeUp(); }
+}
+
 /* --- stone shatters into rubble under a hard hit --- */
 let fragBudget=90;
 function fracture(p, impulseDir){
@@ -461,22 +476,32 @@ function fracture(p, impulseDir){
     hud.score.textContent=score; hud.gold.textContent=gold;
   }
   puff(pos.x,pos.y,pos.z, 9, Math.max(w,h)*.7, p.kind==='stone'?0xc4bdaf:0x9a6f42, 2.6);
+  wakeAround(pos.x,pos.y,pos.z, 7);
   if(fragBudget<=0) return;
-  const n=Math.min(fragBudget, 4);
-  fragBudget-=n;
+  // split the block on a grid so the rubble actually fits where the block was
+  const nx=2, ny=h>1?2:1, nz=1;
+  const cells=nx*ny*nz;
+  if(fragBudget<cells) return;
+  fragBudget-=cells;
   const mat=p.kind==='stone'?MAT.stone:MAT.wood;
-  for(let i=0;i<n;i++){
-    const fw=w*rnd(.34,.5), fh=h*rnd(.36,.55), fd=d*rnd(.34,.5);
+  const q=p.body.quaternion;
+  for(let ix=0;ix<nx;ix++) for(let iy=0;iy<ny;iy++) for(let iz=0;iz<nz;iz++){
+    const fw=w/nx*.94, fh=h/ny*.94, fd=d/nz*.94;
+    const lx=(ix+.5)/nx*w-w/2, ly=(iy+.5)/ny*h-h/2, lz=(iz+.5)/nz*d-d/2;
+    const off=new CANNON.Vec3(lx,ly,lz); const gp=new CANNON.Vec3();
+    q.vmult(off,gp);
     const m=new THREE.Mesh(boxGeo, mat);
     m.scale.set(fw,fh,fd); m.castShadow=true; m.receiveShadow=true; propGroup.add(m);
-    const bx=pos.x+rnd(-w,w)*.3, by=pos.y+rnd(-h,h)*.3, bz=pos.z+rnd(-d,d)*.3;
-    const body=new CANNON.Body({ mass:Math.max(3,6*fw*fh*fd), material:matProp,
+    const body=new CANNON.Body({ mass:Math.max(3,10*fw*fh*fd), material:matProp,
       shape:new CANNON.Box(new CANNON.Vec3(fw/2,fh/2,fd/2)),
-      position:new CANNON.Vec3(bx,by,bz), sleepSpeedLimit:.5, sleepTimeLimit:.4 });
-    body.velocity.set(vel.x*.65+rnd(-4,4), vel.y*.5+rnd(1,5), vel.z*.65+rnd(-4,4));
-    body.angularVelocity.set(rnd(-9,9),rnd(-9,9),rnd(-9,9));
+      position:new CANNON.Vec3(pos.x+gp.x, pos.y+gp.y, pos.z+gp.z),
+      quaternion:new CANNON.Quaternion(q.x,q.y,q.z,q.w),
+      sleepSpeedLimit:.5, sleepTimeLimit:.4 });
+    const sp=(impulseDir||1);
+    body.velocity.set(vel.x*.7+lx*2.2*sp+rnd(-2,2), vel.y*.55+rnd(.5,3.5), vel.z*.7+lz*2.2*sp+rnd(-2,2));
+    body.angularVelocity.set(rnd(-7,7),rnd(-7,7),rnd(-7,7));
     body.allowSleep=true; world.addBody(body);
-    props.push({ mesh:m, body, kind:p.kind, scored:true, y0:by, frag:true, broken:true });
+    props.push({ mesh:m, body, kind:p.kind, scored:true, y0:pos.y+gp.y, frag:true, broken:true });
   }
 }
 function armFracture(p){
@@ -485,6 +510,7 @@ function armFracture(p){
     let v=0;
     try{ v=Math.abs(e.contact.getImpactVelocityAlongNormal()); }catch(_){ return; }
     const lim = p.kind==='stone' ? 13 : 10;
+    if(v>8) wakeAround(p.body.position.x,p.body.position.y,p.body.position.z,6);
     if(v>lim) fracture(p);
   });
 }
@@ -520,13 +546,71 @@ function palisade(cx,cz,len,rot){
   }
 }
 function barrel(x,z){
-  const m=new THREE.Mesh(new THREE.CylinderGeometry(.42,.42,1.0,10), MAT.crate);
-  m.castShadow=m.receiveShadow=true; propGroup.add(m);
-  const b=new CANNON.Body({ mass:12, material:matProp,
-    shape:new CANNON.Cylinder(.42,.42,1.0,10),
+  const g=new THREE.Group();
+  const body=new THREE.Mesh(new THREE.CylinderGeometry(.44,.44,1.0,12), MAT.crate);
+  g.add(body);
+  const hoopMat=new THREE.MeshLambertMaterial({ color:0x3a3f49 });
+  for(const y of [-.3,.3]){
+    const hp=new THREE.Mesh(new THREE.CylinderGeometry(.46,.46,.1,12), hoopMat);
+    hp.position.y=y; g.add(hp);
+  }
+  const cap=new THREE.Mesh(new THREE.CylinderGeometry(.3,.3,.14,10),
+    new THREE.MeshLambertMaterial({ color:0xE8B04B }));
+  cap.position.y=.54; g.add(cap);
+  g.traverse(o=>{ if(o.isMesh){ o.castShadow=true; o.receiveShadow=true; } });
+  propGroup.add(g);
+  const b=new CANNON.Body({ mass:14, material:matProp,
+    shape:new CANNON.Cylinder(.44,.44,1.0,12),
     position:new CANNON.Vec3(x,.5,z), sleepSpeedLimit:.35 });
   b.allowSleep=true; b.sleep(); world.addBody(b);
-  props.push({ mesh:m, body:b, kind:'wood', scored:false, y0:.5 });
+  const p={ mesh:g, body:b, kind:'powder', scored:false, y0:.5, broken:false, frag:false };
+  props.push(p);
+  b.addEventListener('collide', e=>{
+    if(p.broken) return;
+    let v=0; try{ v=Math.abs(e.contact.getImpactVelocityAlongNormal()); }catch(_){ return; }
+    if(v>7) detonate(p);
+  });
+  return p;
+}
+/* powder kegs go up, throwing everything nearby and shattering stone */
+function detonate(p){
+  if(p.broken) return; p.broken=true;
+  const c=p.body.position.clone();
+  propGroup.remove(p.mesh); world.removeBody(p.body);
+  const idx=props.indexOf(p); if(idx>=0) props.splice(idx,1);
+  if(!p.scored){ p.scored=true; score+=150; gold+=30;
+    hud.score.textContent=score; hud.gold.textContent=gold; }
+  puff(c.x,c.y,c.z, 34, 1.6, 0xFFC46A, 8.5);
+  puff(c.x,c.y,c.z, 18, 2.4, 0x6b5a4a, 5.0);
+  shake=Math.max(shake,.95);
+  tmpV.set(c.x,c.y+1.6,c.z); popText(tmpV,'BUM!','gold');
+  const R=7.5;
+  wakeAround(c.x,c.y,c.z,R+3);
+  for(const o of props.slice()){
+    const d=o.body.position, dx=d.x-c.x, dy=d.y-c.y, dz=d.z-c.z;
+    const r=Math.hypot(dx,dy,dz);
+    if(r>R) continue;
+    if(o.kind==='powder'){ setTimeout(()=>detonate(o), 90+Math.random()*160); continue; }
+    const f=(1-r/R);
+    if(!o.frag && f>.45 && o.kind==='stone' && fragBudget>0){ fracture(o, 1.6); continue; }
+    o.body.wakeUp();
+    const k=f*260/Math.max(1,o.body.mass);
+    o.body.velocity.x+=dx/Math.max(.6,r)*k;
+    o.body.velocity.y+=Math.abs(dy)/Math.max(.6,r)*k+f*7;
+    o.body.velocity.z+=dz/Math.max(.6,r)*k;
+  }
+  for(const g of guards){
+    if(g.dead) continue;
+    const d=g.body.position, dx=d.x-c.x, dy=d.y-c.y, dz=d.z-c.z;
+    const r=Math.hypot(dx,dy,dz);
+    if(r>R) continue;
+    const f=(1-r/R);
+    g.body.wakeUp();
+    g.body.velocity.x+=dx/Math.max(.6,r)*f*22;
+    g.body.velocity.y+=f*13;
+    g.body.velocity.z+=dz/Math.max(.6,r)*f*22;
+    g.body.angularVelocity.set(rnd(-8,8),rnd(-8,8),rnd(-8,8));
+  }
 }
 
 function clearField(){
@@ -791,10 +875,10 @@ function pointerMove(e){
   if(dragId!==e.pointerId) return;
   const dx=e.clientX-lastX, dy=e.clientY-lastY;
   lastX=e.clientX; lastY=e.clientY; moved+=Math.abs(dx)+Math.abs(dy);
-  yaw   -= dx*.0022;
-  pitch -= dy*.0016;
-  yaw=Math.max(-.55,Math.min(.55,yaw));
-  pitch=Math.max(.08,Math.min(.92,pitch));
+  yaw   -= dx*.0030;
+  pitch -= dy*.0013;
+  yaw=Math.max(-1.0,Math.min(1.0,yaw));
+  pitch=Math.max(.10,Math.min(1.02,pitch));
 }
 function pointerUp(e){
   if(dragId!==e.pointerId) return;
@@ -906,14 +990,20 @@ document.getElementById('ammoBtn').addEventListener('click',()=>{
 /* ================= LOOP ================= */
 let last=performance.now(), acc=0;
 const FIXED=1/60;
-const camBase=new THREE.Vector3(3.1,3.9,5.6);
+const camBase=new THREE.Vector3(.9,4.4,5.4);
 const camLook=new THREE.Vector3(0,1.4,-26);
 const camPos=camBase.clone(), camTgt=camLook.clone();
 
+let portrait=false;
 function resize(){
   const w=innerWidth, h=innerHeight;
   renderer.setSize(w,h,false);
-  camera.aspect=w/h; camera.updateProjectionMatrix();
+  const a=w/h;
+  camera.aspect=a;
+  portrait = a<1;
+  // portrait needs a taller field of view or the fort falls off the top
+  camera.fov = a<.62 ? 74 : a<1 ? 64 : (a<1.5 ? 56 : 52);
+  camera.updateProjectionMatrix();
 }
 addEventListener('resize',resize);
 
@@ -977,6 +1067,7 @@ function step(dt){
         s.hit=true;
         const pw=Math.min(1, sp/34);
         digCrater(s.body.position.x, s.body.position.z, s.r*(2.6+pw*2.4), s.r*(.75+pw*1.1));
+        wakeAround(s.body.position.x, s.body.position.y, s.body.position.z, 9);
         puff(s.body.position.x, .3, s.body.position.z, 14+((pw*22)|0), s.r*2.2, TH_DUST, 4.5);
         shake=Math.max(shake, .3+pw*.5);
       }
@@ -1023,8 +1114,10 @@ function render(dt){
     tl=new THREE.Vector3(b.x+dx*5, b.y+1.2, b.z+dz*5);
     k=state==='settle'?1.6:3.6;
   } else {
-    tp=camBase.clone().applyQuaternion(q);
-    tp.y=camBase.y+pitch*1.6;
+    tp=camBase.clone();
+    if(portrait){ tp.x*=.35; tp.y+=1.1; tp.z+=1.6; }
+    tp.applyQuaternion(q);
+    tp.y+=pitch*1.5;
     tl=new THREE.Vector3(0, 1.4+pitch*5.5, -26).applyQuaternion(q);
   }
   camPos.lerp(tp, Math.min(1,dt*k));

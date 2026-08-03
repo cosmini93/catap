@@ -82,6 +82,19 @@
     .btn{font-size:9.5px;padding:7px 10px}
     .val{font-size:12px}
   }
+  /* portrait: stack the readouts, keep the gauge clear of the ammo button */
+  @media (orientation:portrait){
+    .biome{top:calc(58px + env(safe-area-inset-top));font-size:9px;letter-spacing:.24em;
+      max-width:92vw;overflow:hidden;text-overflow:ellipsis}
+    .tl{gap:6px}
+    .tr .shotBox{padding:5px 10px}
+    .tension{width:min(340px,80vw);bottom:calc(78px + env(safe-area-inset-bottom))}
+    .tLabel{bottom:calc(106px + env(safe-area-inset-bottom))}
+    .tHint{bottom:calc(140px + env(safe-area-inset-bottom));max-width:86vw;
+      white-space:normal;line-height:1.7}
+    .br{bottom:calc(22px + env(safe-area-inset-bottom));left:50%;right:auto;
+      transform:translateX(-50%)}
+  }
 </style>
 
 <canvas id="gl"></canvas>
