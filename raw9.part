@@ -1,0 +1,18 @@
+.vy>250)killEnemy(e,650);else{e.y=topOf(b)-e.r;e.vy=0;e.falling=false;e.support=b}break}}if(e.y+e.r>660){if(e.vy>290)killEnemy(e,650);else{e.y=660-e.r;e.vy=0;e.falling=false}}}
+   for(const b of blocks){if(!b.dead&&b.dynamic&&Math.abs(e.x-b.x)<(b.w/2+e.r*.7)&&Math.abs(e.y-b.y)<(b.h/2+e.r*.7)&&Math.hypot(b.vx,b.vy)>150){killEnemy(e,800);break}}
+ }
+ for(const br of barrels){if(br.dead)continue;if(br.support&&!br.support.dead&&!br.support.dynamic){br.x=br.support.x;br.y=topOf(br.support)-br.r}else{br.support=null;br.falling=true;br.vy+=520*dt;br.x+=br.vx*dt;br.y+=br.vy*dt;if(br.y+br.r>660){if(br.vy>370){br.dead=true;explode(br.x,660-br.r,.85)}else{br.y=660-br.r;br.vy*=-.1}}}}
+ for(const q of particles){q.life-=dt;q.vy+=q.grav*dt;q.x+=q.vx*dt;q.y+=q.vy*dt;q.rot+=q.vr*dt}particles=particles.filter(q=>q.life>0);
+ projectiles=projectiles.filter(p=>p.alive||p.trail.length);
+ for(const p of projectiles)if(!p.alive&&p.trail.length)p.trail.shift();
+ if(shotActive&&!projectiles.some(p=>p.alive)){shotActive=false;updateUI();setTimeout(checkLevelState,550)}
+ cameraShake*=Math.pow(.86,dt*60);
+ updateUI();
+}
+function checkLevelState(){if(state!=='play')return;if(totalTargets()===0){endLevel(true)}else if(totalAmmo()===0){endLevel(false)}else showToast(`${totalTargets()} ținte rămase`,950)}
+function endLevel(win){state='ending';if(win){sound('win');const L=LEVELS[levelIndex],earned=shotsUsed<=L.par?3:shotsUsed<=L.par+2?2:1;stars[levelIndex]=Math.max(stars[levelIndex]||0,earned);unlocked=Math.max(unlocked,Math.min(LEVELS.length,levelIndex+2));localStorage.setItem('siegewindStars',JSON.stringify(stars));localStorage.setItem('siegewindUnlocked',String(unlocked));score+=earned*1000;setTimeout(()=>showResult(true,earned),900)}else setTimeout(()=>showResult(false,0),650)}
+function showResult(win,earned){UI.modal.classList.remove('hidden');UI.modalCard.innerHTML=win?`<div style="font-size:54px">${'⭐'.repeat(earned)}</div><h2>Fortificație cucerită!</h2><p>Scor: <b>${Math.round(score).toLocaleString('ro-RO')}</b><br>Lovituri folosite: <b>${shotsUsed}</b></p><button class="primary" id="nextLevel">${levelIndex<LEVELS.length-1?'NIVELUL URMĂTOR':'CAMPANIE ÎNCHEIATĂ'}</button><button class="secondary" id="again">REJOACĂ</button>`:`<div style="font-size:54px">🛡️</div><h2>Asediul a eșuat</h2><p>Ai rămas fără muniție. Încearcă un unghi diferit sau declanșează butoaiele.</p><button class="primary" id="again">ÎNCEARCĂ DIN NOU</button><button class="secondary" id="backLevels">NIVELE</button>`;
+ const again=$('again');if(again)again.onclick=()=>startLevel(levelIndex);const next=$('nextLevel');if(next)next.onclick=()=>levelIndex<LEVELS.length-1?startLevel(levelIndex+1):showLevels();const back=$('backLevels');if(back)back.onclick=showLevels;
+}
+function showMenu(){state='menu';UI.center.classList.remove('hidden');UI.modal.classList.add('hidden');UI.hud.style.display='none';UI.controls.style.display='none'}
+function showLevels(){state='menu';UI.center.classList.add('hidden');UI.modal.cla
