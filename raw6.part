@@ -1,0 +1,18 @@
+yOn(d);addBarrel(1035,620);wall(1035,580,120,35,'wood',50);
+ }else if(kind==='spire'){
+  const base=wall(1040,640,380,55,'ice',120);const b1=wall(1040,565,300,40,'wood',65),p1=wall(930,490,55,160,'ice',70),p2=wall(1150,490,55,160,'ice',70),b2=wall(1040,400,270,36,'wood',65),spire=wall(1040,285,70,190,'ice',90);enemyOn(b1,-105);enemyOn(b1,105);enemyOn(p1);enemyOn(p2);enemyOn(b2,-60);enemyOn(spire,0,true);addBarrel(1040,365,b2);void base;
+ }else if(kind==='fortress'){
+  const base=wall(1030,640,440,60,'dark',190),a=wall(850,535,75,210,'dark',100),b=wall(1210,535,75,210,'dark',100),deck=wall(1030,460,390,45,'wood',75),m1=wall(970,555,75,130,'dark',100),m2=wall(1090,555,75,130,'dark',100);enemyOn(a);enemyOn(b);enemyOn(deck,-125);enemyOn(deck,-42);enemyOn(deck,45,true);enemyOn(deck,125);addBarrel(1030,420,deck);addBarrel(1030,610,base);void m1;void m2;
+ }else{
+  const base=wall(1030,650,470,50,'dark',220);const towers=[845,965,1095,1215].map((x,i)=>wall(x,520-(i%2)*35,65,240+(i%2)*70,'dark',110));const deck=wall(1030,385,430,40,'wood',75),core=wall(1030,545,150,170,'wood',85);towers.forEach((b,i)=>enemyOn(b,0,i===1));enemyOn(deck,-145);enemyOn(deck,-50);enemyOn(deck,55,true);enemyOn(deck,145);addBarrel(915,350,deck);addBarrel(1145,350,deck);void base;void core;
+ }
+ while(enemies.length>count){enemies.pop()}
+}
+
+function startLevel(i){levelIndex=clamp(i,0,LEVELS.length-1);const L=LEVELS[levelIndex];score=0;shotsUsed=0;ammo={...L.shots};selectedAmmo=ammo.pebbles?'pebbles':ammo.stone?'stone':'boulder';wind=L.wind+rand(-.22,.22);projectiles=[];particles=[];cameraShake=0;shotActive=false;levelEndTimer=0;angle=45*Math.PI/180;buildCastle(L.castle,L.enemies);makeClouds();state='play';UI.center.classList.add('hidden');UI.modal.classList.add('hidden');UI.hud.style.display='flex';UI.controls.style.display='flex';UI.hint.style.opacity='1';setTimeout(()=>UI.hint.style.opacity='0',4000);updateUI();showToast(`${REGIONS[L.r].name} • Nivel ${Math.floor(levelIndex/2)+1}-${levelIndex%2+1}`,1600)}
+function resetLevel(){startLevel(levelIndex)}
+function totalTargets(){return enemies.filter(e=>!e.dead).length}
+function totalAmmo(){return ammo.pebbles+ammo.stone+ammo.boulder}
+function updateUI(){UI.level.textContent=`${Math.floor(levelIndex/2)+1}–${levelIndex%2+1}`;UI.score.textContent=Math.round(score).toLocaleString('ro-RO');UI.targets.textContent=totalTargets();UI.wind.textContent=Math.abs(wind).toFixed(1);UI.windArrow.style.transform=`rotate(${wind<0?180:0}deg)`;document.querySelectorAll('.ammo').forEach(b=>{const k=b.dataset.ammo;b.classList.toggle('selected',k===selectedAmmo);b.disabled=ammo[k]<=0;b.querySelector('span').textContent=ammo[k]});UI.angleNeedle.style.transform=`rotate(${90-angle*180/Math.PI}deg)`;UI.angleText.textContent=Math.round(angle*180/Math.PI)+'°'}
+
+function launch(){if(state!=='play'||shotActive||ammo[selectedAmmo]<=0)return;const p=clamp(charge,.08,1);ammo[selectedAmmo]--;shotsUsed++;const speed=selectedAmmo==='boulder'?lerp(490,880,p):selectedAmmo
