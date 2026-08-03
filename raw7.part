@@ -1,0 +1,17 @@
+==='stone'?lerp(520,920,p):lerp(500,860,p);const origin={x:245,y:510};const count=selectedAmmo==='pebbles'?5:1;for(let i=0;i<count;i++){const spread=selectedAmmo==='pebbles'?(i-2)*.036:0;const a=angle+spread;projectiles.push({x:origin.x,y:origin.y,vx:Math.cos(a)*speed,vy:-Math.sin(a)*speed,r:selectedAmmo==='boulder'?24:selectedAmmo==='stone'?15:7,mass:selectedAmmo==='boulder'?2.3:selectedAmmo==='stone'?1:0.28,type:selectedAmmo,alive:true,bounces:0,trail:[],life:0})}shotActive=true;sound('launch',.7+p*.5);cameraShake=4;charge=0;charging=false;UI.fire.classList.remove('charging');UI.chargeBar.classList.remove('on');UI.fire.style.setProperty('--charge','0%');updateUI()}
+function startCharge(e){if(state!=='play'||shotActive)return;e.preventDefault();charging=true;charge=.03;UI.fire.classList.add('charging');UI.chargeBar.classList.add('on');sound('hit',.15)}
+function endCharge(e){if(!charging)return;e.preventDefault();launch()}
+UI.fire.addEventListener('pointerdown',startCharge);addEventListener('pointerup',endCharge);addEventListener('pointercancel',endCharge);
+
+function selectAmmo(k){if(state==='play'&&!shotActive&&ammo[k]>0){selectedAmmo=k;updateUI();sound('hit',.12)}}
+document.querySelectorAll('.ammo').forEach(b=>b.addEventListener('click',()=>selectAmmo(b.dataset.ammo)));
+
+function aimFromEvent(e){if(state!=='play'||charging||shotActive)return;const rect=canvas.getBoundingClientRect(),x=(e.clientX-rect.left-OX)/S,y=(e.clientY-rect.top-OY)/S;if(x<330||y>610)return;const dx=x-245,dy=510-y;angle=clamp(Math.atan2(dy,dx),18*Math.PI/180,72*Math.PI/180);updateUI()}
+canvas.addEventListener('pointerdown',aimFromEvent);canvas.addEventListener('pointermove',e=>{if(e.buttons)aimFromEvent(e)});
+
+function damageBlock(b,amount,ix,iy){if(b.dead)return;b.hp-=amount;b.flash=1;b.dynamic=true;b.vx+=(b.x-ix)*.022*amount/b.maxHp;b.vy-=Math.max(10,amount*.2);b.va+=rand(-.8,.8)*amount/100;if(b.hp<=0){b.dead=true;score+=250;burst(b.x,b.y,b.type==='wood'?'#b9783e':b.type==='ice'?'#c8f3ff':'#a79b8b',18,220);sound('hit',.6)}}
+function killEnemy(e,bonus=500){if(e.dead)return;e.dead=true;e.hit=1;score+=bonus;burst(e.x,e.y,'#f2d177',16,190);sound('hit',.35)}
+function explode(x,y,power=1){sound('boom',power);cameraShake=Math.max(cameraShake,14*power);burst(x,y,'#ffb52e',35,360*power);burst(x,y,'#59443c',24,250*power);for(const b of blocks){const d=Math.hypot(b.x-x,b.y-y);if(d<190*power)damageBlock(b,(1-d/(190*power))*170*power,x,y)}for(const e of enemies){if(!e.dead&&Math.hypot(e.x-x,e.y-y)<180*power)killEnemy(e,800)}for(const br of barrels){if(!br.dead&&Math.hypot(br.x-x,br.y-y)<130*power){br.dead=true;setTimeout(()=>explode(br.x,br.y,.85),70)}}}
+function burst(x,y,color,n=12,speed=150){for(let i=0;i<n;i++){const a=rand(0,TAU),v=rand(speed*.2,speed);particles.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-rand(30,120),life:rand(.45,1.2),max:1.2,size:rand(2,7),color,grav:rand(260,520),rot:rand(0,TAU),vr:rand(-6,6)})}}
+
+function projectileHit(p,b){const ca=Math.cos(-b.angle),sa=Mat
