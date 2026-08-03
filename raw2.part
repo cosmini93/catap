@@ -1,0 +1,34 @@
+ rgba(255,255,255,.14);box-shadow:0 5px 0 #0a111c;margin-left:7px}
+  .levelgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:18px 0 22px}
+  .level{aspect-ratio:1;border-radius:15px;background:linear-gradient(#34465f,#182538);border:1px solid rgba(255,255,255,.13);box-shadow:0 4px 0 #0b111b;color:#fff;position:relative}
+  .level.locked{opacity:.36;filter:grayscale(1)}
+  .level .stars{font-size:10px;color:#ffd86a;display:block;margin-top:4px;letter-spacing:-1px}
+  h2{margin:0 0 8px;color:#ffe499;font-size:27px}
+  p{color:#cad7e9;line-height:1.45}
+  #toast{position:absolute;left:50%;top:25%;transform:translate(-50%,-50%) scale(.9);opacity:0;padding:12px 18px;border-radius:14px;background:rgba(8,13,23,.86);border:1px solid rgba(255,255,255,.17);font-weight:900;text-shadow:0 2px 3px #000;transition:.23s;pointer-events:none;text-align:center;max-width:80vw}
+  #toast.show{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  #hint{position:absolute;left:50%;bottom:127px;transform:translateX(-50%);white-space:nowrap;padding:7px 11px;border-radius:12px;background:rgba(6,10,18,.62);font-size:12px;color:#e7eef8;text-shadow:0 1px 2px #000;transition:opacity .4s}
+  #chargeBar{position:absolute;left:50%;bottom:122px;transform:translateX(-50%);width:min(280px,45vw);height:15px;border-radius:9px;background:rgba(9,13,22,.7);border:1px solid rgba(255,255,255,.2);padding:2px;opacity:0;transition:opacity .2s}
+  #chargeFill{height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,#59d47a,#f2d84e 60%,#f04b2d)}
+  #chargeBar.on{opacity:1}
+  #rotate{z-index:20;text-align:center;padding:20px}
+  #rotate .phone{font-size:68px;display:block;animation:turn 1.8s ease-in-out infinite}
+  @keyframes turn{50%{transform:rotate(90deg)}}
+  @media (orientation:portrait) and (max-width:700px){#rotate{display:grid!important}}
+  @media (orientation:landscape), (min-width:701px){#rotate{display:none!important}}
+  @media (max-height:500px){.hudbox{padding:5px 9px}.hudbox strong{font-size:15px}.iconbtn{width:39px;height:39px}.ammo{width:53px;height:50px}#fire{width:82px;height:82px}#angleDial{width:59px;height:59px}#hint{bottom:105px}#chargeBar{bottom:103px}.card{padding:18px}.logo{font-size:47px}.subtitle{margin:8px auto 15px}.levelgrid{margin:12px 0 17px}}
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="ui">
+  <div class="top" id="hud">
+    <div style="display:flex;gap:7px">
+      <div class="hudbox"><small>NIVEL</small><strong id="levelLabel">1–1</strong></div>
+      <div class="hudbox"><small>SCOR</small><strong id="scoreLabel">0</strong></div>
+      <div class="hudbox"><small>ȚINTE</small><strong id="targetsLabel">0</strong></div>
+      <div class="hudbox"><small>VÂNT</small><strong><span id="windArrow">➜</span> <span id="windLabel">0</span></strong></div>
+    </div>
+    <div class="buttons">
+      <button class="iconbtn" id="restartBtn" aria-label="Repornește">↻</button>
+      <button class="iconbtn" id="fullscreenBtn" aria-label="Ecran com
