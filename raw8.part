@@ -1,0 +1,18 @@
+h.sin(-b.angle),dx=p.x-b.x,dy=p.y-b.y,lx=dx*ca-dy*sa,ly=dx*sa+dy*ca;const cx=clamp(lx,-b.w/2,b.w/2),cy=clamp(ly,-b.h/2,b.h/2),ddx=lx-cx,ddy=ly-cy;return ddx*ddx+ddy*ddy<p.r*p.r}
+function updatePhysics(dt){
+ if(charging){charge=Math.min(1,charge+dt*.58);const q=Math.round(charge*100);UI.fire.style.setProperty('--charge',q+'%');UI.chargeFill.style.width=q+'%';if(charge>=1){UI.fire.textContent='MAXIM!'}else UI.fire.innerHTML='ȚINE<br>APĂSAT'}else UI.fire.innerHTML='ȚINE<br>APĂSAT';
+ clouds.forEach(c=>{c.x+=c.v*dt*(wind<0?-1:1);if(c.x>VW+100)c.x=-120;if(c.x<-150)c.x=VW+100});
+ for(const p of projectiles){if(!p.alive)continue;p.life+=dt;p.trail.push({x:p.x,y:p.y,a:1});if(p.trail.length>16)p.trail.shift();p.vx+=wind*16*dt;p.vy+=620*dt;p.x+=p.vx*dt;p.y+=p.vy*dt;
+   for(const b of blocks){if(!b.dead&&projectileHit(p,b)){const vel=Math.hypot(p.vx,p.vy),impact=p.mass*vel*.105;damageBlock(b,impact,p.x,p.y);burst(p.x,p.y,p.type==='pebbles'?'#ded7c8':'#b2a995',p.type==='boulder'?18:8,p.type==='boulder'?250:130);sound('hit',clamp(impact/100,.2,1));if(p.type==='boulder'&&impact>100){for(const ob of blocks){if(ob!==b&&Math.hypot(ob.x-p.x,ob.y-p.y)<95)damageBlock(ob,impact*.35,p.x,p.y)}}p.vx*=.38;p.vy*=-.24;p.bounces++;if(p.type==='pebbles'||p.bounces>1||vel<180)p.alive=false;cameraShake=Math.max(cameraShake,clamp(impact/16,2,10));break}}
+   for(const e of enemies){if(!e.dead&&Math.hypot(p.x-e.x,p.y-e.y)<p.r+e.r){killEnemy(e,p.type==='pebbles'?650:900);p.vx*=.55;p.vy*=-.3;if(p.type!=='boulder')p.alive=false}}
+   for(const br of barrels){if(!br.dead&&Math.hypot(p.x-br.x,p.y-br.y)<p.r+br.r){br.dead=true;p.alive=false;explode(br.x,br.y,1)}}
+   if(p.y+p.r>660){p.y=660-p.r;if(Math.abs(p.vy)>200&&p.bounces<1){p.vy*=-.25;p.vx*=.55;p.bounces++;sound('hit',.25)}else p.alive=false}
+   if(p.x>1450||p.x<-100||p.y>850||p.life>7)p.alive=false;
+ }
+ // Activate unsupported blocks and integrate dynamic debris
+ for(const b of blocks){if(b.dead)continue;if(!b.dynamic){let supported=topOf(b)+b.h>=655; if(!supported){supported=blocks.some(o=>o!==b&&!o.dead&&Math.abs(o.x-b.x)<(o.w+b.w)*.38&&Math.abs((o.y-o.h/2)-(b.y+b.h/2))<13)}if(!supported)b.dynamic=true}
+   if(b.dynamic){b.vy+=520*dt;b.x+=b.vx*dt;b.y+=b.vy*dt;b.angle+=b.va*dt;b.vx*=Math.pow(.985,dt*60);b.va*=Math.pow(.98,dt*60);if(b.y+b.h/2>660){const imp=Math.abs(b.vy);b.y=660-b.h/2;b.vy*=-.13;b.vx*=.66;b.va*=.65;if(imp>230){burst(b.x,b.y+b.h/2,'#938b7d',5,90);for(const e of enemies){if(!e.dead&&Math.abs(e.x-b.x)<b.w*.55&&e.y>b.y-b.h*.7)killEnemy(e,700)}}if(Math.abs(b.vy)<18)b.vy=0}}
+   if(b.flash>0)b.flash-=dt*4;
+ }
+ // Enemies follow support until support moves/dies, then fall
+ for(const e of enemies){if(e.dead){e.hit-=dt;continue}e.blink+=dt;if(e.support&&!e.support.dead&&!e.support.dynamic){e.x=e.support.x;e.y=topOf(e.support)-e.r}else{e.support=null;e.falling=true;e.vy+=520*dt;e.x+=e.vx*dt;e.y+=e.vy*dt;for(const b of blocks){if(b.dead)continue;if(Math.abs(e.x-b.x)<b.w*.45&&e.y+e.r>=topOf(b)&&e.y+e.r<=topOf(b)+22&&e.vy>0){if(e
