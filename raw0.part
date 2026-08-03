@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+<meta name="theme-color" content="#101a2b" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>Siegewind — Mobile Siege Game</title>
+<style>
+  :root{color-scheme:dark;--gold:#f6c65b;--ink:#10131d;--panel:rgba(10,16,28,.80)}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#08111f;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;touch-action:none;user-select:none}
+  #game{position:fixed;inset:0;width:100%;height:100%;display:block;background:#13233b}
+  #ui{position:fixed;inset:0;pointer-events:none;padding:calc(env(safe-area-inset-top) + 10px) calc(env(safe-area-inset-right) + 10px) calc(env(safe-area-inset-bottom) + 10px) calc(env(safe-area-inset-left) + 10px)}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+  .hudbox{min-width:104px;padding:8px 11px;border:1px solid rgba(255,255,255,.18);border-radius:15px;background:linear-gradient(180deg,rgba(19,28,46,.88),rgba(8,13,23,.78));box-shadow:0 8px 24px rgba(0,0,0,.26),inset 0 1px rgba(255,255,255,.13);backdrop-filter:blur(8px);font-weight:800;text-shadow:0 2px 3px #000}
+  .hudbox small{display:block;color:#b9c7da;font-size:10px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:2px}
+  .hudbox strong{font-size:18px;color:#fff}
+  #windArrow{display:inline-block;transition:transform .2s}
+  .buttons{display:flex;gap:7px;pointer-events:auto}
+  button{border:0;color:white;font-weight:900;letter-spacing:.02em;cursor:pointer;font:inherit}
+  .iconbtn{width:44px;height:44px;border-radius:14px;background:linear-gradient(#31415b,#162235);border:1px solid rgba(255,255,255,.18);box-shadow:0 5px 14px rgba(0,0,0,.3),inset 0 1px rgba(255,255,255,.16);font-size:19px}
+  .iconbtn:active{transform:translateY(2px)}
+  #controls{position:absolute;left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));display:flex;align-items:flex-end;justify-content:space-between;gap:12px;pointer-events:none}
+  #ammoPanel{pointer-events:auto;display:flex;gap:8px;padding:7px;border-radius:18px;background:rgba(8,13,23,.72);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);box-shadow:0 9px 24px rgba(0,0,0,.28)}
+  .ammo{width:60px;height:58px;border-radius:14px;background:linear-gradient(#2b3a50,#151f30);border:2px solid transparent;box-shadow:inset 0 1px rgba(255,255,255,.12);display:grid;place-items:center;position:relative;font-size:27px}
+  .ammo span{position:absolute;right:5px;bottom:3px;min-width:19px;height:19px;padding:0 4px;border-radius:10px;background:#101826;border:1px solid rgba(255,255,255,.2);font-size:1
