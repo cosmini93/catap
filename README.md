@@ -57,8 +57,21 @@ Mecanica e pe tensiune: ții apăsat ca să întinzi praștia, tragi cu degetul 
 ochești, eliberezi la momentul potrivit. Bara urcă până sus și apoi coboară
 înapoi, deci momentul eliberării contează.
 
-Trei ținuturi (dune, creastă înghețată, câmpie de miez de noapte), gărzi cubice
-care se prăbușesc când le lovești, aur și scor salvate pe dispozitiv.
+Terenul e o plasă deformabilă cu relief propriu și sol real în fizică: bolovanii
+sapă gropi cu buză ridicată și pământ răscolit acolo unde cad, iar praful se
+ridică la impact.
+
+La ochire vezi arcul prezis punct cu punct plus inelul de aterizare pe sol, deci
+știi unde cade înainte să eliberezi. Bara de tensiune e segmentată, cu zonă de
+maxim marcată și procent afișat.
+
+Piatra se sparge: la o lovitură destul de tare blocul se sfărâmă în moloz care
+zboară mai departe și dărâmă ce prinde.
+
+Șase tipuri de fort (turn de strajă, poarta gemenilor, donjon, zid lung, cetate
+cu turnuri, citadelă) peste trei ținuturi (dune, creastă înghețată, câmpie de
+miez de noapte), care cresc în mărime și garnizoană pe măsură ce avansezi.
+Aur și scor salvate pe dispozitiv.
 
 Se construiește cu:
 

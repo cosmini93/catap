@@ -26,15 +26,27 @@
     font-family:"Cinzel",Georgia,serif;font-size:10px;letter-spacing:.34em;color:var(--gold);
     opacity:.8;text-shadow:0 2px 12px rgba(0,0,0,.8);white-space:nowrap}
   /* tension bar */
-  .tension{position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translateX(-50%);
-    width:min(340px,54vw);height:15px;border:1px solid rgba(232,176,75,.5);border-radius:3px;
-    background:rgba(10,6,16,.62);overflow:hidden;backdrop-filter:blur(6px)}
-  .tension i{position:absolute;inset:2px;width:0;border-radius:2px;
-    background:linear-gradient(90deg,#E8B04B,#F0803A);transition:none}
-  .tension i.hot{background:linear-gradient(90deg,#F0803A,#E8483A)}
-  .tension em{position:absolute;top:0;bottom:0;left:78%;width:14%;
-    border-left:1px solid rgba(255,240,200,.5);border-right:1px solid rgba(255,240,200,.5);
-    background:rgba(255,230,180,.13)}
+  .tension{position:absolute;left:50%;bottom:calc(26px + env(safe-area-inset-bottom));transform:translateX(-50%);
+    width:min(420px,62vw);height:26px;border:1px solid rgba(232,176,75,.55);border-radius:4px;
+    background:linear-gradient(180deg,rgba(14,9,20,.78),rgba(8,5,12,.86));
+    box-shadow:0 10px 30px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,225,175,.12);
+    overflow:hidden;backdrop-filter:blur(8px)}
+  .tension b{position:absolute;top:0;bottom:0;left:0;right:0;pointer-events:none;
+    background:repeating-linear-gradient(90deg,transparent 0 9.9%,rgba(242,231,207,.16) 9.9% 10%)}
+  .tension i{position:absolute;left:3px;top:3px;bottom:3px;width:0;border-radius:2px;
+    background:linear-gradient(90deg,#C98A2E,#E8B04B 60%,#F7D67E);
+    box-shadow:0 0 16px rgba(232,176,75,.55)}
+  .tension i.hot{background:linear-gradient(90deg,#E8702E,#F79A3A 60%,#FFD27A);
+    box-shadow:0 0 22px rgba(240,120,50,.75)}
+  .tension em{position:absolute;top:0;bottom:0;left:76%;width:16%;
+    border-left:2px solid rgba(255,240,200,.75);border-right:2px solid rgba(255,240,200,.75);
+    background:linear-gradient(180deg,rgba(255,232,180,.22),rgba(255,232,180,.06))}
+  .tension u{position:absolute;top:-1px;bottom:-1px;width:3px;border-radius:2px;left:0;
+    background:#FFF3D6;box-shadow:0 0 12px rgba(255,240,200,.95);text-decoration:none}
+  .tLabel{position:absolute;left:50%;bottom:calc(56px + env(safe-area-inset-bottom));transform:translateX(-50%);
+    font-family:"Cinzel",Georgia,serif;font-size:10px;letter-spacing:.34em;color:var(--gold);
+    opacity:.85;white-space:nowrap;text-shadow:0 2px 10px rgba(0,0,0,.9)}
+  .tLabel span{color:var(--gold-hi);font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums}
   .tHint{position:absolute;left:50%;bottom:calc(44px + env(safe-area-inset-bottom));transform:translateX(-50%);
     font-size:9px;letter-spacing:.2em;text-transform:uppercase;opacity:.5;white-space:nowrap;
     text-shadow:0 2px 8px rgba(0,0,0,.9)}
@@ -65,7 +77,8 @@
     -webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
   .bPanel p{font-size:12px;line-height:1.8;opacity:.7;margin-bottom:22px}
   @media (max-width:900px),(max-height:520px){
-    .tension{width:min(280px,58vw);height:13px}
+    .tension{width:min(320px,62vw);height:20px}
+    .tLabel{font-size:8.5px;bottom:calc(48px + env(safe-area-inset-bottom))}
     .btn{font-size:9.5px;padding:7px 10px}
     .val{font-size:12px}
   }
@@ -84,7 +97,8 @@
   </div>
 
   <div class="tHint">ține apăsat ca să întinzi · trage cu degetul ca să ochești · eliberează la momentul potrivit</div>
-  <div class="tension" id="tension"><em></em><i id="tensionFill"></i></div>
+  <div class="tLabel">TENSIUNE <span id="tensionPct">0%</span></div>
+  <div class="tension" id="tension"><em></em><b></b><i id="tensionFill"></i><u id="tensionHead"></u></div>
 
   <div class="br">
     <button class="btn" id="ammoBtn">MUNIȚIE · <span id="ammoName">BOLOVAN</span></button>

@@ -1,4 +1,5 @@
-import * as THREE from 'three';
+import { AmbientLight, BackSide, BoxGeometry, BufferAttribute, BufferGeometry, CanvasTexture, Color, ConeGeometry, CylinderGeometry, DirectionalLight, DoubleSide, Float32BufferAttribute, Fog, Group, HemisphereLight, IcosahedronGeometry, Mesh, MeshBasicMaterial, MeshLambertMaterial, NearestFilter, Object3D, PCFShadowMap, PCFSoftShadowMap, PerspectiveCamera, PlaneGeometry, Points, PointsMaterial, Quaternion, RepeatWrapping, RingGeometry, SRGBColorSpace, Scene, ShaderMaterial, SphereGeometry, Vector3, WebGLRenderer } from 'three';
+const THREE = { AmbientLight, BackSide, BoxGeometry, BufferAttribute, BufferGeometry, CanvasTexture, Color, ConeGeometry, CylinderGeometry, DirectionalLight, DoubleSide, Float32BufferAttribute, Fog, Group, HemisphereLight, IcosahedronGeometry, Mesh, MeshBasicMaterial, MeshLambertMaterial, NearestFilter, Object3D, PCFShadowMap, PCFSoftShadowMap, PerspectiveCamera, PlaneGeometry, Points, PointsMaterial, Quaternion, RepeatWrapping, RingGeometry, SRGBColorSpace, Scene, ShaderMaterial, SphereGeometry, Vector3, WebGLRenderer };
 import * as CANNON from 'cannon-es';
 
 /* ================= BIOMES ================= */
@@ -39,6 +40,10 @@ world.defaultContactMaterial.restitution = .06;
 
 const matGround = new CANNON.Material('g'), matProp = new CANNON.Material('p');
 world.addContactMaterial(new CANNON.ContactMaterial(matGround, matProp, { friction:.62, restitution:.05 }));
+world.addContactMaterial(new CANNON.ContactMaterial(matProp, matProp, { friction:.5, restitution:.04 }));
+const groundBody = new CANNON.Body({ mass:0, material:matGround, shape:new CANNON.Plane() });
+groundBody.quaternion.setFromEuler(-Math.PI/2, 0, 0);
+world.addBody(groundBody);
 
 /* ================= SHARED ART ================= */
 const rnd = (a,b)=>a+Math.random()*(b-a);
@@ -115,20 +120,63 @@ function buildClouds(){
     clouds.add(c);
   }
 }
+const TSEG=176, TSIZE=460;
+let baseY=null, digY=null, terrainGeo=null, terrainCol=null, groundTone=null, digTone=null;
+function terrainBase(x,z){
+  // flat where the siege happens, rolling further out
+  const edge=Math.max(Math.abs(x)/58, Math.max(-(z+64), z-16)/42);
+  const w=Math.min(1, Math.max(0, (edge-1)/.85));
+  const s=w*w*(3-2*w);
+  return (Math.sin(x*.031)*1.7 + Math.sin(z*.026+1.3)*2.1 + Math.sin((x+z)*.015)*2.6
+        + Math.sin(x*.088+z*.05)*.5) * s;
+}
 function buildGround(B){
-  if(groundMesh){ scene.remove(groundMesh); groundMesh.geometry.dispose(); }
-  const geo=new THREE.CircleGeometry(420, 56);
-  const col=new THREE.Color(B.ground), edge=new THREE.Color(B.groundEdge);
-  const pos=geo.attributes.position, cols=[];
-  for(let i=0;i<pos.count;i++){
-    const d=Math.hypot(pos.getX(i),pos.getY(i))/420;
-    const c=col.clone().lerp(edge, Math.pow(d,1.6));
-    cols.push(c.r,c.g,c.b);
+  if(groundMesh){ scene.remove(groundMesh); groundMesh.geometry.dispose(); groundMesh.material.dispose(); }
+  const geo=new THREE.PlaneGeometry(TSIZE,TSIZE,TSEG,TSEG);
+  geo.rotateX(-Math.PI/2);
+  const pos=geo.attributes.position, n=pos.count;
+  baseY=new Float32Array(n); digY=new Float32Array(n);
+  const cols=new Float32Array(n*3);
+  groundTone=new THREE.Color(B.ground); digTone=new THREE.Color(B.groundEdge).multiplyScalar(.72);
+  const edgeTone=new THREE.Color(B.groundEdge);
+  for(let i=0;i<n;i++){
+    const x=pos.getX(i), z=pos.getZ(i);
+    const h=terrainBase(x,z);
+    baseY[i]=h; pos.setY(i,h);
+    const d=Math.min(1,Math.hypot(x,z)/210);
+    // patchy tone so it never reads as one flat colour
+    const patch=(Math.sin(x*.21)*Math.sin(z*.17)*.5+.5)*.09 + (Math.sin(x*.63+z*.41)*.5+.5)*.05;
+    const c=groundTone.clone().lerp(edgeTone, Math.pow(d,1.5)*.9).offsetHSL(0,0,patch-.06);
+    cols[i*3]=c.r; cols[i*3+1]=c.g; cols[i*3+2]=c.b;
   }
   geo.setAttribute('color', new THREE.Float32BufferAttribute(cols,3));
+  geo.computeVertexNormals();
+  terrainGeo=geo; terrainCol=geo.attributes.color;
   groundMesh=new THREE.Mesh(geo, new THREE.MeshLambertMaterial({ vertexColors:true }));
-  groundMesh.rotation.x=-Math.PI/2; groundMesh.receiveShadow=true;
+  groundMesh.receiveShadow=true;
   scene.add(groundMesh);
+}
+/* impact craters: bowl plus a raised rim, with darkened, disturbed soil */
+function digCrater(cx,cz,R,D){
+  if(!terrainGeo) return;
+  const pos=terrainGeo.attributes.position, n=pos.count, R2=R*1.55;
+  for(let i=0;i<n;i++){
+    const dx=pos.getX(i)-cx, dz=pos.getZ(i)-cz;
+    const r=Math.hypot(dx,dz);
+    if(r>R2) continue;
+    let d;
+    if(r<R) d=-D*Math.pow(Math.cos(r/R*Math.PI*.5), 1.4);
+    else { const t=1-(r-R)/(R2-R); d=D*.3*t*t; }
+    digY[i]=Math.max(-2.4, Math.min(1.0, digY[i]+d));
+    pos.setY(i, baseY[i]+digY[i]);
+    if(digY[i]<-.04){
+      const k=Math.min(1,-digY[i]/1.1);
+      const c=groundTone.clone().lerp(digTone, k);
+      terrainCol.setXYZ(i, c.r, c.g, c.b);
+    }
+  }
+  pos.needsUpdate=true; terrainCol.needsUpdate=true;
+  terrainGeo.computeVertexNormals();
 }
 function lowRock(size, color){
   const g=new THREE.IcosahedronGeometry(size, 0);
@@ -240,6 +288,7 @@ function applyBiome(B){
   ambLight.color.set(B.amb); ambLight.intensity=B.ambI;
   hemiLight.color.set(B.hemi); hemiLight.groundColor.set(B.ground);
   buildGround(B); dressScene(B); buildClouds();
+  TH_DUST=new THREE.Color(B.ground).offsetHSL(0,0,-.05).getHex();
   clouds.visible = !B.moon || true;
 }
 function buildLights(){
@@ -254,6 +303,72 @@ function buildLights(){
   sunLight.shadow.bias=-0.0012; sunLight.shadow.normalBias=.03;
   scene.add(sunLight); scene.add(sunLight.target);
   sunLight.target.position.set(0,0,-34);
+}
+
+/* ================= IMPACT PARTICLES ================= */
+const PMAX=420;
+let dustPts, dustPos, dustVel, dustLife, dustSize, dustHead=0;
+function buildDust(){
+  const c=document.createElement('canvas'); c.width=c.height=64;
+  const g=c.getContext('2d');
+  const rg=g.createRadialGradient(32,32,0,32,32,32);
+  rg.addColorStop(0,'rgba(255,255,255,.95)'); rg.addColorStop(.45,'rgba(255,255,255,.35)');
+  rg.addColorStop(1,'rgba(255,255,255,0)');
+  g.fillStyle=rg; g.fillRect(0,0,64,64);
+  const tex=new THREE.CanvasTexture(c);
+  const geo=new THREE.BufferGeometry();
+  dustPos=new Float32Array(PMAX*3); dustVel=new Float32Array(PMAX*3);
+  dustLife=new Float32Array(PMAX); dustSize=new Float32Array(PMAX);
+  const cols=new Float32Array(PMAX*3), sz=new Float32Array(PMAX);
+  for(let i=0;i<PMAX;i++) dustPos[i*3+1]=-999;
+  geo.setAttribute('position', new THREE.BufferAttribute(dustPos,3));
+  geo.setAttribute('color', new THREE.BufferAttribute(cols,3));
+  geo.setAttribute('psize', new THREE.BufferAttribute(sz,1));
+  const mat=new THREE.PointsMaterial({ size:1, map:tex, transparent:true, depthWrite:false,
+    vertexColors:true, sizeAttenuation:true, opacity:.92 });
+  mat.onBeforeCompile=sh=>{
+    sh.vertexShader='attribute float psize;\n'+sh.vertexShader
+      .replace('gl_PointSize = size;','gl_PointSize = size * psize;');
+  };
+  dustPts=new THREE.Points(geo, mat); dustPts.frustumCulled=false;
+  scene.add(dustPts);
+}
+function puff(x,y,z, n, spread, color, up){
+  if(!dustPts) return;
+  const col=dustPts.geometry.attributes.color, sz=dustPts.geometry.attributes.psize;
+  const c=new THREE.Color(color||0xc8b48c);
+  for(let k=0;k<n;k++){
+    const i=dustHead=(dustHead+1)%PMAX;
+    dustPos[i*3]=x+rnd(-spread,spread);
+    dustPos[i*3+1]=y+rnd(0,spread*.6);
+    dustPos[i*3+2]=z+rnd(-spread,spread);
+    dustVel[i*3]=rnd(-1,1)*spread*.9;
+    dustVel[i*3+1]=rnd(.4,1)*(up||3.2);
+    dustVel[i*3+2]=rnd(-1,1)*spread*.9;
+    dustLife[i]=rnd(.7,1.5); dustSize[i]=rnd(.8,2.6);
+    const cc=c.clone().offsetHSL(0,0,rnd(-.06,.06));
+    col.setXYZ(i,cc.r,cc.g,cc.b); sz.setX(i,dustSize[i]);
+  }
+  col.needsUpdate=true; sz.needsUpdate=true;
+}
+function stepDust(dt){
+  if(!dustPts) return;
+  const pos=dustPts.geometry.attributes.position, sz=dustPts.geometry.attributes.psize;
+  let any=false;
+  for(let i=0;i<PMAX;i++){
+    if(dustLife[i]<=0) continue;
+    any=true;
+    dustLife[i]-=dt*.85;
+    dustVel[i*3+1]-=dt*3.4;
+    dustVel[i*3]*=.965; dustVel[i*3+2]*=.965;
+    dustPos[i*3]+=dustVel[i*3]*dt;
+    dustPos[i*3+1]+=dustVel[i*3+1]*dt;
+    dustPos[i*3+2]+=dustVel[i*3+2]*dt;
+    if(dustPos[i*3+1]<.1){ dustPos[i*3+1]=.1; dustVel[i*3+1]*=-.2; }
+    sz.setX(i, Math.max(0, dustSize[i]*Math.min(1,dustLife[i]*1.4)*(1+(1.4-dustLife[i])*.5)));
+    if(dustLife[i]<=0){ dustPos[i*3+1]=-999; sz.setX(i,0); }
+  }
+  if(any){ pos.needsUpdate=true; sz.needsUpdate=true; }
 }
 
 /* ================= DESTRUCTIBLE PROPS ================= */
@@ -278,8 +393,8 @@ function addBox(w,h,d, x,y,z, mass, material, opts={}){
   if(opts.rotY) body.quaternion.setFromEuler(0,opts.rotY,0);
   body.allowSleep=true; body.sleep();
   world.addBody(body);
-  const p={ mesh, body, kind:opts.kind||'stone', scored:false, y0:y };
-  props.push(p); return p;
+  const p={ mesh, body, kind:opts.kind||'stone', scored:false, y0:y, broken:false, frag:false };
+  props.push(p); armFracture(p); return p;
 }
 
 /* --- blocky guard: cube head with a painted face --- */
@@ -332,6 +447,48 @@ function makeGuard(x,y,z, facing){
   guards.push(gd); return gd;
 }
 
+/* --- stone shatters into rubble under a hard hit --- */
+let fragBudget=90;
+function fracture(p, impulseDir){
+  if(p.broken) return; p.broken=true;
+  const pos=p.body.position, vel=p.body.velocity;
+  const w=p.mesh.scale.x, h=p.mesh.scale.y, d=p.mesh.scale.z;
+  propGroup.remove(p.mesh); world.removeBody(p.body);
+  const idx=props.indexOf(p); if(idx>=0) props.splice(idx,1);
+  if(!p.scored){
+    p.scored=true;
+    score+=p.kind==='stone'?70:45; gold+=p.kind==='stone'?14:9;
+    hud.score.textContent=score; hud.gold.textContent=gold;
+  }
+  puff(pos.x,pos.y,pos.z, 9, Math.max(w,h)*.7, p.kind==='stone'?0xc4bdaf:0x9a6f42, 2.6);
+  if(fragBudget<=0) return;
+  const n=Math.min(fragBudget, 4);
+  fragBudget-=n;
+  const mat=p.kind==='stone'?MAT.stone:MAT.wood;
+  for(let i=0;i<n;i++){
+    const fw=w*rnd(.34,.5), fh=h*rnd(.36,.55), fd=d*rnd(.34,.5);
+    const m=new THREE.Mesh(boxGeo, mat);
+    m.scale.set(fw,fh,fd); m.castShadow=true; m.receiveShadow=true; propGroup.add(m);
+    const bx=pos.x+rnd(-w,w)*.3, by=pos.y+rnd(-h,h)*.3, bz=pos.z+rnd(-d,d)*.3;
+    const body=new CANNON.Body({ mass:Math.max(3,6*fw*fh*fd), material:matProp,
+      shape:new CANNON.Box(new CANNON.Vec3(fw/2,fh/2,fd/2)),
+      position:new CANNON.Vec3(bx,by,bz), sleepSpeedLimit:.5, sleepTimeLimit:.4 });
+    body.velocity.set(vel.x*.65+rnd(-4,4), vel.y*.5+rnd(1,5), vel.z*.65+rnd(-4,4));
+    body.angularVelocity.set(rnd(-9,9),rnd(-9,9),rnd(-9,9));
+    body.allowSleep=true; world.addBody(body);
+    props.push({ mesh:m, body, kind:p.kind, scored:true, y0:by, frag:true, broken:true });
+  }
+}
+function armFracture(p){
+  p.body.addEventListener('collide', e=>{
+    if(p.broken||p.frag) return;
+    let v=0;
+    try{ v=Math.abs(e.contact.getImpactVelocityAlongNormal()); }catch(_){ return; }
+    const lim = p.kind==='stone' ? 13 : 10;
+    if(v>lim) fracture(p);
+  });
+}
+
 /* --- fort assembly --- */
 function stoneTower(cx,cz, cols, rows, bw=1.25, bh=.66, bd=1.05){
   const x0=cx-(cols-1)*bw/2;
@@ -379,12 +536,20 @@ function clearField(){
   props=[]; guards=[];
 }
 
+const FORTS=[
+ {name:'TURNUL DE STRAJĂ'},
+ {name:'POARTA GEMENILOR'},
+ {name:'DONJONUL'},
+ {name:'ZIDUL LUNG'},
+ {name:'CETATEA CU TURNURI'},
+ {name:'CITADELA'}
+];
 function buildFort(seed){
   clearField();
-  const Z=-34;
-  const kind=seed%3;
+  const Z=-34, kind=seed%FORTS.length, tier=Math.floor(seed/FORTS.length);
+  const extra=Math.min(3,tier);            // garrison grows on later passes
   if(kind===0){
-    const top=stoneTower(0,Z,4,7);
+    const top=stoneTower(0,Z,4,6+extra);
     timberRoof(0,Z,top,2.6);
     makeGuard(0, top+.05, Z, Math.PI);
     makeGuard(-4.6,0,Z+2.4, Math.PI*.9);
@@ -392,17 +557,17 @@ function buildFort(seed){
     palisade(-8.4,Z+3.2,6,0); palisade(8.4,Z+3.2,6,0);
     barrel(-2.6,Z+3.4); barrel(2.9,Z+3.1); barrel(-3.3,Z+4.2);
   } else if(kind===1){
-    const a=stoneTower(-6.2,Z,3,6), b=stoneTower(6.2,Z,3,6);
+    const a=stoneTower(-6.2,Z,3,6+extra), b=stoneTower(6.2,Z,3,6+extra);
     timberRoof(-6.2,Z,a,2.0); timberRoof(6.2,Z,b,2.0);
-    for(let i=0;i<5;i++) addBox(1.25,.62,1.0, -2.4+i*1.2, .32, Z, 22, MAT.stone,{kind:'stone'});
-    for(let i=0;i<5;i++) addBox(1.25,.62,1.0, -2.4+i*1.2, .96, Z, 22, MAT.stone,{kind:'stone'});
+    for(let r=0;r<2;r++) for(let i=0;i<5;i++)
+      addBox(1.25,.62,1.0, -2.4+i*1.2, .32+r*.64, Z, 22, MAT.stone,{kind:'stone'});
     addBox(6.6,.3,1.1, 0, 1.44, Z, 14, MAT.beam, {kind:'wood'});
     makeGuard(-6.2,a+.05,Z,Math.PI); makeGuard(6.2,b+.05,Z,Math.PI);
     makeGuard(0,1.6,Z,Math.PI);
     makeGuard(-9.5,0,Z+3, Math.PI); makeGuard(9.2,0,Z+2.6, Math.PI);
     barrel(0,Z+3.6); barrel(-4,Z+4.1);
-  } else {
-    const top=stoneTower(0,Z,5,5,1.25,.66,1.4);
+  } else if(kind===2){
+    const top=stoneTower(0,Z,5,5+extra,1.25,.66,1.4);
     timberRoof(0,Z,top,3.2);
     const l=stoneTower(-7.6,Z-1.5,2,4), r=stoneTower(7.6,Z-1.5,2,4);
     makeGuard(0,top+.05,Z,Math.PI);
@@ -411,8 +576,51 @@ function buildFort(seed){
     makeGuard(0,0,Z+4.6,Math.PI);
     palisade(0,Z+5.6,9,0);
     barrel(-5.4,Z+3.2); barrel(5.6,Z+3.4);
+  } else if(kind===3){
+    // a long curtain wall with a gate and walkway
+    for(let r=0;r<4+extra;r++)
+      for(let i=0;i<11;i++){
+        if(r<2 && i>=4 && i<=6) continue;          // gate opening
+        addBox(1.25,.64,1.1, -6.25+i*1.25, .34+r*.64, Z, 22, MAT.stone,{kind:'stone'});
+      }
+    addBox(4.4,.34,1.3, 0, .34+2*.64, Z, 16, MAT.beam,{kind:'wood'});
+    const wt=.34+(4+extra)*.64;
+    for(const x of [-6.25,6.25]) makeGuard(x, wt, Z, Math.PI);
+    makeGuard(0, wt, Z, Math.PI);
+    makeGuard(-8.8,0,Z+2.6,Math.PI); makeGuard(8.6,0,Z+2.4,Math.PI);
+    barrel(-2.2,Z+3.4); barrel(2.4,Z+3.6); barrel(0,Z+4.6);
+  } else if(kind===4){
+    const a=stoneTower(-8.5,Z-1,3,6+extra), b=stoneTower(8.5,Z-1,3,6+extra);
+    const c=stoneTower(0,Z+1,4,4+extra);
+    timberRoof(-8.5,Z-1,a,2.1); timberRoof(8.5,Z-1,b,2.1); timberRoof(0,Z+1,c,2.6);
+    for(let r=0;r<3;r++) for(let i=0;i<4;i++){
+      addBox(1.2,.62,1.0, -6.0+i*1.25, .32+r*.64, Z-1, 22, MAT.stone,{kind:'stone'});
+      addBox(1.2,.62,1.0,  2.6+i*1.25, .32+r*.64, Z-1, 22, MAT.stone,{kind:'stone'});
+    }
+    makeGuard(-8.5,a+.05,Z-1,Math.PI); makeGuard(8.5,b+.05,Z-1,Math.PI);
+    makeGuard(0,c+.05,Z+1,Math.PI);
+    makeGuard(-4,0,Z+4,Math.PI); makeGuard(4.2,0,Z+3.6,Math.PI);
+    palisade(-12,Z+4,7,0); palisade(12,Z+4,7,0);
+    barrel(-6,Z+4.2); barrel(6.2,Z+4.4);
+  } else {
+    // citadel: keep on a raised stone platform, flanking towers, outer wall
+    for(let r=0;r<2;r++) for(let i=0;i<8;i++)
+      addBox(1.3,.66,3.2, -4.55+i*1.3, .34+r*.66, Z-1, 30, MAT.stone,{kind:'stone'});
+    const keepBase=.34+2*.66;
+    for(let r=0;r<5+extra;r++) for(let i=0;i<4;i++)
+      addBox(1.25,.64,1.2, -1.9+i*1.25, keepBase+.34+r*.64, Z-1, 22, MAT.stone,{kind:'stone'});
+    const kt=keepBase+.34+(5+extra)*.64;
+    timberRoof(0,Z-1,kt-.3,2.8);
+    const l=stoneTower(-9.5,Z,2,5), r2=stoneTower(9.5,Z,2,5);
+    makeGuard(0,kt,Z-1,Math.PI);
+    makeGuard(-9.5,l+.05,Z,Math.PI); makeGuard(9.5,r2+.05,Z,Math.PI);
+    makeGuard(-5,keepBase,Z-1,Math.PI); makeGuard(5,keepBase,Z-1,Math.PI);
+    makeGuard(0,0,Z+5,Math.PI);
+    palisade(0,Z+6.4,13,0);
+    barrel(-7,Z+3.6); barrel(7.2,Z+3.8); barrel(0,Z+3.2);
   }
-  debrisBudget=0;
+  debrisBudget=0; fragBudget=90;
+  return FORTS[kind].name;
 }
 
 /* ================= CATAPULT (foreground rig) ================= */
@@ -421,50 +629,114 @@ rig.add(cata);
 let slingPouch, slingRope, armPivot;
 
 function buildCatapult(){
-  const frameMat = new THREE.MeshLambertMaterial({ color:0x9a6f42, map:TEX.wood });
-  // A-frame legs
-  for(const s of [-1,1]){
-    const leg=new THREE.Mesh(boxGeo, frameMat);
-    leg.scale.set(.22,2.5,.22); leg.position.set(s*1.15,-.55,0);
-    leg.rotation.z=s*.14; cata.add(leg);
-    const foot=new THREE.Mesh(boxGeo, frameMat);
-    foot.scale.set(.3,.22,1.5); foot.position.set(s*1.3,-1.75,0); cata.add(foot);
+  const oak=new THREE.MeshLambertMaterial({ color:0x8f6236, map:TEX.wood });
+  const dark=new THREE.MeshLambertMaterial({ color:0x5e421f, map:TEX.wood });
+  const iron=MAT.iron;
+
+  for(const sd of [-1,1]){
+    const rail=new THREE.Mesh(boxGeo, dark);
+    rail.scale.set(.26,.26,3.2); rail.position.set(sd*1.5,-.62,.5); cata.add(rail);
+    const post=new THREE.Mesh(boxGeo, oak);
+    post.scale.set(.24,1.5,.24); post.position.set(sd*1.5,.1,-.35);
+    post.rotation.x=-.2; cata.add(post);
+    const brace=new THREE.Mesh(boxGeo, oak);
+    brace.scale.set(.19,1.5,.19); brace.position.set(sd*1.5,-.05,.9);
+    brace.rotation.x=.55; cata.add(brace);
+    const wheel=new THREE.Mesh(new THREE.CylinderGeometry(.46,.46,.2,12), dark);
+    wheel.rotation.z=Math.PI/2; wheel.position.set(sd*1.62,-.9,1.5); cata.add(wheel);
+    const hub=new THREE.Mesh(new THREE.CylinderGeometry(.12,.12,.26,8), iron);
+    hub.rotation.z=Math.PI/2; hub.position.copy(wheel.position); cata.add(hub);
+    for(let k=0;k<6;k++){
+      const sp=new THREE.Mesh(boxGeo, oak);
+      sp.scale.set(.07,.8,.07); sp.position.copy(wheel.position);
+      sp.rotation.x=k*Math.PI/6; cata.add(sp);
+    }
   }
-  const beam=new THREE.Mesh(boxGeo, frameMat);
-  beam.scale.set(2.9,.26,.3); beam.position.set(0,.34,0); cata.add(beam);
-  for(const s of [-1,1]){
-    const band=new THREE.Mesh(boxGeo, MAT.iron);
-    band.scale.set(.16,.34,.36); band.position.set(s*.95,.34,0); cata.add(band);
-    const rivet=new THREE.Mesh(new THREE.SphereGeometry(.055,6,5), MAT.iron);
-    rivet.position.set(s*.95,.42,.19); cata.add(rivet);
+  const beam=new THREE.Mesh(boxGeo, oak);
+  beam.scale.set(3.4,.3,.34); beam.position.set(0,.62,-.3); cata.add(beam);
+  for(const sd of [-1,1]){
+    const band=new THREE.Mesh(boxGeo, iron);
+    band.scale.set(.18,.4,.42); band.position.set(sd*1.2,.62,-.3); cata.add(band);
   }
-  // rope binding
-  const rope=new THREE.Mesh(new THREE.CylinderGeometry(.13,.13,.5,8),
-    new THREE.MeshLambertMaterial({ color:0xe8dcc0 }));
-  rope.position.set(0,.1,0); cata.add(rope);
-  slingRope=rope;
-  // leather pouch holding the stone
-  armPivot=new THREE.Object3D(); armPivot.position.set(0,.34,0); cata.add(armPivot);
-  slingPouch=new THREE.Group(); slingPouch.position.y=.42; armPivot.add(slingPouch);
-  // leather cradle
+  const pad=new THREE.Mesh(boxGeo, new THREE.MeshLambertMaterial({color:0x6b4a2c}));
+  pad.scale.set(2.2,.16,.4); pad.position.set(0,.8,-.3); cata.add(pad);
+
+  const skein=new THREE.Mesh(new THREE.CylinderGeometry(.34,.34,2.1,10),
+    new THREE.MeshLambertMaterial({ color:0xd8c9a6 }));
+  skein.rotation.z=Math.PI/2; skein.position.set(0,.55,-.1); cata.add(skein);
+  for(const sd of [-1,1]){
+    const cap=new THREE.Mesh(new THREE.CylinderGeometry(.4,.4,.22,10), iron);
+    cap.rotation.z=Math.PI/2; cap.position.set(sd*1.1,.55,-.1); cata.add(cap);
+  }
+
+  armPivot=new THREE.Object3D(); armPivot.position.set(0,.55,-.1); cata.add(armPivot);
+  const arm=new THREE.Mesh(boxGeo, oak);
+  arm.scale.set(.3,.3,2.6); arm.position.set(0,0,1.3); armPivot.add(arm);
+  const armIron=new THREE.Mesh(boxGeo, iron);
+  armIron.scale.set(.38,.38,.22); armIron.position.set(0,0,2.4); armPivot.add(armIron);
+
+  slingPouch=new THREE.Group(); slingPouch.position.set(0,.3,2.5); armPivot.add(slingPouch);
   const hide=new THREE.MeshLambertMaterial({ color:0x6b4a2c, side:THREE.DoubleSide });
-  const cradle=new THREE.Mesh(new THREE.SphereGeometry(.46,16,10,0,Math.PI*2,Math.PI*.42,Math.PI*.58), hide);
-  cradle.position.y=-.04; slingPouch.add(cradle);
-  // the stone itself
-  const sg=new THREE.IcosahedronGeometry(.4,1), sp=sg.attributes.position;
-  for(let i=0;i<sp.count;i++) sp.setXYZ(i, sp.getX(i)*rnd(.88,1.12), sp.getY(i)*rnd(.88,1.12), sp.getZ(i)*rnd(.88,1.12));
+  const cradle=new THREE.Mesh(new THREE.SphereGeometry(.5,16,10,0,Math.PI*2,Math.PI*.44,Math.PI*.56), hide);
+  slingPouch.add(cradle);
+  const sg=new THREE.IcosahedronGeometry(.42,1), sp2=sg.attributes.position;
+  for(let i2=0;i2<sp2.count;i2++) sp2.setXYZ(i2, sp2.getX(i2)*rnd(.88,1.12), sp2.getY(i2)*rnd(.88,1.12), sp2.getZ(i2)*rnd(.88,1.12));
   sg.computeVertexNormals();
   const stone=new THREE.Mesh(sg, new THREE.MeshLambertMaterial({ color:0xa9a396, flatShading:true }));
-  stone.position.y=.1; slingPouch.add(stone);
-  // rope strands running back to the frame
-  const ropeMat=new THREE.MeshLambertMaterial({ color:0xd8c9a6 });
-  for(const s2 of [-1,1]){
-    const r2=new THREE.Mesh(new THREE.CylinderGeometry(.035,.035,.9,5), ropeMat);
-    r2.position.set(s2*.34,.1,-.05); r2.rotation.z=s2*.32; slingPouch.add(r2);
+  stone.position.y=.16; slingPouch.add(stone);
+
+  cata.traverse(o=>{ if(o.isMesh){ o.castShadow=true; o.receiveShadow=true; } });
+  cata.position.set(0,.85,-3.6);
+}
+
+/* ---- aiming aids: predicted arc and landing ring ---- */
+const traj=new THREE.Group(); scene.add(traj);
+const TDOTS=26, trajDots=[];
+let landRing;
+function buildAim(){
+  const dotGeo=new THREE.SphereGeometry(.17,7,6);
+  for(let i=0;i<TDOTS;i++){
+    const m=new THREE.Mesh(dotGeo, new THREE.MeshBasicMaterial({
+      color:0xFFE0A0, transparent:true, opacity:.9, depthWrite:false }));
+    m.visible=false; traj.add(m); trajDots.push(m);
   }
-  slingPouch.traverse(o=>{ if(o.isMesh) o.castShadow=true; });
-  cata.traverse(o=>{ if(o.isMesh) o.castShadow=true; });
-  cata.position.set(0,1.35,-2.6);
+  landRing=new THREE.Mesh(new THREE.RingGeometry(1.0,1.35,28),
+    new THREE.MeshBasicMaterial({ color:0xFFC65A, transparent:true, opacity:.75,
+      side:THREE.DoubleSide, depthWrite:false }));
+  landRing.rotation.x=-Math.PI/2; landRing.visible=false; traj.add(landRing);
+}
+function updateAim(){
+  if(state!=='aim'){ trajDots.forEach(d=>d.visible=false); if(landRing) landRing.visible=false; return; }
+  const A=AMMO[ammoKind];
+  const dir=new THREE.Vector3(0,0,-1)
+    .applyAxisAngle(new THREE.Vector3(1,0,0), pitch)
+    .applyAxisAngle(new THREE.Vector3(0,1,0), yaw);
+  const v=A.speed*(.42+power*.58);
+  const o=new THREE.Vector3(0,2.5,-2.6).applyAxisAngle(new THREE.Vector3(0,1,0), yaw);
+  let px=o.x, py=o.y, pz=o.z;
+  let vx=dir.x*v, vy=dir.y*v+2.2, vz=dir.z*v;
+  const h=1/24;
+  let idx=0, landed=false;
+  for(let stp=0; stp<300 && idx<TDOTS; stp++){
+    vy-=22*h; px+=vx*h; py+=vy*h; pz+=vz*h;
+    if(py<=0){ landed=true;
+      if(landRing){
+        landRing.position.set(px,.07,pz); landRing.visible=true;
+        const dr=camera.position.distanceTo(landRing.position);
+        landRing.scale.setScalar(Math.max(.7, Math.min(2.6, dr*.022)));
+      }
+      break; }
+    if(stp%4===0){
+      const d=trajDots[idx++];
+      d.position.set(px,py,pz); d.visible=true;
+      const t=idx/TDOTS;
+      d.material.opacity=.92*(1-t*.45);
+      const dist=camera.position.distanceTo(d.position);
+      d.scale.setScalar(Math.max(.5, Math.min(3.4, dist*.035)));
+    }
+  }
+  for(let i=idx;i<TDOTS;i++) trajDots[i].visible=false;
+  if(!landed&&landRing) landRing.visible=false;
 }
 
 /* ================= AMMO ================= */
@@ -480,7 +752,7 @@ function fireShot(pw){
   const dir=new THREE.Vector3(0,0,-1)
     .applyAxisAngle(new THREE.Vector3(1,0,0), pitch)
     .applyAxisAngle(new THREE.Vector3(0,1,0), rig.rotation.y);
-  const origin=new THREE.Vector3(0,2.1,-2.6).applyAxisAngle(new THREE.Vector3(0,1,0), rig.rotation.y);
+  const origin=new THREE.Vector3(0,2.5,-2.6).applyAxisAngle(new THREE.Vector3(0,1,0), rig.rotation.y);
   const v=A.speed*(.42+pw*.58);
   for(let i=0;i<A.count;i++){
     const d=dir.clone();
@@ -497,15 +769,16 @@ function fireShot(pw){
     body.velocity.set(d.x*v, d.y*v+2.2, d.z*v);
     body.angularVelocity.set(rnd(-4,4),rnd(-4,4),rnd(-4,4));
     world.addBody(body);
-    shots.push({ mesh, body, life:0 });
+    shots.push({ mesh, body, life:0, r:A.r, hit:false });
   }
   shotsLeft--; hud.shots.textContent=shotsLeft;
   state='fly'; flyT=0; chase=shots[0];
-  recoil=1; power=0; powerDir=1;
+  recoil=1; power=0; powerDir=1; armVel=-.55;
 }
 
 /* ================= AIM / TENSION INPUT ================= */
 let pitch=.42, yaw=0, charging=false, power=0, powerDir=1, recoil=0;
+let armAng=-.58, armVel=0, armTarget=-.58;
 let dragId=null, lastX=0, lastY=0, moved=0;
 
 function pointerDown(e){
@@ -538,6 +811,8 @@ canvas.addEventListener('contextmenu',e=>e.preventDefault());
 const hud={
   bar:document.getElementById('tension'),
   fill:document.getElementById('tensionFill'),
+  head:document.getElementById('tensionHead'),
+  pct:document.getElementById('tensionPct'),
   sweet:document.getElementById('sweet'),
   gold:document.getElementById('gold'),
   shots:document.getElementById('shots'),
@@ -549,7 +824,8 @@ const hud={
   bBtn:document.getElementById('bBtn'),
   score:document.getElementById('score')
 };
-let gold=0, score=0, level=0, state='aim', flyT=0, chase=null, settle=0;
+let gold=0, score=0, level=0, state='aim', flyT=0, chase=null, settle=0, shake=0;
+let TH_DUST=0xc8b48c;
 const SAVE='catapult3d.v1';
 function load(){ try{ const d=JSON.parse(localStorage.getItem(SAVE)||'{}');
   gold=d.gold||0; level=d.level||0; }catch(e){} }
@@ -586,7 +862,9 @@ function checkTargets(){
     if(p.scored) continue;
     const moved=Math.abs(p.body.position.y-p.y0)>.8 || p.body.velocity.length()>4.5;
     if(moved){ p.scored=true; score+=p.kind==='stone'?40:25; gold+=p.kind==='stone'?8:5;
-      hud.score.textContent=score; hud.gold.textContent=gold; }
+      hud.score.textContent=score; hud.gold.textContent=gold;
+      puff(p.body.position.x,p.body.position.y,p.body.position.z, 5, .8,
+           p.kind==='stone'?0xbdb6a8:0x9a6f42, 2.4); }
   }
 }
 function allDown(){ return guards.length>0 && guards.every(g=>g.dead); }
@@ -598,9 +876,9 @@ function startLevel(){
   const keys=Object.keys(BIOMES);
   const B=BIOMES[keys[level%keys.length]];
   applyBiome(B);
-  hud.biome.textContent=B.name;
-  buildFort(level);
-  shotsLeft=6+Math.min(3,(level/3)|0); hud.shots.textContent=shotsLeft;
+  const fortName=buildFort(level);
+  hud.biome.textContent='ASEDIUL '+(level+1)+' · '+fortName;
+  shotsLeft=6+Math.min(4,(level/2)|0); hud.shots.textContent=shotsLeft;
   score=0; hud.score.textContent=0; hud.gold.textContent=gold;
   yaw=0; pitch=.42; power=0; state='aim';
   rig.rotation.y=0;
@@ -628,8 +906,8 @@ document.getElementById('ammoBtn').addEventListener('click',()=>{
 /* ================= LOOP ================= */
 let last=performance.now(), acc=0;
 const FIXED=1/60;
-const camBase=new THREE.Vector3(0,3.0,4.6);
-const camLook=new THREE.Vector3(0,2.2,-20);
+const camBase=new THREE.Vector3(3.1,3.9,5.6);
+const camLook=new THREE.Vector3(0,1.4,-26);
 const camPos=camBase.clone(), camTgt=camLook.clone();
 
 function resize(){
@@ -660,14 +938,23 @@ function step(dt){
     if(power>=1){ power=1; powerDir=-1; }
     else if(power<=0 && powerDir<0){ power=0; powerDir=1; }
   }
-  hud.fill.style.width=(power*100)+'%';
-  hud.fill.classList.toggle('hot', power>.82);
+  const pct=Math.round(power*100);
+  hud.fill.style.width=pct+'%';
+  hud.fill.classList.toggle('hot', power>.76);
+  if(hud.head) hud.head.style.left='calc('+pct+'% - 1px)';
+  if(hud.pct) hud.pct.textContent=pct+'%';
 
   recoil*=.86;
-  cata.position.z=-2.6+recoil*.5;
-  cata.rotation.x=-recoil*.16;
-  if(armPivot) armPivot.rotation.x = -power*.5 + recoil*.5;
+  cata.position.z=-3.6+recoil*.6;
+  cata.rotation.x=-recoil*.1;
+  // the arm cocks back with tension and whips forward on release
+  armTarget = charging ? -.58+power*.82 : (state==='aim' ? -.58 : -2.25);
+  armVel += (armTarget-armAng)*(state==='aim'?.24:.4);
+  armVel *= .76; armAng += armVel;
+  if(armAng<-2.4){ armAng=-2.4; armVel*=-.22; }
+  if(armPivot) armPivot.rotation.x = armAng;
   if(slingPouch) slingPouch.visible = state==='aim';
+  updateAim();
 
   world.step(FIXED, dt, 3);
 
@@ -684,6 +971,16 @@ function step(dt){
     s.mesh.position.copy(s.body.position);
     s.mesh.quaternion.copy(s.body.quaternion);
     s.life+=dt;
+    if(!s.hit && s.body.position.y < s.r+.25){
+      const sp=s.body.velocity.length();
+      if(sp>6){
+        s.hit=true;
+        const pw=Math.min(1, sp/34);
+        digCrater(s.body.position.x, s.body.position.z, s.r*(2.6+pw*2.4), s.r*(.75+pw*1.1));
+        puff(s.body.position.x, .3, s.body.position.z, 14+((pw*22)|0), s.r*2.2, TH_DUST, 4.5);
+        shake=Math.max(shake, .3+pw*.5);
+      }
+    }
     if(s.body.position.y<-30 || s.life>14){
       scene.remove(s.mesh); world.removeBody(s.body); shots.splice(i,1);
       if(chase===s) chase=null;
@@ -692,6 +989,8 @@ function step(dt){
   checkTargets();
 
   for(const c of clouds.children) c.rotation.y+=c.userData.spin*dt;
+  stepDust(dt);
+  shake*=.90;
 
   // flow
   if(state==='fly'){
@@ -725,8 +1024,8 @@ function render(dt){
     k=state==='settle'?1.6:3.6;
   } else {
     tp=camBase.clone().applyQuaternion(q);
-    tp.y=camBase.y+pitch*1.7;
-    tl=new THREE.Vector3(0, 1.6+pitch*9, -22).applyQuaternion(q);
+    tp.y=camBase.y+pitch*1.6;
+    tl=new THREE.Vector3(0, 1.4+pitch*5.5, -26).applyQuaternion(q);
   }
   camPos.lerp(tp, Math.min(1,dt*k));
   camTgt.lerp(tl, Math.min(1,dt*(k+.6)));
@@ -747,7 +1046,7 @@ function loop(now){
 }
 
 /* ================= BOOT ================= */
-buildSky(); buildLights(); buildCatapult();
+buildSky(); buildLights(); buildDust(); buildCatapult(); buildAim();
 load(); resize(); startLevel();
 hud.ammo.textContent=AMMO[ammoKind].label;
 requestAnimationFrame(loop);
