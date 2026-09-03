@@ -73,11 +73,28 @@ cu turnuri, citadelă) peste trei ținuturi (dune, creastă înghețată, câmpi
 miez de noapte), care cresc în mărime și garnizoană pe măsură ce avansezi.
 Aur și scor salvate pe dispozitiv.
 
-Se construiește cu:
+### Modelele (Blender)
+
+Recuzita nu mai e făcută din cutii în cod: piatra, lemnul, butoiul, bolovanul,
+stânca, soldatul, scutul și roata sunt modelate procedural în Blender de
+`src3d/blender/build_assets.py` și exportate ca un singur `src3d/assets.glb`.
+
+Fiecare model primește muchii teșite — de asta prind lumină în loc să arate
+plat — iar ocluzia ambientală e coaptă în culorile de vertex prin ray casting,
+deci nu costă nimic la randare. Fața soldatului e tăiată în model și înnegrită
+tot prin culori de vertex, fără texturi.
+
+Nu există fișiere binare de sursă: totul se regenerează din script.
+
+## Construire
 
 ```sh
-npm pack three@0.169.0 cannon-es@0.20.0     # sursele bibliotecilor
-sh src3d/build.sh <esbuild> <three.module.min.js> <cannon-es.js> catapult3d.html
+npm install                       # three, cannon-es, esbuild
+npm run build3d                   # -> catapult3d.html, un singur fișier
+
+# doar dacă vrei să regenerezi modelele:
+pip install bpy==4.2.0            # Blender ca modul Python (are nevoie de Python 3.11)
+python3 src3d/blender/build_assets.py src3d/assets.glb
 ```
 
 Rezultatul e un singur fișier HTML, fără dependențe externe.

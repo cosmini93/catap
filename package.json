@@ -1,0 +1,13 @@
+{
+  "name": "catap",
+  "private": true,
+  "description": "Build tooling for the 3D siege game (src3d).",
+  "devDependencies": {
+    "cannon-es": "0.20.0",
+    "esbuild": "^0.28.1",
+    "three": "0.169.0"
+  },
+  "scripts": {
+    "build3d": "sh src3d/build.sh catapult3d.html"
+  }
+}
