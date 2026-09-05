@@ -73,16 +73,33 @@ cu turnuri, citadelă) peste trei ținuturi (dune, creastă înghețată, câmpi
 miez de noapte), care cresc în mărime și garnizoană pe măsură ce avansezi.
 Aur și scor salvate pe dispozitiv.
 
+### Materiale și lumină
+
+Suprafețele sunt PBR: fiecare material are albedo, hartă de normale și hartă de
+rugozitate, toate generate procedural la încărcare dintr-un singur câmp de
+înălțime (normalele ies din el prin Sobel), deci nu se încarcă niciun fișier de
+textură.
+
+Cerul e cel fizic — împrăștiere Rayleigh și Mie, cu turbiditate, unghi și azimut
+setate pe ținut. Din el se coace o hartă de mediu (PMREM) care luminează tot ce
+e în scenă: umbrele prind albastrul cerului, metalul reflectă. Soarele
+direcțional pleacă din același vector, deci lumina și cerul nu se contrazic
+niciodată. Tot lanțul e HDR, cu ACES la ieșire.
+
 ### Modelele (Blender)
 
 Recuzita nu mai e făcută din cutii în cod: piatra, lemnul, butoiul, bolovanul,
 stânca, soldatul, scutul și roata sunt modelate procedural în Blender de
 `src3d/blender/build_assets.py` și exportate ca un singur `src3d/assets.glb`.
 
-Fiecare model primește muchii teșite — de asta prind lumină în loc să arate
-plat — iar ocluzia ambientală e coaptă în culorile de vertex prin ray casting,
-deci nu costă nimic la randare. Fața soldatului e tăiată în model și înnegrită
-tot prin culori de vertex, fără texturi.
+Fiecare model primește muchii teșite, apoi e subdivizat și împins pe normale cu
+zgomot: relieful e geometrie adevărată, nu doar o hartă de normale, așa că se
+vede și pe siluetă — muchia unui bloc de piatră iese ciobită, nu trasă cu rigla.
+Ocluzia ambientală e coaptă în culorile de vertex prin ray casting, deci nu
+costă nimic la randare. UV-urile sunt o proiecție pe cutie făcută în script:
+texturile fiind zgomot care se repetă, fiecare față iese cu aceeași densitate de
+texeli. Fața soldatului e tăiată în model și înnegrită tot prin culori de
+vertex, fără texturi.
 
 Nu există fișiere binare de sursă: totul se regenerează din script.
 

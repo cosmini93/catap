@@ -12,7 +12,7 @@ costs nothing at runtime.
 """
 import sys, math, random
 import bpy, bmesh
-from mathutils import Vector, Matrix
+from mathutils import Vector, Matrix, noise
 from mathutils.bvhtree import BVHTree
 
 random.seed(7)
@@ -58,6 +58,50 @@ def apply_mods(ob):
     ob.data = me
     ob.modifiers.clear()
     bpy.data.meshes.remove(old)
+
+
+def box_uv(ob, scale=1.0):
+    """World-space box projection.
+
+    The runtime textures are tileable procedural noise, not an atlas, so a
+    per-face axis projection is both simpler and steadier than an unwrap:
+    every face gets the same texel density, whichever way it points.
+    """
+    me = ob.data
+    uvs = me.uv_layers.get("UVMap") or me.uv_layers.new(name="UVMap")
+    for poly in me.polygons:
+        n = poly.normal
+        ax, ay, az = abs(n.x), abs(n.y), abs(n.z)
+        if az >= ax and az >= ay:
+            pick = lambda c: (c.x, c.y)
+        elif ax >= ay:
+            pick = lambda c: (c.y, c.z)
+        else:
+            pick = lambda c: (c.x, c.z)
+        for li in poly.loop_indices:
+            co = me.vertices[me.loops[li].vertex_index].co
+            u, v = pick(co)
+            uvs.data[li].uv = (u * scale, v * scale)
+
+
+def roughen(ob, cuts=2, amp=0.02, freq=6.0, seed=0.0):
+    """Subdivide and push the surface around: real relief, not a normal map.
+
+    Cheap on the GPU (one geometry, drawn many times) and it survives on the
+    silhouette - the edge of a stone block comes out chipped, not ruler-straight.
+    """
+    bm = bmesh.new()
+    bm.from_mesh(ob.data)
+    if cuts:
+        bmesh.ops.subdivide_edges(bm, edges=bm.edges[:], cuts=cuts,
+                                  use_grid_fill=True)
+    bm.normal_update()
+    off = Vector((seed * 3.7, seed * 1.9, seed * 5.3))
+    for v in bm.verts:
+        d = noise.noise(v.co * freq + off)
+        v.co += v.normal * (d * amp)
+    bm.to_mesh(ob.data)
+    bm.free()
 
 
 def shade_flat(ob):
@@ -155,14 +199,18 @@ def make_block_stone():
         v.co.z -= 0.04
     bm.to_mesh(ob.data)
     bm.free()
+    roughen(ob, cuts=1, amp=0.042, freq=5.0, seed=1.0)
     shade_flat(ob)
+    box_uv(ob)
     bake_ao(ob, samples=24, dist=1.2, floor=0.55)
     return ob
 
 
 def make_block_wood():
     ob = rough_box("block_wood", 1.0, 1.0, 1.0, jitter=0.004, bev=0.03, seg=2)
+    roughen(ob, cuts=1, amp=0.018, freq=8.0, seed=2.0)
     shade_flat(ob)
+    box_uv(ob)
     bake_ao(ob, samples=24, dist=1.2, floor=0.6)
     return ob
 
@@ -214,7 +262,9 @@ def make_barrel():
 
     ob = from_bm("barrel", bm)
     bevel(ob, 0.012, 1)
+    roughen(ob, cuts=0, amp=0.006, freq=14.0, seed=3.0)
     shade_flat(ob)
+    box_uv(ob)
     bake_ao(ob, samples=32, dist=1.4, floor=0.62)
     return ob
 
@@ -226,7 +276,9 @@ def make_boulder():
         v.co *= random.uniform(0.84, 1.16)
     ob = from_bm("boulder", bm)
     bevel(ob, 0.01, 1)
+    roughen(ob, cuts=1, amp=0.030, freq=6.0, seed=4.0)
     shade_flat(ob)
+    box_uv(ob, 2.0)
     bake_ao(ob, samples=24, dist=1.2, floor=0.5)
     return ob
 
@@ -240,7 +292,9 @@ def make_rock():
         v.co.z *= random.uniform(0.75, 1.15)
     ob = from_bm("rock", bm)
     bevel(ob, 0.02, 1)
+    roughen(ob, cuts=1, amp=0.050, freq=4.0, seed=5.0)
     shade_flat(ob)
+    box_uv(ob, 1.4)
     bake_ao(ob, samples=20, dist=1.5, floor=0.5)
     return ob
 
@@ -280,6 +334,7 @@ def make_guard():
     ob = from_bm("guard", bm)
     bevel(ob, 0.024, 2)
     shade_flat(ob)
+    box_uv(ob, 1.0)
     bake_ao(ob, samples=28, dist=1.6, floor=0.46)
     paint_verts(ob, lambda co: co.y > face_y - 0.005 and 1.24 < co.z < 1.60
                                and abs(co.x) < 0.32, 0.10)
@@ -294,6 +349,7 @@ def make_shield():
     ob = from_bm("shield", bm)
     bevel(ob, 0.015, 2)
     shade_flat(ob)
+    box_uv(ob, 1.6)
     bake_ao(ob, samples=20, dist=1.0, floor=0.5)
     return ob
 
@@ -317,6 +373,7 @@ def make_wheel():
     ob = from_bm("wheel", bm)
     bevel(ob, 0.012, 1)
     shade_flat(ob)
+    box_uv(ob, 1.6)
     bake_ao(ob, samples=20, dist=1.0, floor=0.45)
     return ob
 
@@ -331,6 +388,7 @@ def make_palm_frond():
         v.co.z = -(u ** 2) * 1.25
     ob = from_bm("frond", bm)
     shade_flat(ob)
+    box_uv(ob)
     return ob
 
 
