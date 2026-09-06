@@ -11,7 +11,7 @@ Prioritate: 1 = fara el nu functioneaza nimic; 2 = necesar pentru operare comple
 | M02 | Solicitare (SCP) | Deschiderea cererii de catre KAM, varianta de rezerva pe mail | KAM | Model-driven + formular canvas simplificat | 1 | Val 1 |
 | M03 | Triaj si generare proiect | Acceptat / respins / amanat cu motiv, generare cod {AA}{NNN}, creare folder | Manager R&D | Model-driven | 1 | Val 1 |
 | M04 | Proiect CDI si versiuni | Radacina proiectului, proiecte-copil cu sufix .1, mostenire referinte | Manager R&D, tehnolog | Model-driven | 1 | Val 1 |
-| M05 | Livrabile de proiect | Generarea din sablon a celor ~34 de livrabile, termen, responsabil, status | Tehnolog | Model-driven | 1 | Val 1 |
+| M05 | Livrabile de proiect | Generarea din sablon a celor 43 de livrabile, termen, responsabil, status | Tehnolog | Model-driven | 1 | Val 1 |
 | M06 | Etape si durate | Sablon de etape, durata standard 2 saptamani, data estimata de finalizare | Manager R&D | Model-driven | 2 | Val 1 |
 | M07 | Alocare si incarcare | Alocarea tehnologului, incarcarea pe tehnolog si pe linie, praguri vizuale | Manager R&D | Model-driven (dashboard) | 1 | Val 1 |
 | M08 | Prioritizare | Scor 100 de puncte, benzi P1-P4, buget de urgenta, imbatranire, suprascriere | Manager operational / vanzari | Model-driven + flux programat | 2 | Val 2 |

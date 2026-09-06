@@ -1,0 +1,123 @@
+{
+  "_descriere": "Ponderi, benzi si mecanisme ale scorului de prioritate si ale calculului de termen. Referinta: Anexa A1. Toate valorile se stocheaza ca variabile de mediu, parametrizabile fara modificarea fluxului FLX-10.",
+  "scor": {
+    "total": 100,
+    "frecventa_recalculare": "saptamanal, luni la 06:00",
+    "flux": "FLX-10",
+    "componente": [
+      { "cod": "VOL", "nume": "Volum anual estimat", "puncte_max": 30, "tip": "benzi",
+        "benzi": [
+          { "banda": "V1", "min_tone": 500, "max_tone": null, "puncte": 30 },
+          { "banda": "V2", "min_tone": 200, "max_tone": 500, "puncte": 25 },
+          { "banda": "V3", "min_tone": 80, "max_tone": 200, "puncte": 19 },
+          { "banda": "V4", "min_tone": 30, "max_tone": 80, "puncte": 13 },
+          { "banda": "V5", "min_tone": 10, "max_tone": 30, "puncte": 7 },
+          { "banda": "V6", "min_tone": 0, "max_tone": 10, "puncte": 3 } ] },
+      { "cod": "CLI", "nume": "Importanta clientului", "puncte_max": 20, "tip": "clasificare",
+        "valori": { "A": 20, "B": 12, "C": 5, "Neclasificat": 12 },
+        "nota": "Clasificarea este stabilita si revizuita de Sales / KAM, nu de R&D" },
+      { "cod": "TER", "nume": "Termen impus extern", "puncte_max": 20, "tip": "situatie",
+        "valori": {
+          "Listare retail data ferma sub 60 zile": 20,
+          "Listare retail data ferma 60-120 zile": 15,
+          "Sezon cu data de livrare ferma": 15,
+          "Licitatie sau caiet de sarcini": 15,
+          "Lansare anuntata fara data ferma": 8,
+          "Cerinta de reglementare cu termen legal": 20,
+          "Fara termen impus": 0 },
+        "regula": "Termenul impus declarat verbal, fara document doveditor, primeste jumatate din punctaj (A1.1.4.1)" },
+      { "cod": "EFO", "nume": "Efort de dezvoltare (invers proportional)", "puncte_max": 10, "tip": "scala",
+        "valori": { "Foarte mic": 10, "Mic": 8, "Mediu": 5, "Mare": 2, "Foarte mare": 0 } },
+      { "cod": "RSK", "nume": "Risc de materie prima noua", "puncte_max": 0, "puncte_min": -10, "tip": "situatie",
+        "valori": {
+          "Fara MP noi": 0,
+          "O MP noua, furnizor aprobat": -3,
+          "O MP noua, furnizor nou sau achizitie noua": -6,
+          "Doua sau mai multe MP noi": -8,
+          "MP de import sau caz special": -10 } },
+      { "cod": "REU", "nume": "Reutilizare de reteta sau de linie setata", "puncte_max": 10, "tip": "situatie",
+        "valori": {
+          "Reteta existenta, doar gramaj sau ambalaj diferit": 10,
+          "Reteta derivata, linie deja setata": 7,
+          "Linie deja setata pentru tipul de produs": 4,
+          "Nimic reutilizabil": 0 } }
+    ],
+    "imbatranire": {
+      "_referinta": "A1.1.9",
+      "formula": "MIN(20, INTREG(zile_coada / 10) * 2)",
+      "puncte_la_interval": 2,
+      "interval_zile_lucratoare": 10,
+      "plafon": 20,
+      "ceasul_se_opreste_cand": ["proiectul intra in status In dezvoltare", "exista blocaj extern activ"]
+    },
+    "formula_finala": "scor_final = MIN(100, MAX(0, suma_componente + bonus_imbatranire))",
+    "benzi": [
+      { "banda": "P1", "min": 80, "max": 100, "semnificatie": "Se lucreaza acum, are slot rezervat" },
+      { "banda": "P2", "min": 60, "max": 79, "semnificatie": "Se lucreaza in urmatoarele 2 saptamani" },
+      { "banda": "P3", "min": 35, "max": 59, "semnificatie": "In coada, fara slot rezervat" },
+      { "banda": "P4", "min": 0, "max": 34, "semnificatie": "Se lucreaza cand exista capacitate libera" }
+    ]
+  },
+  "buget_urgenta": {
+    "_referinta": "A1.1.10",
+    "proiecte_p1_simultane_pe_kam": 2,
+    "buget_suplimentar_comercial_manager": 1,
+    "se_numara": "proiecte in statusuri active (4-9) cu banda P1, indiferent de sursa benzii",
+    "la_depasire": "promovarea automata se refuza; se cere retrogradarea explicita a altui proiect, cu motiv obligatoriu si urma in audit",
+    "exceptie": "proiectele cu termen impus de tip reglementare intra in P1 fara sa consume buget"
+  },
+  "suprascriere": {
+    "_referinta": "A1.1.12",
+    "rol_permis": "Comercial Manager (ROL-06)",
+    "campuri_obligatorii": ["scor nou 0-100", "motiv"],
+    "scorul_calculat": "ramane vizibil alaturi, nu se sterge",
+    "expirare_zile": 90,
+    "notificare_inainte_de_expirare_zile": 7,
+    "raport": "RAP-14, lunar"
+  },
+  "termen_propus": {
+    "_referinta": "A1.2",
+    "flux": "FLX-03",
+    "formula": "durata_baza * f_incarcare * f_coada_linie * f_sezonalitate + adaos_mp_noi + zile_indisponibilitate",
+    "factor_incarcare_tehnolog": [
+      { "proiecte_active_min": 1, "proiecte_active_max": 2, "factor": 0.9 },
+      { "proiecte_active_min": 3, "proiecte_active_max": 4, "factor": 1.0 },
+      { "proiecte_active_min": 5, "proiecte_active_max": 6, "factor": 1.2 },
+      { "proiecte_active_min": 7, "proiecte_active_max": 8, "factor": 1.5 },
+      { "proiecte_active_min": 9, "proiecte_active_max": 10, "factor": 1.9 },
+      { "proiecte_active_min": 11, "proiecte_active_max": null, "factor": 2.4, "avertizare": "supraincarcare la alocare" }
+    ],
+    "factor_coada_linie": [
+      { "proiecte_min": 0, "proiecte_max": 2, "factor": 1.0 },
+      { "proiecte_min": 3, "proiecte_max": 5, "factor": 1.1 },
+      { "proiecte_min": 6, "proiecte_max": 8, "factor": 1.25 },
+      { "proiecte_min": 9, "proiecte_max": null, "factor": 1.4 }
+    ],
+    "factor_sezonalitate": [
+      { "luni": [1, 2, 3], "factor": 1.0, "motiv": "Perioada normala" },
+      { "luni": [4, 5], "factor": 1.1, "motiv": "Pregatirea sezonului de vara" },
+      { "luni": [6, 7, 8], "factor": 1.2, "motiv": "Concedii, capacitate redusa" },
+      { "luni": [9, 10], "factor": 1.3, "motiv": "Varf de dezvoltare pentru Craciun" },
+      { "luni": [11, 12], "factor": 1.25, "motiv": "Productie de varf, acces greu la linii" }
+    ],
+    "adaos_materii_prime_noi_zile": {
+      "Fara MP noi": 0,
+      "Pe stoc": 5,
+      "In portofoliu furnizor": 5,
+      "Achizitie noua": 20,
+      "Import sau caz special": 30,
+      "_regula": "La mai multe MP noi se ia maximul, nu suma (A1.2.5.1). ETA-ul confirmat inlocuieste estimarea."
+    },
+    "_nota_sezonalitate": "PROPUNERE - factorii trebuie confirmati cu date reale din ultimii doi ani, la configurare (A1.2.4.1)"
+  },
+  "praguri_incarcare": {
+    "_referinta": "2.22.1",
+    "verde_sub_procent": 80,
+    "galben_pana_la_procent": 100,
+    "rosu_peste_procent": 100,
+    "regula_suplimentara": "peste 2 proiecte in banda P1 = Rosu, indiferent de gradul de incarcare",
+    "capacitate_maxima_implicita": 6,
+    "capacitate_interval_admis": [1, 10],
+    "prag_supraincarcare_linie_implicit": 6
+  }
+}

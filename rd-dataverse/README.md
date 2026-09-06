@@ -36,6 +36,7 @@ referinta ulterioara (exemplu: 2.4.3, TBL-07, LIV-14, FLX-05).
 | 19 | [S19-criterii-acceptanta.md](docs/S19-criterii-acceptanta.md) | Lista verificabila pe modul |
 | 20 | [S20-intrebari-deschise.md](docs/S20-intrebari-deschise.md) | Maximum 10 intrebari blocante |
 | 21 | [S21-prompturi-continuare.md](docs/S21-prompturi-continuare.md) | Prompturi de constructie pe modul |
+| A1 | [A1-prioritizare-si-termene.md](docs/A1-prioritizare-si-termene.md) | Anexa: algoritmul scorului de prioritate si al termenului propus |
 
 ## Artefacte pentru constructie
 
@@ -45,13 +46,13 @@ sau consumate de un script de provizionare.
 
 | Fisier | Continut |
 |---|---|
-| [data/tabele.json](data/tabele.json) | Toate tabelele si coloanele din Sectiunea 2 |
-| [data/relatii.json](data/relatii.json) | Relatiile din Sectiunea 3, cu comportament la stergere |
-| [data/choices.json](data/choices.json) | Toate seturile de optiuni globale |
-| [data/sablon-livrabile.json](data/sablon-livrabile.json) | Cele 34 de livrabile standard, cu faza si conditia de aplicabilitate |
-| [data/sablon-etape.json](data/sablon-etape.json) | Etapele standard si duratele de pornire |
-| [data/prioritizare.json](data/prioritizare.json) | Ponderi, benzi si mecanisme de scor |
-| [data/nomenclatoare.json](data/nomenclatoare.json) | Linii de productie, tipuri de documente, motive |
+| [data/tabele.json](data/tabele.json) | Cele 43 de tabele si 676 de coloane din Sectiunea 2 |
+| [data/relatii.json](data/relatii.json) | Cele 68 de relatii din Sectiunea 3, cu comportament la stergere |
+| [data/choices.json](data/choices.json) | Cele 25 de seturi de optiuni globale, cu valori si etichete |
+| [data/sablon-livrabile.json](data/sablon-livrabile.json) | Cele 43 de livrabile standard, cu faza, rol, termen si conditie de aplicabilitate |
+| [data/sablon-etape.json](data/sablon-etape.json) | Cele 11 etape standard, duratele de pornire si mecanismul de calibrare |
+| [data/prioritizare.json](data/prioritizare.json) | Ponderi, benzi, buget de urgenta si factorii de calcul al termenului |
+| [data/nomenclatoare.json](data/nomenclatoare.json) | Tipuri de documente, motive, criterii senzoriale cu ancore, defecte, cauze de rebut, praguri |
 
 ## Conventii de referinta
 
@@ -60,12 +61,34 @@ sau consumate de un script de provizionare.
 | `TBL-nn` | Tabela Dataverse |
 | `REL-nn` | Relatie intre tabele |
 | `LIV-nn` | Livrabil de proiect din sablon |
-| `ETP-nn` | Etapa de proiect |
 | `FLX-nn` | Flux Power Automate |
 | `ECR-nn` | Ecran de aplicatie |
 | `ROL-nn` | Rol de securitate |
 | `RSC-nn` | Risc |
 | `CA-nn` | Criteriu de acceptanta |
 | `DOC-nn` | Document generat din date |
+| `RAP-nn` | Raport |
+| `M-nn` | Modul |
+| `ETP-nn` | Etapa de proiect |
 | `PROPUNERE` | Element propus de arhitect, care nu exista in cerinta initiala |
 | `NOTA` | Conflict intre cerinta din context si buna practica de platforma |
+
+## Verificarea artefactelor
+
+Fisierele din `data/` sunt verificate incrucisat: fiecare relatie refera o tabela si o
+coloana care exista, fiecare faza si rol din sablonul de livrabile exista in Choice-ul
+corespunzator, fiecare sablon Word are un tip de document, iar ponderile grilelor
+senzoriale insumeaza 100 pe categorie de produs.
+
+## Ce urmeaza
+
+Blueprintul este complet si se poate construi din el, modul cu modul, fara alte decizii
+de arhitectura. Pasii imediati:
+
+1. Raspunsuri la cele 10 intrebari din [Sectiunea 20](docs/S20-intrebari-deschise.md).
+   Fiecare are o valoare implicita, deci constructia poate incepe si fara ele, dar IQ-01
+   (mediul de productie) si IQ-10 (disponibilitatea reala de timp) schimba calendarul.
+2. Valul 0, conform [Sectiunii 16.1](docs/S16-roadmap.md), pornind de la promptul P-01 din
+   [Sectiunea 21](docs/S21-prompturi-continuare.md).
+3. Fiecare modul se construieste cu promptul lui din Sectiunea 21 si se verifica fata de
+   criteriile din [Sectiunea 19](docs/S19-criterii-acceptanta.md).

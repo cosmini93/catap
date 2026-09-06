@@ -1,0 +1,78 @@
+{
+  "_descriere": "Sablonul de livrabile care inlocuieste cele ~30 de coloane-bifa din F-PS-LID-10.01. Referinta: Sectiunea 4. Se importa in tabela rd_sablonlivrabil (TBL-04).",
+  "_offset": "Zile lucratoare de la data acceptarii, pe durata standard de 14 zile. Formula de scalare: termen = data_acceptare + ROUND(offset * durata_proiect / 14) zile lucratoare (4.6.2).",
+  "conditii_aplicabilitate": [
+    { "cod": "C0", "nume": "Intotdeauna", "evaluare": "-" },
+    { "cod": "C1", "nume": "Doar MP noua", "evaluare": "rd_proiect.rd_aremp = Da" },
+    { "cod": "C2", "nume": "Doar eticheta noua", "evaluare": "produsul primeste eticheta proprie" },
+    { "cod": "C3", "nume": "Doar client nou", "evaluare": "rd_client.rd_proiecteactive = 0 la deschidere" },
+    { "cod": "C4", "nume": "Doar ambalaj nou", "evaluare": "rd_proiect.rd_ambalajnou = Da" },
+    { "cod": "C5", "nume": "Doar linie nesetata", "evaluare": "capabilitatea ceruta lipseste din rd_linie.rd_capabilitati" },
+    { "cod": "C6", "nume": "Doar export", "evaluare": "rd_client.rd_tara != Romania" },
+    { "cod": "C7", "nume": "Doar produs nou", "evaluare": "rd_tipproiect = Produs nou" }
+  ],
+  "livrabile": [
+    { "cod": "LIV-01", "nume": "SCP completat si trimis", "faza": "00 Solicitare", "ordine": 1, "rol_responsabil": "KAM", "rol_aprobator": "Manager R&D", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 0, "sablon_word": "SCP", "corespondent_centralizator": null },
+    { "cod": "LIV-02", "nume": "Eticheta produs client (EPC) primita", "faza": "00 Solicitare", "ordine": 2, "rol_responsabil": "KAM", "rol_aprobator": null, "obligatoriu": false, "necesita_document": true, "conditie": "C2", "offset": 2, "sablon_word": null, "corespondent_centralizator": null },
+    { "cod": "LIV-03", "nume": "Referinta de comparatie inregistrata", "faza": "00 Solicitare", "ordine": 3, "rol_responsabil": "KAM", "rol_aprobator": "Tehnolog", "obligatoriu": true, "necesita_document": false, "conditie": "C0", "offset": 1, "sablon_word": null, "corespondent_centralizator": null },
+    { "cod": "LIV-04", "nume": "Cerinte de eticheta si ambalaj de la client", "faza": "00 Solicitare", "ordine": 4, "rol_responsabil": "KAM", "rol_aprobator": null, "obligatoriu": false, "necesita_document": true, "conditie": "C0", "offset": 2, "sablon_word": null, "corespondent_centralizator": null },
+    { "cod": "LIV-05", "nume": "Decizie de triaj cu motiv", "faza": "00 Solicitare", "ordine": 5, "rol_responsabil": "Manager R&D", "rol_aprobator": null, "obligatoriu": true, "necesita_document": false, "conditie": "C0", "offset": 1, "sablon_word": null, "corespondent_centralizator": null },
+
+    { "cod": "LIV-06", "nume": "Plan de dezvoltare produs", "faza": "01 Plan", "ordine": 1, "rol_responsabil": "Tehnolog", "rol_aprobator": "Manager R&D", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 2, "sablon_word": "PLAN", "corespondent_centralizator": "PLAN DEZVOLTARE PRODUS" },
+    { "cod": "LIV-07", "nume": "Cerere achizitii mostra MP noua", "faza": "01 Plan", "ordine": 2, "rol_responsabil": "Tehnolog", "rol_aprobator": "Achizitii", "obligatoriu": true, "necesita_document": true, "conditie": "C1", "offset": 3, "sablon_word": "CAMP", "corespondent_centralizator": "CERERE ACHIZITII MOSTRA MP NOUA" },
+    { "cod": "LIV-08", "nume": "Lista materiilor prime cu marcarea celor noi", "faza": "01 Plan", "ordine": 3, "rol_responsabil": "Tehnolog", "rol_aprobator": null, "obligatoriu": true, "necesita_document": false, "conditie": "C0", "offset": 3, "sablon_word": null, "corespondent_centralizator": null },
+    { "cod": "LIV-09", "nume": "Slot de testare propus si negociat", "faza": "01 Plan", "ordine": 4, "rol_responsabil": "Manager R&D", "rol_aprobator": "Planificare", "obligatoriu": false, "necesita_document": false, "conditie": "C0", "offset": 3, "sablon_word": null, "corespondent_centralizator": null },
+
+    { "cod": "LIV-10", "nume": "Fisa de test", "faza": "02 Testare", "ordine": 1, "rol_responsabil": "Tehnolog", "rol_aprobator": "Manager R&D", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 5, "sablon_word": "FTEST", "corespondent_centralizator": "FISA DE TEST" },
+    { "cod": "LIV-11", "nume": "Testare realizata (cel putin un trial reusit)", "faza": "02 Testare", "ordine": 2, "rol_responsabil": "Tehnolog", "rol_aprobator": null, "obligatoriu": true, "necesita_document": false, "conditie": "C0", "offset": 8, "sablon_word": null, "corespondent_centralizator": "TESTARE REALIZATA" },
+    { "cod": "LIV-12", "nume": "Raport de testare cu masuratori si statistica", "faza": "02 Testare", "ordine": 3, "rol_responsabil": "Tehnolog", "rol_aprobator": "Manager R&D", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 9, "sablon_word": "RTEST", "corespondent_centralizator": null },
+    { "cod": "LIV-13", "nume": "Evaluare produs (fisa de evaluare senzoriala)", "faza": "02 Testare", "ordine": 4, "rol_responsabil": "Tehnolog", "rol_aprobator": "Manager R&D", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 9, "sablon_word": "FSENZ", "corespondent_centralizator": "EVALUARE PRODUS" },
+    { "cod": "LIV-14", "nume": "Test comparativ fata de referinta", "faza": "02 Testare", "ordine": 5, "rol_responsabil": "Tehnolog", "rol_aprobator": null, "obligatoriu": false, "necesita_document": false, "conditie": "C0", "offset": 9, "sablon_word": null, "corespondent_centralizator": null },
+
+    { "cod": "LIV-15", "nume": "Mostre de produs pregatite si livrate", "faza": "03 Mostre", "ordine": 1, "rol_responsabil": "Suport R&D", "rol_aprobator": null, "obligatoriu": true, "necesita_document": false, "conditie": "C0", "offset": 10, "sablon_word": null, "corespondent_centralizator": "MOSTRE" },
+    { "cod": "LIV-16", "nume": "Dosar de mostra (fisa, poze, dovada livrarii)", "faza": "03 Mostre", "ordine": 2, "rol_responsabil": "Suport R&D", "rol_aprobator": "Tehnolog", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 10, "sablon_word": "DMOSTRA", "corespondent_centralizator": null },
+    { "cod": "LIV-17", "nume": "Feedback client la mostra", "faza": "03 Mostre", "ordine": 3, "rol_responsabil": "KAM", "rol_aprobator": null, "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 12, "sablon_word": null, "corespondent_centralizator": null },
+
+    { "cod": "LIV-18", "nume": "Antecalcul", "faza": "04 Antecalcul", "ordine": 1, "rol_responsabil": "Tehnolog", "rol_aprobator": "Manager R&D", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 7, "sablon_word": "ANTECALC", "corespondent_centralizator": "ANTECALCUL" },
+    { "cod": "LIV-19", "nume": "Confirmare de pret de la client", "faza": "04 Antecalcul", "ordine": 2, "rol_responsabil": "KAM", "rol_aprobator": null, "obligatoriu": false, "necesita_document": true, "conditie": "C0", "offset": 12, "sablon_word": null, "corespondent_centralizator": null },
+
+    { "cod": "LIV-20", "nume": "Conditii ST", "faza": "05 Specificatii", "ordine": 1, "rol_responsabil": "Tehnolog", "rol_aprobator": "Calitate", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 6, "sablon_word": "CONDST", "corespondent_centralizator": "CONDITII ST" },
+    { "cod": "LIV-21", "nume": "ST draft", "faza": "05 Specificatii", "ordine": 2, "rol_responsabil": "Tehnolog", "rol_aprobator": "Calitate", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 10, "sablon_word": null, "corespondent_centralizator": "ST DRAFT" },
+    { "cod": "LIV-22", "nume": "ST interna pentru MP noua", "faza": "05 Specificatii", "ordine": 3, "rol_responsabil": "Calitate", "rol_aprobator": "Calitate", "obligatoriu": true, "necesita_document": true, "conditie": "C1", "offset": 8, "sablon_word": null, "corespondent_centralizator": "ST INTERN MP NOUA" },
+    { "cod": "LIV-23", "nume": "Material SAP creat pentru MP noua", "faza": "05 Specificatii", "ordine": 4, "rol_responsabil": "Achizitii", "rol_aprobator": null, "obligatoriu": true, "necesita_document": false, "conditie": "C1", "offset": 9, "sablon_word": null, "corespondent_centralizator": "MATERIAL SAP" },
+    { "cod": "LIV-24", "nume": "ST finala", "faza": "05 Specificatii", "ordine": 5, "rol_responsabil": "Tehnolog", "rol_aprobator": "Calitate", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 13, "sablon_word": null, "corespondent_centralizator": "ST FINAL" },
+    { "cod": "LIV-25", "nume": "SDP - specificatie de produs", "faza": "05 Specificatii", "ordine": 6, "rol_responsabil": "Tehnolog", "rol_aprobator": "Calitate", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 14, "sablon_word": "SDP", "corespondent_centralizator": "SDP" },
+    { "cod": "LIV-26", "nume": "Material SAP creat pentru produsul finit", "faza": "05 Specificatii", "ordine": 7, "rol_responsabil": "Tehnolog", "rol_aprobator": "Manager R&D", "obligatoriu": true, "necesita_document": false, "conditie": "C0", "offset": 13, "sablon_word": null, "corespondent_centralizator": "MATERIAL SAP" },
+    { "cod": "LIV-27", "nume": "Alergeni si valori nutritionale calculate", "faza": "05 Specificatii", "ordine": 8, "rol_responsabil": "Tehnolog", "rol_aprobator": "Calitate", "obligatoriu": true, "necesita_document": false, "conditie": "C0", "offset": 12, "sablon_word": null, "corespondent_centralizator": null },
+
+    { "cod": "LIV-28", "nume": "Eticheta realizata (punga si bax)", "faza": "06 Eticheta", "ordine": 1, "rol_responsabil": "Suport R&D", "rol_aprobator": "Calitate", "obligatoriu": true, "necesita_document": true, "conditie": "C2", "offset": 14, "sablon_word": null, "corespondent_centralizator": "ETICHETA REALIZATA" },
+    { "cod": "LIV-29", "nume": "Fisier de imprimanta Colos / Zebra", "faza": "06 Eticheta", "ordine": 2, "rol_responsabil": "Suport R&D", "rol_aprobator": null, "obligatoriu": false, "necesita_document": true, "conditie": "C2", "offset": 15, "sablon_word": null, "corespondent_centralizator": null },
+    { "cod": "LIV-30", "nume": "Eticheta implementata pe linie", "faza": "06 Eticheta", "ordine": 3, "rol_responsabil": "Productie", "rol_aprobator": "Tehnolog", "obligatoriu": true, "necesita_document": false, "conditie": "C2", "offset": 18, "sablon_word": null, "corespondent_centralizator": "ETICHETA IMPLEMENTATA" },
+
+    { "cod": "LIV-31", "nume": "Conditii IPN", "faza": "07 Implementare", "ordine": 1, "rol_responsabil": "Tehnolog", "rol_aprobator": "Manager R&D", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 15, "sablon_word": "CONDIPN", "corespondent_centralizator": "CONDITII IPN" },
+    { "cod": "LIV-32", "nume": "Plan IPN", "faza": "07 Implementare", "ordine": 2, "rol_responsabil": "Tehnolog", "rol_aprobator": "Manager R&D", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 15, "sablon_word": "PLANIPN", "corespondent_centralizator": "PLAN IPN" },
+    { "cod": "LIV-33", "nume": "IL productie creata", "faza": "07 Implementare", "ordine": 3, "rol_responsabil": "Tehnolog", "rol_aprobator": "Productie", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 16, "sablon_word": null, "corespondent_centralizator": "CREAZA IL PROD" },
+    { "cod": "LIV-34", "nume": "Plan HACCP actualizat si aprobat", "faza": "07 Implementare", "ordine": 4, "rol_responsabil": "Calitate", "rol_aprobator": "Calitate", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 16, "sablon_word": null, "corespondent_centralizator": "PLAN HACCP" },
+    { "cod": "LIV-35", "nume": "Instruire operatori efectuata", "faza": "07 Implementare", "ordine": 5, "rol_responsabil": "Productie", "rol_aprobator": "Tehnolog", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 17, "sablon_word": null, "corespondent_centralizator": null },
+    { "cod": "LIV-36", "nume": "Productie 0 realizata si inregistrata", "faza": "07 Implementare", "ordine": 6, "rol_responsabil": "Tehnolog", "rol_aprobator": "Manager R&D", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 18, "sablon_word": null, "corespondent_centralizator": "PROD 0" },
+    { "cod": "LIV-37", "nume": "Raport de productie 0 cu decizie", "faza": "07 Implementare", "ordine": 7, "rol_responsabil": "Tehnolog", "rol_aprobator": "Manager R&D si Calitate", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 19, "sablon_word": "RPROD0", "corespondent_centralizator": null },
+
+    { "cod": "LIV-38", "nume": "Dosar validat complet", "faza": "08 Dosar validat", "ordine": 1, "rol_responsabil": "Suport R&D", "rol_aprobator": "Manager R&D", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 20, "sablon_word": "DOSAR", "corespondent_centralizator": "DOSAR VALIDAT" },
+    { "cod": "LIV-39", "nume": "TDV validat, semnat R&D si Calitate", "faza": "08 Dosar validat", "ordine": 2, "rol_responsabil": "Manager R&D", "rol_aprobator": "Calitate", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": 20, "sablon_word": "TDV", "corespondent_centralizator": "TDV VALIDAT" },
+    { "cod": "LIV-40", "nume": "Predare catre productie si comercial", "faza": "08 Dosar validat", "ordine": 3, "rol_responsabil": "Manager R&D", "rol_aprobator": null, "obligatoriu": true, "necesita_document": false, "conditie": "C0", "offset": 20, "sablon_word": null, "corespondent_centralizator": null },
+
+    { "cod": "LIV-41", "nume": "Revizuire la 30 de zile", "faza": "09 Revizuire", "ordine": 1, "rol_responsabil": "Manager R&D", "rol_aprobator": null, "obligatoriu": false, "necesita_document": true, "conditie": "C0", "offset": null, "offset_implementare": 30, "sablon_word": "RPI30", "corespondent_centralizator": null },
+    { "cod": "LIV-42", "nume": "Revizuire la 60 de zile", "faza": "09 Revizuire", "ordine": 2, "rol_responsabil": "Manager R&D", "rol_aprobator": null, "obligatoriu": false, "necesita_document": true, "conditie": "C0", "offset": null, "offset_implementare": 60, "sablon_word": "RPI60", "corespondent_centralizator": null },
+    { "cod": "LIV-43", "nume": "Revizuire la 90 de zile cu decizie finala", "faza": "09 Revizuire", "ordine": 3, "rol_responsabil": "Manager R&D", "rol_aprobator": "Head of R&D", "obligatoriu": true, "necesita_document": true, "conditie": "C0", "offset": null, "offset_implementare": 90, "sablon_word": "RPI90", "corespondent_centralizator": null }
+  ],
+  "excluderi_pe_tip_proiect": {
+    "_referinta": "4.7",
+    "Produs nou": [],
+    "Reformulare": ["LIV-03", "LIV-26"],
+    "Abatere": ["LIV-06", "LIV-18", "LIV-26", "LIV-38"],
+    "Transfer pe alta linie": ["LIV-18", "LIV-20", "LIV-21", "LIV-24", "LIV-28"],
+    "Optimizare cost": ["LIV-02", "LIV-03", "LIV-28", "LIV-30"],
+    "Ambalaj nou": ["LIV-08", "LIV-10", "LIV-11", "LIV-12", "LIV-13", "LIV-14", "LIV-27"]
+  },
+  "_nota_exceptie": "4.7.1 - orice optimizare de cost care schimba o materie prima reactiveaza LIV-27 si LIV-28, chiar daca sablonul le excludea. Regula se implementeaza in FLX-13."
+}

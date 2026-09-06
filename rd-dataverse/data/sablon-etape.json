@@ -1,0 +1,36 @@
+{
+  "_descriere": "Sablonul de etape si duratele standard de pornire. Referinta: Sectiunea 14.2. Se importa in tabela rd_sablonetapa (TBL-06).",
+  "_nota": "Duratele se seteaza o singura data, la configurare. Sistemul masoara duratele reale si propune corectia dupa 6-12 luni (FLX-17), dar nu o aplica automat (14.1.2).",
+  "durata_referinta_zile_lucratoare": 14,
+  "etape": [
+    { "cod": "ETP-01", "nume": "Triaj si acceptare", "ordine": 1, "durata_standard": 1, "start_zi": 0, "rol_responsabil": "Manager R&D", "opreste_ceasul_la_blocaj": true, "paralel": false, "lant_critic": true },
+    { "cod": "ETP-02", "nume": "Planificare si alocare", "ordine": 2, "durata_standard": 2, "start_zi": 1, "rol_responsabil": "Manager R&D", "opreste_ceasul_la_blocaj": true, "paralel": false, "lant_critic": true },
+    { "cod": "ETP-03", "nume": "Aprovizionare materii prime", "ordine": 3, "durata_standard": 5, "start_zi": 2, "rol_responsabil": "Achizitii", "opreste_ceasul_la_blocaj": true, "paralel": true, "lant_critic": false },
+    { "cod": "ETP-04", "nume": "Dezvoltare reteta si antecalcul", "ordine": 4, "durata_standard": 4, "start_zi": 2, "rol_responsabil": "Tehnolog", "opreste_ceasul_la_blocaj": true, "paralel": false, "lant_critic": true },
+    { "cod": "ETP-05", "nume": "Testare si trialuri", "ordine": 5, "durata_standard": 4, "start_zi": 5, "rol_responsabil": "Tehnolog", "opreste_ceasul_la_blocaj": true, "paralel": false, "lant_critic": true, "start_real_din": "crearea primului trial" },
+    { "cod": "ETP-06", "nume": "Evaluare senzoriala si decizie", "ordine": 6, "durata_standard": 1, "start_zi": 9, "rol_responsabil": "Tehnolog", "opreste_ceasul_la_blocaj": true, "paralel": false, "lant_critic": true, "start_real_din": "salvarea primului scor senzorial" },
+    { "cod": "ETP-07", "nume": "Mostre catre client si feedback", "ordine": 7, "durata_standard": 3, "start_zi": 10, "rol_responsabil": "Suport R&D", "opreste_ceasul_la_blocaj": true, "paralel": true, "lant_critic": false },
+    { "cod": "ETP-08", "nume": "Specificatii si eticheta", "ordine": 8, "durata_standard": 4, "start_zi": 10, "rol_responsabil": "Tehnolog", "opreste_ceasul_la_blocaj": true, "paralel": false, "lant_critic": true },
+    { "cod": "ETP-09", "nume": "Pregatirea implementarii (IPN)", "ordine": 9, "durata_standard": 2, "start_zi": 15, "rol_responsabil": "Tehnolog", "opreste_ceasul_la_blocaj": true, "paralel": false, "lant_critic": true },
+    { "cod": "ETP-10", "nume": "Productie 0", "ordine": 10, "durata_standard": 1, "start_zi": 18, "rol_responsabil": "Tehnolog", "opreste_ceasul_la_blocaj": true, "paralel": false, "lant_critic": true },
+    { "cod": "ETP-11", "nume": "Validare si dosar TDV", "ordine": 11, "durata_standard": 2, "start_zi": 19, "rol_responsabil": "Manager R&D", "opreste_ceasul_la_blocaj": true, "paralel": false, "lant_critic": true }
+  ],
+  "durate_pe_tip_proiect": {
+    "_referinta": "14.2.3",
+    "Produs nou": { "durata_totala": 14, "etape_eliminate": [] },
+    "Reformulare": { "durata_totala": 10, "etape_eliminate": [], "observatie": "ETP-07 scurtat" },
+    "Abatere": { "durata_totala": 5, "etape_eliminate": ["ETP-02", "ETP-03"], "observatie": "ETP-08 partial" },
+    "Transfer pe alta linie": { "durata_totala": 8, "etape_eliminate": ["ETP-04", "ETP-08"] },
+    "Optimizare cost": { "durata_totala": 12, "etape_eliminate": [], "observatie": "ETP-07 optional" },
+    "Ambalaj nou": { "durata_totala": 8, "etape_eliminate": ["ETP-04", "ETP-05", "ETP-06"] }
+  },
+  "calibrare": {
+    "_referinta": "14.4",
+    "flux": "FLX-17",
+    "frecventa": "lunar",
+    "conditii_minime": { "proiecte_finalizate": 20, "luni_acoperite": 6, "abatere_minima_procent": 20 },
+    "metrica_propusa": "MEDIANA(durata_neta) pe ultimele 12 luni, acelasi tip de proiect",
+    "metrica_afisata_suplimentar": "percentila 80, minim, maxim, distributie, tendinta ultimelor 3 luni",
+    "aplicare": "manuala, doar Head of R&D; proiectele existente nu se recalculeaza"
+  }
+}

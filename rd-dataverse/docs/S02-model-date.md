@@ -610,11 +610,13 @@ Nume: `rd_referinta`.
 | Nume coloana | Nume logic | Tip Dataverse | Obligatoriu | Valori / interval | Regula de business | Observatii |
 |---|---|---|---|---|---|---|
 | Denumire | rd_name | Text (200) | Da | - | - | Coloana primara |
+| Proiect | rd_proiect | Lookup (rd_proiect) | Da | - | Parental | Cascada la stergere |
 | Tip referinta | rd_tipreferinta | Choice | Da | Produs concurenta / Produs actual / Mostra client / Specificatie client / Inexistenta | - | Choice global TIPREFERINTA |
 | Client asociat | rd_client | Lookup (rd_client) | Nu | - | - | - |
 | Producator | rd_producator | Text (150) | Nu | - | Pentru produs concurenta | - |
 | Cod produs actual | rd_codprodusactual | Text (20) | Nu | - | Cod SAP daca este produs propriu | - |
-| Gramaj (g) | rd_gramaj | Decimal (2) | Nu | - | - | - |
+| Gramaj (g) | rd_gramaj | Decimal (2) | Nu | - | Gramajul nominal, de pe eticheta | - |
+| Gramaj masurat real (g) | rd_gramajmasurat | Decimal (2) | Nu | - | Minimum 5 bucati la produs concurenta | Vezi 6.4.4 |
 | Pret raft | rd_pretraft | Currency (2) | Nu | - | Pentru pozitionare | - |
 | Data achizitiei referintei | rd_dataachizitie | Date Only | Nu | - | - | - |
 | Lista de ingrediente | rd_ingrediente | Text Area (4000) | Nu | - | De pe eticheta | - |
@@ -978,7 +980,8 @@ UM, ALERGEN.
 | TBL-17 | Evaluare senzoriala | rd_evaluaresenzoriala | Copil | 2 |
 | TBL-18 | Criteriu senzorial | rd_criteriusenzorial | Nomenclator | 2 |
 | TBL-19 | Scor senzorial | rd_scorsenzorial | Copil | 2 |
-| TBL-20 | Defect / Defect constatat | rd_defect / rd_defectconstatat | Nomenclator / Copil | 2 |
+| TBL-20a | Defect (nomenclator) | rd_defect | Nomenclator | 2 |
+| TBL-20b | Defect constatat | rd_defectconstatat | Copil | 2 |
 | TBL-21 | Referinta de comparatie | rd_referinta | Copil | 1 |
 | TBL-22 | Antecalcul | rd_antecalcul | Copil | 2 |
 | TBL-23 | Linie de antecalcul | rd_linieantecalcul | Copil | 2 |
@@ -986,6 +989,7 @@ UM, ALERGEN.
 | TBL-25 | Versiune de reteta | rd_versiunereteta | Copil | 2 |
 | TBL-26 | Linie de reteta | rd_liniereteta | Copil | 2 |
 | TBL-27 | Alergen | rd_alergen | Nomenclator | 3 |
+| TBL-28 | (valorile nutritionale sunt coloane pe TBL-25, nu tabela separata - vezi 2.15) | - | - | - |
 | TBL-29 | Specificatie tehnica | rd_specificatie | Copil | 2 |
 | TBL-30 | SDP | rd_sdp | Copil | 2 |
 | TBL-31 | Eticheta | rd_eticheta | Copil | 3 |
