@@ -1,0 +1,41 @@
+Denumire,Cod,Tip motiv,Necesita comentariu,Activ
+Volum insuficient pentru efortul cerut,MR-01,Respingere solicitare,Nu,Da
+Marja sub pragul companiei,MR-02,Respingere solicitare,Da,Da
+Capabilitate tehnica inexistenta pe liniile actuale,MR-03,Respingere solicitare,Da,Da
+Termen imposibil de respectat,MR-04,Respingere solicitare,Da,Da
+Duplicat al unui proiect existent,MR-05,Respingere solicitare,Da,Da
+"Cerinta incompleta, nu se poate evalua",MR-06,Respingere solicitare,Da,Da
+Risc de siguranta alimentelor sau de conformitate,MR-07,Respingere solicitare,Da,Da
+Capacitate R&D indisponibila in perioada ceruta,MA-01,Amanare,Nu,Da
+Asteptare decizie comerciala sau de pret,MA-02,Amanare,Da,Da
+Asteptare disponibilitate de linie,MA-03,Amanare,Nu,Da
+Sezon nepotrivit pentru lansare,MA-04,Amanare,Nu,Da
+Caracteristici tehnice neconforme,MP-01,Respingere materie prima,Da,Da
+Comportament nesatisfacator la proces,MP-02,Respingere materie prima,Da,Da
+Impact senzorial negativ,MP-03,Respingere materie prima,Da,Da
+Pret peste bugetul de antecalcul,MP-04,Respingere materie prima,Nu,Da
+Furnizor neaprobat de Calitate,MP-05,Respingere materie prima,Nu,Da
+Specificatie sau documentatie incompleta,MP-06,Respingere materie prima,Da,Da
+Profil de alergeni incompatibil cu linia,MP-07,Respingere materie prima,Da,Da
+Lead time inacceptabil,MP-08,Respingere materie prima,Nu,Da
+Decizie comerciala de amanare,MS-01,Suspendare proiect,Da,Da
+Reprioritizare interna,MS-02,Suspendare proiect,Da,Da
+Indisponibilitate prelungita de resurse,MS-03,Suspendare proiect,Da,Da
+Client renuntat,MB-01,Abandon proiect,Da,Da
+Produs nefezabil tehnic,MB-02,Abandon proiect,Da,Da
+Cost final peste pretul acceptabil,MB-03,Abandon proiect,Da,Da
+Respins de client dupa mostra,MB-04,Abandon proiect,Da,Da
+"Necunoscut, anterior migrarii",MB-05,Abandon proiect,Nu,Da
+Status necunoscut la migrare,MB-06,Abandon proiect,Nu,Da
+Cerinta ferma de client cheie,MSP-01,Suprascriere prioritate,Da,Da
+Oportunitate comerciala cu fereastra scurta,MSP-02,Suprascriere prioritate,Da,Da
+Decizie de conducere,MSP-03,Suprascriere prioritate,Da,Da
+Asteptare mostra de la furnizor,MBL-01,Blocaj,Nu,Da
+Asteptare decizie de client,MBL-02,Blocaj,Nu,Da
+Asteptare aprobare de Calitate,MBL-03,Blocaj,Nu,Da
+Indisponibilitate de linie,MBL-04,Blocaj,Nu,Da
+Lipsa ambalaj,MBL-05,Blocaj,Nu,Da
+Nu se aplica tipului de produs,MEX-01,Respingere livrabil,Da,Da
+Acoperit de un livrabil al proiectului parinte,MEX-02,Respingere livrabil,Da,Da
+"Continut incomplet, se reface",MEX-03,Respingere livrabil,Da,Da
+Neconform cu specificatia sau cu cerinta,MEX-04,Respingere livrabil,Da,Da

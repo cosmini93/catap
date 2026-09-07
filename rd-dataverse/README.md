@@ -54,6 +54,22 @@ sau consumate de un script de provizionare.
 | [data/prioritizare.json](data/prioritizare.json) | Ponderi, benzi, buget de urgenta si factorii de calcul al termenului |
 | [data/nomenclatoare.json](data/nomenclatoare.json) | Tipuri de documente, motive, criterii senzoriale cu ancore, defecte, cauze de rebut, praguri |
 
+## Constructia
+
+`build/` contine materialele cu care se executa efectiv Valul 0.
+
+| Fisier | Continut |
+|---|---|
+| [build/V0-ghid-constructie.md](build/V0-ghid-constructie.md) | Ghid pas cu pas pentru Valul 0: mediu, DLP, solutie, variabile, Choice-uri, nomenclatoare, sabloane, roluri, SharePoint, export, verificare |
+| [build/import/](build/import/) | 8 fisiere CSV gata de importat in Dataverse plus 5 sabloane de completat cu datele companiei |
+| [build/genereaza-import.py](build/genereaza-import.py) | Regenereaza fisierele CSV din `data/*.json`, ca sa ramana sincronizate cu blueprintul |
+
+Fisierele de import gata de folosit: 40 de motive, 31 de tipuri de documente, 14
+alergeni, 22 de defecte, 17 criterii senzoriale cu ancore, 11 etape, 43 de livrabile cu
+tipurile de proiect aplicabile deja calculate, si cele 178 de valori ale Choice-urilor
+globale. Sabloanele de completat: linii de productie, clienti, furnizori, materii prime,
+profiluri de tehnolog.
+
 ## Conventii de referinta
 
 | Prefix | Inseamna |
@@ -88,7 +104,7 @@ de arhitectura. Pasii imediati:
 1. Raspunsuri la cele 10 intrebari din [Sectiunea 20](docs/S20-intrebari-deschise.md).
    Fiecare are o valoare implicita, deci constructia poate incepe si fara ele, dar IQ-01
    (mediul de productie) si IQ-10 (disponibilitatea reala de timp) schimba calendarul.
-2. Valul 0, conform [Sectiunii 16.1](docs/S16-roadmap.md), pornind de la promptul P-01 din
-   [Sectiunea 21](docs/S21-prompturi-continuare.md).
+2. Valul 0, dupa [build/V0-ghid-constructie.md](build/V0-ghid-constructie.md), cu
+   fisierele de import din `build/import/`. Efort 8-10 zile-om, durata 2-3 saptamani.
 3. Fiecare modul se construieste cu promptul lui din Sectiunea 21 si se verifica fata de
    criteriile din [Sectiunea 19](docs/S19-criterii-acceptanta.md).

@@ -1,0 +1,32 @@
+Denumire,Cod,Faza,Extensie asteptata,Necesita aprobare,Rol aprobator,Retentie (ani),Activ
+Solicitare cerinta produs,SCP,00 Solicitare,pdf,Da,Manager R&D,5,Da
+Eticheta produs client,EPC,00 Solicitare,pdf,Nu,,5,Da
+Documentatie de referinta,REF,00 Solicitare,pdf,Nu,,3,Da
+Plan de dezvoltare produs,PLAN,01 Plan,docx,Da,Manager R&D,5,Da
+Cerere achizitii mostra MP,CAMP,01 Plan,pdf,Da,Achizitii,3,Da
+Fisa de test,FTEST,02 Testare,pdf,Da,Manager R&D,5,Da
+Raport de testare,RTEST,02 Testare,pdf,Da,Manager R&D,5,Da
+Fisa de evaluare senzoriala,FSENZ,02 Testare,pdf,Da,Manager R&D,5,Da
+Documentatie foto,POZA,02 Testare,jpg,Nu,,3,Da
+Dosar de mostra,DMOSTRA,03 Mostre,pdf,Da,Tehnolog,3,Da
+Antecalcul,ANTECALC,04 Antecalcul,xlsx,Da,Manager R&D,5,Da
+Conditii ST,CONDST,05 Specificatii,pdf,Da,Calitate,10,Da
+ST draft,STDRAFT,05 Specificatii,pdf,Da,Calitate,10,Da
+ST finala,STFINAL,05 Specificatii,pdf,Da,Calitate,10,Da
+ST interna materie prima,STMP,05 Specificatii,pdf,Da,Calitate,10,Da
+Specificatie de produs,SDP,05 Specificatii,pdf,Da,Calitate,10,Da
+Eticheta punga,ETPUNGA,06 Eticheta,pdf,Da,Calitate,10,Da
+Eticheta bax,ETBAX,06 Eticheta,pdf,Da,Calitate,10,Da
+Fisier imprimanta Colos / Zebra,ETPRINT,06 Eticheta,zpl,Nu,,5,Da
+Conditii IPN,CONDIPN,07 Implementare,pdf,Da,Manager R&D,10,Da
+Plan IPN,PLANIPN,07 Implementare,pdf,Da,Manager R&D,10,Da
+Instructiune de lucru,IL,07 Implementare,pdf,Da,Productie,10,Da
+Plan HACCP actualizat,HACCP,07 Implementare,pdf,Da,Calitate,,Da
+Dovada de instruire,INSTR,07 Implementare,pdf,Nu,,5,Da
+Raport de productie 0,RPROD0,07 Implementare,pdf,Da,Manager R&D,10,Da
+TDV validat,TDV,08 Dosar validat,pdf,Da,Calitate,,Da
+Dosar validat complet,DOSAR,08 Dosar validat,pdf,Da,Manager R&D,,Da
+Dovada codului de material SAP,SAP,08 Dosar validat,pdf,Nu,,10,Da
+Raport revizuire 30 de zile,RPI30,09 Revizuire,pdf,Nu,,5,Da
+Raport revizuire 60 de zile,RPI60,09 Revizuire,pdf,Nu,,5,Da
+Raport revizuire 90 de zile,RPI90,09 Revizuire,pdf,Da,Head of R&D,5,Da

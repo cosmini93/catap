@@ -1,0 +1,15 @@
+Denumire,Cod,Denumire legala pe eticheta,Grupa,Necesita evidentiere pe eticheta,Prag de declarare
+Cereale cu gluten,GLU,Cereale cu gluten,Cereale cu gluten,Da,Fara prag
+Crustacee,CRU,Crustacee,Altele,Da,Fara prag
+Oua,OUA,Oua,Altele,Da,Fara prag
+Peste,PES,Peste,Altele,Da,Fara prag
+Arahide,ARA,Arahide,Altele,Da,Fara prag
+Soia,SOI,Soia,Altele,Da,Fara prag
+Lapte,LAP,Lapte,Altele,Da,Fara prag
+Fructe cu coaja lemnoasa,FRC,Fructe cu coaja lemnoasa,Fructe cu coaja,Da,Fara prag
+Telina,TEL,Telina,Altele,Da,Fara prag
+Mustar,MUS,Mustar,Altele,Da,Fara prag
+Susan,SUS,Susan,Altele,Da,Fara prag
+Dioxid de sulf si sulfiti,SO2,Dioxid de sulf si sulfiti,Altele,Da,10 mg/kg sau 10 mg/l
+Lupin,LUP,Lupin,Altele,Da,Fara prag
+Moluste,MOL,Moluste,Altele,Da,Fara prag

@@ -1,0 +1,23 @@
+Denumire,Cod,Grupa,Severitate implicita,Cauza probabila,Punct critic HACCP,Activ
+Aluat insuficient framantat,DF-01,Aluat,Major,Timp sau viteza de framantare sub specificatie,Nu,Da
+Aluat supraframantat,DF-02,Aluat,Major,Timp excesiv sau temperatura prea mare a aluatului,Nu,Da
+Temperatura aluatului in afara specificatiei,DF-03,Aluat,Major,"Apa nerarcita, temperatura camerei, frecare la malaxor",Nu,Da
+Aluat lipicios sau prea moale,DF-04,Aluat,Major,Hidratare excesiva sau faina cu absorbtie diferita,Nu,Da
+Grasime de laminare iesita sau sparta,DF-05,Laminare,Critic,Temperatura grasimii sau a aluatului in afara intervalului,Nu,Da
+"Straturi lipite, foietare absenta",DF-06,Laminare,Critic,"Presiune de laminare, numar de ture sau temperatura incorecte",Nu,Da
+Grosime de laminare neuniforma,DF-07,Laminare,Major,"Reglaj de calandru, uzura benzii",Nu,Da
+Taiere neregulata sau capete inegale,DF-08,Laminare,Minor,Cutite uzate sau sincronizare de banda,Nu,Da
+Dospire insuficienta,DF-09,Dospire,Major,"Timp, temperatura sau umiditate sub specificatie",Nu,Da
+"Supradospire, produs prabusit",DF-10,Dospire,Major,Timp excesiv sau dozaj de drojdie prea mare,Nu,Da
+Crusta formata la dospire,DF-11,Dospire,Major,Umiditate insuficienta in dospitor,Nu,Da
+"Coacere insuficienta, miez crud",DF-12,Coacere,Critic,"Timp sau temperatura sub specificatie, viteza de banda prea mare",Nu,Da
+Ardere sau culoare excesiva,DF-13,Coacere,Major,Temperatura pe zone prea mare sau aburire insuficienta,Nu,Da
+Coacere neuniforma pe latimea benzii,DF-14,Coacere,Major,Dezechilibru termic in cuptorul tunel,Nu,Da
+"Congelare incompleta, centru peste -18 C",DF-15,Congelare,Critic,Timp de tunel insuficient sau incarcare prea mare,Da,Da
+"Aglomerare, bucati lipite intre ele",DF-16,Congelare,Major,Asezare prea densa pe banda sau congelare lenta,Nu,Da
+Formare de gheata sau brumare,DF-17,Congelare,Major,"Variatii de temperatura, ambalare inainte de racire completa",Nu,Da
+Sudura de ambalaj incompleta,DF-18,Ambalare,Critic,"Temperatura sau presiune de sudura, folie in afara specificatiei",Nu,Da
+"Eticheta gresita, lipsa sau ilizibila",DF-19,Ambalare,Critic,Fisier de imprimanta gresit sau cap de printare murdar,Nu,Da
+Gramaj in afara tolerantei la ambalare,DF-20,Ambalare,Major,Reglaj de divizor sau variatie de densitate a aluatului,Nu,Da
+Materie prima cu caracteristici diferite de lot,DF-21,Materie prima,Major,"Variatie de lot la furnizor, faina cu W sau P/L diferit",Nu,Da
+Corp strain identificat,DF-22,Materie prima,Critic,Contaminare la furnizor sau pe linie,Da,Da

@@ -1,0 +1,12 @@
+Denumire etapa,Cod etapa,Ordine,Tip proiect,Durata standard (zile lucratoare),Rol responsabil,Opreste ceasul la blocaj,Activ
+Triaj si acceptare,ETP-01,1,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,1,Manager R&D,Da,Da
+Planificare si alocare,ETP-02,2,Produs nou;Reformulare;Transfer pe alta linie;Optimizare cost;Ambalaj nou,2,Manager R&D,Da,Da
+Aprovizionare materii prime,ETP-03,3,Produs nou;Reformulare;Transfer pe alta linie;Optimizare cost;Ambalaj nou,5,Achizitii,Da,Da
+Dezvoltare reteta si antecalcul,ETP-04,4,Produs nou;Reformulare;Abatere;Optimizare cost,4,Tehnolog,Da,Da
+Testare si trialuri,ETP-05,5,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost,4,Tehnolog,Da,Da
+Evaluare senzoriala si decizie,ETP-06,6,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost,1,Tehnolog,Da,Da
+Mostre catre client si feedback,ETP-07,7,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,3,Suport R&D,Da,Da
+Specificatii si eticheta,ETP-08,8,Produs nou;Reformulare;Abatere;Optimizare cost;Ambalaj nou,4,Tehnolog,Da,Da
+Pregatirea implementarii (IPN),ETP-09,9,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,2,Tehnolog,Da,Da
+Productie 0,ETP-10,10,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,1,Tehnolog,Da,Da
+Validare si dosar TDV,ETP-11,11,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,2,Manager R&D,Da,Da

@@ -18,7 +18,8 @@ celorlalti (introducerea datelor de nomenclator, instruirea, testarea de accepta
 | Mediul Developer | Mediu personal, cu Dataverse activat |
 | Solution `RDSuitaDigitala` | Editor `RD Digital`, prefix `rd`, versiune 0.1 |
 | Politica DLP | Conectori limitati la Microsoft 365 si Dataverse |
-| Nomenclatoarele | TBL-36 linii, TBL-38 clienti, TBL-37 profiluri, TBL-41 motive, TBL-42 tipuri de documente, alergeni, Choice-uri globale |
+| Nomenclatoarele din blueprint | TBL-41 motive, TBL-42 tipuri de documente, TBL-27 alergeni, TBL-20a defecte, TBL-18 criterii senzoriale, TBL-36 linii, TBL-37 profiluri, Choice-uri globale |
+| Tabelele create, populate in Val 1 | TBL-38 clienti, TBL-10 furnizori, TBL-09 materii prime - vezi 16.1.1 |
 | Sabloanele | TBL-04 livrabile (43 de randuri), TBL-06 etape (11 randuri) |
 | Rolurile de securitate | ROL-01 ... ROL-13, cu matricea din Sectiunea 11 |
 | Echipele | Cele 6 echipe din 11.1.2 |
@@ -34,6 +35,13 @@ celorlalti (introducerea datelor de nomenclator, instruirea, testarea de accepta
 
 **Riscul principal**: tentatia de a sari peste roluri si de a le face "la sfarsit".
 Retrofitarea securitatii intr-o solutie construita fara ea costa de trei ori mai mult.
+
+16.1.1 **Linia de demarcatie fata de migrarea din Valul 1.** Valul 0 populeaza
+nomenclatoarele care vin din blueprint si din discutia interna; pasii 4-6 din 15.2
+(clienti, furnizori, materii prime) raman in Valul 1, ca parte a migrarii, pentru ca cer
+extragere de date din SAP si depind de alti oameni. Tabelele se creeaza insa in Valul 0,
+ca structura, pentru ca lookup-urile din Valul 1 sa aiba ce sa refere. Fara aceasta
+separare, Valul 0 nu se termina in 2-3 saptamani si tot roadmap-ul aluneca.
 
 ## 16.2 Val 1 - MVP utilizabil (30 de zile)
 

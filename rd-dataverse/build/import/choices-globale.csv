@@ -1,0 +1,179 @@
+Nume logic,Eticheta set,Valoare,Eticheta optiune,Referinta blueprint,Multi-select
+rd_amplasament,Amplasament,100000000,Amplasament 1,,Nu
+rd_amplasament,Amplasament,100000001,Amplasament 2,,Nu
+rd_canal,Lant sau canal,100000000,Retail modern,,Nu
+rd_canal,Lant sau canal,100000001,Retail traditional,,Nu
+rd_canal,Lant sau canal,100000002,HoReCa,,Nu
+rd_canal,Lant sau canal,100000003,Industrial,,Nu
+rd_canal,Lant sau canal,100000004,Export,,Nu
+rd_canal,Lant sau canal,100000005,Marca proprie,,Nu
+rd_ambalare,Tip ambalare,100000000,Punga,,Nu
+rd_ambalare,Tip ambalare,100000001,Tava,,Nu
+rd_ambalare,Tip ambalare,100000002,Bax direct,,Nu
+rd_ambalare,Tip ambalare,100000003,Vrac,,Nu
+rd_ambalare,Tip ambalare,100000004,Flow-pack,,Nu
+rd_ambalare,Tip ambalare,100000005,Termoformat,,Nu
+rd_motivcerere,Motivul cererii,100000000,Client nou,,Nu
+rd_motivcerere,Motivul cererii,100000001,Extindere portofoliu,,Nu
+rd_motivcerere,Motivul cererii,100000002,Inlocuire produs,,Nu
+rd_motivcerere,Motivul cererii,100000003,Cerere de pret,,Nu
+rd_motivcerere,Motivul cererii,100000004,Reformulare,,Nu
+rd_motivcerere,Motivul cererii,100000005,Reactie la concurenta,,Nu
+rd_motivcerere,Motivul cererii,100000006,Reglementare,,Nu
+rd_tipproiect,Tip proiect,100000000,Produs nou,,Nu
+rd_tipproiect,Tip proiect,100000001,Reformulare,,Nu
+rd_tipproiect,Tip proiect,100000002,Abatere,,Nu
+rd_tipproiect,Tip proiect,100000003,Transfer pe alta linie,,Nu
+rd_tipproiect,Tip proiect,100000004,Optimizare cost,,Nu
+rd_tipproiect,Tip proiect,100000005,Ambalaj nou,,Nu
+rd_statusproiect,Status proiect,100000000,Solicitat,2.2.1,Nu
+rd_statusproiect,Status proiect,100000001,In evaluare,2.2.1,Nu
+rd_statusproiect,Status proiect,100000002,Acceptat - planificat,2.2.1,Nu
+rd_statusproiect,Status proiect,100000003,In dezvoltare,2.2.1,Nu
+rd_statusproiect,Status proiect,100000004,In asteptare materie prima,2.2.1,Nu
+rd_statusproiect,Status proiect,100000005,In testare,2.2.1,Nu
+rd_statusproiect,Status proiect,100000006,Blocat,2.2.1,Nu
+rd_statusproiect,Status proiect,100000007,In implementare,2.2.1,Nu
+rd_statusproiect,Status proiect,100000008,Productie 0,2.2.1,Nu
+rd_statusproiect,Status proiect,100000009,In revizuire,2.2.1,Nu
+rd_statusproiect,Status proiect,100000010,Finalizat,2.2.1,Nu
+rd_statusproiect,Status proiect,100000011,Respins,2.2.1,Nu
+rd_statusproiect,Status proiect,100000012,Suspendat,2.2.1,Nu
+rd_statusproiect,Status proiect,100000013,Abandonat,2.2.1,Nu
+rd_statuslivrabil,Status livrabil,100000000,Neinceput,,Nu
+rd_statuslivrabil,Status livrabil,100000001,In lucru,,Nu
+rd_statuslivrabil,Status livrabil,100000002,Trimis spre aprobare,,Nu
+rd_statuslivrabil,Status livrabil,100000003,Realizat,,Nu
+rd_statuslivrabil,Status livrabil,100000004,Respins,,Nu
+rd_statuslivrabil,Status livrabil,100000005,Nu se aplica,,Nu
+rd_statusetapa,Status etapa,100000000,Neinceputa,,Nu
+rd_statusetapa,Status etapa,100000001,In lucru,,Nu
+rd_statusetapa,Status etapa,100000002,Blocata,,Nu
+rd_statusetapa,Status etapa,100000003,Finalizata,,Nu
+rd_statusetapa,Status etapa,100000004,Sarita,,Nu
+rd_statusmp,Status ciclu materie prima,100000000,Identificata,4.4,Nu
+rd_statusmp,Status ciclu materie prima,100000001,Mostra ceruta,4.4,Nu
+rd_statusmp,Status ciclu materie prima,100000002,Mostra primita,4.4,Nu
+rd_statusmp,Status ciclu materie prima,100000003,In testare,4.4,Nu
+rd_statusmp,Status ciclu materie prima,100000004,Conditii ST emise,4.4,Nu
+rd_statusmp,Status ciclu materie prima,100000005,ST interna MP,4.4,Nu
+rd_statusmp,Status ciclu materie prima,100000006,Aprobata Calitate,4.4,Nu
+rd_statusmp,Status ciclu materie prima,100000007,Respinsa,4.4,Nu
+rd_statusmp,Status ciclu materie prima,100000008,Cod SAP creat,4.4,Nu
+rd_statusmp,Status ciclu materie prima,100000009,Comanda plasata,4.4,Nu
+rd_statusmp,Status ciclu materie prima,100000010,Receptionata,4.4,Nu
+rd_categoriemp,Categorie materie prima,100000000,Faina,,Nu
+rd_categoriemp,Categorie materie prima,100000001,Grasimi,,Nu
+rd_categoriemp,Categorie materie prima,100000002,Zaharuri,,Nu
+rd_categoriemp,Categorie materie prima,100000003,Lactate,,Nu
+rd_categoriemp,Categorie materie prima,100000004,Oua,,Nu
+rd_categoriemp,Categorie materie prima,100000005,Drojdie si afanatori,,Nu
+rd_categoriemp,Categorie materie prima,100000006,Amelioratori,,Nu
+rd_categoriemp,Categorie materie prima,100000007,Umpluturi,,Nu
+rd_categoriemp,Categorie materie prima,100000008,Fructe,,Nu
+rd_categoriemp,Categorie materie prima,100000009,Ciocolata,,Nu
+rd_categoriemp,Categorie materie prima,100000010,Arome,,Nu
+rd_categoriemp,Categorie materie prima,100000011,Aditivi,,Nu
+rd_categoriemp,Categorie materie prima,100000012,Ambalaje,,Nu
+rd_categoriemp,Categorie materie prima,100000013,Altele,,Nu
+rd_sursablocaj,Cine blocheaza,100000000,Furnizor,,Nu
+rd_sursablocaj,Cine blocheaza,100000001,Client,,Nu
+rd_sursablocaj,Cine blocheaza,100000002,Calitate,,Nu
+rd_sursablocaj,Cine blocheaza,100000003,Planificare,,Nu
+rd_sursablocaj,Cine blocheaza,100000004,Productie,,Nu
+rd_sursablocaj,Cine blocheaza,100000005,Achizitii,,Nu
+rd_sursablocaj,Cine blocheaza,100000006,Intern R&D,,Nu
+rd_sursablocaj,Cine blocheaza,100000007,Extern reglementar,,Nu
+rd_tipmostra,Tip mostra,100000000,Materie prima,,Nu
+rd_tipmostra,Tip mostra,100000001,Produs finit intern,,Nu
+rd_tipmostra,Tip mostra,100000002,Produs concurenta,,Nu
+rd_tipmostra,Tip mostra,100000003,Mostra client,,Nu
+rd_tipmostra,Tip mostra,100000004,Ambalaj,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000000,Greutate,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000001,Lungime,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000002,Latime,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000003,Inaltime,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000004,Diametru,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000005,Grosime,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000006,Volum,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000007,Aspect,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000008,Alveolare,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000009,Miros,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000010,Gust,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000011,Culoare,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000012,Umiditate,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000013,Aw,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000014,pH,,Nu
+rd_tipmasuratoare,Tip masuratoare,100000015,Temperatura,,Nu
+rd_rezultattrial,Rezultat trial,100000000,In curs,,Nu
+rd_rezultattrial,Rezultat trial,100000001,Reusit,,Nu
+rd_rezultattrial,Rezultat trial,100000002,Reusit cu observatii,,Nu
+rd_rezultattrial,Rezultat trial,100000003,Nereusit,,Nu
+rd_rezultatiteratie,Rezultat iteratie furnizor,100000000,In curs,,Nu
+rd_rezultatiteratie,Rezultat iteratie furnizor,100000001,Acceptata tehnic,,Nu
+rd_rezultatiteratie,Rezultat iteratie furnizor,100000002,Respinsa tehnic,,Nu
+rd_rezultatiteratie,Rezultat iteratie furnizor,100000003,Respinsa de Calitate,,Nu
+rd_rezultatiteratie,Rezultat iteratie furnizor,100000004,Respinsa pe cost,,Nu
+rd_rezultatiteratie,Rezultat iteratie furnizor,100000005,Retrasa de furnizor,,Nu
+rd_verdict,Verdict senzorial,100000000,Acceptat,6.5.5,Nu
+rd_verdict,Verdict senzorial,100000001,Acceptat cu observatii,6.5.5,Nu
+rd_verdict,Verdict senzorial,100000002,Respins,6.5.5,Nu
+rd_tipst,Tip specificatie,100000000,Conditii ST,,Nu
+rd_tipst,Tip specificatie,100000001,ST draft,,Nu
+rd_tipst,Tip specificatie,100000002,ST finala,,Nu
+rd_tipst,Tip specificatie,100000003,ST interna MP noua,,Nu
+rd_tipeticheta,Tip eticheta,100000000,Punga,,Nu
+rd_tipeticheta,Tip eticheta,100000001,Bax,,Nu
+rd_tipeticheta,Tip eticheta,100000002,EPC eticheta produs client,,Nu
+rd_tipeticheta,Tip eticheta,100000003,Fisier imprimanta,,Nu
+rd_tipreferinta,Tip referinta de comparatie,100000000,Produs concurenta,,Nu
+rd_tipreferinta,Tip referinta de comparatie,100000001,Produs actual,,Nu
+rd_tipreferinta,Tip referinta de comparatie,100000002,Mostra client,,Nu
+rd_tipreferinta,Tip referinta de comparatie,100000003,Specificatie client,,Nu
+rd_tipreferinta,Tip referinta de comparatie,100000004,Inexistenta,,Nu
+rd_faza,Faza,100000000,00 Solicitare,5.1.1,Nu
+rd_faza,Faza,100000001,01 Plan,5.1.1,Nu
+rd_faza,Faza,100000002,02 Testare,5.1.1,Nu
+rd_faza,Faza,100000003,03 Mostre,5.1.1,Nu
+rd_faza,Faza,100000004,04 Antecalcul,5.1.1,Nu
+rd_faza,Faza,100000005,05 Specificatii,5.1.1,Nu
+rd_faza,Faza,100000006,06 Eticheta,5.1.1,Nu
+rd_faza,Faza,100000007,07 Implementare,5.1.1,Nu
+rd_faza,Faza,100000008,08 Dosar validat,5.1.1,Nu
+rd_faza,Faza,100000009,09 Revizuire,5.1.1,Nu
+rd_rol,Rol,100000000,Head of R&D,11.2,Nu
+rd_rol,Rol,100000001,Manager R&D,11.2,Nu
+rd_rol,Rol,100000002,Tehnolog,11.2,Nu
+rd_rol,Rol,100000003,Suport R&D,11.2,Nu
+rd_rol,Rol,100000004,KAM,11.2,Nu
+rd_rol,Rol,100000005,Comercial Manager,11.2,Nu
+rd_rol,Rol,100000006,Achizitii,11.2,Nu
+rd_rol,Rol,100000007,Calitate,11.2,Nu
+rd_rol,Rol,100000008,Planificare,11.2,Nu
+rd_rol,Rol,100000009,Productie,11.2,Nu
+rd_banda,Banda prioritate,100000000,P1,2.2.4,Nu
+rd_banda,Banda prioritate,100000001,P2,2.2.4,Nu
+rd_banda,Banda prioritate,100000002,P3,2.2.4,Nu
+rd_banda,Banda prioritate,100000003,P4,2.2.4,Nu
+rd_schimb,Schimb,100000000,07-15,,Nu
+rd_schimb,Schimb,100000001,15-23,,Nu
+rd_schimb,Schimb,100000002,23-07,,Nu
+rd_um,Unitate de masura,100000000,kg,,Nu
+rd_um,Unitate de masura,100000001,g,,Nu
+rd_um,Unitate de masura,100000002,l,,Nu
+rd_um,Unitate de masura,100000003,ml,,Nu
+rd_um,Unitate de masura,100000004,buc,,Nu
+rd_alergen,Alergen,100000000,Cereale cu gluten,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000001,Crustacee,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000002,Oua,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000003,Peste,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000004,Arahide,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000005,Soia,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000006,Lapte,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000007,Fructe cu coaja lemnoasa,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000008,Telina,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000009,Mustar,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000010,Susan,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000011,Dioxid de sulf si sulfiti,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000012,Lupin,Anexa II Reg. (UE) 1169/2011,Da
+rd_alergen,Alergen,100000013,Moluste,Anexa II Reg. (UE) 1169/2011,Da

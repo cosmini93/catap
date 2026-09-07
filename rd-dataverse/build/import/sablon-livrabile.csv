@@ -1,0 +1,44 @@
+Denumire,Cod livrabil,Tip proiect aplicabil,Faza,Ordine,Offset termen (zile),Offset fata de implementare,Rol responsabil,Rol aprobator,Obligatoriu,Necesita document,Conditie de aplicabilitate,Sablon Word,Activ
+SCP completat si trimis,LIV-01,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,00 Solicitare,1,0,,KAM,Manager R&D,Da,Da,Intotdeauna,SCP,Da
+Eticheta produs client (EPC) primita,LIV-02,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Ambalaj nou,00 Solicitare,2,2,,KAM,,Nu,Da,Doar eticheta noua,,Da
+Referinta de comparatie inregistrata,LIV-03,Produs nou;Abatere;Transfer pe alta linie;Ambalaj nou,00 Solicitare,3,1,,KAM,Tehnolog,Da,Nu,Intotdeauna,,Da
+Cerinte de eticheta si ambalaj de la client,LIV-04,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,00 Solicitare,4,2,,KAM,,Nu,Da,Intotdeauna,,Da
+Decizie de triaj cu motiv,LIV-05,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,00 Solicitare,5,1,,Manager R&D,,Da,Nu,Intotdeauna,,Da
+Plan de dezvoltare produs,LIV-06,Produs nou;Reformulare;Transfer pe alta linie;Optimizare cost;Ambalaj nou,01 Plan,1,2,,Tehnolog,Manager R&D,Da,Da,Intotdeauna,PLAN,Da
+Cerere achizitii mostra MP noua,LIV-07,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,01 Plan,2,3,,Tehnolog,Achizitii,Da,Da,Doar MP noua,CAMP,Da
+Lista materiilor prime cu marcarea celor noi,LIV-08,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost,01 Plan,3,3,,Tehnolog,,Da,Nu,Intotdeauna,,Da
+Slot de testare propus si negociat,LIV-09,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,01 Plan,4,3,,Manager R&D,Planificare,Nu,Nu,Intotdeauna,,Da
+Fisa de test,LIV-10,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost,02 Testare,1,5,,Tehnolog,Manager R&D,Da,Da,Intotdeauna,FTEST,Da
+Testare realizata (cel putin un trial reusit),LIV-11,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost,02 Testare,2,8,,Tehnolog,,Da,Nu,Intotdeauna,,Da
+Raport de testare cu masuratori si statistica,LIV-12,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost,02 Testare,3,9,,Tehnolog,Manager R&D,Da,Da,Intotdeauna,RTEST,Da
+Evaluare produs (fisa de evaluare senzoriala),LIV-13,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost,02 Testare,4,9,,Tehnolog,Manager R&D,Da,Da,Intotdeauna,FSENZ,Da
+Test comparativ fata de referinta,LIV-14,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost,02 Testare,5,9,,Tehnolog,,Nu,Nu,Intotdeauna,,Da
+Mostre de produs pregatite si livrate,LIV-15,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,03 Mostre,1,10,,Suport R&D,,Da,Nu,Intotdeauna,,Da
+"Dosar de mostra (fisa, poze, dovada livrarii)",LIV-16,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,03 Mostre,2,10,,Suport R&D,Tehnolog,Da,Da,Intotdeauna,DMOSTRA,Da
+Feedback client la mostra,LIV-17,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,03 Mostre,3,12,,KAM,,Da,Da,Intotdeauna,,Da
+Antecalcul,LIV-18,Produs nou;Reformulare;Optimizare cost;Ambalaj nou,04 Antecalcul,1,7,,Tehnolog,Manager R&D,Da,Da,Intotdeauna,ANTECALC,Da
+Confirmare de pret de la client,LIV-19,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,04 Antecalcul,2,12,,KAM,,Nu,Da,Intotdeauna,,Da
+Conditii ST,LIV-20,Produs nou;Reformulare;Abatere;Optimizare cost;Ambalaj nou,05 Specificatii,1,6,,Tehnolog,Calitate,Da,Da,Intotdeauna,CONDST,Da
+ST draft,LIV-21,Produs nou;Reformulare;Abatere;Optimizare cost;Ambalaj nou,05 Specificatii,2,10,,Tehnolog,Calitate,Da,Da,Intotdeauna,,Da
+ST interna pentru MP noua,LIV-22,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,05 Specificatii,3,8,,Calitate,Calitate,Da,Da,Doar MP noua,,Da
+Material SAP creat pentru MP noua,LIV-23,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,05 Specificatii,4,9,,Achizitii,,Da,Nu,Doar MP noua,,Da
+ST finala,LIV-24,Produs nou;Reformulare;Abatere;Optimizare cost;Ambalaj nou,05 Specificatii,5,13,,Tehnolog,Calitate,Da,Da,Intotdeauna,,Da
+SDP - specificatie de produs,LIV-25,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,05 Specificatii,6,14,,Tehnolog,Calitate,Da,Da,Intotdeauna,SDP,Da
+Material SAP creat pentru produsul finit,LIV-26,Produs nou;Transfer pe alta linie;Optimizare cost;Ambalaj nou,05 Specificatii,7,13,,Tehnolog,Manager R&D,Da,Nu,Intotdeauna,,Da
+Alergeni si valori nutritionale calculate,LIV-27,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost,05 Specificatii,8,12,,Tehnolog,Calitate,Da,Nu,Intotdeauna,,Da
+Eticheta realizata (punga si bax),LIV-28,Produs nou;Reformulare;Abatere;Ambalaj nou,06 Eticheta,1,14,,Suport R&D,Calitate,Da,Da,Doar eticheta noua,,Da
+Fisier de imprimanta Colos / Zebra,LIV-29,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,06 Eticheta,2,15,,Suport R&D,,Nu,Da,Doar eticheta noua,,Da
+Eticheta implementata pe linie,LIV-30,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Ambalaj nou,06 Eticheta,3,18,,Productie,Tehnolog,Da,Nu,Doar eticheta noua,,Da
+Conditii IPN,LIV-31,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,07 Implementare,1,15,,Tehnolog,Manager R&D,Da,Da,Intotdeauna,CONDIPN,Da
+Plan IPN,LIV-32,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,07 Implementare,2,15,,Tehnolog,Manager R&D,Da,Da,Intotdeauna,PLANIPN,Da
+IL productie creata,LIV-33,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,07 Implementare,3,16,,Tehnolog,Productie,Da,Da,Intotdeauna,,Da
+Plan HACCP actualizat si aprobat,LIV-34,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,07 Implementare,4,16,,Calitate,Calitate,Da,Da,Intotdeauna,,Da
+Instruire operatori efectuata,LIV-35,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,07 Implementare,5,17,,Productie,Tehnolog,Da,Da,Intotdeauna,,Da
+Productie 0 realizata si inregistrata,LIV-36,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,07 Implementare,6,18,,Tehnolog,Manager R&D,Da,Da,Intotdeauna,,Da
+Raport de productie 0 cu decizie,LIV-37,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,07 Implementare,7,19,,Tehnolog,Manager R&D si Calitate,Da,Da,Intotdeauna,RPROD0,Da
+Dosar validat complet,LIV-38,Produs nou;Reformulare;Transfer pe alta linie;Optimizare cost;Ambalaj nou,08 Dosar validat,1,20,,Suport R&D,Manager R&D,Da,Da,Intotdeauna,DOSAR,Da
+"TDV validat, semnat R&D si Calitate",LIV-39,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,08 Dosar validat,2,20,,Manager R&D,Calitate,Da,Da,Intotdeauna,TDV,Da
+Predare catre productie si comercial,LIV-40,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,08 Dosar validat,3,20,,Manager R&D,,Da,Nu,Intotdeauna,,Da
+Revizuire la 30 de zile,LIV-41,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,09 Revizuire,1,,30,Manager R&D,,Nu,Da,Intotdeauna,RPI30,Da
+Revizuire la 60 de zile,LIV-42,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,09 Revizuire,2,,60,Manager R&D,,Nu,Da,Intotdeauna,RPI60,Da
+Revizuire la 90 de zile cu decizie finala,LIV-43,Produs nou;Reformulare;Abatere;Transfer pe alta linie;Optimizare cost;Ambalaj nou,09 Revizuire,3,,90,Manager R&D,Head of R&D,Da,Da,Intotdeauna,RPI90,Da
