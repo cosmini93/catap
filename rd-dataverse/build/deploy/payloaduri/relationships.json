@@ -1,0 +1,6042 @@
+[
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Proiect_solicitare_solicitare",
+    "ReferencedEntity": "rd_solicitare",
+    "ReferencingEntity": "rd_proiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Solicitare",
+      "LogicalName": "rd_solicitare",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Solicitare sursa",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Livrabil_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_livrabil",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Etapa_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_etapa",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Mpproiect_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_mpproiect",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Iteratiefurnizor_mpproiect_mpproiect",
+    "ReferencedEntity": "rd_mpproiect",
+    "ReferencingEntity": "rd_iteratiefurnizor",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Mpproiect",
+      "LogicalName": "rd_mpproiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Materie prima de proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Blocaj_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_blocaj",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Ceremostra_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_ceremostra",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Miscaremostra_ceremostra_ceremostra",
+    "ReferencedEntity": "rd_ceremostra",
+    "ReferencingEntity": "rd_miscaremostra",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Ceremostra",
+      "LogicalName": "rd_ceremostra",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Cerere de mostra",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Fisatestare_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_fisatestare",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Trial_fisatestare_fisatestare",
+    "ReferencedEntity": "rd_fisatestare",
+    "ReferencingEntity": "rd_trial",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Fisatestare",
+      "LogicalName": "rd_fisatestare",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Fisa de testare",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Masuratoare_trial_trial",
+    "ReferencedEntity": "rd_trial",
+    "ReferencingEntity": "rd_masuratoare",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Trial",
+      "LogicalName": "rd_trial",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Trial",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Statisticatrial_trial_trial",
+    "ReferencedEntity": "rd_trial",
+    "ReferencingEntity": "rd_statisticatrial",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Trial",
+      "LogicalName": "rd_trial",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Trial",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Evaluaresenzoriala_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_evaluaresenzoriala",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Scorsenzorial_evaluaresenzoriala_evaluare",
+    "ReferencedEntity": "rd_evaluaresenzoriala",
+    "ReferencingEntity": "rd_scorsenzorial",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Evaluare",
+      "LogicalName": "rd_evaluare",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Evaluare",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Defectconstatat_evaluaresenzoriala_evaluare",
+    "ReferencedEntity": "rd_evaluaresenzoriala",
+    "ReferencingEntity": "rd_defectconstatat",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Evaluare",
+      "LogicalName": "rd_evaluare",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Evaluare",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Referinta_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_referinta",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Reteta_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_reteta",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Versiunereteta_reteta_reteta",
+    "ReferencedEntity": "rd_reteta",
+    "ReferencingEntity": "rd_versiunereteta",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Reteta",
+      "LogicalName": "rd_reteta",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Reteta",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Liniereteta_versiunereteta_versiunereteta",
+    "ReferencedEntity": "rd_versiunereteta",
+    "ReferencingEntity": "rd_liniereteta",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Versiunereteta",
+      "LogicalName": "rd_versiunereteta",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Versiune reteta",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Antecalcul_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_antecalcul",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Linieantecalcul_antecalcul_antecalcul",
+    "ReferencedEntity": "rd_antecalcul",
+    "ReferencingEntity": "rd_linieantecalcul",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Antecalcul",
+      "LogicalName": "rd_antecalcul",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Antecalcul",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Specificatie_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_specificatie",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Sdp_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_sdp",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Eticheta_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_eticheta",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Implementare_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_implementare",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Productie0_implementare_implementare",
+    "ReferencedEntity": "rd_implementare",
+    "ReferencingEntity": "rd_productie0",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Implementare",
+      "LogicalName": "rd_implementare",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Implementare",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Inregistrareprod0_productie0_productie0",
+    "ReferencedEntity": "rd_productie0",
+    "ReferencingEntity": "rd_inregistrareprod0",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Productie0",
+      "LogicalName": "rd_productie0",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Productie 0",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Revizuire_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_revizuire",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Proiect_proiect_proiectparinte",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_proiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiectparinte",
+      "LogicalName": "rd_proiectparinte",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect parinte",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Gate_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_gate",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Verificaregate_gate_gate",
+    "ReferencedEntity": "rd_gate",
+    "ReferencingEntity": "rd_verificaregate",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Gate",
+      "LogicalName": "rd_gate",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Gate",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Criteriugate_sablongate_sablongate",
+    "ReferencedEntity": "rd_sablongate",
+    "ReferencingEntity": "rd_criteriugate",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Sablongate",
+      "LogicalName": "rd_sablongate",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Sablon gate",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Risc_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_risc",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Problema_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_problema",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Decizie_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_decizie",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Stabilizare_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_stabilizare",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Lotstabilizare_stabilizare_stabilizare",
+    "ReferencedEntity": "rd_stabilizare",
+    "ReferencingEntity": "rd_lotstabilizare",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Stabilizare",
+      "LogicalName": "rd_stabilizare",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Stabilizare",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Capabilitateproces_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_capabilitateproces",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Utilizarelectie_lectie_lectie",
+    "ReferencedEntity": "rd_lectie",
+    "ReferencingEntity": "rd_utilizarelectie",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Lectie",
+      "LogicalName": "rd_lectie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Lectie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Recomandarelectie_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_recomandarelectie",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Snapshotsanatate_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_snapshotsanatate",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Actiune_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_actiune",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Solicitare_client_client",
+    "ReferencedEntity": "rd_client",
+    "ReferencingEntity": "rd_solicitare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Client",
+      "LogicalName": "rd_client",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Client",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Proiect_client_client",
+    "ReferencedEntity": "rd_client",
+    "ReferencingEntity": "rd_proiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Client",
+      "LogicalName": "rd_client",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Client",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Referinta_client_client",
+    "ReferencedEntity": "rd_client",
+    "ReferencingEntity": "rd_referinta",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Client",
+      "LogicalName": "rd_client",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Client asociat",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Proiect_linie_linie",
+    "ReferencedEntity": "rd_linie",
+    "ReferencingEntity": "rd_proiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Linie",
+      "LogicalName": "rd_linie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Linie de productie vizata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Trial_linie_linie",
+    "ReferencedEntity": "rd_linie",
+    "ReferencingEntity": "rd_trial",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Linie",
+      "LogicalName": "rd_linie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Linie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Fisatestare_linie_linie",
+    "ReferencedEntity": "rd_linie",
+    "ReferencingEntity": "rd_fisatestare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Linie",
+      "LogicalName": "rd_linie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Linie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Antecalcul_linie_linie",
+    "ReferencedEntity": "rd_linie",
+    "ReferencingEntity": "rd_antecalcul",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Linie",
+      "LogicalName": "rd_linie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Linie de productie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Implementare_linie_linie",
+    "ReferencedEntity": "rd_linie",
+    "ReferencingEntity": "rd_implementare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Linie",
+      "LogicalName": "rd_linie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Linie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Productie0_linie_linie",
+    "ReferencedEntity": "rd_linie",
+    "ReferencingEntity": "rd_productie0",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Linie",
+      "LogicalName": "rd_linie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Linie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Mpproiect_materieprima_materieprima",
+    "ReferencedEntity": "rd_materieprima",
+    "ReferencingEntity": "rd_mpproiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Materieprima",
+      "LogicalName": "rd_materieprima",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Materie prima catalog",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Liniereteta_materieprima_materieprima",
+    "ReferencedEntity": "rd_materieprima",
+    "ReferencingEntity": "rd_liniereteta",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Materieprima",
+      "LogicalName": "rd_materieprima",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Materie prima",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Linieantecalcul_materieprima_materieprima",
+    "ReferencedEntity": "rd_materieprima",
+    "ReferencingEntity": "rd_linieantecalcul",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Materieprima",
+      "LogicalName": "rd_materieprima",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Materie prima",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Specificatie_materieprima_materieprima",
+    "ReferencedEntity": "rd_materieprima",
+    "ReferencingEntity": "rd_specificatie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Materieprima",
+      "LogicalName": "rd_materieprima",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Materie prima",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Materieprima_furnizor_furnizor",
+    "ReferencedEntity": "rd_furnizor",
+    "ReferencingEntity": "rd_materieprima",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Furnizor",
+      "LogicalName": "rd_furnizor",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Furnizor principal",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Mpproiect_furnizor_furnizor",
+    "ReferencedEntity": "rd_furnizor",
+    "ReferencingEntity": "rd_mpproiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Furnizor",
+      "LogicalName": "rd_furnizor",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Furnizor propus",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Iteratiefurnizor_furnizor_furnizor",
+    "ReferencedEntity": "rd_furnizor",
+    "ReferencingEntity": "rd_iteratiefurnizor",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Furnizor",
+      "LogicalName": "rd_furnizor",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Furnizor",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Solicitare_motiv_motivtriaj",
+    "ReferencedEntity": "rd_motiv",
+    "ReferencingEntity": "rd_solicitare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Motivtriaj",
+      "LogicalName": "rd_motivtriaj",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Motiv triaj",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Proiect_motiv_motivstatus",
+    "ReferencedEntity": "rd_motiv",
+    "ReferencingEntity": "rd_proiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Motivstatus",
+      "LogicalName": "rd_motivstatus",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Motiv status",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Iteratiefurnizor_motiv_motivrespingere",
+    "ReferencedEntity": "rd_motiv",
+    "ReferencingEntity": "rd_iteratiefurnizor",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Motivrespingere",
+      "LogicalName": "rd_motivrespingere",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Motiv respingere",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Scorsenzorial_criteriusenzorial_criteriu",
+    "ReferencedEntity": "rd_criteriusenzorial",
+    "ReferencingEntity": "rd_scorsenzorial",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Criteriu",
+      "LogicalName": "rd_criteriu",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Criteriu",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Defectconstatat_defect_defect",
+    "ReferencedEntity": "rd_defect",
+    "ReferencingEntity": "rd_defectconstatat",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Defect",
+      "LogicalName": "rd_defect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Defect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Livrabil_sablonlivrabil_sablon",
+    "ReferencedEntity": "rd_sablonlivrabil",
+    "ReferencingEntity": "rd_livrabil",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Sablon",
+      "LogicalName": "rd_sablon",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Sablon sursa",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Etapa_sablonetapa_sablon",
+    "ReferencedEntity": "rd_sablonetapa",
+    "ReferencingEntity": "rd_etapa",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Sablon",
+      "LogicalName": "rd_sablon",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Sablon",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Sablonlivrabil_sablonetapa_etapa",
+    "ReferencedEntity": "rd_sablonetapa",
+    "ReferencingEntity": "rd_sablonlivrabil",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Etapa",
+      "LogicalName": "rd_etapa",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Etapa asociata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Masurareindicator_indicator_indicator",
+    "ReferencedEntity": "rd_indicator",
+    "ReferencingEntity": "rd_masurareindicator",
+    "CascadeConfiguration": {
+      "Assign": "Cascade",
+      "Delete": "Cascade",
+      "Merge": "Cascade",
+      "Reparent": "Cascade",
+      "Share": "Cascade",
+      "Unshare": "Cascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Indicator",
+      "LogicalName": "rd_indicator",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Indicator",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Sablongate_sablonetapa_sablonetapa",
+    "ReferencedEntity": "rd_sablonetapa",
+    "ReferencingEntity": "rd_sablongate",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Sablonetapa",
+      "LogicalName": "rd_sablonetapa",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Etapa asociata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Stabilizare_linie_linie",
+    "ReferencedEntity": "rd_linie",
+    "ReferencingEntity": "rd_stabilizare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Linie",
+      "LogicalName": "rd_linie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Linie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Capabilitateproces_linie_linie",
+    "ReferencedEntity": "rd_linie",
+    "ReferencingEntity": "rd_capabilitateproces",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "Restrict",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Linie",
+      "LogicalName": "rd_linie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Linie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Lectie_linie_linie",
+    "ReferencedEntity": "rd_linie",
+    "ReferencingEntity": "rd_lectie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Linie",
+      "LogicalName": "rd_linie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Linie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Lectie_materieprima_materieprima",
+    "ReferencedEntity": "rd_materieprima",
+    "ReferencingEntity": "rd_lectie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Materieprima",
+      "LogicalName": "rd_materieprima",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Materie prima",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Lectie_furnizor_furnizor",
+    "ReferencedEntity": "rd_furnizor",
+    "ReferencingEntity": "rd_lectie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Furnizor",
+      "LogicalName": "rd_furnizor",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Furnizor",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Lectie_client_client",
+    "ReferencedEntity": "rd_client",
+    "ReferencingEntity": "rd_lectie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Client",
+      "LogicalName": "rd_client",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Client",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Fisatestare_versiunereteta_versiunereteta",
+    "ReferencedEntity": "rd_versiunereteta",
+    "ReferencingEntity": "rd_fisatestare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Versiunereteta",
+      "LogicalName": "rd_versiunereteta",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Versiune reteta testata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Evaluaresenzoriala_trial_trial",
+    "ReferencedEntity": "rd_trial",
+    "ReferencingEntity": "rd_evaluaresenzoriala",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Trial",
+      "LogicalName": "rd_trial",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Trial evaluat",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Evaluaresenzoriala_referinta_referinta",
+    "ReferencedEntity": "rd_referinta",
+    "ReferencingEntity": "rd_evaluaresenzoriala",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Referinta",
+      "LogicalName": "rd_referinta",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Referinta comparata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Antecalcul_versiunereteta_versiunereteta",
+    "ReferencedEntity": "rd_versiunereteta",
+    "ReferencingEntity": "rd_antecalcul",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Versiunereteta",
+      "LogicalName": "rd_versiunereteta",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Versiune reteta",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Linieantecalcul_mpproiect_mpproiect",
+    "ReferencedEntity": "rd_mpproiect",
+    "ReferencingEntity": "rd_linieantecalcul",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Mpproiect",
+      "LogicalName": "rd_mpproiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Materie prima de proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Liniereteta_mpproiect_mpproiect",
+    "ReferencedEntity": "rd_mpproiect",
+    "ReferencingEntity": "rd_liniereteta",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Mpproiect",
+      "LogicalName": "rd_mpproiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Materie prima de proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Sdp_versiunereteta_versiunereteta",
+    "ReferencedEntity": "rd_versiunereteta",
+    "ReferencingEntity": "rd_sdp",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Versiunereteta",
+      "LogicalName": "rd_versiunereteta",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Versiune reteta",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Blocaj_etapa_etapa",
+    "ReferencedEntity": "rd_etapa",
+    "ReferencingEntity": "rd_blocaj",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Etapa",
+      "LogicalName": "rd_etapa",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Etapa afectata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Ceremostra_mpproiect_mpproiect",
+    "ReferencedEntity": "rd_mpproiect",
+    "ReferencingEntity": "rd_ceremostra",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Mpproiect",
+      "LogicalName": "rd_mpproiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Materie prima de proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Specificatie_specificatie_inlocuieste",
+    "ReferencedEntity": "rd_specificatie",
+    "ReferencingEntity": "rd_specificatie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Inlocuieste",
+      "LogicalName": "rd_inlocuieste",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Inlocuieste",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Reteta_versiunereteta_versiunecurenta",
+    "ReferencedEntity": "rd_versiunereteta",
+    "ReferencingEntity": "rd_reteta",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Versiunecurenta",
+      "LogicalName": "rd_versiunecurenta",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Versiune curenta",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Proiect_referinta_referinta",
+    "ReferencedEntity": "rd_referinta",
+    "ReferencingEntity": "rd_proiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Referinta",
+      "LogicalName": "rd_referinta",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Referinta de comparatie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Trial_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_trial",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Gate_sablongate_sablongate",
+    "ReferencedEntity": "rd_sablongate",
+    "ReferencingEntity": "rd_gate",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Sablongate",
+      "LogicalName": "rd_sablongate",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Sablon gate",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Gate_etapa_etapa",
+    "ReferencedEntity": "rd_etapa",
+    "ReferencingEntity": "rd_gate",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Etapa",
+      "LogicalName": "rd_etapa",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Etapa",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Verificaregate_criteriugate_criteriu",
+    "ReferencedEntity": "rd_criteriugate",
+    "ReferencingEntity": "rd_verificaregate",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Criteriu",
+      "LogicalName": "rd_criteriu",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Criteriu",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Verificaregate_actiune_actiune",
+    "ReferencedEntity": "rd_actiune",
+    "ReferencingEntity": "rd_verificaregate",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Actiune",
+      "LogicalName": "rd_actiune",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Actiune generata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Risc_problema_problema",
+    "ReferencedEntity": "rd_problema",
+    "ReferencingEntity": "rd_risc",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Problema",
+      "LogicalName": "rd_problema",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Problema generata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Problema_risc_risc",
+    "ReferencedEntity": "rd_risc",
+    "ReferencingEntity": "rd_problema",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Risc",
+      "LogicalName": "rd_risc",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Risc sursa",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Problema_trial_trial",
+    "ReferencedEntity": "rd_trial",
+    "ReferencingEntity": "rd_problema",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Trial",
+      "LogicalName": "rd_trial",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Trial legat",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Problema_mpproiect_mpproiect",
+    "ReferencedEntity": "rd_mpproiect",
+    "ReferencingEntity": "rd_problema",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Mpproiect",
+      "LogicalName": "rd_mpproiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Materie prima legata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Problema_productie0_productie0",
+    "ReferencedEntity": "rd_productie0",
+    "ReferencingEntity": "rd_problema",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Productie0",
+      "LogicalName": "rd_productie0",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Productie 0 legata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Problema_lectie_lectie",
+    "ReferencedEntity": "rd_lectie",
+    "ReferencingEntity": "rd_problema",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Lectie",
+      "LogicalName": "rd_lectie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Lectie generata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Actiune_risc_risc",
+    "ReferencedEntity": "rd_risc",
+    "ReferencingEntity": "rd_actiune",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Risc",
+      "LogicalName": "rd_risc",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Risc",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Actiune_problema_problema",
+    "ReferencedEntity": "rd_problema",
+    "ReferencingEntity": "rd_actiune",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Problema",
+      "LogicalName": "rd_problema",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Problema",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Actiune_gate_gate",
+    "ReferencedEntity": "rd_gate",
+    "ReferencingEntity": "rd_actiune",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Gate",
+      "LogicalName": "rd_gate",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Gate",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Actiune_productie0_productie0",
+    "ReferencedEntity": "rd_productie0",
+    "ReferencingEntity": "rd_actiune",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Productie0",
+      "LogicalName": "rd_productie0",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Productie 0",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Stabilizare_productie0_productie0",
+    "ReferencedEntity": "rd_productie0",
+    "ReferencingEntity": "rd_stabilizare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Productie0",
+      "LogicalName": "rd_productie0",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Productie 0 sursa",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Lotstabilizare_problema_problema",
+    "ReferencedEntity": "rd_problema",
+    "ReferencingEntity": "rd_lotstabilizare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Problema",
+      "LogicalName": "rd_problema",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Problema generata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Capabilitateproces_stabilizare_stabilizare",
+    "ReferencedEntity": "rd_stabilizare",
+    "ReferencingEntity": "rd_capabilitateproces",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Stabilizare",
+      "LogicalName": "rd_stabilizare",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Stabilizare",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Recomandarelectie_lectie_lectie",
+    "ReferencedEntity": "rd_lectie",
+    "ReferencingEntity": "rd_recomandarelectie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Lectie",
+      "LogicalName": "rd_lectie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Lectie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Recomandarelectie_utilizarelectie_utilizare",
+    "ReferencedEntity": "rd_utilizarelectie",
+    "ReferencingEntity": "rd_recomandarelectie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Utilizare",
+      "LogicalName": "rd_utilizare",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Utilizare generata",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Utilizarelectie_proiect_proiect",
+    "ReferencedEntity": "rd_proiect",
+    "ReferencingEntity": "rd_utilizarelectie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proiect",
+      "LogicalName": "rd_proiect",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proiect",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Leadtimeistoric_furnizor_furnizor",
+    "ReferencedEntity": "rd_furnizor",
+    "ReferencingEntity": "rd_leadtimeistoric",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Furnizor",
+      "LogicalName": "rd_furnizor",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Furnizor",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Leadtimeistoric_materieprima_materieprima",
+    "ReferencedEntity": "rd_materieprima",
+    "ReferencingEntity": "rd_leadtimeistoric",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Materieprima",
+      "LogicalName": "rd_materieprima",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Materie prima",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Problema_motiv_cauzaradacina",
+    "ReferencedEntity": "rd_motiv",
+    "ReferencingEntity": "rd_problema",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Cauzaradacina",
+      "LogicalName": "rd_cauzaradacina",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Cauza radacina",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Solicitare_systemuser_kam",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_solicitare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Kam",
+      "LogicalName": "rd_kam",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "KAM solicitant",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Solicitare_systemuser_preluatde",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_solicitare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Preluatde",
+      "LogicalName": "rd_preluatde",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Preluat de",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Proiect_systemuser_kam",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_proiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Kam",
+      "LogicalName": "rd_kam",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "KAM",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Proiect_systemuser_tehnolog",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_proiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Tehnolog",
+      "LogicalName": "rd_tehnolog",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Tehnolog alocat",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Proiect_systemuser_manager",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_proiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Manager",
+      "LogicalName": "rd_manager",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Manager R&D",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Proiect_systemuser_urmatorulresponsabil",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_proiect",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Urmatorulresponsabil",
+      "LogicalName": "rd_urmatorulresponsabil",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Urmatorul responsabil",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Livrabil_systemuser_responsabil",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_livrabil",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Responsabil",
+      "LogicalName": "rd_responsabil",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Responsabil persoana",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Livrabil_systemuser_aprobator",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_livrabil",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Aprobator",
+      "LogicalName": "rd_aprobator",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Aprobator",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Blocaj_systemuser_responsabil",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_blocaj",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Responsabil",
+      "LogicalName": "rd_responsabil",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Responsabil deblocare",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Ceremostra_systemuser_solicitant",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_ceremostra",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Solicitant",
+      "LogicalName": "rd_solicitant",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Solicitant",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Miscaremostra_systemuser_persoana",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_miscaremostra",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Persoana",
+      "LogicalName": "rd_persoana",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Persoana",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Fisatestare_systemuser_aprobator",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_fisatestare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Aprobator",
+      "LogicalName": "rd_aprobator",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Aprobator",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Masuratoare_systemuser_masuratde",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_masuratoare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Masuratde",
+      "LogicalName": "rd_masuratde",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Masurat de",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Scorsenzorial_systemuser_evaluator",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_scorsenzorial",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Evaluator",
+      "LogicalName": "rd_evaluator",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Evaluator",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Antecalcul_systemuser_aprobator",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_antecalcul",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Aprobator",
+      "LogicalName": "rd_aprobator",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Aprobator",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Versiunereteta_systemuser_autor",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_versiunereteta",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Autor",
+      "LogicalName": "rd_autor",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Autor",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Specificatie_systemuser_autor",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_specificatie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Autor",
+      "LogicalName": "rd_autor",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Autor",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Specificatie_systemuser_aprobatorcalitate",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_specificatie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Aprobatorcalitate",
+      "LogicalName": "rd_aprobatorcalitate",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Aprobator Calitate",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Sdp_systemuser_aprobatorrd",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_sdp",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Aprobatorrd",
+      "LogicalName": "rd_aprobatorrd",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Aprobator R&D",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Sdp_systemuser_aprobatorcalitate",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_sdp",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Aprobatorcalitate",
+      "LogicalName": "rd_aprobatorcalitate",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Aprobator Calitate",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Eticheta_systemuser_aprobator",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_eticheta",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Aprobator",
+      "LogicalName": "rd_aprobator",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Aprobator Calitate",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Productie0_systemuser_responsabildecizie",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_productie0",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Responsabildecizie",
+      "LogicalName": "rd_responsabildecizie",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Responsabil decizie",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Inregistrareprod0_systemuser_responsabil",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_inregistrareprod0",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Responsabil",
+      "LogicalName": "rd_responsabil",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Responsabil",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Revizuire_systemuser_responsabil",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_revizuire",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Responsabil",
+      "LogicalName": "rd_responsabil",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Responsabil",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Revizuire_systemuser_aprobator",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_revizuire",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Aprobator",
+      "LogicalName": "rd_aprobator",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Aprobator",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Profiltehnolog_systemuser_utilizator",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_profiltehnolog",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Utilizator",
+      "LogicalName": "rd_utilizator",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Utilizator",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Client_systemuser_kam",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_client",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Kam",
+      "LogicalName": "rd_kam",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "KAM responsabil",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Masurareindicator_systemuser_persoana",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_masurareindicator",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Persoana",
+      "LogicalName": "rd_persoana",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Persoana",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Gate_systemuser_decident",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_gate",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Decident",
+      "LogicalName": "rd_decident",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Decident",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Gate_systemuser_coaprobator",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_gate",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Coaprobator",
+      "LogicalName": "rd_coaprobator",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Coaprobator",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Gate_systemuser_aprobatorderogare",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_gate",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Aprobatorderogare",
+      "LogicalName": "rd_aprobatorderogare",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Aprobator derogare",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Verificaregate_systemuser_verificatde",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_verificaregate",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Verificatde",
+      "LogicalName": "rd_verificatde",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Verificat de",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Risc_systemuser_proprietar",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_risc",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proprietar",
+      "LogicalName": "rd_proprietar",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proprietar",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Problema_systemuser_proprietar",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_problema",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proprietar",
+      "LogicalName": "rd_proprietar",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proprietar",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Actiune_systemuser_proprietar",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_actiune",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Proprietar",
+      "LogicalName": "rd_proprietar",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Proprietar",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Actiune_systemuser_verificator",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_actiune",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Verificator",
+      "LogicalName": "rd_verificator",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Verificator",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Decizie_systemuser_decident",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_decizie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Decident",
+      "LogicalName": "rd_decident",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Decident",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Stabilizare_systemuser_responsabil",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_stabilizare",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Responsabil",
+      "LogicalName": "rd_responsabil",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Responsabil",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Lectie_systemuser_autor",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_lectie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Autor",
+      "LogicalName": "rd_autor",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Autor",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Lectie_systemuser_aprobator",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_lectie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Aprobator",
+      "LogicalName": "rd_aprobator",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Aprobator",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "None"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+    "SchemaName": "rd_Utilizarelectie_systemuser_persoana",
+    "ReferencedEntity": "systemuser",
+    "ReferencingEntity": "rd_utilizarelectie",
+    "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Merge": "NoCascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade"
+    },
+    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+      "SchemaName": "rd_Persoana",
+      "LogicalName": "rd_persoana",
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Persoana",
+            "LanguageCode": 1048
+          }
+        ]
+      },
+      "RequiredLevel": {
+        "Value": "ApplicationRequired"
+      },
+      "IsAuditEnabled": {
+        "Value": true
+      }
+    },
+    "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000
+    }
+  }
+]

@@ -1,0 +1,1124 @@
+[
+  {
+    "tabela": "rd_solicitare",
+    "coloana": "rd_client",
+    "tip": "Lookup (rd_client)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_solicitare",
+    "coloana": "rd_kam",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_solicitare",
+    "coloana": "rd_preluatde",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_solicitare",
+    "coloana": "rd_motivtriaj",
+    "tip": "Lookup (rd_motiv)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_solicitare",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_denumire",
+    "tip": "Calculated (Text)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_solicitare",
+    "tip": "Lookup (rd_solicitare)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_proiectparinte",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_client",
+    "tip": "Lookup (rd_client)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_kam",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_tehnolog",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_manager",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_linie",
+    "tip": "Lookup (rd_linie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_motivstatus",
+    "tip": "Lookup (rd_motiv)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_numarmpnoi",
+    "tip": "Rollup (Count)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_zileblocate",
+    "tip": "Rollup (Sum)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_referinta",
+    "tip": "Lookup (rd_referinta)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_proiect",
+    "coloana": "rd_urmatorulresponsabil",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_livrabil",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_livrabil",
+    "coloana": "rd_sablon",
+    "tip": "Lookup (rd_sablonlivrabil)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_livrabil",
+    "coloana": "rd_responsabil",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_livrabil",
+    "coloana": "rd_aprobator",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_sablonlivrabil",
+    "coloana": "rd_etapa",
+    "tip": "Lookup (rd_sablonetapa)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_etapa",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_etapa",
+    "coloana": "rd_sablon",
+    "tip": "Lookup (rd_sablonetapa)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_etapa",
+    "coloana": "rd_zileblocate",
+    "tip": "Rollup (Sum)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_mpproiect",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_mpproiect",
+    "coloana": "rd_materieprima",
+    "tip": "Lookup (rd_materieprima)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_mpproiect",
+    "coloana": "rd_furnizor",
+    "tip": "Lookup (rd_furnizor)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_mpproiect",
+    "coloana": "rd_numariteratii",
+    "tip": "Rollup (Count)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_iteratiefurnizor",
+    "coloana": "rd_mpproiect",
+    "tip": "Lookup (rd_mpproiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_iteratiefurnizor",
+    "coloana": "rd_furnizor",
+    "tip": "Lookup (rd_furnizor)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_iteratiefurnizor",
+    "coloana": "rd_motivrespingere",
+    "tip": "Lookup (rd_motiv)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_materieprima",
+    "coloana": "rd_furnizor",
+    "tip": "Lookup (rd_furnizor)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_materieprima",
+    "coloana": "rd_summacro",
+    "tip": "Calculated (Decimal)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_blocaj",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_blocaj",
+    "coloana": "rd_etapa",
+    "tip": "Lookup (rd_etapa)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_blocaj",
+    "coloana": "rd_responsabil",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_blocaj",
+    "coloana": "rd_activ",
+    "tip": "Calculated (Yes/No)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_ceremostra",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_ceremostra",
+    "coloana": "rd_mpproiect",
+    "tip": "Lookup (rd_mpproiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_ceremostra",
+    "coloana": "rd_solicitant",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_miscaremostra",
+    "coloana": "rd_ceremostra",
+    "tip": "Lookup (rd_ceremostra)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_miscaremostra",
+    "coloana": "rd_persoana",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_fisatestare",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_fisatestare",
+    "coloana": "rd_versiunereteta",
+    "tip": "Lookup (rd_versiunereteta)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_fisatestare",
+    "coloana": "rd_linie",
+    "tip": "Lookup (rd_linie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_fisatestare",
+    "coloana": "rd_aprobator",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_trial",
+    "coloana": "rd_fisatestare",
+    "tip": "Lookup (rd_fisatestare)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_trial",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_trial",
+    "coloana": "rd_linie",
+    "tip": "Lookup (rd_linie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_trial",
+    "coloana": "rd_numarmasuratori",
+    "tip": "Rollup (Count)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_masuratoare",
+    "coloana": "rd_trial",
+    "tip": "Lookup (rd_trial)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_masuratoare",
+    "coloana": "rd_conform",
+    "tip": "Calculated (Yes/No)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_masuratoare",
+    "coloana": "rd_masuratde",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_statisticatrial",
+    "coloana": "rd_trial",
+    "tip": "Lookup (rd_trial)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_evaluaresenzoriala",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_evaluaresenzoriala",
+    "coloana": "rd_trial",
+    "tip": "Lookup (rd_trial)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_evaluaresenzoriala",
+    "coloana": "rd_numarevaluatori",
+    "tip": "Rollup (Count)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_evaluaresenzoriala",
+    "coloana": "rd_referinta",
+    "tip": "Lookup (rd_referinta)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_scorsenzorial",
+    "coloana": "rd_evaluare",
+    "tip": "Lookup (rd_evaluaresenzoriala)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_scorsenzorial",
+    "coloana": "rd_criteriu",
+    "tip": "Lookup (rd_criteriusenzorial)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_scorsenzorial",
+    "coloana": "rd_evaluator",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_defectconstatat",
+    "coloana": "rd_evaluare",
+    "tip": "Lookup (rd_evaluaresenzoriala)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_defectconstatat",
+    "coloana": "rd_defect",
+    "tip": "Lookup (rd_defect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_referinta",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_referinta",
+    "coloana": "rd_client",
+    "tip": "Lookup (rd_client)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_antecalcul",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_antecalcul",
+    "coloana": "rd_versiunereteta",
+    "tip": "Lookup (rd_versiunereteta)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_antecalcul",
+    "coloana": "rd_linie",
+    "tip": "Lookup (rd_linie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_antecalcul",
+    "coloana": "rd_aprobator",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_linieantecalcul",
+    "coloana": "rd_antecalcul",
+    "tip": "Lookup (rd_antecalcul)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_linieantecalcul",
+    "coloana": "rd_materieprima",
+    "tip": "Lookup (rd_materieprima)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_linieantecalcul",
+    "coloana": "rd_mpproiect",
+    "tip": "Lookup (rd_mpproiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_linieantecalcul",
+    "coloana": "rd_costlinie",
+    "tip": "Calculated (Currency)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_reteta",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_reteta",
+    "coloana": "rd_versiunecurenta",
+    "tip": "Lookup (rd_versiunereteta)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_versiunereteta",
+    "coloana": "rd_reteta",
+    "tip": "Lookup (rd_reteta)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_versiunereteta",
+    "coloana": "rd_autor",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_versiunereteta",
+    "coloana": "rd_total",
+    "tip": "Rollup (Sum)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_liniereteta",
+    "coloana": "rd_versiunereteta",
+    "tip": "Lookup (rd_versiunereteta)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_liniereteta",
+    "coloana": "rd_materieprima",
+    "tip": "Lookup (rd_materieprima)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_liniereteta",
+    "coloana": "rd_mpproiect",
+    "tip": "Lookup (rd_mpproiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_liniereteta",
+    "coloana": "rd_procent",
+    "tip": "Calculated (Decimal)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_specificatie",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_specificatie",
+    "coloana": "rd_materieprima",
+    "tip": "Lookup (rd_materieprima)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_specificatie",
+    "coloana": "rd_autor",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_specificatie",
+    "coloana": "rd_aprobatorcalitate",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_specificatie",
+    "coloana": "rd_inlocuieste",
+    "tip": "Lookup (rd_specificatie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_sdp",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_sdp",
+    "coloana": "rd_versiunereteta",
+    "tip": "Lookup (rd_versiunereteta)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_sdp",
+    "coloana": "rd_linie",
+    "tip": "Lookup (rd_linie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_sdp",
+    "coloana": "rd_aprobatorrd",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_sdp",
+    "coloana": "rd_aprobatorcalitate",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_eticheta",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_eticheta",
+    "coloana": "rd_aprobator",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_implementare",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_implementare",
+    "coloana": "rd_linie",
+    "tip": "Lookup (rd_linie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_productie0",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_productie0",
+    "coloana": "rd_implementare",
+    "tip": "Lookup (rd_implementare)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_productie0",
+    "coloana": "rd_linie",
+    "tip": "Lookup (rd_linie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_productie0",
+    "coloana": "rd_numarabateri",
+    "tip": "Rollup (Count)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_productie0",
+    "coloana": "rd_responsabildecizie",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_inregistrareprod0",
+    "coloana": "rd_productie0",
+    "tip": "Lookup (rd_productie0)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_inregistrareprod0",
+    "coloana": "rd_abatere",
+    "tip": "Calculated (Decimal)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_inregistrareprod0",
+    "coloana": "rd_responsabil",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_revizuire",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_revizuire",
+    "coloana": "rd_diferentarandament",
+    "tip": "Calculated (Decimal)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_revizuire",
+    "coloana": "rd_abaterecost",
+    "tip": "Calculated (Decimal)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_revizuire",
+    "coloana": "rd_responsabil",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_revizuire",
+    "coloana": "rd_aprobator",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_profiltehnolog",
+    "coloana": "rd_utilizator",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_client",
+    "coloana": "rd_kam",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_masurareindicator",
+    "coloana": "rd_indicator",
+    "tip": "Lookup (rd_indicator)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_masurareindicator",
+    "coloana": "rd_persoana",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_masurareindicator",
+    "coloana": "rd_linie",
+    "tip": "Lookup (rd_linie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_masurareindicator",
+    "coloana": "rd_atins",
+    "tip": "Calculated (Yes/No)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_sablongate",
+    "coloana": "rd_sablonetapa",
+    "tip": "Lookup (rd_sablonetapa)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_criteriugate",
+    "coloana": "rd_sablongate",
+    "tip": "Lookup (rd_sablongate)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_gate",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_gate",
+    "coloana": "rd_sablongate",
+    "tip": "Lookup (rd_sablongate)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_gate",
+    "coloana": "rd_etapa",
+    "tip": "Lookup (rd_etapa)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_gate",
+    "coloana": "rd_decident",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_gate",
+    "coloana": "rd_coaprobator",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_gate",
+    "coloana": "rd_actiunideschise",
+    "tip": "Rollup (Count)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_gate",
+    "coloana": "rd_aprobatorderogare",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_verificaregate",
+    "coloana": "rd_gate",
+    "tip": "Lookup (rd_gate)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_verificaregate",
+    "coloana": "rd_criteriu",
+    "tip": "Lookup (rd_criteriugate)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_verificaregate",
+    "coloana": "rd_verificatde",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_verificaregate",
+    "coloana": "rd_actiune",
+    "tip": "Lookup (rd_actiune)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_risc",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_risc",
+    "coloana": "rd_etapa",
+    "tip": "Lookup (rd_etapa)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_risc",
+    "coloana": "rd_rpn",
+    "tip": "Calculated (Whole Number)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_risc",
+    "coloana": "rd_proprietar",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_risc",
+    "coloana": "rd_problema",
+    "tip": "Lookup (rd_problema)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_problema",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_problema",
+    "coloana": "rd_etapa",
+    "tip": "Lookup (rd_etapa)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_problema",
+    "coloana": "rd_cauzaradacina",
+    "tip": "Lookup (rd_motiv)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_problema",
+    "coloana": "rd_proprietar",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_problema",
+    "coloana": "rd_risc",
+    "tip": "Lookup (rd_risc)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_problema",
+    "coloana": "rd_trial",
+    "tip": "Lookup (rd_trial)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_problema",
+    "coloana": "rd_mpproiect",
+    "tip": "Lookup (rd_mpproiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_problema",
+    "coloana": "rd_productie0",
+    "tip": "Lookup (rd_productie0)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_problema",
+    "coloana": "rd_lectie",
+    "tip": "Lookup (rd_lectie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_actiune",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_actiune",
+    "coloana": "rd_risc",
+    "tip": "Lookup (rd_risc)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_actiune",
+    "coloana": "rd_problema",
+    "tip": "Lookup (rd_problema)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_actiune",
+    "coloana": "rd_gate",
+    "tip": "Lookup (rd_gate)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_actiune",
+    "coloana": "rd_productie0",
+    "tip": "Lookup (rd_productie0)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_actiune",
+    "coloana": "rd_proprietar",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_actiune",
+    "coloana": "rd_verificator",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_decizie",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_decizie",
+    "coloana": "rd_etapa",
+    "tip": "Lookup (rd_etapa)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_decizie",
+    "coloana": "rd_decident",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_stabilizare",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_stabilizare",
+    "coloana": "rd_productie0",
+    "tip": "Lookup (rd_productie0)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_stabilizare",
+    "coloana": "rd_linie",
+    "tip": "Lookup (rd_linie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_stabilizare",
+    "coloana": "rd_loturiproduse",
+    "tip": "Rollup (Count)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_stabilizare",
+    "coloana": "rd_diferentarandament",
+    "tip": "Calculated (Decimal)",
+    "motiv": "Calculated - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_stabilizare",
+    "coloana": "rd_actiunideschise",
+    "tip": "Rollup (Count)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_stabilizare",
+    "coloana": "rd_responsabil",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lotstabilizare",
+    "coloana": "rd_stabilizare",
+    "tip": "Lookup (rd_stabilizare)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lotstabilizare",
+    "coloana": "rd_problema",
+    "tip": "Lookup (rd_problema)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_capabilitateproces",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_capabilitateproces",
+    "coloana": "rd_stabilizare",
+    "tip": "Lookup (rd_stabilizare)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_capabilitateproces",
+    "coloana": "rd_linie",
+    "tip": "Lookup (rd_linie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lectie",
+    "coloana": "rd_linie",
+    "tip": "Lookup (rd_linie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lectie",
+    "coloana": "rd_materieprima",
+    "tip": "Lookup (rd_materieprima)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lectie",
+    "coloana": "rd_furnizor",
+    "tip": "Lookup (rd_furnizor)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lectie",
+    "coloana": "rd_client",
+    "tip": "Lookup (rd_client)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lectie",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lectie",
+    "coloana": "rd_problema",
+    "tip": "Lookup (rd_problema)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lectie",
+    "coloana": "rd_productie0",
+    "tip": "Lookup (rd_productie0)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lectie",
+    "coloana": "rd_autor",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lectie",
+    "coloana": "rd_aprobator",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_lectie",
+    "coloana": "rd_numarreutilizari",
+    "tip": "Rollup (Count)",
+    "motiv": "Rollup - formula se configureaza manual in UI"
+  },
+  {
+    "tabela": "rd_utilizarelectie",
+    "coloana": "rd_lectie",
+    "tip": "Lookup (rd_lectie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_utilizarelectie",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_utilizarelectie",
+    "coloana": "rd_etapa",
+    "tip": "Lookup (rd_etapa)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_utilizarelectie",
+    "coloana": "rd_persoana",
+    "tip": "Lookup (systemuser)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_recomandarelectie",
+    "coloana": "rd_lectie",
+    "tip": "Lookup (rd_lectie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_recomandarelectie",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_recomandarelectie",
+    "coloana": "rd_utilizare",
+    "tip": "Lookup (rd_utilizarelectie)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_leadtimeistoric",
+    "coloana": "rd_furnizor",
+    "tip": "Lookup (rd_furnizor)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_leadtimeistoric",
+    "coloana": "rd_materieprima",
+    "tip": "Lookup (rd_materieprima)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_leadtimeistoric",
+    "coloana": "rd_mpproiect",
+    "tip": "Lookup (rd_mpproiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  },
+  {
+    "tabela": "rd_snapshotsanatate",
+    "coloana": "rd_proiect",
+    "tip": "Lookup (rd_proiect)",
+    "motiv": "lookup - se creeaza prin relatie"
+  }
+]

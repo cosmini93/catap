@@ -1,0 +1,4040 @@
+[
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Solicitare",
+    "LogicalName": "rd_solicitare",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Solicitare (SCP)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Solicitare (SCP)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-01 - Tranzactionala, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Numarscp",
+        "LogicalName": "rd_numarscp",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar SCP",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "SCP-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Proiect",
+    "LogicalName": "rd_proiect",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Proiect CDI",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Proiect CDI",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-02 - Radacina, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Codproiect",
+        "LogicalName": "rd_codproiect",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Cod proiect",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "{AA}{SEQ:000}, exemplu 26025"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Livrabil",
+    "LogicalName": "rd_livrabil",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Livrabil de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Livrabil de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-03 - Copil, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire livrabil",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Sablonlivrabil",
+    "LogicalName": "rd_sablonlivrabil",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Sablon de livrabil",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Sablon de livrabil",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-04 - Configurare, val 0",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Etapa",
+    "LogicalName": "rd_etapa",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Etapa de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Etapa de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-05 - Copil, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 100,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Sablonetapa",
+    "LogicalName": "rd_sablonetapa",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Sablon de etapa",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Sablon de etapa",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-06 - Configurare, val 0",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire etapa",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 100,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Mpproiect",
+    "LogicalName": "rd_mpproiect",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Materie prima de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Materie prima de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-07 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Iteratiefurnizor",
+    "LogicalName": "rd_iteratiefurnizor",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Iteratie de furnizor",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Iteratie de furnizor",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-08 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Materieprima",
+    "LogicalName": "rd_materieprima",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Materie prima (catalog)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Materie prima (catalog)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-09 - Nomenclator, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Furnizor",
+    "LogicalName": "rd_furnizor",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Furnizor",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Furnizor",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-10 - Nomenclator, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Blocaj",
+    "LogicalName": "rd_blocaj",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Blocaj",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Blocaj",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-11 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Ceremostra",
+    "LogicalName": "rd_ceremostra",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Cerere de mostra",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Cerere de mostra",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-12 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar cerere",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "CM-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Miscaremostra",
+    "LogicalName": "rd_miscaremostra",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Miscare de mostra",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Miscare de mostra",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-13 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Fisatestare",
+    "LogicalName": "rd_fisatestare",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Fisa de testare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Fisa de testare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-14 - Copil, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar fisa",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "FT-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Trial",
+    "LogicalName": "rd_trial",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Trial",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Trial",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-15 - Copil, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar trial",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "TR-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Masuratoare",
+    "LogicalName": "rd_masuratoare",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Masuratoare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Masuratoare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-16 - Copil, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Statisticatrial",
+    "LogicalName": "rd_statisticatrial",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Statistica de trial",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Statistica de trial",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-16b - Derivata, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Evaluaresenzoriala",
+    "LogicalName": "rd_evaluaresenzoriala",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Evaluare senzoriala",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Evaluare senzoriala",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-17 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar evaluare",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "ES-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Criteriusenzorial",
+    "LogicalName": "rd_criteriusenzorial",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Criteriu senzorial",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Criteriu senzorial",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-18 - Nomenclator, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire criteriu",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 100,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Scorsenzorial",
+    "LogicalName": "rd_scorsenzorial",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Scor senzorial",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Scor senzorial",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-19 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Defect",
+    "LogicalName": "rd_defect",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Defect (nomenclator)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Defect (nomenclator)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-20a - Nomenclator, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Defectconstatat",
+    "LogicalName": "rd_defectconstatat",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Defect constatat",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Defect constatat",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-20b - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Referinta",
+    "LogicalName": "rd_referinta",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Referinta de comparatie",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Referinta de comparatie",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-21 - Copil, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Antecalcul",
+    "LogicalName": "rd_antecalcul",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Antecalcul",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Antecalcul",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-22 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar antecalcul",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "AC-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Linieantecalcul",
+    "LogicalName": "rd_linieantecalcul",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Linie de antecalcul",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Linie de antecalcul",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-23 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Reteta",
+    "LogicalName": "rd_reteta",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Reteta (antet)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Reteta (antet)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-24 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Versiunereteta",
+    "LogicalName": "rd_versiunereteta",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Versiune de reteta",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Versiune de reteta",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-25 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Liniereteta",
+    "LogicalName": "rd_liniereteta",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Linie de reteta",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Linie de reteta",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-26 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Alergen",
+    "LogicalName": "rd_alergen",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Alergen",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Alergen",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-27 - Nomenclator, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 100,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Specificatie",
+    "LogicalName": "rd_specificatie",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Specificatie tehnica",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Specificatie tehnica",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-29 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar specificatie",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "ST-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Sdp",
+    "LogicalName": "rd_sdp",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "SDP (Specificatie de produs)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "SDP (Specificatie de produs)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-30 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar SDP",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "SDP-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Eticheta",
+    "LogicalName": "rd_eticheta",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Eticheta",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Eticheta",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-31 - Copil, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Implementare",
+    "LogicalName": "rd_implementare",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Implementare (IPN)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Implementare (IPN)",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-32 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar IPN",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "IPN-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Productie0",
+    "LogicalName": "rd_productie0",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Productie 0",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Productie 0",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-33 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "P0-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Inregistrareprod0",
+    "LogicalName": "rd_inregistrareprod0",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Inregistrare de productie 0",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Inregistrare de productie 0",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-34 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Revizuire",
+    "LogicalName": "rd_revizuire",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Revizuire post-implementare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Revizuire post-implementare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-35 - Copil, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "RPI-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Linie",
+    "LogicalName": "rd_linie",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Linie de productie",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Linie de productie",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-36 - Nomenclator, val 0",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire linie",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 100,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Profiltehnolog",
+    "LogicalName": "rd_profiltehnolog",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Profil de tehnolog",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Profil de tehnolog",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-37 - Nomenclator, val 0",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Client",
+    "LogicalName": "rd_client",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Client",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Client",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-38 - Nomenclator, val 0",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire client",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Indicator",
+    "LogicalName": "rd_indicator",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Indicator",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Indicator",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-39 - Configurare, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 100,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Masurareindicator",
+    "LogicalName": "rd_masurareindicator",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Masurare de indicator",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Masurare de indicator",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-40 - Derivata, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Motiv",
+    "LogicalName": "rd_motiv",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Motiv",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Motiv",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-41 - Nomenclator, val 0",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Tipdocument",
+    "LogicalName": "rd_tipdocument",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Tip document",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Tip document",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-42 - Nomenclator, val 0",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 100,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Sablongate",
+    "LogicalName": "rd_sablongate",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Sablon de gate",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Sablon de gate",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-43 - Configurare, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 100,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Criteriugate",
+    "LogicalName": "rd_criteriugate",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Criteriu de gate",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Criteriu de gate",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-44 - Configurare, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire criteriu",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Gate",
+    "LogicalName": "rd_gate",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Gate de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Gate de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-45 - Copil, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Verificaregate",
+    "LogicalName": "rd_verificaregate",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Verificare de gate",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Verificare de gate",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-46 - Copil, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Risc",
+    "LogicalName": "rd_risc",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Risc de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Risc de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-47 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar risc",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "RSK-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Problema",
+    "LogicalName": "rd_problema",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Problema de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Problema de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-48 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar problema",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "ISS-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Actiune",
+    "LogicalName": "rd_actiune",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Actiune",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Actiune",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-49 - Copil, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar actiune",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "ACT-{AA}-{SEQ:00000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Decizie",
+    "LogicalName": "rd_decizie",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Decizie de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Decizie de proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-50 - Copil, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar decizie",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "DEC-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Stabilizare",
+    "LogicalName": "rd_stabilizare",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Stabilizare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Stabilizare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-51 - Copil, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "STB-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Lotstabilizare",
+    "LogicalName": "rd_lotstabilizare",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Lot de stabilizare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Lot de stabilizare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-52 - Copil, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Capabilitateproces",
+    "LogicalName": "rd_capabilitateproces",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Capabilitate de proces",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Capabilitate de proces",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-53 - Derivata, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Lectie",
+    "LogicalName": "rd_lectie",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Lectie invatata",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Lectie invatata",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-54 - Cunoastere, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Numar lectie",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true,
+        "AutoNumberFormat": "LSN-{AA}-{SEQ:0000}"
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Utilizarelectie",
+    "LogicalName": "rd_utilizarelectie",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Utilizare de lectie",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Utilizare de lectie",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-55 - Cunoastere, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Recomandarelectie",
+    "LogicalName": "rd_recomandarelectie",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Recomandare de lectie",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Recomandare de lectie",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-56 - Cunoastere, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Leadtimeistoric",
+    "LogicalName": "rd_leadtimeistoric",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Istoric de lead time",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Istoric de lead time",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-57 - Derivata, val 2",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Snapshotsanatate",
+    "LogicalName": "rd_snapshotsanatate",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Snapshot de sanatate",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Snapshot de sanatate",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-58 - Derivata, val 3",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "UserOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 150,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "rd_Logeroare",
+    "LogicalName": "rd_logeroare",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Log de eroare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Log de eroare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "TBL-59 - Tehnic, val 1",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "OwnershipType": "OrganizationOwned",
+    "IsActivity": false,
+    "HasNotes": false,
+    "HasActivities": false,
+    "IsAuditEnabled": {
+      "Value": true
+    },
+    "Attributes": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+        "SchemaName": "rd_Name",
+        "LogicalName": "rd_name",
+        "DisplayName": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Denumire",
+              "LanguageCode": 1048
+            }
+          ]
+        },
+        "RequiredLevel": {
+          "Value": "ApplicationRequired"
+        },
+        "MaxLength": 200,
+        "FormatName": {
+          "Value": "Text"
+        },
+        "IsPrimaryName": true
+      }
+    ]
+  }
+]

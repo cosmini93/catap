@@ -1,0 +1,3589 @@
+[
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_amplasament",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Amplasament",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Amplasament 1",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Amplasament 2",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_canal",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Lant sau canal",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Retail modern",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Retail traditional",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "HoReCa",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Industrial",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Export",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Marca proprie",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_ambalare",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Tip ambalare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Punga",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Tava",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Bax direct",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Vrac",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Flow-pack",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Termoformat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_motivcerere",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Motivul cererii",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Client nou",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Extindere portofoliu",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Inlocuire produs",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Cerere de pret",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reformulare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reactie la concurenta",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reglementare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_tipproiect",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Tip proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Produs nou",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reformulare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Abatere",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Transfer pe alta linie",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Optimizare cost",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Ambalaj nou",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_statusproiect",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Status proiect",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Solicitat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In evaluare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Acceptat - planificat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In dezvoltare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In asteptare materie prima",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In testare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Blocat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000007,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In implementare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000008,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Productie 0",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000009,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In revizuire",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000010,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Finalizat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000011,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Respins",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000012,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Suspendat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000013,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Abandonat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_statuslivrabil",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Status livrabil",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Neinceput",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In lucru",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Trimis spre aprobare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Realizat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Respins",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Nu se aplica",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_statusetapa",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Status etapa",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Neinceputa",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In lucru",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Blocata",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Finalizata",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Sarita",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_statusmp",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Status ciclu materie prima",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Identificata",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Mostra ceruta",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Mostra primita",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In testare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Conditii ST emise",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "ST interna MP",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Aprobata Calitate",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000007,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Respinsa",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000008,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Cod SAP creat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000009,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Comanda plasata",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000010,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Receptionata",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_categoriemp",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Categorie materie prima",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Faina",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Grasimi",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Zaharuri",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Lactate",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Oua",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Drojdie si afanatori",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Amelioratori",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000007,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Umpluturi",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000008,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Fructe",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000009,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Ciocolata",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000010,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Arome",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000011,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Aditivi",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000012,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Ambalaje",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000013,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Altele",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_sursablocaj",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Cine blocheaza",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Furnizor",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Client",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Calitate",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Planificare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Productie",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Achizitii",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Intern R&D",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000007,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Extern reglementar",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_tipmostra",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Tip mostra",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Materie prima",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Produs finit intern",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Produs concurenta",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Mostra client",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Ambalaj",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_tipmasuratoare",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Tip masuratoare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Greutate",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Lungime",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Latime",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Inaltime",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Diametru",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Grosime",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Volum",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000007,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Aspect",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000008,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Alveolare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000009,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Miros",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000010,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Gust",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000011,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Culoare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000012,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Umiditate",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000013,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Aw",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000014,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "pH",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000015,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Temperatura",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_rezultattrial",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Rezultat trial",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In curs",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reusit",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reusit cu observatii",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Nereusit",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_rezultatiteratie",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Rezultat iteratie furnizor",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In curs",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Acceptata tehnic",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Respinsa tehnic",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Respinsa de Calitate",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Respinsa pe cost",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Retrasa de furnizor",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_verdict",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Verdict senzorial",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Acceptat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Acceptat cu observatii",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Respins",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_tipst",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Tip specificatie",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Conditii ST",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "ST draft",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "ST finala",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "ST interna MP noua",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_tipeticheta",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Tip eticheta",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Punga",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Bax",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "EPC eticheta produs client",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Fisier imprimanta",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_tipreferinta",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Tip referinta de comparatie",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Produs concurenta",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Produs actual",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Mostra client",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Specificatie client",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Inexistenta",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_faza",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Faza",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "00 Solicitare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "01 Plan",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "02 Testare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "03 Mostre",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "04 Antecalcul",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "05 Specificatii",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "06 Eticheta",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000007,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "07 Implementare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000008,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "08 Dosar validat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000009,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "09 Revizuire",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_rol",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Rol",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Head of R&D",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Manager R&D",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Tehnolog",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Suport R&D",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "KAM",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Comercial Manager",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Achizitii",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000007,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Calitate",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000008,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Planificare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000009,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Productie",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_banda",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Banda prioritate",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "P1",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "P2",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "P3",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "P4",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_schimb",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Schimb",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "07-15",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "15-23",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "23-07",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_um",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Unitate de masura",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "kg",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "g",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "l",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "ml",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "buc",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_alergen",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Alergen",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Cereale cu gluten",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Crustacee",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Oua",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Peste",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Arahide",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Soia",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Lapte",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000007,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Fructe cu coaja lemnoasa",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000008,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Telina",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000009,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Mustar",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000010,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Susan",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000011,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Dioxid de sulf si sulfiti",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000012,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Lupin",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000013,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Moluste",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_deciziegate",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Decizie de gate",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "GO",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "GO cu conditii",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "HOLD",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "REWORK",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "STOP",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_categorierisc",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Categorie de risc",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Tehnic",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reteta",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Materie prima",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Furnizor",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Calitate",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Siguranta alimentelor",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reglementare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000007,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Etichetare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000008,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Ambalaj",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000009,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Client",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000010,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Comercial",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000011,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Financiar",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000012,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Productie",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000013,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Planificare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000014,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Logistica",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000015,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "SAP",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_sursaactiune",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Sursa actiunii",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Risc",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Problema",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Conditie de gate",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Productie 0",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Revizuire",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Evaluare senzoriala",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Neconformitate",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000007,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "CAPA",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000008,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Audit",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000009,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reclamatie",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000010,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Incident furnizor",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000011,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Decizie de sedinta",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000012,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Manuala",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_categorielectie",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Categorie de lectie",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reteta",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Materie prima",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Furnizor",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Proces",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Echipament",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000005,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Calitate",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000006,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Client",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000007,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Comercial",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000008,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Cost",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000009,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Planificare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000010,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Ambalaj",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000011,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reglementare",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_statusstab",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Status stabilizare",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "In curs",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Reusita",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Neconcludenta",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Esuata",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Name": "rd_nivelsanatate",
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Nivel de sanatate",
+          "LanguageCode": 1048
+        }
+      ]
+    },
+    "IsGlobal": true,
+    "OptionSetType": "Picklist",
+    "Options": [
+      {
+        "Value": 100000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Verde",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Galben",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Portocaliu",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Rosu",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      },
+      {
+        "Value": 100000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Blocat",
+              "LanguageCode": 1048
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

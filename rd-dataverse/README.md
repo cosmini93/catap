@@ -48,6 +48,7 @@ referinta ulterioara (exemplu: 2.4.3, TBL-07, LIV-14, FLX-05).
 | 24 | [S24-stabilizare-capabilitate.md](docs/S24-stabilizare-capabilitate.md) | Stabilizare pe 3 loturi, Cp si Cpk, sanatatea proiectului in timp |
 | 25 | [S25-cunoastere.md](docs/S25-cunoastere.md) | Lectii invatate, reutilizare, recomandare |
 | A2 | [A2-backlog-enterprise.md](docs/A2-backlog-enterprise.md) | Anexa: backlogul amanat, cu criterii de activare |
+| 26 | [S26-constructie-asistata.md](docs/S26-constructie-asistata.md) | Ce se genereaza automat, ce nu, si efortul recalculat |
 
 ## Artefacte pentru constructie
 
@@ -75,6 +76,7 @@ sau consumate de un script de provizionare.
 | [build/import/](build/import/) | 8 fisiere CSV gata de importat in Dataverse plus 5 sabloane de completat cu datele companiei |
 | [build/genereaza-import.py](build/genereaza-import.py) | Regenereaza fisierele CSV din `data/*.json`, ca sa ramana sincronizate cu blueprintul |
 | [build/genereaza-model.py](build/genereaza-model.py) | Sursa unica pentru `data/tabele.json`: cele 60 de tabele si 985 de coloane |
+| [build/deploy/](build/deploy/) | Provizionarea modelului in Dataverse prin Web API: 31 de optionsets, 60 de tabele, 738 de coloane, 151 de relatii |
 
 Fisierele de import gata de folosit: 40 de motive, 31 de tipuri de documente, 14
 alergeni, 22 de defecte, 17 criterii senzoriale cu ancore, 11 etape, 43 de livrabile cu
@@ -120,6 +122,27 @@ de arhitectura. Pasii imediati:
    fisierele de import din `build/import/`. Efort 8-10 zile-om, durata 2-3 saptamani.
 3. Fiecare modul se construieste cu promptul lui din Sectiunea 21 si se verifica fata de
    criteriile din [Sectiunea 19](docs/S19-criterii-acceptanta.md).
+
+## Constructia asistata
+
+Metadatele Dataverse sunt date, deci se genereaza. `build/deploy/provisioning.py` creeaza
+prin Web API 961 din cele 985 de coloane ale modelului - restul de 24, de tip Calculated si
+Rollup, se configureaza manual pentru ca formula nu se poate seta fiabil prin API.
+
+| | Estimare initiala | Revizuita |
+|---|---|---|
+| Constructie | 138 zile-om | **41** |
+| Colectare de date, testare, instruire | nedetaliat | **37-53** |
+| Total | 130-158 | **78-94** |
+
+Constructia se comprima de 3,4 ori; proiectul de 1,7 ori. Diferenta este ca peste jumatate
+din efortul ramas nu este constructie, ci colectare de date de la celelalte departamente,
+testare cu oameni reali si asteptarea realitatii. Detaliat in
+[Sectiunea 26](docs/S26-constructie-asistata.md).
+
+**Consecinta de planificare**: calea critica nu mai este constructia, ci obtinerea datelor.
+Cererile catre Sales, Productie si Calitate trebuie sa plece in prima saptamana, nu cand
+ajunge constructia la ele.
 
 ## Domeniul: cele trei niveluri
 
