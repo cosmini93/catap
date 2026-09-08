@@ -7,6 +7,13 @@ proiecte CDI pe an).
 Rezultatul este un blueprint de constructie, nu cod. Se construieste modul cu modul,
 fara alte decizii de arhitectura.
 
+> **Acest repository nu este produsul. Este schela din care se construieste produsul.**
+> Solutia finala ruleaza integral in tenantul companiei, pe Dataverse, Power Apps,
+> Power Automate, SharePoint si Power BI. Fisierele de aici sunt blueprintul, modelul
+> exprimat ca date si scripturile care creeaza componentele in Dataverse prin Web API.
+> Python-ul nu ruleaza in tenant si nu face parte din solutia livrata.
+> Vezi [Sectiunea 27](docs/S27-unde-traieste-ce.md).
+
 Documentul rezulta din sinteza a doua surse: blueprintul operational construibil
 (Sectiunile 0-21) si arhitectura tinta "R&D Suite Enterprise", din care s-au preluat 11
 elemente de fond si s-au amanat explicit restul. Deciziile de fuziune, cu motive, sunt in
@@ -49,6 +56,7 @@ referinta ulterioara (exemplu: 2.4.3, TBL-07, LIV-14, FLX-05).
 | 25 | [S25-cunoastere.md](docs/S25-cunoastere.md) | Lectii invatate, reutilizare, recomandare |
 | A2 | [A2-backlog-enterprise.md](docs/A2-backlog-enterprise.md) | Anexa: backlogul amanat, cu criterii de activare |
 | 26 | [S26-constructie-asistata.md](docs/S26-constructie-asistata.md) | Ce se genereaza automat, ce nu, si efortul recalculat |
+| 27 | [S27-unde-traieste-ce.md](docs/S27-unde-traieste-ce.md) | Ce ruleaza in Microsoft, ce este schela, unde se face trecerea |
 
 ## Artefacte pentru constructie
 
