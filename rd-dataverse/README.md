@@ -7,6 +7,12 @@ proiecte CDI pe an).
 Rezultatul este un blueprint de constructie, nu cod. Se construieste modul cu modul,
 fara alte decizii de arhitectura.
 
+Documentul rezulta din sinteza a doua surse: blueprintul operational construibil
+(Sectiunile 0-21) si arhitectura tinta "R&D Suite Enterprise", din care s-au preluat 11
+elemente de fond si s-au amanat explicit restul. Deciziile de fuziune, cu motive, sunt in
+[Sectiunea 22](docs/S22-sinteza-enterprise.md); ce s-a amanat, cu criterii de activare,
+in [Anexa A2](docs/A2-backlog-enterprise.md).
+
 Limba: romana fara diacritice. Toate sectiunile sunt numerotate consecutiv pentru
 referinta ulterioara (exemplu: 2.4.3, TBL-07, LIV-14, FLX-05).
 
@@ -37,6 +43,11 @@ referinta ulterioara (exemplu: 2.4.3, TBL-07, LIV-14, FLX-05).
 | 20 | [S20-intrebari-deschise.md](docs/S20-intrebari-deschise.md) | Maximum 10 intrebari blocante |
 | 21 | [S21-prompturi-continuare.md](docs/S21-prompturi-continuare.md) | Prompturi de constructie pe modul |
 | A1 | [A1-prioritizare-si-termene.md](docs/A1-prioritizare-si-termene.md) | Anexa: algoritmul scorului de prioritate si al termenului propus |
+| 22 | [S22-sinteza-enterprise.md](docs/S22-sinteza-enterprise.md) | Sinteza cu blueprintul Enterprise: ce s-a preluat, ce s-a respins, contradictii rezolvate |
+| 23 | [S23-guvernanta-proiect.md](docs/S23-guvernanta-proiect.md) | Gate-uri, riscuri, probleme, actiuni, decizii, lead time inteligent, alerte |
+| 24 | [S24-stabilizare-capabilitate.md](docs/S24-stabilizare-capabilitate.md) | Stabilizare pe 3 loturi, Cp si Cpk, sanatatea proiectului in timp |
+| 25 | [S25-cunoastere.md](docs/S25-cunoastere.md) | Lectii invatate, reutilizare, recomandare |
+| A2 | [A2-backlog-enterprise.md](docs/A2-backlog-enterprise.md) | Anexa: backlogul amanat, cu criterii de activare |
 
 ## Artefacte pentru constructie
 
@@ -46,9 +57,9 @@ sau consumate de un script de provizionare.
 
 | Fisier | Continut |
 |---|---|
-| [data/tabele.json](data/tabele.json) | Cele 43 de tabele si 676 de coloane din Sectiunea 2 |
-| [data/relatii.json](data/relatii.json) | Cele 68 de relatii din Sectiunea 3, cu comportament la stergere |
-| [data/choices.json](data/choices.json) | Cele 25 de seturi de optiuni globale, cu valori si etichete |
+| [data/tabele.json](data/tabele.json) | Cele 60 de tabele si 985 de coloane din Sectiunile 2, 23, 24 si 25 |
+| [data/relatii.json](data/relatii.json) | Cele 111 relatii din Sectiunea 3, cu comportament la stergere |
+| [data/choices.json](data/choices.json) | Cele 31 de seturi de optiuni globale, cu valori si etichete |
 | [data/sablon-livrabile.json](data/sablon-livrabile.json) | Cele 43 de livrabile standard, cu faza, rol, termen si conditie de aplicabilitate |
 | [data/sablon-etape.json](data/sablon-etape.json) | Cele 11 etape standard, duratele de pornire si mecanismul de calibrare |
 | [data/prioritizare.json](data/prioritizare.json) | Ponderi, benzi, buget de urgenta si factorii de calcul al termenului |
@@ -63,6 +74,7 @@ sau consumate de un script de provizionare.
 | [build/V0-ghid-constructie.md](build/V0-ghid-constructie.md) | Ghid pas cu pas pentru Valul 0: mediu, DLP, solutie, variabile, Choice-uri, nomenclatoare, sabloane, roluri, SharePoint, export, verificare |
 | [build/import/](build/import/) | 8 fisiere CSV gata de importat in Dataverse plus 5 sabloane de completat cu datele companiei |
 | [build/genereaza-import.py](build/genereaza-import.py) | Regenereaza fisierele CSV din `data/*.json`, ca sa ramana sincronizate cu blueprintul |
+| [build/genereaza-model.py](build/genereaza-model.py) | Sursa unica pentru `data/tabele.json`: cele 60 de tabele si 985 de coloane |
 
 Fisierele de import gata de folosit: 40 de motive, 31 de tipuri de documente, 14
 alergeni, 22 de defecte, 17 criterii senzoriale cu ancore, 11 etape, 43 de livrabile cu
@@ -108,3 +120,14 @@ de arhitectura. Pasii imediati:
    fisierele de import din `build/import/`. Efort 8-10 zile-om, durata 2-3 saptamani.
 3. Fiecare modul se construieste cu promptul lui din Sectiunea 21 si se verifica fata de
    criteriile din [Sectiunea 19](docs/S19-criterii-acceptanta.md).
+
+## Domeniul: cele trei niveluri
+
+| Nivel | Tabele | Valuri | Criteriu de existenta |
+|---|---|---|---|
+| Core | 60 | Val 0-3, lunile 1-9 | Fara ele procesul R&D nu functioneaza digital |
+| Extins | 13 | Val 4-5, lunile 9-15 | Se activeaza cand procesul core produce date consecvent |
+| Amanat | ~80 din inventarul Enterprise | Dupa Val 5 | Fiecare cu criteriu de activare in A2 |
+
+Solutia este utila si daca se opreste dupa Valul 3: acopera intreg procesul R&D, de la SCP
+la revizuire, cu gate-uri, riscuri, stabilizare si lectii invatate. Vezi 16.8.3.

@@ -6,84 +6,860 @@
     "regula_stergere": "Stergerea fizica este interzisa prin rol de securitate pe tabelele de proces (11.7.1). Inregistrarile se dezactiveaza."
   },
   "arbore_principal": [
-    { "parinte": "rd_solicitare", "copil": "rd_proiect", "coloana": "rd_solicitare", "tip": "referential", "stergere": "Remove Link", "nota": "Solicitarea genereaza proiectul, dar nu il detine" },
-    { "parinte": "rd_proiect", "copil": "rd_livrabil", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_etapa", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_mpproiect", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_mpproiect", "copil": "rd_iteratiefurnizor", "coloana": "rd_mpproiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_blocaj", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_ceremostra", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_ceremostra", "copil": "rd_miscaremostra", "coloana": "rd_ceremostra", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_fisatestare", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_fisatestare", "copil": "rd_trial", "coloana": "rd_fisatestare", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_trial", "copil": "rd_masuratoare", "coloana": "rd_trial", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_trial", "copil": "rd_statisticatrial", "coloana": "rd_trial", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_evaluaresenzoriala", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_evaluaresenzoriala", "copil": "rd_scorsenzorial", "coloana": "rd_evaluare", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_evaluaresenzoriala", "copil": "rd_defectconstatat", "coloana": "rd_evaluare", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_referinta", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_reteta", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_reteta", "copil": "rd_versiunereteta", "coloana": "rd_reteta", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_versiunereteta", "copil": "rd_liniereteta", "coloana": "rd_versiunereteta", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_antecalcul", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_antecalcul", "copil": "rd_linieantecalcul", "coloana": "rd_antecalcul", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_specificatie", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_sdp", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_eticheta", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_implementare", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_implementare", "copil": "rd_productie0", "coloana": "rd_implementare", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_productie0", "copil": "rd_inregistrareprod0", "coloana": "rd_productie0", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_revizuire", "coloana": "rd_proiect", "tip": "parental", "stergere": "Cascade All" },
-    { "parinte": "rd_proiect", "copil": "rd_proiect", "coloana": "rd_proiectparinte", "tip": "referential", "stergere": "Remove Link", "nota": "Proiect-copil (.1); referential intentionat, ca sa aiba responsabil propriu (3.1.3)" }
+    {
+      "parinte": "rd_solicitare",
+      "copil": "rd_proiect",
+      "coloana": "rd_solicitare",
+      "tip": "referential",
+      "stergere": "Remove Link",
+      "nota": "Solicitarea genereaza proiectul, dar nu il detine"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_livrabil",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_etapa",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_mpproiect",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_mpproiect",
+      "copil": "rd_iteratiefurnizor",
+      "coloana": "rd_mpproiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_blocaj",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_ceremostra",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_ceremostra",
+      "copil": "rd_miscaremostra",
+      "coloana": "rd_ceremostra",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_fisatestare",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_fisatestare",
+      "copil": "rd_trial",
+      "coloana": "rd_fisatestare",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_trial",
+      "copil": "rd_masuratoare",
+      "coloana": "rd_trial",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_trial",
+      "copil": "rd_statisticatrial",
+      "coloana": "rd_trial",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_evaluaresenzoriala",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_evaluaresenzoriala",
+      "copil": "rd_scorsenzorial",
+      "coloana": "rd_evaluare",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_evaluaresenzoriala",
+      "copil": "rd_defectconstatat",
+      "coloana": "rd_evaluare",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_referinta",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_reteta",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_reteta",
+      "copil": "rd_versiunereteta",
+      "coloana": "rd_reteta",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_versiunereteta",
+      "copil": "rd_liniereteta",
+      "coloana": "rd_versiunereteta",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_antecalcul",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_antecalcul",
+      "copil": "rd_linieantecalcul",
+      "coloana": "rd_antecalcul",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_specificatie",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_sdp",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_eticheta",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_implementare",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_implementare",
+      "copil": "rd_productie0",
+      "coloana": "rd_implementare",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_productie0",
+      "copil": "rd_inregistrareprod0",
+      "coloana": "rd_productie0",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_revizuire",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_proiect",
+      "coloana": "rd_proiectparinte",
+      "tip": "referential",
+      "stergere": "Remove Link",
+      "nota": "Proiect-copil (.1); referential intentionat, ca sa aiba responsabil propriu (3.1.3)"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_gate",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_gate",
+      "copil": "rd_verificaregate",
+      "coloana": "rd_gate",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_sablongate",
+      "copil": "rd_criteriugate",
+      "coloana": "rd_sablongate",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_risc",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_problema",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_decizie",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_stabilizare",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_stabilizare",
+      "copil": "rd_lotstabilizare",
+      "coloana": "rd_stabilizare",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_capabilitateproces",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_lectie",
+      "copil": "rd_utilizarelectie",
+      "coloana": "rd_lectie",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_recomandarelectie",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_snapshotsanatate",
+      "coloana": "rd_proiect",
+      "tip": "parental",
+      "stergere": "Cascade All",
+      "sursa": "Sinteza Enterprise, S22.7.2"
+    },
+    {
+      "parinte": "rd_proiect",
+      "copil": "rd_actiune",
+      "coloana": "rd_proiect",
+      "tip": "referential",
+      "stergere": "Remove Link",
+      "nota": "Actiunea poate exista fara proiect (audit, incident furnizor)",
+      "sursa": "Sinteza Enterprise, S23.4"
+    }
   ],
   "relatii_nomenclatoare": [
-    { "cod": "REL-01", "parinte": "rd_client", "copil": "rd_solicitare", "coloana": "rd_client", "stergere": "Restrict" },
-    { "cod": "REL-02", "parinte": "rd_client", "copil": "rd_proiect", "coloana": "rd_client", "stergere": "Restrict" },
-    { "cod": "REL-03", "parinte": "rd_client", "copil": "rd_referinta", "coloana": "rd_client", "stergere": "Remove Link" },
-    { "cod": "REL-04", "parinte": "rd_linie", "copil": "rd_proiect", "coloana": "rd_linie", "stergere": "Restrict" },
-    { "cod": "REL-05", "parinte": "rd_linie", "copil": "rd_trial", "coloana": "rd_linie", "stergere": "Restrict" },
-    { "cod": "REL-06", "parinte": "rd_linie", "copil": "rd_fisatestare", "coloana": "rd_linie", "stergere": "Remove Link" },
-    { "cod": "REL-07", "parinte": "rd_linie", "copil": "rd_antecalcul", "coloana": "rd_linie", "stergere": "Restrict" },
-    { "cod": "REL-08", "parinte": "rd_linie", "copil": "rd_implementare", "coloana": "rd_linie", "stergere": "Restrict" },
-    { "cod": "REL-09", "parinte": "rd_linie", "copil": "rd_productie0", "coloana": "rd_linie", "stergere": "Restrict" },
-    { "cod": "REL-10", "parinte": "rd_materieprima", "copil": "rd_mpproiect", "coloana": "rd_materieprima", "stergere": "Restrict" },
-    { "cod": "REL-11", "parinte": "rd_materieprima", "copil": "rd_liniereteta", "coloana": "rd_materieprima", "stergere": "Restrict" },
-    { "cod": "REL-12", "parinte": "rd_materieprima", "copil": "rd_linieantecalcul", "coloana": "rd_materieprima", "stergere": "Restrict" },
-    { "cod": "REL-13", "parinte": "rd_materieprima", "copil": "rd_specificatie", "coloana": "rd_materieprima", "stergere": "Remove Link" },
-    { "cod": "REL-14", "parinte": "rd_furnizor", "copil": "rd_materieprima", "coloana": "rd_furnizor", "stergere": "Remove Link" },
-    { "cod": "REL-15", "parinte": "rd_furnizor", "copil": "rd_mpproiect", "coloana": "rd_furnizor", "stergere": "Remove Link" },
-    { "cod": "REL-16", "parinte": "rd_furnizor", "copil": "rd_iteratiefurnizor", "coloana": "rd_furnizor", "stergere": "Restrict" },
-    { "cod": "REL-17", "parinte": "rd_motiv", "copil": "rd_solicitare", "coloana": "rd_motivtriaj", "stergere": "Restrict" },
-    { "cod": "REL-18", "parinte": "rd_motiv", "copil": "rd_proiect", "coloana": "rd_motivstatus", "stergere": "Restrict" },
-    { "cod": "REL-19", "parinte": "rd_motiv", "copil": "rd_iteratiefurnizor", "coloana": "rd_motivrespingere", "stergere": "Restrict" },
-    { "cod": "REL-20", "parinte": "rd_criteriusenzorial", "copil": "rd_scorsenzorial", "coloana": "rd_criteriu", "stergere": "Restrict" },
-    { "cod": "REL-21", "parinte": "rd_defect", "copil": "rd_defectconstatat", "coloana": "rd_defect", "stergere": "Restrict" },
-    { "cod": "REL-22", "parinte": "rd_sablonlivrabil", "copil": "rd_livrabil", "coloana": "rd_sablon", "stergere": "Remove Link" },
-    { "cod": "REL-23", "parinte": "rd_sablonetapa", "copil": "rd_etapa", "coloana": "rd_sablon", "stergere": "Remove Link" },
-    { "cod": "REL-24", "parinte": "rd_sablonetapa", "copil": "rd_sablonlivrabil", "coloana": "rd_etapa", "stergere": "Remove Link" },
-    { "cod": "REL-25", "parinte": "rd_indicator", "copil": "rd_masurareindicator", "coloana": "rd_indicator", "stergere": "Cascade All", "tip": "parental" }
+    {
+      "cod": "REL-01",
+      "parinte": "rd_client",
+      "copil": "rd_solicitare",
+      "coloana": "rd_client",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-02",
+      "parinte": "rd_client",
+      "copil": "rd_proiect",
+      "coloana": "rd_client",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-03",
+      "parinte": "rd_client",
+      "copil": "rd_referinta",
+      "coloana": "rd_client",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-04",
+      "parinte": "rd_linie",
+      "copil": "rd_proiect",
+      "coloana": "rd_linie",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-05",
+      "parinte": "rd_linie",
+      "copil": "rd_trial",
+      "coloana": "rd_linie",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-06",
+      "parinte": "rd_linie",
+      "copil": "rd_fisatestare",
+      "coloana": "rd_linie",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-07",
+      "parinte": "rd_linie",
+      "copil": "rd_antecalcul",
+      "coloana": "rd_linie",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-08",
+      "parinte": "rd_linie",
+      "copil": "rd_implementare",
+      "coloana": "rd_linie",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-09",
+      "parinte": "rd_linie",
+      "copil": "rd_productie0",
+      "coloana": "rd_linie",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-10",
+      "parinte": "rd_materieprima",
+      "copil": "rd_mpproiect",
+      "coloana": "rd_materieprima",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-11",
+      "parinte": "rd_materieprima",
+      "copil": "rd_liniereteta",
+      "coloana": "rd_materieprima",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-12",
+      "parinte": "rd_materieprima",
+      "copil": "rd_linieantecalcul",
+      "coloana": "rd_materieprima",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-13",
+      "parinte": "rd_materieprima",
+      "copil": "rd_specificatie",
+      "coloana": "rd_materieprima",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-14",
+      "parinte": "rd_furnizor",
+      "copil": "rd_materieprima",
+      "coloana": "rd_furnizor",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-15",
+      "parinte": "rd_furnizor",
+      "copil": "rd_mpproiect",
+      "coloana": "rd_furnizor",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-16",
+      "parinte": "rd_furnizor",
+      "copil": "rd_iteratiefurnizor",
+      "coloana": "rd_furnizor",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-17",
+      "parinte": "rd_motiv",
+      "copil": "rd_solicitare",
+      "coloana": "rd_motivtriaj",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-18",
+      "parinte": "rd_motiv",
+      "copil": "rd_proiect",
+      "coloana": "rd_motivstatus",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-19",
+      "parinte": "rd_motiv",
+      "copil": "rd_iteratiefurnizor",
+      "coloana": "rd_motivrespingere",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-20",
+      "parinte": "rd_criteriusenzorial",
+      "copil": "rd_scorsenzorial",
+      "coloana": "rd_criteriu",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-21",
+      "parinte": "rd_defect",
+      "copil": "rd_defectconstatat",
+      "coloana": "rd_defect",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-22",
+      "parinte": "rd_sablonlivrabil",
+      "copil": "rd_livrabil",
+      "coloana": "rd_sablon",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-23",
+      "parinte": "rd_sablonetapa",
+      "copil": "rd_etapa",
+      "coloana": "rd_sablon",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-24",
+      "parinte": "rd_sablonetapa",
+      "copil": "rd_sablonlivrabil",
+      "coloana": "rd_etapa",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-25",
+      "parinte": "rd_indicator",
+      "copil": "rd_masurareindicator",
+      "coloana": "rd_indicator",
+      "stergere": "Cascade All",
+      "tip": "parental"
+    },
+    {
+      "cod": "REL-73",
+      "parinte": "rd_sablonetapa",
+      "copil": "rd_sablongate",
+      "coloana": "rd_sablonetapa",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-74",
+      "parinte": "rd_linie",
+      "copil": "rd_stabilizare",
+      "coloana": "rd_linie",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-75",
+      "parinte": "rd_linie",
+      "copil": "rd_capabilitateproces",
+      "coloana": "rd_linie",
+      "stergere": "Restrict"
+    },
+    {
+      "cod": "REL-76",
+      "parinte": "rd_linie",
+      "copil": "rd_lectie",
+      "coloana": "rd_linie",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-77",
+      "parinte": "rd_materieprima",
+      "copil": "rd_lectie",
+      "coloana": "rd_materieprima",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-78",
+      "parinte": "rd_furnizor",
+      "copil": "rd_lectie",
+      "coloana": "rd_furnizor",
+      "stergere": "Remove Link"
+    },
+    {
+      "cod": "REL-79",
+      "parinte": "rd_client",
+      "copil": "rd_lectie",
+      "coloana": "rd_client",
+      "stergere": "Remove Link"
+    }
   ],
   "relatii_transversale": [
-    { "cod": "REL-30", "de_la": "rd_fisatestare", "la": "rd_versiunereteta", "coloana": "rd_versiunereteta", "stergere": "Remove Link", "motiv": "Ce reteta se testeaza" },
-    { "cod": "REL-31", "de_la": "rd_evaluaresenzoriala", "la": "rd_trial", "coloana": "rd_trial", "stergere": "Remove Link", "motiv": "Ce s-a degustat" },
-    { "cod": "REL-32", "de_la": "rd_evaluaresenzoriala", "la": "rd_referinta", "coloana": "rd_referinta", "stergere": "Remove Link", "motiv": "Comparatia" },
-    { "cod": "REL-33", "de_la": "rd_antecalcul", "la": "rd_versiunereteta", "coloana": "rd_versiunereteta", "stergere": "Remove Link", "motiv": "Pe ce reteta s-a calculat" },
-    { "cod": "REL-34", "de_la": "rd_linieantecalcul", "la": "rd_mpproiect", "coloana": "rd_mpproiect", "stergere": "Remove Link", "motiv": "MP fara cod SAP inca" },
-    { "cod": "REL-35", "de_la": "rd_liniereteta", "la": "rd_mpproiect", "coloana": "rd_mpproiect", "stergere": "Remove Link", "motiv": "Idem" },
-    { "cod": "REL-36", "de_la": "rd_sdp", "la": "rd_versiunereteta", "coloana": "rd_versiunereteta", "stergere": "Remove Link", "motiv": "Ce reteta se implementeaza" },
-    { "cod": "REL-37", "de_la": "rd_blocaj", "la": "rd_etapa", "coloana": "rd_etapa", "stergere": "Remove Link", "motiv": "Pe ce etapa se opreste ceasul" },
-    { "cod": "REL-38", "de_la": "rd_ceremostra", "la": "rd_mpproiect", "coloana": "rd_mpproiect", "stergere": "Remove Link", "motiv": "Mostra pentru ce MP" },
-    { "cod": "REL-39", "de_la": "rd_productie0", "la": "rd_implementare", "coloana": "rd_implementare", "stergere": "Remove Link", "motiv": "Pe ce IPN" },
-    { "cod": "REL-40", "de_la": "rd_specificatie", "la": "rd_specificatie", "coloana": "rd_inlocuieste", "stergere": "Remove Link", "motiv": "Lantul de versiuni" },
-    { "cod": "REL-41", "de_la": "rd_reteta", "la": "rd_versiunereteta", "coloana": "rd_versiunecurenta", "stergere": "Remove Link", "motiv": "Care versiune este in vigoare; se scrie de flux" },
-    { "cod": "REL-42", "de_la": "rd_proiect", "la": "rd_referinta", "coloana": "rd_referinta", "stergere": "Remove Link", "motiv": "Referinta activa a proiectului; se scrie de flux" },
-    { "cod": "REL-43", "de_la": "rd_trial", "la": "rd_proiect", "coloana": "rd_proiect", "stergere": "Remove Link", "motiv": "Denormalizare acceptata constient pentru raportare (3.4.2)" }
+    {
+      "cod": "REL-30",
+      "de_la": "rd_fisatestare",
+      "la": "rd_versiunereteta",
+      "coloana": "rd_versiunereteta",
+      "stergere": "Remove Link",
+      "motiv": "Ce reteta se testeaza"
+    },
+    {
+      "cod": "REL-31",
+      "de_la": "rd_evaluaresenzoriala",
+      "la": "rd_trial",
+      "coloana": "rd_trial",
+      "stergere": "Remove Link",
+      "motiv": "Ce s-a degustat"
+    },
+    {
+      "cod": "REL-32",
+      "de_la": "rd_evaluaresenzoriala",
+      "la": "rd_referinta",
+      "coloana": "rd_referinta",
+      "stergere": "Remove Link",
+      "motiv": "Comparatia"
+    },
+    {
+      "cod": "REL-33",
+      "de_la": "rd_antecalcul",
+      "la": "rd_versiunereteta",
+      "coloana": "rd_versiunereteta",
+      "stergere": "Remove Link",
+      "motiv": "Pe ce reteta s-a calculat"
+    },
+    {
+      "cod": "REL-34",
+      "de_la": "rd_linieantecalcul",
+      "la": "rd_mpproiect",
+      "coloana": "rd_mpproiect",
+      "stergere": "Remove Link",
+      "motiv": "MP fara cod SAP inca"
+    },
+    {
+      "cod": "REL-35",
+      "de_la": "rd_liniereteta",
+      "la": "rd_mpproiect",
+      "coloana": "rd_mpproiect",
+      "stergere": "Remove Link",
+      "motiv": "Idem"
+    },
+    {
+      "cod": "REL-36",
+      "de_la": "rd_sdp",
+      "la": "rd_versiunereteta",
+      "coloana": "rd_versiunereteta",
+      "stergere": "Remove Link",
+      "motiv": "Ce reteta se implementeaza"
+    },
+    {
+      "cod": "REL-37",
+      "de_la": "rd_blocaj",
+      "la": "rd_etapa",
+      "coloana": "rd_etapa",
+      "stergere": "Remove Link",
+      "motiv": "Pe ce etapa se opreste ceasul"
+    },
+    {
+      "cod": "REL-38",
+      "de_la": "rd_ceremostra",
+      "la": "rd_mpproiect",
+      "coloana": "rd_mpproiect",
+      "stergere": "Remove Link",
+      "motiv": "Mostra pentru ce MP"
+    },
+    {
+      "cod": "REL-39",
+      "de_la": "rd_productie0",
+      "la": "rd_implementare",
+      "coloana": "rd_implementare",
+      "stergere": "Remove Link",
+      "motiv": "Pe ce IPN"
+    },
+    {
+      "cod": "REL-40",
+      "de_la": "rd_specificatie",
+      "la": "rd_specificatie",
+      "coloana": "rd_inlocuieste",
+      "stergere": "Remove Link",
+      "motiv": "Lantul de versiuni"
+    },
+    {
+      "cod": "REL-41",
+      "de_la": "rd_reteta",
+      "la": "rd_versiunereteta",
+      "coloana": "rd_versiunecurenta",
+      "stergere": "Remove Link",
+      "motiv": "Care versiune este in vigoare; se scrie de flux"
+    },
+    {
+      "cod": "REL-42",
+      "de_la": "rd_proiect",
+      "la": "rd_referinta",
+      "coloana": "rd_referinta",
+      "stergere": "Remove Link",
+      "motiv": "Referinta activa a proiectului; se scrie de flux"
+    },
+    {
+      "cod": "REL-43",
+      "de_la": "rd_trial",
+      "la": "rd_proiect",
+      "coloana": "rd_proiect",
+      "stergere": "Remove Link",
+      "motiv": "Denormalizare acceptata constient pentru raportare (3.4.2)"
+    },
+    {
+      "cod": "REL-50",
+      "de_la": "rd_gate",
+      "la": "rd_sablongate",
+      "coloana": "rd_sablongate",
+      "stergere": "Remove Link",
+      "motiv": "Ce sablon de gate"
+    },
+    {
+      "cod": "REL-51",
+      "de_la": "rd_gate",
+      "la": "rd_etapa",
+      "coloana": "rd_etapa",
+      "stergere": "Remove Link",
+      "motiv": "La iesirea din ce etapa"
+    },
+    {
+      "cod": "REL-52",
+      "de_la": "rd_verificaregate",
+      "la": "rd_criteriugate",
+      "coloana": "rd_criteriu",
+      "stergere": "Remove Link",
+      "motiv": "Ce criteriu se verifica"
+    },
+    {
+      "cod": "REL-53",
+      "de_la": "rd_verificaregate",
+      "la": "rd_actiune",
+      "coloana": "rd_actiune",
+      "stergere": "Remove Link",
+      "motiv": "Actiunea generata de un criteriu neindeplinit"
+    },
+    {
+      "cod": "REL-54",
+      "de_la": "rd_risc",
+      "la": "rd_problema",
+      "coloana": "rd_problema",
+      "stergere": "Remove Link",
+      "motiv": "Riscul materializat devine problema"
+    },
+    {
+      "cod": "REL-55",
+      "de_la": "rd_problema",
+      "la": "rd_risc",
+      "coloana": "rd_risc",
+      "stergere": "Remove Link",
+      "motiv": "Legatura inversa, catre riscul sursa"
+    },
+    {
+      "cod": "REL-56",
+      "de_la": "rd_problema",
+      "la": "rd_trial",
+      "coloana": "rd_trial",
+      "stergere": "Remove Link",
+      "motiv": "Problema constatata la un trial"
+    },
+    {
+      "cod": "REL-57",
+      "de_la": "rd_problema",
+      "la": "rd_mpproiect",
+      "coloana": "rd_mpproiect",
+      "stergere": "Remove Link",
+      "motiv": "Problema de materie prima"
+    },
+    {
+      "cod": "REL-58",
+      "de_la": "rd_problema",
+      "la": "rd_productie0",
+      "coloana": "rd_productie0",
+      "stergere": "Remove Link",
+      "motiv": "Problema constatata la productia 0"
+    },
+    {
+      "cod": "REL-59",
+      "de_la": "rd_problema",
+      "la": "rd_lectie",
+      "coloana": "rd_lectie",
+      "stergere": "Remove Link",
+      "motiv": "Lectia generata din problema"
+    },
+    {
+      "cod": "REL-60",
+      "de_la": "rd_actiune",
+      "la": "rd_risc",
+      "coloana": "rd_risc",
+      "stergere": "Remove Link",
+      "motiv": "Actiune de mitigare"
+    },
+    {
+      "cod": "REL-61",
+      "de_la": "rd_actiune",
+      "la": "rd_problema",
+      "coloana": "rd_problema",
+      "stergere": "Remove Link",
+      "motiv": "Actiune corectiva"
+    },
+    {
+      "cod": "REL-62",
+      "de_la": "rd_actiune",
+      "la": "rd_gate",
+      "coloana": "rd_gate",
+      "stergere": "Remove Link",
+      "motiv": "Conditie de GO cu conditii"
+    },
+    {
+      "cod": "REL-63",
+      "de_la": "rd_actiune",
+      "la": "rd_productie0",
+      "coloana": "rd_productie0",
+      "stergere": "Remove Link",
+      "motiv": "Actiune din productia 0"
+    },
+    {
+      "cod": "REL-64",
+      "de_la": "rd_stabilizare",
+      "la": "rd_productie0",
+      "coloana": "rd_productie0",
+      "stergere": "Remove Link",
+      "motiv": "Pe ce productie 0 se bazeaza"
+    },
+    {
+      "cod": "REL-65",
+      "de_la": "rd_lotstabilizare",
+      "la": "rd_problema",
+      "coloana": "rd_problema",
+      "stergere": "Remove Link",
+      "motiv": "Lotul neconform creeaza problema"
+    },
+    {
+      "cod": "REL-66",
+      "de_la": "rd_capabilitateproces",
+      "la": "rd_stabilizare",
+      "coloana": "rd_stabilizare",
+      "stergere": "Remove Link",
+      "motiv": "Pe ce perioada de stabilizare"
+    },
+    {
+      "cod": "REL-67",
+      "de_la": "rd_recomandarelectie",
+      "la": "rd_lectie",
+      "coloana": "rd_lectie",
+      "stergere": "Remove Link",
+      "motiv": "Ce lectie se recomanda"
+    },
+    {
+      "cod": "REL-68",
+      "de_la": "rd_recomandarelectie",
+      "la": "rd_utilizarelectie",
+      "coloana": "rd_utilizare",
+      "stergere": "Remove Link",
+      "motiv": "Utilizarea generata la acceptare"
+    },
+    {
+      "cod": "REL-69",
+      "de_la": "rd_utilizarelectie",
+      "la": "rd_proiect",
+      "coloana": "rd_proiect",
+      "stergere": "Remove Link",
+      "motiv": "Unde s-a folosit lectia"
+    },
+    {
+      "cod": "REL-70",
+      "de_la": "rd_leadtimeistoric",
+      "la": "rd_furnizor",
+      "coloana": "rd_furnizor",
+      "stergere": "Remove Link",
+      "motiv": "Al carui furnizor"
+    },
+    {
+      "cod": "REL-71",
+      "de_la": "rd_leadtimeistoric",
+      "la": "rd_materieprima",
+      "coloana": "rd_materieprima",
+      "stergere": "Remove Link",
+      "motiv": "Ce materie prima"
+    },
+    {
+      "cod": "REL-72",
+      "de_la": "rd_problema",
+      "la": "rd_motiv",
+      "coloana": "rd_cauzaradacina",
+      "stergere": "Remove Link",
+      "motiv": "Cauza radacina din nomenclator"
+    }
   ],
   "relatii_systemuser": {
     "tip": "referential",
     "stergere": "Remove Link",
     "regula": "Nu se sterge niciodata un utilizator; se dezactiveaza",
-    "coloane": ["rd_kam", "rd_tehnolog", "rd_manager", "rd_responsabil", "rd_aprobator", "rd_autor", "rd_evaluator", "rd_masuratde", "rd_solicitant", "rd_persoana", "rd_preluatde", "rd_aprobatorcalitate"],
+    "coloane": [
+      "rd_kam",
+      "rd_tehnolog",
+      "rd_manager",
+      "rd_responsabil",
+      "rd_aprobator",
+      "rd_autor",
+      "rd_evaluator",
+      "rd_masuratde",
+      "rd_solicitant",
+      "rd_persoana",
+      "rd_preluatde",
+      "rd_aprobatorcalitate"
+    ],
     "owner": "Proprietarul inregistrarii de proiect si al copiilor este tehnologul alocat; reatribuirea cascadeaza prin relatiile parentale (3.5.1)"
   },
   "sharepoint": {

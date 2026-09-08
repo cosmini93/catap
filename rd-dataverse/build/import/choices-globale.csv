@@ -177,3 +177,58 @@ rd_alergen,Alergen,100000010,Susan,Anexa II Reg. (UE) 1169/2011,Da
 rd_alergen,Alergen,100000011,Dioxid de sulf si sulfiti,Anexa II Reg. (UE) 1169/2011,Da
 rd_alergen,Alergen,100000012,Lupin,Anexa II Reg. (UE) 1169/2011,Da
 rd_alergen,Alergen,100000013,Moluste,Anexa II Reg. (UE) 1169/2011,Da
+rd_deciziegate,Decizie de gate,100000000,GO,23.1.4,Nu
+rd_deciziegate,Decizie de gate,100000001,GO cu conditii,23.1.4,Nu
+rd_deciziegate,Decizie de gate,100000002,HOLD,23.1.4,Nu
+rd_deciziegate,Decizie de gate,100000003,REWORK,23.1.4,Nu
+rd_deciziegate,Decizie de gate,100000004,STOP,23.1.4,Nu
+rd_categorierisc,Categorie de risc,100000000,Tehnic,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000001,Reteta,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000002,Materie prima,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000003,Furnizor,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000004,Calitate,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000005,Siguranta alimentelor,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000006,Reglementare,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000007,Etichetare,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000008,Ambalaj,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000009,Client,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000010,Comercial,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000011,Financiar,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000012,Productie,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000013,Planificare,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000014,Logistica,23.2.3,Nu
+rd_categorierisc,Categorie de risc,100000015,SAP,23.2.3,Nu
+rd_sursaactiune,Sursa actiunii,100000000,Risc,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000001,Problema,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000002,Conditie de gate,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000003,Productie 0,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000004,Revizuire,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000005,Evaluare senzoriala,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000006,Neconformitate,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000007,CAPA,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000008,Audit,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000009,Reclamatie,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000010,Incident furnizor,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000011,Decizie de sedinta,23.4.2,Nu
+rd_sursaactiune,Sursa actiunii,100000012,Manuala,23.4.2,Nu
+rd_categorielectie,Categorie de lectie,100000000,Reteta,25.2.1,Nu
+rd_categorielectie,Categorie de lectie,100000001,Materie prima,25.2.1,Nu
+rd_categorielectie,Categorie de lectie,100000002,Furnizor,25.2.1,Nu
+rd_categorielectie,Categorie de lectie,100000003,Proces,25.2.1,Nu
+rd_categorielectie,Categorie de lectie,100000004,Echipament,25.2.1,Nu
+rd_categorielectie,Categorie de lectie,100000005,Calitate,25.2.1,Nu
+rd_categorielectie,Categorie de lectie,100000006,Client,25.2.1,Nu
+rd_categorielectie,Categorie de lectie,100000007,Comercial,25.2.1,Nu
+rd_categorielectie,Categorie de lectie,100000008,Cost,25.2.1,Nu
+rd_categorielectie,Categorie de lectie,100000009,Planificare,25.2.1,Nu
+rd_categorielectie,Categorie de lectie,100000010,Ambalaj,25.2.1,Nu
+rd_categorielectie,Categorie de lectie,100000011,Reglementare,25.2.1,Nu
+rd_statusstab,Status stabilizare,100000000,In curs,24.1.5,Nu
+rd_statusstab,Status stabilizare,100000001,Reusita,24.1.5,Nu
+rd_statusstab,Status stabilizare,100000002,Neconcludenta,24.1.5,Nu
+rd_statusstab,Status stabilizare,100000003,Esuata,24.1.5,Nu
+rd_nivelsanatate,Nivel de sanatate,100000000,Verde,24.3.2,Nu
+rd_nivelsanatate,Nivel de sanatate,100000001,Galben,24.3.2,Nu
+rd_nivelsanatate,Nivel de sanatate,100000002,Portocaliu,24.3.2,Nu
+rd_nivelsanatate,Nivel de sanatate,100000003,Rosu,24.3.2,Nu
+rd_nivelsanatate,Nivel de sanatate,100000004,Blocat,24.3.2,Nu

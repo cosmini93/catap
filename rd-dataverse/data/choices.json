@@ -2,156 +2,1226 @@
   "_descriere": "Seturi de optiuni globale (Global Option Sets) pentru solutia RDSuitaDigitala. Referinta: Sectiunea 2.25.3. Toate statusurile sunt Choice, niciodata text liber (regula 2.0.4).",
   "prefix_editor": "rd",
   "choices": [
-    { "nume": "rd_amplasament", "eticheta": "Amplasament", "valori": [
-      { "v": 100000000, "e": "Amplasament 1" }, { "v": 100000001, "e": "Amplasament 2" } ] },
-    { "nume": "rd_canal", "eticheta": "Lant sau canal", "valori": [
-      { "v": 100000000, "e": "Retail modern" }, { "v": 100000001, "e": "Retail traditional" },
-      { "v": 100000002, "e": "HoReCa" }, { "v": 100000003, "e": "Industrial" },
-      { "v": 100000004, "e": "Export" }, { "v": 100000005, "e": "Marca proprie" } ] },
-    { "nume": "rd_ambalare", "eticheta": "Tip ambalare", "valori": [
-      { "v": 100000000, "e": "Punga" }, { "v": 100000001, "e": "Tava" }, { "v": 100000002, "e": "Bax direct" },
-      { "v": 100000003, "e": "Vrac" }, { "v": 100000004, "e": "Flow-pack" }, { "v": 100000005, "e": "Termoformat" } ] },
-    { "nume": "rd_motivcerere", "eticheta": "Motivul cererii", "valori": [
-      { "v": 100000000, "e": "Client nou" }, { "v": 100000001, "e": "Extindere portofoliu" },
-      { "v": 100000002, "e": "Inlocuire produs" }, { "v": 100000003, "e": "Cerere de pret" },
-      { "v": 100000004, "e": "Reformulare" }, { "v": 100000005, "e": "Reactie la concurenta" },
-      { "v": 100000006, "e": "Reglementare" } ] },
-    { "nume": "rd_tipproiect", "eticheta": "Tip proiect", "valori": [
-      { "v": 100000000, "e": "Produs nou" }, { "v": 100000001, "e": "Reformulare" },
-      { "v": 100000002, "e": "Abatere" }, { "v": 100000003, "e": "Transfer pe alta linie" },
-      { "v": 100000004, "e": "Optimizare cost" }, { "v": 100000005, "e": "Ambalaj nou" } ] },
-    { "nume": "rd_statusproiect", "eticheta": "Status proiect", "referinta": "2.2.1", "valori": [
-      { "v": 100000000, "e": "Solicitat", "ceas": "nu porneste" },
-      { "v": 100000001, "e": "In evaluare", "ceas": "nu porneste" },
-      { "v": 100000002, "e": "Acceptat - planificat", "ceas": "porneste" },
-      { "v": 100000003, "e": "In dezvoltare", "ceas": "curge" },
-      { "v": 100000004, "e": "In asteptare materie prima", "ceas": "oprit" },
-      { "v": 100000005, "e": "In testare", "ceas": "curge" },
-      { "v": 100000006, "e": "Blocat", "ceas": "oprit" },
-      { "v": 100000007, "e": "In implementare", "ceas": "curge" },
-      { "v": 100000008, "e": "Productie 0", "ceas": "curge" },
-      { "v": 100000009, "e": "In revizuire", "ceas": "nu conteaza" },
-      { "v": 100000010, "e": "Finalizat", "ceas": "se opreste definitiv" },
-      { "v": 100000011, "e": "Respins", "ceas": "nu porneste" },
-      { "v": 100000012, "e": "Suspendat", "ceas": "oprit" },
-      { "v": 100000013, "e": "Abandonat", "ceas": "se opreste definitiv" } ] },
-    { "nume": "rd_statuslivrabil", "eticheta": "Status livrabil", "valori": [
-      { "v": 100000000, "e": "Neinceput" }, { "v": 100000001, "e": "In lucru" },
-      { "v": 100000002, "e": "Trimis spre aprobare" }, { "v": 100000003, "e": "Realizat" },
-      { "v": 100000004, "e": "Respins" }, { "v": 100000005, "e": "Nu se aplica" } ] },
-    { "nume": "rd_statusetapa", "eticheta": "Status etapa", "valori": [
-      { "v": 100000000, "e": "Neinceputa" }, { "v": 100000001, "e": "In lucru" },
-      { "v": 100000002, "e": "Blocata" }, { "v": 100000003, "e": "Finalizata" },
-      { "v": 100000004, "e": "Sarita" } ] },
-    { "nume": "rd_statusmp", "eticheta": "Status ciclu materie prima", "referinta": "4.4", "valori": [
-      { "v": 100000000, "e": "Identificata" }, { "v": 100000001, "e": "Mostra ceruta" },
-      { "v": 100000002, "e": "Mostra primita" }, { "v": 100000003, "e": "In testare" },
-      { "v": 100000004, "e": "Conditii ST emise" }, { "v": 100000005, "e": "ST interna MP" },
-      { "v": 100000006, "e": "Aprobata Calitate" }, { "v": 100000007, "e": "Respinsa" },
-      { "v": 100000008, "e": "Cod SAP creat" }, { "v": 100000009, "e": "Comanda plasata" },
-      { "v": 100000010, "e": "Receptionata" } ] },
-    { "nume": "rd_categoriemp", "eticheta": "Categorie materie prima", "valori": [
-      { "v": 100000000, "e": "Faina" }, { "v": 100000001, "e": "Grasimi" }, { "v": 100000002, "e": "Zaharuri" },
-      { "v": 100000003, "e": "Lactate" }, { "v": 100000004, "e": "Oua" }, { "v": 100000005, "e": "Drojdie si afanatori" },
-      { "v": 100000006, "e": "Amelioratori" }, { "v": 100000007, "e": "Umpluturi" }, { "v": 100000008, "e": "Fructe" },
-      { "v": 100000009, "e": "Ciocolata" }, { "v": 100000010, "e": "Arome" }, { "v": 100000011, "e": "Aditivi" },
-      { "v": 100000012, "e": "Ambalaje" }, { "v": 100000013, "e": "Altele" } ] },
-    { "nume": "rd_sursablocaj", "eticheta": "Cine blocheaza", "valori": [
-      { "v": 100000000, "e": "Furnizor", "opreste_ceasul": true },
-      { "v": 100000001, "e": "Client", "opreste_ceasul": true },
-      { "v": 100000002, "e": "Calitate", "opreste_ceasul": true },
-      { "v": 100000003, "e": "Planificare", "opreste_ceasul": true },
-      { "v": 100000004, "e": "Productie", "opreste_ceasul": true },
-      { "v": 100000005, "e": "Achizitii", "opreste_ceasul": true },
-      { "v": 100000006, "e": "Intern R&D", "opreste_ceasul": false },
-      { "v": 100000007, "e": "Extern reglementar", "opreste_ceasul": true } ] },
-    { "nume": "rd_tipmostra", "eticheta": "Tip mostra", "valori": [
-      { "v": 100000000, "e": "Materie prima" }, { "v": 100000001, "e": "Produs finit intern" },
-      { "v": 100000002, "e": "Produs concurenta" }, { "v": 100000003, "e": "Mostra client" },
-      { "v": 100000004, "e": "Ambalaj" } ] },
-    { "nume": "rd_tipmasuratoare", "eticheta": "Tip masuratoare", "valori": [
-      { "v": 100000000, "e": "Greutate", "um": "g", "numeric": true },
-      { "v": 100000001, "e": "Lungime", "um": "mm", "numeric": true },
-      { "v": 100000002, "e": "Latime", "um": "mm", "numeric": true },
-      { "v": 100000003, "e": "Inaltime", "um": "mm", "numeric": true },
-      { "v": 100000004, "e": "Diametru", "um": "mm", "numeric": true },
-      { "v": 100000005, "e": "Grosime", "um": "mm", "numeric": true },
-      { "v": 100000006, "e": "Volum", "um": "ml", "numeric": true },
-      { "v": 100000007, "e": "Aspect", "numeric": false },
-      { "v": 100000008, "e": "Alveolare", "numeric": false },
-      { "v": 100000009, "e": "Miros", "numeric": false },
-      { "v": 100000010, "e": "Gust", "numeric": false },
-      { "v": 100000011, "e": "Culoare", "numeric": false },
-      { "v": 100000012, "e": "Umiditate", "um": "%", "numeric": true },
-      { "v": 100000013, "e": "Aw", "numeric": true },
-      { "v": 100000014, "e": "pH", "numeric": true },
-      { "v": 100000015, "e": "Temperatura", "um": "C", "numeric": true } ] },
-    { "nume": "rd_rezultattrial", "eticheta": "Rezultat trial", "valori": [
-      { "v": 100000000, "e": "In curs" }, { "v": 100000001, "e": "Reusit" },
-      { "v": 100000002, "e": "Reusit cu observatii" }, { "v": 100000003, "e": "Nereusit" } ] },
-    { "nume": "rd_rezultatiteratie", "eticheta": "Rezultat iteratie furnizor", "valori": [
-      { "v": 100000000, "e": "In curs" }, { "v": 100000001, "e": "Acceptata tehnic" },
-      { "v": 100000002, "e": "Respinsa tehnic" }, { "v": 100000003, "e": "Respinsa de Calitate" },
-      { "v": 100000004, "e": "Respinsa pe cost" }, { "v": 100000005, "e": "Retrasa de furnizor" } ] },
-    { "nume": "rd_verdict", "eticheta": "Verdict senzorial", "referinta": "6.5.5", "valori": [
-      { "v": 100000000, "e": "Acceptat" }, { "v": 100000001, "e": "Acceptat cu observatii" },
-      { "v": 100000002, "e": "Respins" } ] },
-    { "nume": "rd_tipst", "eticheta": "Tip specificatie", "valori": [
-      { "v": 100000000, "e": "Conditii ST" }, { "v": 100000001, "e": "ST draft" },
-      { "v": 100000002, "e": "ST finala" }, { "v": 100000003, "e": "ST interna MP noua" } ] },
-    { "nume": "rd_tipeticheta", "eticheta": "Tip eticheta", "valori": [
-      { "v": 100000000, "e": "Punga" }, { "v": 100000001, "e": "Bax" },
-      { "v": 100000002, "e": "EPC eticheta produs client" }, { "v": 100000003, "e": "Fisier imprimanta" } ] },
-    { "nume": "rd_tipreferinta", "eticheta": "Tip referinta de comparatie", "valori": [
-      { "v": 100000000, "e": "Produs concurenta" }, { "v": 100000001, "e": "Produs actual" },
-      { "v": 100000002, "e": "Mostra client" }, { "v": 100000003, "e": "Specificatie client" },
-      { "v": 100000004, "e": "Inexistenta" } ] },
-    { "nume": "rd_faza", "eticheta": "Faza", "referinta": "5.1.1", "valori": [
-      { "v": 100000000, "e": "00 Solicitare", "folder": "00_Solicitare" },
-      { "v": 100000001, "e": "01 Plan", "folder": "01_Plan" },
-      { "v": 100000002, "e": "02 Testare", "folder": "02_Testare" },
-      { "v": 100000003, "e": "03 Mostre", "folder": "03_Mostre" },
-      { "v": 100000004, "e": "04 Antecalcul", "folder": "04_Antecalcul" },
-      { "v": 100000005, "e": "05 Specificatii", "folder": "05_Specificatii" },
-      { "v": 100000006, "e": "06 Eticheta", "folder": "06_Eticheta" },
-      { "v": 100000007, "e": "07 Implementare", "folder": "07_Implementare" },
-      { "v": 100000008, "e": "08 Dosar validat", "folder": "08_Dosar_validat" },
-      { "v": 100000009, "e": "09 Revizuire", "folder": "09_Revizuire" } ] },
-    { "nume": "rd_rol", "eticheta": "Rol", "referinta": "11.2", "valori": [
-      { "v": 100000000, "e": "Head of R&D", "cod": "ROL-01" },
-      { "v": 100000001, "e": "Manager R&D", "cod": "ROL-02" },
-      { "v": 100000002, "e": "Tehnolog", "cod": "ROL-03" },
-      { "v": 100000003, "e": "Suport R&D", "cod": "ROL-04" },
-      { "v": 100000004, "e": "KAM", "cod": "ROL-05" },
-      { "v": 100000005, "e": "Comercial Manager", "cod": "ROL-06" },
-      { "v": 100000006, "e": "Achizitii", "cod": "ROL-07" },
-      { "v": 100000007, "e": "Calitate", "cod": "ROL-08" },
-      { "v": 100000008, "e": "Planificare", "cod": "ROL-09" },
-      { "v": 100000009, "e": "Productie", "cod": "ROL-10" } ] },
-    { "nume": "rd_banda", "eticheta": "Banda prioritate", "referinta": "2.2.4", "valori": [
-      { "v": 100000000, "e": "P1", "scor_min": 80, "scor_max": 100 },
-      { "v": 100000001, "e": "P2", "scor_min": 60, "scor_max": 79 },
-      { "v": 100000002, "e": "P3", "scor_min": 35, "scor_max": 59 },
-      { "v": 100000003, "e": "P4", "scor_min": 0, "scor_max": 34 } ] },
-    { "nume": "rd_schimb", "eticheta": "Schimb", "valori": [
-      { "v": 100000000, "e": "07-15" }, { "v": 100000001, "e": "15-23" }, { "v": 100000002, "e": "23-07" } ] },
-    { "nume": "rd_um", "eticheta": "Unitate de masura", "valori": [
-      { "v": 100000000, "e": "kg" }, { "v": 100000001, "e": "g" }, { "v": 100000002, "e": "l" },
-      { "v": 100000003, "e": "ml" }, { "v": 100000004, "e": "buc" } ] },
-    { "nume": "rd_alergen", "eticheta": "Alergen", "referinta": "Anexa II Reg. (UE) 1169/2011", "multi_select": true, "valori": [
-      { "v": 100000000, "e": "Cereale cu gluten", "cod": "GLU" },
-      { "v": 100000001, "e": "Crustacee", "cod": "CRU" },
-      { "v": 100000002, "e": "Oua", "cod": "OUA" },
-      { "v": 100000003, "e": "Peste", "cod": "PES" },
-      { "v": 100000004, "e": "Arahide", "cod": "ARA" },
-      { "v": 100000005, "e": "Soia", "cod": "SOI" },
-      { "v": 100000006, "e": "Lapte", "cod": "LAP" },
-      { "v": 100000007, "e": "Fructe cu coaja lemnoasa", "cod": "FRC" },
-      { "v": 100000008, "e": "Telina", "cod": "TEL" },
-      { "v": 100000009, "e": "Mustar", "cod": "MUS" },
-      { "v": 100000010, "e": "Susan", "cod": "SUS" },
-      { "v": 100000011, "e": "Dioxid de sulf si sulfiti", "cod": "SO2" },
-      { "v": 100000012, "e": "Lupin", "cod": "LUP" },
-      { "v": 100000013, "e": "Moluste", "cod": "MOL" } ] }
+    {
+      "nume": "rd_amplasament",
+      "eticheta": "Amplasament",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Amplasament 1"
+        },
+        {
+          "v": 100000001,
+          "e": "Amplasament 2"
+        }
+      ]
+    },
+    {
+      "nume": "rd_canal",
+      "eticheta": "Lant sau canal",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Retail modern"
+        },
+        {
+          "v": 100000001,
+          "e": "Retail traditional"
+        },
+        {
+          "v": 100000002,
+          "e": "HoReCa"
+        },
+        {
+          "v": 100000003,
+          "e": "Industrial"
+        },
+        {
+          "v": 100000004,
+          "e": "Export"
+        },
+        {
+          "v": 100000005,
+          "e": "Marca proprie"
+        }
+      ]
+    },
+    {
+      "nume": "rd_ambalare",
+      "eticheta": "Tip ambalare",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Punga"
+        },
+        {
+          "v": 100000001,
+          "e": "Tava"
+        },
+        {
+          "v": 100000002,
+          "e": "Bax direct"
+        },
+        {
+          "v": 100000003,
+          "e": "Vrac"
+        },
+        {
+          "v": 100000004,
+          "e": "Flow-pack"
+        },
+        {
+          "v": 100000005,
+          "e": "Termoformat"
+        }
+      ]
+    },
+    {
+      "nume": "rd_motivcerere",
+      "eticheta": "Motivul cererii",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Client nou"
+        },
+        {
+          "v": 100000001,
+          "e": "Extindere portofoliu"
+        },
+        {
+          "v": 100000002,
+          "e": "Inlocuire produs"
+        },
+        {
+          "v": 100000003,
+          "e": "Cerere de pret"
+        },
+        {
+          "v": 100000004,
+          "e": "Reformulare"
+        },
+        {
+          "v": 100000005,
+          "e": "Reactie la concurenta"
+        },
+        {
+          "v": 100000006,
+          "e": "Reglementare"
+        }
+      ]
+    },
+    {
+      "nume": "rd_tipproiect",
+      "eticheta": "Tip proiect",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Produs nou"
+        },
+        {
+          "v": 100000001,
+          "e": "Reformulare"
+        },
+        {
+          "v": 100000002,
+          "e": "Abatere"
+        },
+        {
+          "v": 100000003,
+          "e": "Transfer pe alta linie"
+        },
+        {
+          "v": 100000004,
+          "e": "Optimizare cost"
+        },
+        {
+          "v": 100000005,
+          "e": "Ambalaj nou"
+        }
+      ]
+    },
+    {
+      "nume": "rd_statusproiect",
+      "eticheta": "Status proiect",
+      "referinta": "2.2.1",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Solicitat",
+          "ceas": "nu porneste"
+        },
+        {
+          "v": 100000001,
+          "e": "In evaluare",
+          "ceas": "nu porneste"
+        },
+        {
+          "v": 100000002,
+          "e": "Acceptat - planificat",
+          "ceas": "porneste"
+        },
+        {
+          "v": 100000003,
+          "e": "In dezvoltare",
+          "ceas": "curge"
+        },
+        {
+          "v": 100000004,
+          "e": "In asteptare materie prima",
+          "ceas": "oprit"
+        },
+        {
+          "v": 100000005,
+          "e": "In testare",
+          "ceas": "curge"
+        },
+        {
+          "v": 100000006,
+          "e": "Blocat",
+          "ceas": "oprit"
+        },
+        {
+          "v": 100000007,
+          "e": "In implementare",
+          "ceas": "curge"
+        },
+        {
+          "v": 100000008,
+          "e": "Productie 0",
+          "ceas": "curge"
+        },
+        {
+          "v": 100000009,
+          "e": "In revizuire",
+          "ceas": "nu conteaza"
+        },
+        {
+          "v": 100000010,
+          "e": "Finalizat",
+          "ceas": "se opreste definitiv"
+        },
+        {
+          "v": 100000011,
+          "e": "Respins",
+          "ceas": "nu porneste"
+        },
+        {
+          "v": 100000012,
+          "e": "Suspendat",
+          "ceas": "oprit"
+        },
+        {
+          "v": 100000013,
+          "e": "Abandonat",
+          "ceas": "se opreste definitiv"
+        }
+      ]
+    },
+    {
+      "nume": "rd_statuslivrabil",
+      "eticheta": "Status livrabil",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Neinceput"
+        },
+        {
+          "v": 100000001,
+          "e": "In lucru"
+        },
+        {
+          "v": 100000002,
+          "e": "Trimis spre aprobare"
+        },
+        {
+          "v": 100000003,
+          "e": "Realizat"
+        },
+        {
+          "v": 100000004,
+          "e": "Respins"
+        },
+        {
+          "v": 100000005,
+          "e": "Nu se aplica"
+        }
+      ]
+    },
+    {
+      "nume": "rd_statusetapa",
+      "eticheta": "Status etapa",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Neinceputa"
+        },
+        {
+          "v": 100000001,
+          "e": "In lucru"
+        },
+        {
+          "v": 100000002,
+          "e": "Blocata"
+        },
+        {
+          "v": 100000003,
+          "e": "Finalizata"
+        },
+        {
+          "v": 100000004,
+          "e": "Sarita"
+        }
+      ]
+    },
+    {
+      "nume": "rd_statusmp",
+      "eticheta": "Status ciclu materie prima",
+      "referinta": "4.4",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Identificata"
+        },
+        {
+          "v": 100000001,
+          "e": "Mostra ceruta"
+        },
+        {
+          "v": 100000002,
+          "e": "Mostra primita"
+        },
+        {
+          "v": 100000003,
+          "e": "In testare"
+        },
+        {
+          "v": 100000004,
+          "e": "Conditii ST emise"
+        },
+        {
+          "v": 100000005,
+          "e": "ST interna MP"
+        },
+        {
+          "v": 100000006,
+          "e": "Aprobata Calitate"
+        },
+        {
+          "v": 100000007,
+          "e": "Respinsa"
+        },
+        {
+          "v": 100000008,
+          "e": "Cod SAP creat"
+        },
+        {
+          "v": 100000009,
+          "e": "Comanda plasata"
+        },
+        {
+          "v": 100000010,
+          "e": "Receptionata"
+        }
+      ]
+    },
+    {
+      "nume": "rd_categoriemp",
+      "eticheta": "Categorie materie prima",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Faina"
+        },
+        {
+          "v": 100000001,
+          "e": "Grasimi"
+        },
+        {
+          "v": 100000002,
+          "e": "Zaharuri"
+        },
+        {
+          "v": 100000003,
+          "e": "Lactate"
+        },
+        {
+          "v": 100000004,
+          "e": "Oua"
+        },
+        {
+          "v": 100000005,
+          "e": "Drojdie si afanatori"
+        },
+        {
+          "v": 100000006,
+          "e": "Amelioratori"
+        },
+        {
+          "v": 100000007,
+          "e": "Umpluturi"
+        },
+        {
+          "v": 100000008,
+          "e": "Fructe"
+        },
+        {
+          "v": 100000009,
+          "e": "Ciocolata"
+        },
+        {
+          "v": 100000010,
+          "e": "Arome"
+        },
+        {
+          "v": 100000011,
+          "e": "Aditivi"
+        },
+        {
+          "v": 100000012,
+          "e": "Ambalaje"
+        },
+        {
+          "v": 100000013,
+          "e": "Altele"
+        }
+      ]
+    },
+    {
+      "nume": "rd_sursablocaj",
+      "eticheta": "Cine blocheaza",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Furnizor",
+          "opreste_ceasul": true
+        },
+        {
+          "v": 100000001,
+          "e": "Client",
+          "opreste_ceasul": true
+        },
+        {
+          "v": 100000002,
+          "e": "Calitate",
+          "opreste_ceasul": true
+        },
+        {
+          "v": 100000003,
+          "e": "Planificare",
+          "opreste_ceasul": true
+        },
+        {
+          "v": 100000004,
+          "e": "Productie",
+          "opreste_ceasul": true
+        },
+        {
+          "v": 100000005,
+          "e": "Achizitii",
+          "opreste_ceasul": true
+        },
+        {
+          "v": 100000006,
+          "e": "Intern R&D",
+          "opreste_ceasul": false
+        },
+        {
+          "v": 100000007,
+          "e": "Extern reglementar",
+          "opreste_ceasul": true
+        }
+      ]
+    },
+    {
+      "nume": "rd_tipmostra",
+      "eticheta": "Tip mostra",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Materie prima"
+        },
+        {
+          "v": 100000001,
+          "e": "Produs finit intern"
+        },
+        {
+          "v": 100000002,
+          "e": "Produs concurenta"
+        },
+        {
+          "v": 100000003,
+          "e": "Mostra client"
+        },
+        {
+          "v": 100000004,
+          "e": "Ambalaj"
+        }
+      ]
+    },
+    {
+      "nume": "rd_tipmasuratoare",
+      "eticheta": "Tip masuratoare",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Greutate",
+          "um": "g",
+          "numeric": true
+        },
+        {
+          "v": 100000001,
+          "e": "Lungime",
+          "um": "mm",
+          "numeric": true
+        },
+        {
+          "v": 100000002,
+          "e": "Latime",
+          "um": "mm",
+          "numeric": true
+        },
+        {
+          "v": 100000003,
+          "e": "Inaltime",
+          "um": "mm",
+          "numeric": true
+        },
+        {
+          "v": 100000004,
+          "e": "Diametru",
+          "um": "mm",
+          "numeric": true
+        },
+        {
+          "v": 100000005,
+          "e": "Grosime",
+          "um": "mm",
+          "numeric": true
+        },
+        {
+          "v": 100000006,
+          "e": "Volum",
+          "um": "ml",
+          "numeric": true
+        },
+        {
+          "v": 100000007,
+          "e": "Aspect",
+          "numeric": false
+        },
+        {
+          "v": 100000008,
+          "e": "Alveolare",
+          "numeric": false
+        },
+        {
+          "v": 100000009,
+          "e": "Miros",
+          "numeric": false
+        },
+        {
+          "v": 100000010,
+          "e": "Gust",
+          "numeric": false
+        },
+        {
+          "v": 100000011,
+          "e": "Culoare",
+          "numeric": false
+        },
+        {
+          "v": 100000012,
+          "e": "Umiditate",
+          "um": "%",
+          "numeric": true
+        },
+        {
+          "v": 100000013,
+          "e": "Aw",
+          "numeric": true
+        },
+        {
+          "v": 100000014,
+          "e": "pH",
+          "numeric": true
+        },
+        {
+          "v": 100000015,
+          "e": "Temperatura",
+          "um": "C",
+          "numeric": true
+        }
+      ]
+    },
+    {
+      "nume": "rd_rezultattrial",
+      "eticheta": "Rezultat trial",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "In curs"
+        },
+        {
+          "v": 100000001,
+          "e": "Reusit"
+        },
+        {
+          "v": 100000002,
+          "e": "Reusit cu observatii"
+        },
+        {
+          "v": 100000003,
+          "e": "Nereusit"
+        }
+      ]
+    },
+    {
+      "nume": "rd_rezultatiteratie",
+      "eticheta": "Rezultat iteratie furnizor",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "In curs"
+        },
+        {
+          "v": 100000001,
+          "e": "Acceptata tehnic"
+        },
+        {
+          "v": 100000002,
+          "e": "Respinsa tehnic"
+        },
+        {
+          "v": 100000003,
+          "e": "Respinsa de Calitate"
+        },
+        {
+          "v": 100000004,
+          "e": "Respinsa pe cost"
+        },
+        {
+          "v": 100000005,
+          "e": "Retrasa de furnizor"
+        }
+      ]
+    },
+    {
+      "nume": "rd_verdict",
+      "eticheta": "Verdict senzorial",
+      "referinta": "6.5.5",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Acceptat"
+        },
+        {
+          "v": 100000001,
+          "e": "Acceptat cu observatii"
+        },
+        {
+          "v": 100000002,
+          "e": "Respins"
+        }
+      ]
+    },
+    {
+      "nume": "rd_tipst",
+      "eticheta": "Tip specificatie",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Conditii ST"
+        },
+        {
+          "v": 100000001,
+          "e": "ST draft"
+        },
+        {
+          "v": 100000002,
+          "e": "ST finala"
+        },
+        {
+          "v": 100000003,
+          "e": "ST interna MP noua"
+        }
+      ]
+    },
+    {
+      "nume": "rd_tipeticheta",
+      "eticheta": "Tip eticheta",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Punga"
+        },
+        {
+          "v": 100000001,
+          "e": "Bax"
+        },
+        {
+          "v": 100000002,
+          "e": "EPC eticheta produs client"
+        },
+        {
+          "v": 100000003,
+          "e": "Fisier imprimanta"
+        }
+      ]
+    },
+    {
+      "nume": "rd_tipreferinta",
+      "eticheta": "Tip referinta de comparatie",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Produs concurenta"
+        },
+        {
+          "v": 100000001,
+          "e": "Produs actual"
+        },
+        {
+          "v": 100000002,
+          "e": "Mostra client"
+        },
+        {
+          "v": 100000003,
+          "e": "Specificatie client"
+        },
+        {
+          "v": 100000004,
+          "e": "Inexistenta"
+        }
+      ]
+    },
+    {
+      "nume": "rd_faza",
+      "eticheta": "Faza",
+      "referinta": "5.1.1",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "00 Solicitare",
+          "folder": "00_Solicitare"
+        },
+        {
+          "v": 100000001,
+          "e": "01 Plan",
+          "folder": "01_Plan"
+        },
+        {
+          "v": 100000002,
+          "e": "02 Testare",
+          "folder": "02_Testare"
+        },
+        {
+          "v": 100000003,
+          "e": "03 Mostre",
+          "folder": "03_Mostre"
+        },
+        {
+          "v": 100000004,
+          "e": "04 Antecalcul",
+          "folder": "04_Antecalcul"
+        },
+        {
+          "v": 100000005,
+          "e": "05 Specificatii",
+          "folder": "05_Specificatii"
+        },
+        {
+          "v": 100000006,
+          "e": "06 Eticheta",
+          "folder": "06_Eticheta"
+        },
+        {
+          "v": 100000007,
+          "e": "07 Implementare",
+          "folder": "07_Implementare"
+        },
+        {
+          "v": 100000008,
+          "e": "08 Dosar validat",
+          "folder": "08_Dosar_validat"
+        },
+        {
+          "v": 100000009,
+          "e": "09 Revizuire",
+          "folder": "09_Revizuire"
+        }
+      ]
+    },
+    {
+      "nume": "rd_rol",
+      "eticheta": "Rol",
+      "referinta": "11.2",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Head of R&D",
+          "cod": "ROL-01"
+        },
+        {
+          "v": 100000001,
+          "e": "Manager R&D",
+          "cod": "ROL-02"
+        },
+        {
+          "v": 100000002,
+          "e": "Tehnolog",
+          "cod": "ROL-03"
+        },
+        {
+          "v": 100000003,
+          "e": "Suport R&D",
+          "cod": "ROL-04"
+        },
+        {
+          "v": 100000004,
+          "e": "KAM",
+          "cod": "ROL-05"
+        },
+        {
+          "v": 100000005,
+          "e": "Comercial Manager",
+          "cod": "ROL-06"
+        },
+        {
+          "v": 100000006,
+          "e": "Achizitii",
+          "cod": "ROL-07"
+        },
+        {
+          "v": 100000007,
+          "e": "Calitate",
+          "cod": "ROL-08"
+        },
+        {
+          "v": 100000008,
+          "e": "Planificare",
+          "cod": "ROL-09"
+        },
+        {
+          "v": 100000009,
+          "e": "Productie",
+          "cod": "ROL-10"
+        }
+      ]
+    },
+    {
+      "nume": "rd_banda",
+      "eticheta": "Banda prioritate",
+      "referinta": "2.2.4",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "P1",
+          "scor_min": 80,
+          "scor_max": 100
+        },
+        {
+          "v": 100000001,
+          "e": "P2",
+          "scor_min": 60,
+          "scor_max": 79
+        },
+        {
+          "v": 100000002,
+          "e": "P3",
+          "scor_min": 35,
+          "scor_max": 59
+        },
+        {
+          "v": 100000003,
+          "e": "P4",
+          "scor_min": 0,
+          "scor_max": 34
+        }
+      ]
+    },
+    {
+      "nume": "rd_schimb",
+      "eticheta": "Schimb",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "07-15"
+        },
+        {
+          "v": 100000001,
+          "e": "15-23"
+        },
+        {
+          "v": 100000002,
+          "e": "23-07"
+        }
+      ]
+    },
+    {
+      "nume": "rd_um",
+      "eticheta": "Unitate de masura",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "kg"
+        },
+        {
+          "v": 100000001,
+          "e": "g"
+        },
+        {
+          "v": 100000002,
+          "e": "l"
+        },
+        {
+          "v": 100000003,
+          "e": "ml"
+        },
+        {
+          "v": 100000004,
+          "e": "buc"
+        }
+      ]
+    },
+    {
+      "nume": "rd_alergen",
+      "eticheta": "Alergen",
+      "referinta": "Anexa II Reg. (UE) 1169/2011",
+      "multi_select": true,
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Cereale cu gluten",
+          "cod": "GLU"
+        },
+        {
+          "v": 100000001,
+          "e": "Crustacee",
+          "cod": "CRU"
+        },
+        {
+          "v": 100000002,
+          "e": "Oua",
+          "cod": "OUA"
+        },
+        {
+          "v": 100000003,
+          "e": "Peste",
+          "cod": "PES"
+        },
+        {
+          "v": 100000004,
+          "e": "Arahide",
+          "cod": "ARA"
+        },
+        {
+          "v": 100000005,
+          "e": "Soia",
+          "cod": "SOI"
+        },
+        {
+          "v": 100000006,
+          "e": "Lapte",
+          "cod": "LAP"
+        },
+        {
+          "v": 100000007,
+          "e": "Fructe cu coaja lemnoasa",
+          "cod": "FRC"
+        },
+        {
+          "v": 100000008,
+          "e": "Telina",
+          "cod": "TEL"
+        },
+        {
+          "v": 100000009,
+          "e": "Mustar",
+          "cod": "MUS"
+        },
+        {
+          "v": 100000010,
+          "e": "Susan",
+          "cod": "SUS"
+        },
+        {
+          "v": 100000011,
+          "e": "Dioxid de sulf si sulfiti",
+          "cod": "SO2"
+        },
+        {
+          "v": 100000012,
+          "e": "Lupin",
+          "cod": "LUP"
+        },
+        {
+          "v": 100000013,
+          "e": "Moluste",
+          "cod": "MOL"
+        }
+      ]
+    },
+    {
+      "nume": "rd_deciziegate",
+      "eticheta": "Decizie de gate",
+      "referinta": "23.1.4",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "GO"
+        },
+        {
+          "v": 100000001,
+          "e": "GO cu conditii"
+        },
+        {
+          "v": 100000002,
+          "e": "HOLD"
+        },
+        {
+          "v": 100000003,
+          "e": "REWORK"
+        },
+        {
+          "v": 100000004,
+          "e": "STOP"
+        }
+      ]
+    },
+    {
+      "nume": "rd_categorierisc",
+      "eticheta": "Categorie de risc",
+      "referinta": "23.2.3",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Tehnic"
+        },
+        {
+          "v": 100000001,
+          "e": "Reteta"
+        },
+        {
+          "v": 100000002,
+          "e": "Materie prima"
+        },
+        {
+          "v": 100000003,
+          "e": "Furnizor"
+        },
+        {
+          "v": 100000004,
+          "e": "Calitate"
+        },
+        {
+          "v": 100000005,
+          "e": "Siguranta alimentelor"
+        },
+        {
+          "v": 100000006,
+          "e": "Reglementare"
+        },
+        {
+          "v": 100000007,
+          "e": "Etichetare"
+        },
+        {
+          "v": 100000008,
+          "e": "Ambalaj"
+        },
+        {
+          "v": 100000009,
+          "e": "Client"
+        },
+        {
+          "v": 100000010,
+          "e": "Comercial"
+        },
+        {
+          "v": 100000011,
+          "e": "Financiar"
+        },
+        {
+          "v": 100000012,
+          "e": "Productie"
+        },
+        {
+          "v": 100000013,
+          "e": "Planificare"
+        },
+        {
+          "v": 100000014,
+          "e": "Logistica"
+        },
+        {
+          "v": 100000015,
+          "e": "SAP"
+        }
+      ]
+    },
+    {
+      "nume": "rd_sursaactiune",
+      "eticheta": "Sursa actiunii",
+      "referinta": "23.4.2",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Risc"
+        },
+        {
+          "v": 100000001,
+          "e": "Problema"
+        },
+        {
+          "v": 100000002,
+          "e": "Conditie de gate"
+        },
+        {
+          "v": 100000003,
+          "e": "Productie 0"
+        },
+        {
+          "v": 100000004,
+          "e": "Revizuire"
+        },
+        {
+          "v": 100000005,
+          "e": "Evaluare senzoriala"
+        },
+        {
+          "v": 100000006,
+          "e": "Neconformitate"
+        },
+        {
+          "v": 100000007,
+          "e": "CAPA"
+        },
+        {
+          "v": 100000008,
+          "e": "Audit"
+        },
+        {
+          "v": 100000009,
+          "e": "Reclamatie"
+        },
+        {
+          "v": 100000010,
+          "e": "Incident furnizor"
+        },
+        {
+          "v": 100000011,
+          "e": "Decizie de sedinta"
+        },
+        {
+          "v": 100000012,
+          "e": "Manuala"
+        }
+      ]
+    },
+    {
+      "nume": "rd_categorielectie",
+      "eticheta": "Categorie de lectie",
+      "referinta": "25.2.1",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Reteta"
+        },
+        {
+          "v": 100000001,
+          "e": "Materie prima"
+        },
+        {
+          "v": 100000002,
+          "e": "Furnizor"
+        },
+        {
+          "v": 100000003,
+          "e": "Proces"
+        },
+        {
+          "v": 100000004,
+          "e": "Echipament"
+        },
+        {
+          "v": 100000005,
+          "e": "Calitate"
+        },
+        {
+          "v": 100000006,
+          "e": "Client"
+        },
+        {
+          "v": 100000007,
+          "e": "Comercial"
+        },
+        {
+          "v": 100000008,
+          "e": "Cost"
+        },
+        {
+          "v": 100000009,
+          "e": "Planificare"
+        },
+        {
+          "v": 100000010,
+          "e": "Ambalaj"
+        },
+        {
+          "v": 100000011,
+          "e": "Reglementare"
+        }
+      ]
+    },
+    {
+      "nume": "rd_statusstab",
+      "eticheta": "Status stabilizare",
+      "referinta": "24.1.5",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "In curs"
+        },
+        {
+          "v": 100000001,
+          "e": "Reusita"
+        },
+        {
+          "v": 100000002,
+          "e": "Neconcludenta"
+        },
+        {
+          "v": 100000003,
+          "e": "Esuata"
+        }
+      ]
+    },
+    {
+      "nume": "rd_nivelsanatate",
+      "eticheta": "Nivel de sanatate",
+      "referinta": "24.3.2",
+      "valori": [
+        {
+          "v": 100000000,
+          "e": "Verde"
+        },
+        {
+          "v": 100000001,
+          "e": "Galben"
+        },
+        {
+          "v": 100000002,
+          "e": "Portocaliu"
+        },
+        {
+          "v": 100000003,
+          "e": "Rosu"
+        },
+        {
+          "v": 100000004,
+          "e": "Blocat"
+        }
+      ]
+    }
   ]
 }

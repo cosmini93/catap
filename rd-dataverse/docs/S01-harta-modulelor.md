@@ -32,6 +32,22 @@ Prioritate: 1 = fara el nu functioneaza nimic; 2 = necesar pentru operare comple
 | M23 | Ecran public de status | Status vizibil intregii companii, read-only, fara instruire | Toata compania | Model-driven dashboard partajat | 2 | Val 2 |
 | M24 | Securitate si roluri | Matrice Rol x Tabela, roluri externe R&D, rol de cititor global | Head of R&D | Configurare | 1 | Val 0 |
 | M25 | Migrare | Import din centralizator si din foldere, curatare, proiecte in curs | Head of R&D | Dataflow / import Excel | 2 | Val 1 |
+| M26 | Gate-uri | Stage-gate cu criterii, decizii GO / conditii / HOLD / REWORK / STOP | Manager R&D | Model-driven | 1 | Val 1 |
+| M27 | Actiuni centralizate | O singura coada de actiuni, din toate sursele | Toti | Model-driven | 1 | Val 1 |
+| M28 | Riscuri si probleme | Registru de riscuri cu RPN, registru de probleme cu cauza radacina | Manager R&D, tehnolog | Model-driven | 2 | Val 2 |
+| M29 | Jurnal de decizii | Context, alternative, motiv, ipoteze, reevaluare | Manager R&D | Model-driven | 3 | Val 2 |
+| M30 | Stabilizare | Trei loturi consecutive conforme inainte de release | Tehnolog, Productie | Model-driven + canvas | 2 | Val 3 |
+| M31 | Capabilitate de proces | Cp si Cpk pe gramaj si parametri critici | Tehnolog, Calitate | Model-driven | 3 | Val 3 |
+| M32 | Lectii invatate | Generare de drafturi, aprobare, recomandare, urmarirea reutilizarii | Toti | Model-driven | 3 | Val 3 |
+| M33 | Sanatatea proiectului | Snapshot saptamanal, tendinta, alerta de degradare | Manager R&D | Dashboard | 3 | Val 3 |
+| M34 | Validare si feedback de client | Validari, feedback pe mostra si lansare | KAM | Model-driven | 3 | Val 4 |
+| M35 | Reclamatii | Legate de produs, lot si proiect | Calitate | Model-driven | 3 | Val 4 |
+| M36 | Neconformitati si CAPA | Cu evaluarea eficacitatii la 30 de zile | Calitate | Model-driven | 3 | Val 4 |
+| M37 | Performanta furnizorilor | Scorecard, incidente, OTIF, acuratetea ETA | Achizitii | Model-driven | 3 | Val 4 |
+| M38 | Business case si buget | Buget pe proiect, urmarirea consumului | Head of R&D | Model-driven | 3 | Val 5 |
+| M39 | Cost real de productie | Cost real, giveaway, comparatie cu antecalculul | Head of R&D | Power BI | 3 | Val 5 |
+| M40 | Realizarea beneficiilor | La 3, 6, 12 si 24 de luni | Head of R&D | Model-driven | 3 | Val 5 |
+| M41 | Registru de documente tehnice | Ciclu de viata si harta de dependente | Suport R&D | Model-driven | 3 | Val 5 |
 
 ## 1.2 Dependente intre module
 
@@ -48,6 +64,12 @@ Prioritate: 1 = fara el nu functioneaza nimic; 2 = necesar pentru operare comple
 | M19 | M18 | Productia 0 se face pe conditiile IPN aprobate |
 | M20 | M19 | Revizuirea compara seria cu productia 0 |
 | M22 | M06, M11 | T-Total are nevoie de etape si de blocaje pentru oprirea ceasului |
+| M26 | M04, M05, M06 | Gate-ul verifica livrabilele si se aseaza la iesirea dintr-o etapa |
+| M28 | M04, M27 | Riscul si problema genereaza actiuni in tabela centrala |
+| M30 | M19 | Stabilizarea porneste de la productia 0 validata |
+| M31 | M30, M12 | Capabilitatea are nevoie de minimum 30 de masuratori pe 3 loturi |
+| M32 | M28, M19 | Drafturile de lectii se genereaza din probleme si din productia 0 |
+| M33 | M28, M05, M09 | Scorul de sanatate agrega riscuri, livrabile si aprovizionare |
 
 ## 1.3 Ce nu face aceasta solutie
 
@@ -63,4 +85,9 @@ Legatura se face prin codul liniei si prin slotul de testare propus.
 statusul, versiunea si legatura documentului ST cu proiectul.
 
 1.3.4 Nu contine cod si nu contine formule Power Fx, cu exceptia regulilor de calcul
-care nu pot fi exprimate altfel (scor de prioritate, statistica de masuratori, alergeni).
+care nu pot fi exprimate altfel (scor de prioritate, statistica de masuratori, alergeni,
+RPN, Cp si Cpk, scor de sanatate).
+
+1.3.5 Nu construieste modulele din Anexa A2 pana cand criteriile lor de activare nu sunt
+indeplinite. Modulele M26-M41 provin din sinteza cu blueprintul Enterprise (Sectiunea 22);
+tot ce nu apare in tabelul de mai sus a fost amanat sau respins explicit, cu motiv.

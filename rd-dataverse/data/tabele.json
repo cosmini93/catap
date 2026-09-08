@@ -6546,6 +6546,2957 @@
           "observatii": null
         }
       ]
+    },
+    {
+      "cod": "TBL-43",
+      "nume": "Sablon de gate",
+      "nume_logic": "rd_sablongate",
+      "coloana_primara": "rd_name",
+      "categorie": "Configurare",
+      "val": 1,
+      "coloane": [
+        {
+          "nume": "Denumire",
+          "nume_logic": "rd_name",
+          "tip": "Text (100)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Cod gate",
+          "nume_logic": "rd_codgate",
+          "tip": "Text (10)",
+          "obligatoriu": true,
+          "valori": "G0 ... G8",
+          "regula": "Unic",
+          "observatii": "Alternate key"
+        },
+        {
+          "nume": "Ordine",
+          "nume_logic": "rd_ordine",
+          "tip": "Whole Number",
+          "obligatoriu": true,
+          "valori": "0 - 20",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Etapa asociata",
+          "nume_logic": "rd_sablonetapa",
+          "tip": "Lookup (rd_sablonetapa)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Gate-ul se evalueaza la iesirea din etapa",
+          "observatii": null
+        },
+        {
+          "nume": "Tip proiect",
+          "nume_logic": "rd_tipproiect",
+          "tip": "Choice (multi)",
+          "obligatoriu": true,
+          "valori": "Choice TIPPROIECT",
+          "regula": "Nu toate gate-urile se aplica la toate tipurile",
+          "observatii": null
+        },
+        {
+          "nume": "Rol decident",
+          "nume_logic": "rd_roldecident",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Choice ROL",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Rol coaprobator",
+          "nume_logic": "rd_rolcoaprobator",
+          "tip": "Choice",
+          "obligatoriu": false,
+          "valori": "Choice ROL",
+          "regula": "Unele gate-uri cer doua semnaturi",
+          "observatii": "G2, G4, G5, G6, G7"
+        },
+        {
+          "nume": "Blocheaza avansarea",
+          "nume_logic": "rd_blocheaza",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Da",
+          "regula": "Nu = gate informativ",
+          "observatii": null
+        },
+        {
+          "nume": "Permite GO cu conditii",
+          "nume_logic": "rd_permiteconditii",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Da",
+          "regula": "G5 si G6 = Nu",
+          "observatii": null
+        },
+        {
+          "nume": "Prag RPN blocant",
+          "nume_logic": "rd_pragrpn",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "1 - 125, implicit 48",
+          "regula": "Riscul peste acest RPN blocheaza GO",
+          "observatii": "Vezi 23.2.5"
+        },
+        {
+          "nume": "Activ",
+          "nume_logic": "rd_activ",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        }
+      ]
+    },
+    {
+      "cod": "TBL-44",
+      "nume": "Criteriu de gate",
+      "nume_logic": "rd_criteriugate",
+      "coloana_primara": "rd_name",
+      "categorie": "Configurare",
+      "val": 1,
+      "coloane": [
+        {
+          "nume": "Denumire criteriu",
+          "nume_logic": "rd_name",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Cod",
+          "nume_logic": "rd_cod",
+          "tip": "Text (15)",
+          "obligatoriu": true,
+          "valori": "G0-01, G0-02 ...",
+          "regula": "Unic",
+          "observatii": null
+        },
+        {
+          "nume": "Sablon gate",
+          "nume_logic": "rd_sablongate",
+          "tip": "Lookup (rd_sablongate)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Ordine",
+          "nume_logic": "rd_ordine",
+          "tip": "Whole Number",
+          "obligatoriu": true,
+          "valori": "1 - 30",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Tip verificare",
+          "nume_logic": "rd_tipverificare",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Automata / Manuala / Mixta",
+          "regula": null,
+          "observatii": "Vezi 23.1.10"
+        },
+        {
+          "nume": "Sursa verificarii automate",
+          "nume_logic": "rd_sursaauto",
+          "tip": "Text (200)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatorie daca tip = Automata",
+          "observatii": "Livrabil, camp sau agregare"
+        },
+        {
+          "nume": "Livrabil legat",
+          "nume_logic": "rd_codlivrabil",
+          "tip": "Text (10)",
+          "obligatoriu": false,
+          "valori": "LIV-nn",
+          "regula": "Criteriul verifica un livrabil anume",
+          "observatii": null
+        },
+        {
+          "nume": "Obligatoriu pentru GO",
+          "nume_logic": "rd_obligatoriu",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Da",
+          "regula": "Nu = criteriu de atentionare",
+          "observatii": null
+        },
+        {
+          "nume": "Sever",
+          "nume_logic": "rd_sever",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": "Da = nu admite GO cu conditii",
+          "observatii": null
+        },
+        {
+          "nume": "Rol responsabil",
+          "nume_logic": "rd_rolresponsabil",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Choice ROL",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Activ",
+          "nume_logic": "rd_activ",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        }
+      ]
+    },
+    {
+      "cod": "TBL-45",
+      "nume": "Gate de proiect",
+      "nume_logic": "rd_gate",
+      "coloana_primara": "rd_name",
+      "categorie": "Copil",
+      "val": 1,
+      "coloane": [
+        {
+          "nume": "Denumire",
+          "nume_logic": "rd_name",
+          "tip": "Text (150)",
+          "obligatoriu": true,
+          "valori": "{cod proiect}_{cod gate}",
+          "regula": "Generata",
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Proiect",
+          "nume_logic": "rd_proiect",
+          "tip": "Lookup (rd_proiect)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Sablon gate",
+          "nume_logic": "rd_sablongate",
+          "tip": "Lookup (rd_sablongate)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Etapa",
+          "nume_logic": "rd_etapa",
+          "tip": "Lookup (rd_etapa)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Data planificata",
+          "nume_logic": "rd_dataplanificata",
+          "tip": "Date Only",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Din data de final a etapei",
+          "observatii": null
+        },
+        {
+          "nume": "Data evaluarii",
+          "nume_logic": "rd_dataevaluare",
+          "tip": "Date and Time",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Automata la salvarea deciziei",
+          "observatii": null
+        },
+        {
+          "nume": "Status gate",
+          "nume_logic": "rd_statusgate",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Neevaluat / In pregatire / Gata de evaluare / Evaluat / Sarit",
+          "regula": "Gata cand toate criteriile automate sunt indeplinite",
+          "observatii": "Scris de FLX-23"
+        },
+        {
+          "nume": "Decizie",
+          "nume_logic": "rd_decizie",
+          "tip": "Choice",
+          "obligatoriu": false,
+          "valori": "GO / GO cu conditii / HOLD / REWORK / STOP",
+          "regula": "Vezi 23.1.4",
+          "observatii": "Choice global DECIZIEGATE"
+        },
+        {
+          "nume": "Decident",
+          "nume_logic": "rd_decident",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Trebuie sa aiba rolul din sablon",
+          "observatii": "Business rule"
+        },
+        {
+          "nume": "Coaprobator",
+          "nume_logic": "rd_coaprobator",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatoriu daca sablonul cere",
+          "observatii": null
+        },
+        {
+          "nume": "Criterii indeplinite",
+          "nume_logic": "rd_criteriiok",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 30",
+          "regula": "Rollup pe verificari",
+          "observatii": null
+        },
+        {
+          "nume": "Criterii totale aplicabile",
+          "nume_logic": "rd_criteriitotal",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 30",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Procent pregatire",
+          "nume_logic": "rd_procentpregatire",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": "0 - 100",
+          "regula": "indeplinite / total x 100",
+          "observatii": "Afisat ca bara"
+        },
+        {
+          "nume": "Motivul deciziei",
+          "nume_logic": "rd_motivdecizie",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatoriu pentru tot ce nu e GO",
+          "observatii": "Business rule"
+        },
+        {
+          "nume": "Numar actiuni deschise",
+          "nume_logic": "rd_actiunideschise",
+          "tip": "Rollup (Count)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Din rd_actiune legate de gate",
+          "observatii": "GO cu conditii cere minimum 1"
+        },
+        {
+          "nume": "Derogare acordata",
+          "nume_logic": "rd_derogare",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": "Permite GO peste un risc blocant",
+          "observatii": "Vezi 23.1.5"
+        },
+        {
+          "nume": "Motivul derogarii",
+          "nume_logic": "rd_motivderogare",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatoriu daca derogare = Da",
+          "observatii": "Auditat"
+        },
+        {
+          "nume": "Aprobator derogare",
+          "nume_logic": "rd_aprobatorderogare",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatoriu daca derogare = Da",
+          "observatii": "Head of R&D"
+        },
+        {
+          "nume": "Numar reveniri",
+          "nume_logic": "rd_numarreveniri",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 20",
+          "regula": "Incrementat la fiecare REWORK",
+          "observatii": "Indicator de calitate"
+        },
+        {
+          "nume": "Zile in gate",
+          "nume_logic": "rd_zileingate",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 999",
+          "regula": "Data evaluarii - data planificata",
+          "observatii": "Masoara birocratia"
+        },
+        {
+          "nume": "Data ultimei alerte",
+          "nume_logic": "rd_dataultimaalerta",
+          "tip": "Date and Time",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Deduplicare alerte",
+          "observatii": "Vezi 23.7.2.1"
+        },
+        {
+          "nume": "Amanat pana la",
+          "nume_logic": "rd_amanatpanala",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Snooze cu motiv",
+          "observatii": null
+        },
+        {
+          "nume": "Motiv amanare",
+          "nume_logic": "rd_motivamanare",
+          "tip": "Text (300)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatoriu daca exista amanare",
+          "observatii": null
+        }
+      ]
+    },
+    {
+      "cod": "TBL-46",
+      "nume": "Verificare de gate",
+      "nume_logic": "rd_verificaregate",
+      "coloana_primara": "rd_name",
+      "categorie": "Copil",
+      "val": 1,
+      "coloane": [
+        {
+          "nume": "Denumire",
+          "nume_logic": "rd_name",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Din criteriu",
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Gate",
+          "nume_logic": "rd_gate",
+          "tip": "Lookup (rd_gate)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Criteriu",
+          "nume_logic": "rd_criteriu",
+          "tip": "Lookup (rd_criteriugate)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Rezultat",
+          "nume_logic": "rd_rezultat",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Neverificat / Indeplinit / Neindeplinit / Nu se aplica",
+          "regula": "Implicit Neverificat",
+          "observatii": null
+        },
+        {
+          "nume": "Verificat automat",
+          "nume_logic": "rd_automat",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Din tipul criteriului",
+          "observatii": null
+        },
+        {
+          "nume": "Data verificarii",
+          "nume_logic": "rd_dataverificare",
+          "tip": "Date and Time",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Verificat de",
+          "nume_logic": "rd_verificatde",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Gol pentru verificarile automate",
+          "observatii": null
+        },
+        {
+          "nume": "Observatii",
+          "nume_logic": "rd_observatii",
+          "tip": "Text Area (1000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatorii daca rezultat = Neindeplinit",
+          "observatii": null
+        },
+        {
+          "nume": "Actiune generata",
+          "nume_logic": "rd_actiune",
+          "tip": "Lookup (rd_actiune)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": "Vezi 23.4"
+        }
+      ]
+    },
+    {
+      "cod": "TBL-47",
+      "nume": "Risc de proiect",
+      "nume_logic": "rd_risc",
+      "coloana_primara": "rd_name",
+      "categorie": "Copil",
+      "val": 2,
+      "coloane": [
+        {
+          "nume": "Numar risc",
+          "nume_logic": "rd_name",
+          "tip": "Autonumber",
+          "obligatoriu": true,
+          "valori": "RSK-{AA}-{SEQ:0000}",
+          "regula": null,
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Proiect",
+          "nume_logic": "rd_proiect",
+          "tip": "Lookup (rd_proiect)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Etapa detectarii",
+          "nume_logic": "rd_etapa",
+          "tip": "Lookup (rd_etapa)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": "Cand a fost vazut"
+        },
+        {
+          "nume": "Titlu",
+          "nume_logic": "rd_titlu",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Descriere",
+          "nume_logic": "rd_descriere",
+          "tip": "Text Area (2000)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Categorie",
+          "nume_logic": "rd_categorie",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Choice CATEGORIERISC",
+          "regula": null,
+          "observatii": "16 valori, vezi 23.2.3"
+        },
+        {
+          "nume": "Probabilitate",
+          "nume_logic": "rd_probabilitate",
+          "tip": "Whole Number",
+          "obligatoriu": true,
+          "valori": "1 - 5",
+          "regula": "Vezi 23.2.4",
+          "observatii": null
+        },
+        {
+          "nume": "Impact",
+          "nume_logic": "rd_impact",
+          "tip": "Whole Number",
+          "obligatoriu": true,
+          "valori": "1 - 5",
+          "regula": "Vezi 23.2.4",
+          "observatii": null
+        },
+        {
+          "nume": "Detectabilitate",
+          "nume_logic": "rd_detectabilitate",
+          "tip": "Whole Number",
+          "obligatoriu": true,
+          "valori": "1 - 5",
+          "regula": "1 = se vede imediat, 5 = se afla tarziu",
+          "observatii": null
+        },
+        {
+          "nume": "RPN",
+          "nume_logic": "rd_rpn",
+          "tip": "Calculated (Whole Number)",
+          "obligatoriu": false,
+          "valori": "1 - 125",
+          "regula": "probabilitate x impact x detectabilitate",
+          "observatii": "Vezi 23.2.5"
+        },
+        {
+          "nume": "Nivel de risc",
+          "nume_logic": "rd_nivel",
+          "tip": "Choice",
+          "obligatoriu": false,
+          "valori": "Scazut / Mediu / Ridicat / Critic",
+          "regula": "Derivat din RPN",
+          "observatii": "Scris de flux"
+        },
+        {
+          "nume": "Impact estimat in zile",
+          "nume_logic": "rd_impactzile",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 365",
+          "regula": null,
+          "observatii": "Pentru termenul forecast"
+        },
+        {
+          "nume": "Expunere financiara",
+          "nume_logic": "rd_expunere",
+          "tip": "Currency (2)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Optionala, vezi 23.2.7",
+          "observatii": "Securitate pe coloana"
+        },
+        {
+          "nume": "Afecteaza siguranta alimentelor",
+          "nume_logic": "rd_afecteazafoodsafety",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": "Da = nivel Critic automat",
+          "observatii": "Blocheaza gate"
+        },
+        {
+          "nume": "Afecteaza clientul",
+          "nume_logic": "rd_afecteazaclient",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Afecteaza conformitatea",
+          "nume_logic": "rd_afecteazaconformitate",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": "IFS, ISO, legal",
+          "observatii": null
+        },
+        {
+          "nume": "Semnal de declansare",
+          "nume_logic": "rd_trigger",
+          "tip": "Text (500)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Ce ar arata ca riscul se produce",
+          "observatii": "Face riscul urmaribil"
+        },
+        {
+          "nume": "Plan de mitigare",
+          "nume_logic": "rd_mitigare",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatoriu pentru Ridicat si Critic",
+          "observatii": "Business rule"
+        },
+        {
+          "nume": "Plan de contingenta",
+          "nume_logic": "rd_contingenta",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Ce facem daca se produce totusi",
+          "observatii": null
+        },
+        {
+          "nume": "Proprietar",
+          "nume_logic": "rd_proprietar",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "O persoana, nu un departament",
+          "observatii": null
+        },
+        {
+          "nume": "Termen de mitigare",
+          "nume_logic": "rd_termen",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatoriu pentru Ridicat si Critic",
+          "observatii": null
+        },
+        {
+          "nume": "Probabilitate reziduala",
+          "nume_logic": "rd_probabilitatereziduala",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "1 - 5",
+          "regula": "Dupa mitigare",
+          "observatii": null
+        },
+        {
+          "nume": "Impact rezidual",
+          "nume_logic": "rd_impactrezidual",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "1 - 5",
+          "regula": "Dupa mitigare",
+          "observatii": null
+        },
+        {
+          "nume": "RPN rezidual",
+          "nume_logic": "rd_rpnrezidual",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "1 - 125",
+          "regula": null,
+          "observatii": "Ce ramane asumat"
+        },
+        {
+          "nume": "Status",
+          "nume_logic": "rd_statusrisc",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Identificat / In evaluare / In mitigare / Mitigat / Acceptat / Produs / Inchis",
+          "regula": "Produs = se creeaza problema",
+          "observatii": "Vezi 23.2.6"
+        },
+        {
+          "nume": "Tendinta",
+          "nume_logic": "rd_tendinta",
+          "tip": "Choice",
+          "obligatoriu": false,
+          "valori": "In crestere / Stabil / In scadere",
+          "regula": "Comparat cu ultima revizuire",
+          "observatii": null
+        },
+        {
+          "nume": "Problema generata",
+          "nume_logic": "rd_problema",
+          "tip": "Lookup (rd_problema)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Cand riscul se produce",
+          "observatii": "Trasabilitate"
+        },
+        {
+          "nume": "Data ultimei revizuiri",
+          "nume_logic": "rd_dataultimarevizuire",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Ridicat si Critic se revizuiesc lunar",
+          "observatii": "FLX-24"
+        },
+        {
+          "nume": "Data ultimei alerte",
+          "nume_logic": "rd_dataultimaalerta",
+          "tip": "Date and Time",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Deduplicare alerte",
+          "observatii": null
+        }
+      ]
+    },
+    {
+      "cod": "TBL-48",
+      "nume": "Problema de proiect",
+      "nume_logic": "rd_problema",
+      "coloana_primara": "rd_name",
+      "categorie": "Copil",
+      "val": 2,
+      "coloane": [
+        {
+          "nume": "Numar problema",
+          "nume_logic": "rd_name",
+          "tip": "Autonumber",
+          "obligatoriu": true,
+          "valori": "ISS-{AA}-{SEQ:0000}",
+          "regula": null,
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Proiect",
+          "nume_logic": "rd_proiect",
+          "tip": "Lookup (rd_proiect)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Etapa",
+          "nume_logic": "rd_etapa",
+          "tip": "Lookup (rd_etapa)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Titlu",
+          "nume_logic": "rd_titlu",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Descriere",
+          "nume_logic": "rd_descriere",
+          "tip": "Text Area (2000)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Sursa",
+          "nume_logic": "rd_sursa",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Trial / Materie prima / Furnizor / Productie 0 / Client / Calitate / Reclamatie / Audit / Risc materializat / Alta",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Categorie",
+          "nume_logic": "rd_categorie",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Choice CATEGORIERISC",
+          "regula": "Aceleasi categorii ca la risc",
+          "observatii": "Permite analiza comuna"
+        },
+        {
+          "nume": "Severitate",
+          "nume_logic": "rd_severitate",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Minora / Majora / Critica / Blocanta",
+          "regula": "Critica si Blocanta blocheaza gate",
+          "observatii": null
+        },
+        {
+          "nume": "Impact asupra termenului (zile)",
+          "nume_logic": "rd_impacttermen",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 365",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Impact asupra costului",
+          "nume_logic": "rd_impactcost",
+          "tip": "Currency (2)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Optional",
+          "observatii": "Securitate pe coloana"
+        },
+        {
+          "nume": "Impact asupra calitatii",
+          "nume_logic": "rd_impactcalitate",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Impact asupra clientului",
+          "nume_logic": "rd_impactclient",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Siguranta alimentelor",
+          "nume_logic": "rd_foodsafety",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": "Da = severitate Critica automat",
+          "observatii": "Declanseaza neconformitate"
+        },
+        {
+          "nume": "Cauza radacina",
+          "nume_logic": "rd_cauzaradacina",
+          "tip": "Lookup (rd_motiv)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatorie la inchidere pentru Critica si Blocanta",
+          "observatii": "Nomenclator, vezi 25.6.2"
+        },
+        {
+          "nume": "Detalii cauza",
+          "nume_logic": "rd_detaliicauza",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Metoda de analiza",
+          "nume_logic": "rd_metodaanaliza",
+          "tip": "Choice",
+          "obligatoriu": false,
+          "valori": "5 De ce / Ishikawa / Experienta / Altele",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Actiune corectiva",
+          "nume_logic": "rd_actiunecorectiva",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Ce rezolva problema acum",
+          "observatii": null
+        },
+        {
+          "nume": "Actiune preventiva",
+          "nume_logic": "rd_actiunepreventiva",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Ce impiedica repetarea",
+          "observatii": null
+        },
+        {
+          "nume": "Proprietar",
+          "nume_logic": "rd_proprietar",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Termen",
+          "nume_logic": "rd_termen",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatoriu pentru Critica si Blocanta",
+          "observatii": null
+        },
+        {
+          "nume": "Status",
+          "nume_logic": "rd_statusproblema",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Deschisa / In analiza / In rezolvare / Rezolvata / Verificata / Inchisa / Reaparuta",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Data deschiderii",
+          "nume_logic": "rd_datadeschidere",
+          "tip": "Date Only",
+          "obligatoriu": true,
+          "valori": "Implicit azi",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Data inchiderii",
+          "nume_logic": "rd_datainchidere",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Zile deschisa",
+          "nume_logic": "rd_ziledeschisa",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 999",
+          "regula": null,
+          "observatii": "Scris de flux"
+        },
+        {
+          "nume": "Risc sursa",
+          "nume_logic": "rd_risc",
+          "tip": "Lookup (rd_risc)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Daca provine dintr-un risc materializat",
+          "observatii": null
+        },
+        {
+          "nume": "Trial legat",
+          "nume_logic": "rd_trial",
+          "tip": "Lookup (rd_trial)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Materie prima legata",
+          "nume_logic": "rd_mpproiect",
+          "tip": "Lookup (rd_mpproiect)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Productie 0 legata",
+          "nume_logic": "rd_productie0",
+          "tip": "Lookup (rd_productie0)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Lectie generata",
+          "nume_logic": "rd_lectie",
+          "tip": "Lookup (rd_lectie)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Vezi 25.2",
+          "observatii": null
+        },
+        {
+          "nume": "Repetare",
+          "nume_logic": "rd_esterepetare",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": "Aceeasi cauza in ultimele 12 luni",
+          "observatii": "Scris de FLX-26"
+        }
+      ]
+    },
+    {
+      "cod": "TBL-49",
+      "nume": "Actiune",
+      "nume_logic": "rd_actiune",
+      "coloana_primara": "rd_name",
+      "categorie": "Copil",
+      "val": 1,
+      "coloane": [
+        {
+          "nume": "Numar actiune",
+          "nume_logic": "rd_name",
+          "tip": "Autonumber",
+          "obligatoriu": true,
+          "valori": "ACT-{AA}-{SEQ:00000}",
+          "regula": null,
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Titlu",
+          "nume_logic": "rd_titlu",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Descriere",
+          "nume_logic": "rd_descriere",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Proiect",
+          "nume_logic": "rd_proiect",
+          "tip": "Lookup (rd_proiect)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential; poate exista si actiune fara proiect",
+          "observatii": "Remove Link"
+        },
+        {
+          "nume": "Sursa",
+          "nume_logic": "rd_sursaactiune",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Choice SURSAACTIUNE",
+          "regula": null,
+          "observatii": "12 valori, vezi 23.4.2"
+        },
+        {
+          "nume": "Risc",
+          "nume_logic": "rd_risc",
+          "tip": "Lookup (rd_risc)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Completat de flux",
+          "observatii": null
+        },
+        {
+          "nume": "Problema",
+          "nume_logic": "rd_problema",
+          "tip": "Lookup (rd_problema)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Completat de flux",
+          "observatii": null
+        },
+        {
+          "nume": "Gate",
+          "nume_logic": "rd_gate",
+          "tip": "Lookup (rd_gate)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Pentru GO cu conditii",
+          "observatii": null
+        },
+        {
+          "nume": "Productie 0",
+          "nume_logic": "rd_productie0",
+          "tip": "Lookup (rd_productie0)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Prioritate",
+          "nume_logic": "rd_prioritate",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Scazuta / Normala / Ridicata / Urgenta",
+          "regula": "Implicit Normala",
+          "observatii": null
+        },
+        {
+          "nume": "Proprietar",
+          "nume_logic": "rd_proprietar",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "O persoana",
+          "observatii": null
+        },
+        {
+          "nume": "Termen",
+          "nume_logic": "rd_termen",
+          "tip": "Date Only",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Status",
+          "nume_logic": "rd_statusactiune",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Deschisa / In lucru / In verificare / Inchisa / Anulata",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Data inchiderii",
+          "nume_logic": "rd_datainchidere",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Zile intarziere",
+          "nume_logic": "rd_zileintarziere",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 999",
+          "regula": "max(0, azi - termen) daca nu e inchisa",
+          "observatii": "Scris de FLX-08"
+        },
+        {
+          "nume": "Dovada",
+          "nume_logic": "rd_dovada",
+          "tip": "Text Area (1000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatorie la inchidere pentru Gate, CAPA, Neconformitate",
+          "observatii": "Business rule"
+        },
+        {
+          "nume": "Verificator",
+          "nume_logic": "rd_verificator",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Cine confirma ca s-a facut",
+          "observatii": null
+        },
+        {
+          "nume": "Data verificarii",
+          "nume_logic": "rd_dataverificare",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Eficacitate",
+          "nume_logic": "rd_eficacitate",
+          "tip": "Choice",
+          "obligatoriu": false,
+          "valori": "Eficace / Partial eficace / Neeficace / Prea devreme pentru evaluare",
+          "regula": "Se evalueaza la 30 de zile de la inchidere",
+          "observatii": "Cerinta IFS pentru CAPA"
+        },
+        {
+          "nume": "Blocheaza gate",
+          "nume_logic": "rd_blocheazagate",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": "Da = gate-ul nu trece pana la inchidere",
+          "observatii": null
+        },
+        {
+          "nume": "Escaladata",
+          "nume_logic": "rd_escaladata",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": "Scris de FLX-27",
+          "observatii": null
+        },
+        {
+          "nume": "Nivel escaladare",
+          "nume_logic": "rd_nivelescaladare",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 4",
+          "regula": "Vezi 23.7.3",
+          "observatii": null
+        },
+        {
+          "nume": "Data ultimei alerte",
+          "nume_logic": "rd_dataultimaalerta",
+          "tip": "Date and Time",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Deduplicare alerte",
+          "observatii": null
+        },
+        {
+          "nume": "Amanat pana la",
+          "nume_logic": "rd_amanatpanala",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Snooze cu motiv",
+          "observatii": null
+        },
+        {
+          "nume": "Motiv amanare",
+          "nume_logic": "rd_motivamanare",
+          "tip": "Text (300)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatoriu daca exista amanare",
+          "observatii": null
+        }
+      ]
+    },
+    {
+      "cod": "TBL-50",
+      "nume": "Decizie de proiect",
+      "nume_logic": "rd_decizie",
+      "coloana_primara": "rd_name",
+      "categorie": "Copil",
+      "val": 2,
+      "coloane": [
+        {
+          "nume": "Numar decizie",
+          "nume_logic": "rd_name",
+          "tip": "Autonumber",
+          "obligatoriu": true,
+          "valori": "DEC-{AA}-{SEQ:0000}",
+          "regula": null,
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Proiect",
+          "nume_logic": "rd_proiect",
+          "tip": "Lookup (rd_proiect)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Etapa",
+          "nume_logic": "rd_etapa",
+          "tip": "Lookup (rd_etapa)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Titlu",
+          "nume_logic": "rd_titlu",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Contextul deciziei",
+          "nume_logic": "rd_context",
+          "tip": "Text Area (2000)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Ce problema se rezolva",
+          "observatii": null
+        },
+        {
+          "nume": "Alternative considerate",
+          "nume_logic": "rd_alternative",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Ce s-a mai luat in calcul",
+          "observatii": "Partea cea mai valoroasa la recitire"
+        },
+        {
+          "nume": "Decizia luata",
+          "nume_logic": "rd_deciziatext",
+          "tip": "Text Area (2000)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Motivul",
+          "nume_logic": "rd_motiv",
+          "tip": "Text Area (2000)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Categorie",
+          "nume_logic": "rd_categorie",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Tehnica / Reteta / Furnizor / Cost / Comerciala / Calitate / Planificare / Scop",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Decident",
+          "nume_logic": "rd_decident",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Data deciziei",
+          "nume_logic": "rd_datadecizie",
+          "tip": "Date Only",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Consultati",
+          "nume_logic": "rd_consultati",
+          "tip": "Text (300)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Cine a participat",
+          "observatii": null
+        },
+        {
+          "nume": "Reversibila",
+          "nume_logic": "rd_reversibila",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Da",
+          "regula": "Nu = consecinte greu de anulat",
+          "observatii": "Merita mai multa atentie"
+        },
+        {
+          "nume": "Ipoteze asumate",
+          "nume_logic": "rd_ipoteze",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Ce presupunem ca este adevarat",
+          "observatii": "Vezi 23.5.3"
+        },
+        {
+          "nume": "Data de reevaluare",
+          "nume_logic": "rd_datareevaluare",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Cand se verifica ipotezele",
+          "observatii": "Genereaza actiune"
+        },
+        {
+          "nume": "Rezultat la reevaluare",
+          "nume_logic": "rd_rezultat",
+          "tip": "Choice",
+          "obligatoriu": false,
+          "valori": "Confirmata / Partial confirmata / Infirmata / Nereevaluata",
+          "regula": null,
+          "observatii": "Alimenteaza lectiile"
+        },
+        {
+          "nume": "Impact asupra costului",
+          "nume_logic": "rd_impactcost",
+          "tip": "Currency (2)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Optional",
+          "observatii": "Securitate pe coloana"
+        }
+      ]
+    },
+    {
+      "cod": "TBL-51",
+      "nume": "Stabilizare",
+      "nume_logic": "rd_stabilizare",
+      "coloana_primara": "rd_name",
+      "categorie": "Copil",
+      "val": 3,
+      "coloane": [
+        {
+          "nume": "Numar",
+          "nume_logic": "rd_name",
+          "tip": "Autonumber",
+          "obligatoriu": true,
+          "valori": "STB-{AA}-{SEQ:0000}",
+          "regula": null,
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Proiect",
+          "nume_logic": "rd_proiect",
+          "tip": "Lookup (rd_proiect)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Productie 0 sursa",
+          "nume_logic": "rd_productie0",
+          "tip": "Lookup (rd_productie0)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Linie",
+          "nume_logic": "rd_linie",
+          "tip": "Lookup (rd_linie)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Data inceperii",
+          "nume_logic": "rd_datainceput",
+          "tip": "Date Only",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Prima productie de serie",
+          "observatii": null
+        },
+        {
+          "nume": "Numar loturi necesare",
+          "nume_logic": "rd_loturinecesare",
+          "tip": "Whole Number",
+          "obligatoriu": true,
+          "valori": "1 - 10, implicit 3",
+          "regula": "Configurabil pe categorie",
+          "observatii": "Variabila de mediu"
+        },
+        {
+          "nume": "Loturi produse",
+          "nume_logic": "rd_loturiproduse",
+          "tip": "Rollup (Count)",
+          "obligatoriu": false,
+          "valori": "0 - 99",
+          "regula": "Din rd_lotstabilizare",
+          "observatii": null
+        },
+        {
+          "nume": "Loturi conforme consecutive",
+          "nume_logic": "rd_loturiconforme",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 99",
+          "regula": "Se reseteaza la primul neconform",
+          "observatii": "Scris de FLX-31"
+        },
+        {
+          "nume": "Schimburi acoperite",
+          "nume_logic": "rd_schimburi",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "1 - 3",
+          "regula": "Distinct pe loturi conforme",
+          "observatii": "Vezi 24.1.3"
+        },
+        {
+          "nume": "Randament mediu in serie (%)",
+          "nume_logic": "rd_randamentmediu",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": "0 - 120",
+          "regula": "Media loturilor conforme",
+          "observatii": null
+        },
+        {
+          "nume": "Randament la productia 0 (%)",
+          "nume_logic": "rd_randamentprod0",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Preluat automat",
+          "observatii": "Baza de comparatie"
+        },
+        {
+          "nume": "Diferenta de randament (pp)",
+          "nume_logic": "rd_diferentarandament",
+          "tip": "Calculated (Decimal)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "serie - productie 0",
+          "observatii": "Vezi 24.1.7"
+        },
+        {
+          "nume": "Rebut mediu in serie (%)",
+          "nume_logic": "rd_rebutmediu",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": "0 - 100",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Giveaway mediu (%)",
+          "nume_logic": "rd_giveawaymediu",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": "-50 - 50",
+          "regula": "Supraumplerea in serie",
+          "observatii": "Vezi 7.6.7"
+        },
+        {
+          "nume": "Viteza medie realizata (%)",
+          "nume_logic": "rd_vitezamedie",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": "0 - 150",
+          "regula": "Fata de viteza nominala",
+          "observatii": null
+        },
+        {
+          "nume": "Reclamatii interne",
+          "nume_logic": "rd_reclamatiiinterne",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 99",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Variabilitate acceptabila",
+          "nume_logic": "rd_variabilitateok",
+          "tip": "Yes/No",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "CV al gramajului sub prag pe toate loturile",
+          "observatii": "Vezi 6.2.3"
+        },
+        {
+          "nume": "Actiuni deschise",
+          "nume_logic": "rd_actiunideschise",
+          "tip": "Rollup (Count)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Din rd_actiune",
+          "observatii": "Blocheaza inchiderea"
+        },
+        {
+          "nume": "Status",
+          "nume_logic": "rd_statusstabilizare",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "In curs / Reusita / Neconcludenta / Esuata",
+          "regula": null,
+          "observatii": "Choice global STATUSSTAB"
+        },
+        {
+          "nume": "Data finalizarii",
+          "nume_logic": "rd_datafinalizare",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "La al treilea lot conform consecutiv",
+          "observatii": "Declanseaza G7"
+        },
+        {
+          "nume": "Decizie",
+          "nume_logic": "rd_deciziestabilizare",
+          "tip": "Choice",
+          "obligatoriu": false,
+          "valori": "Release / Release cu monitorizare / Se prelungeste / Se reia productia 0",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Motivul deciziei",
+          "nume_logic": "rd_motivdecizie",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatoriu pentru tot ce nu e Release",
+          "observatii": null
+        },
+        {
+          "nume": "Responsabil",
+          "nume_logic": "rd_responsabil",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        }
+      ]
+    },
+    {
+      "cod": "TBL-52",
+      "nume": "Lot de stabilizare",
+      "nume_logic": "rd_lotstabilizare",
+      "coloana_primara": "rd_name",
+      "categorie": "Copil",
+      "val": 3,
+      "coloane": [
+        {
+          "nume": "Denumire",
+          "nume_logic": "rd_name",
+          "tip": "Text (150)",
+          "obligatoriu": true,
+          "valori": "Numarul lotului de productie",
+          "regula": null,
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Stabilizare",
+          "nume_logic": "rd_stabilizare",
+          "tip": "Lookup (rd_stabilizare)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Numar de ordine",
+          "nume_logic": "rd_numarordine",
+          "tip": "Whole Number",
+          "obligatoriu": true,
+          "valori": "1 - 99",
+          "regula": "Succesiv",
+          "observatii": null
+        },
+        {
+          "nume": "Data productiei",
+          "nume_logic": "rd_dataproductie",
+          "tip": "Date Only",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Schimb",
+          "nume_logic": "rd_schimb",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Choice SCHIMB",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Cantitate produsa (kg)",
+          "nume_logic": "rd_cantitate",
+          "tip": "Decimal (2)",
+          "obligatoriu": true,
+          "valori": "> 0",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Randament (%)",
+          "nume_logic": "rd_randament",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": "0 - 120",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Rebut (%)",
+          "nume_logic": "rd_rebut",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": "0 - 100",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Greutate medie (g)",
+          "nume_logic": "rd_greutatemedie",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Minimum 20 de bucati",
+          "observatii": null
+        },
+        {
+          "nume": "CV gramaj (%)",
+          "nume_logic": "rd_cvgramaj",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": "0 - 100",
+          "regula": null,
+          "observatii": "Vezi 6.2.3"
+        },
+        {
+          "nume": "Giveaway (%)",
+          "nume_logic": "rd_giveaway",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": "-50 - 50",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Viteza realizata (%)",
+          "nume_logic": "rd_viteza",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": "0 - 150",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Conformitate HACCP",
+          "nume_logic": "rd_haccpok",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "O neconformitate = lot neconform",
+          "observatii": null
+        },
+        {
+          "nume": "Reclamatii sau neconformitati",
+          "nume_logic": "rd_neconformitati",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 99",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Lot conform",
+          "nume_logic": "rd_conform",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Vezi 24.1.2",
+          "observatii": "Scris de FLX-31"
+        },
+        {
+          "nume": "Motivul neconformitatii",
+          "nume_logic": "rd_motivneconform",
+          "tip": "Text Area (1000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Obligatoriu daca lot conform = Nu",
+          "observatii": null
+        },
+        {
+          "nume": "Problema generata",
+          "nume_logic": "rd_problema",
+          "tip": "Lookup (rd_problema)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Un lot neconform creeaza automat o problema",
+          "observatii": "FLX-31"
+        }
+      ]
+    },
+    {
+      "cod": "TBL-53",
+      "nume": "Capabilitate de proces",
+      "nume_logic": "rd_capabilitateproces",
+      "coloana_primara": "rd_name",
+      "categorie": "Derivata",
+      "val": 3,
+      "coloane": [
+        {
+          "nume": "Denumire",
+          "nume_logic": "rd_name",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": "{produs}_{parametru}",
+          "regula": "Generata",
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Proiect",
+          "nume_logic": "rd_proiect",
+          "tip": "Lookup (rd_proiect)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Stabilizare",
+          "nume_logic": "rd_stabilizare",
+          "tip": "Lookup (rd_stabilizare)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Linie",
+          "nume_logic": "rd_linie",
+          "tip": "Lookup (rd_linie)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Capabilitatea este a perechii produs-linie",
+          "observatii": null
+        },
+        {
+          "nume": "Parametru",
+          "nume_logic": "rd_parametru",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Choice TIPMASURATOARE",
+          "regula": "Tipuri numerice",
+          "observatii": null
+        },
+        {
+          "nume": "Perioada de la",
+          "nume_logic": "rd_perioadadela",
+          "tip": "Date Only",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Perioada pana la",
+          "nume_logic": "rd_perioadapanala",
+          "tip": "Date Only",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Numar de valori",
+          "nume_logic": "rd_n",
+          "tip": "Whole Number",
+          "obligatoriu": true,
+          "valori": "1 - 9999",
+          "regula": "Sub 30 = Date insuficiente",
+          "observatii": "Vezi 24.2.5"
+        },
+        {
+          "nume": "Numar de loturi",
+          "nume_logic": "rd_numarloturi",
+          "tip": "Whole Number",
+          "obligatoriu": true,
+          "valori": "1 - 99",
+          "regula": "Minimum 3",
+          "observatii": null
+        },
+        {
+          "nume": "Media",
+          "nume_logic": "rd_medie",
+          "tip": "Decimal (4)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Abaterea standard",
+          "nume_logic": "rd_sigma",
+          "tip": "Decimal (5)",
+          "obligatoriu": true,
+          "valori": "> 0",
+          "regula": "Esantion, n-1",
+          "observatii": null
+        },
+        {
+          "nume": "Tinta",
+          "nume_logic": "rd_tinta",
+          "tip": "Decimal (4)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Din specificatie",
+          "observatii": null
+        },
+        {
+          "nume": "Limita inferioara",
+          "nume_logic": "rd_lis",
+          "tip": "Decimal (4)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "tinta - toleranta minus",
+          "observatii": null
+        },
+        {
+          "nume": "Limita superioara",
+          "nume_logic": "rd_lss",
+          "tip": "Decimal (4)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "tinta + toleranta plus",
+          "observatii": null
+        },
+        {
+          "nume": "Cp",
+          "nume_logic": "rd_cp",
+          "tip": "Decimal (3)",
+          "obligatoriu": false,
+          "valori": "0 - 10",
+          "regula": "Vezi 24.2.2",
+          "observatii": null
+        },
+        {
+          "nume": "Cpk",
+          "nume_logic": "rd_cpk",
+          "tip": "Decimal (3)",
+          "obligatoriu": false,
+          "valori": "-5 - 10",
+          "regula": "Poate fi negativ daca media e in afara limitelor",
+          "observatii": null
+        },
+        {
+          "nume": "Deplasare fata de tinta (%)",
+          "nume_logic": "rd_deplasare",
+          "tip": "Decimal (2)",
+          "obligatoriu": false,
+          "valori": "-100 - 100",
+          "regula": "(medie - tinta) / tinta x 100",
+          "observatii": "Arata daca e reglaj sau imprastiere"
+        },
+        {
+          "nume": "Verdict",
+          "nume_logic": "rd_verdict",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Date insuficiente / Incapabil / Marginal / Capabil / Foarte capabil",
+          "regula": "Vezi 24.2.3",
+          "observatii": null
+        },
+        {
+          "nume": "Recomandare",
+          "nume_logic": "rd_recomandare",
+          "tip": "Text Area (1000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Generata din combinatia Cp / Cpk",
+          "observatii": "Vezi 24.2.4"
+        },
+        {
+          "nume": "Data calculului",
+          "nume_logic": "rd_datacalcul",
+          "tip": "Date and Time",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": "Scris de FLX-32"
+        }
+      ]
+    },
+    {
+      "cod": "TBL-54",
+      "nume": "Lectie invatata",
+      "nume_logic": "rd_lectie",
+      "coloana_primara": "rd_name",
+      "categorie": "Cunoastere",
+      "val": 3,
+      "coloane": [
+        {
+          "nume": "Numar lectie",
+          "nume_logic": "rd_name",
+          "tip": "Autonumber",
+          "obligatoriu": true,
+          "valori": "LSN-{AA}-{SEQ:0000}",
+          "regula": null,
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Titlu",
+          "nume_logic": "rd_titlu",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Formulat ca afirmatie, nu ca subiect",
+          "observatii": "Vezi 25.2.4"
+        },
+        {
+          "nume": "Situatia",
+          "nume_logic": "rd_situatie",
+          "tip": "Text Area (2000)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Ce s-a intamplat concret",
+          "observatii": null
+        },
+        {
+          "nume": "Cauza radacina",
+          "nume_logic": "rd_cauzaradacina",
+          "tip": "Text Area (2000)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "De ce s-a intamplat",
+          "observatii": null
+        },
+        {
+          "nume": "Lectia",
+          "nume_logic": "rd_lectietext",
+          "tip": "Text Area (2000)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Ce stim acum si nu stiam inainte",
+          "observatii": null
+        },
+        {
+          "nume": "Recomandarea",
+          "nume_logic": "rd_recomandare",
+          "tip": "Text Area (2000)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Ce sa faca altcineva data viitoare",
+          "observatii": "Partea reutilizabila"
+        },
+        {
+          "nume": "Actiune preventiva",
+          "nume_logic": "rd_actiunepreventiva",
+          "tip": "Text Area (2000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Ce schimbare de proces ar impiedica repetarea",
+          "observatii": null
+        },
+        {
+          "nume": "Categorie",
+          "nume_logic": "rd_categorie",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Choice CATEGORIELECTIE",
+          "regula": null,
+          "observatii": "12 valori"
+        },
+        {
+          "nume": "Severitatea situatiei",
+          "nume_logic": "rd_severitate",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Minora / Majora / Critica",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Nivel de reutilizare",
+          "nume_logic": "rd_nivelreutilizare",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Proiect / Categorie de produs / Linie / Furnizor / Client / Intreaga companie",
+          "regula": "Determina cui i se recomanda",
+          "observatii": "Vezi 25.4"
+        },
+        {
+          "nume": "Categorie de produs",
+          "nume_logic": "rd_categorieprodus",
+          "tip": "Choice",
+          "obligatoriu": false,
+          "valori": "Foietaj / Aluat dospit / Patiserie cu umplutura / Paine / Toate",
+          "regula": "Pentru potrivire",
+          "observatii": null
+        },
+        {
+          "nume": "Linie",
+          "nume_logic": "rd_linie",
+          "tip": "Lookup (rd_linie)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Materie prima",
+          "nume_logic": "rd_materieprima",
+          "tip": "Lookup (rd_materieprima)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Furnizor",
+          "nume_logic": "rd_furnizor",
+          "tip": "Lookup (rd_furnizor)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Client",
+          "nume_logic": "rd_client",
+          "tip": "Lookup (rd_client)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Etichete",
+          "nume_logic": "rd_etichete",
+          "tip": "Text (300)",
+          "obligatoriu": false,
+          "valori": "Cuvinte separate prin ;",
+          "regula": "Pentru cautare libera",
+          "observatii": null
+        },
+        {
+          "nume": "Cost potential evitat",
+          "nume_logic": "rd_costevitat",
+          "tip": "Currency (2)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Estimare, optionala",
+          "observatii": "Securitate pe coloana"
+        },
+        {
+          "nume": "Zile potential evitate",
+          "nume_logic": "rd_zileevitate",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 365",
+          "regula": "Estimare",
+          "observatii": null
+        },
+        {
+          "nume": "Proiect sursa",
+          "nume_logic": "rd_proiect",
+          "tip": "Lookup (rd_proiect)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "De unde provine",
+          "observatii": "Referential"
+        },
+        {
+          "nume": "Problema sursa",
+          "nume_logic": "rd_problema",
+          "tip": "Lookup (rd_problema)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Productie 0 sursa",
+          "nume_logic": "rd_productie0",
+          "tip": "Lookup (rd_productie0)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Generata automat",
+          "nume_logic": "rd_generataauto",
+          "tip": "Yes/No",
+          "obligatoriu": true,
+          "valori": "Implicit Nu",
+          "regula": "Draft creat de FLX-33",
+          "observatii": "Vezi 25.2.2"
+        },
+        {
+          "nume": "Status",
+          "nume_logic": "rd_statuslectie",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Draft / In verificare / Aprobata / Respinsa / Arhivata",
+          "regula": "Numai cele Aprobate se recomanda",
+          "observatii": null
+        },
+        {
+          "nume": "Autor",
+          "nume_logic": "rd_autor",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Aprobator",
+          "nume_logic": "rd_aprobator",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Manager R&D",
+          "observatii": null
+        },
+        {
+          "nume": "Data aprobarii",
+          "nume_logic": "rd_dataaprobare",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Numar reutilizari",
+          "nume_logic": "rd_numarreutilizari",
+          "tip": "Rollup (Count)",
+          "obligatoriu": false,
+          "valori": "0 - 999",
+          "regula": "Din rd_utilizarelectie",
+          "observatii": "Vezi 25.3"
+        },
+        {
+          "nume": "Data ultimei reutilizari",
+          "nume_logic": "rd_dataultimareutilizare",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": "Lectiile nefolosite se revizuiesc"
+        }
+      ]
+    },
+    {
+      "cod": "TBL-55",
+      "nume": "Utilizare de lectie",
+      "nume_logic": "rd_utilizarelectie",
+      "coloana_primara": "rd_name",
+      "categorie": "Cunoastere",
+      "val": 3,
+      "coloane": [
+        {
+          "nume": "Denumire",
+          "nume_logic": "rd_name",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": "Generata",
+          "regula": null,
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Lectie",
+          "nume_logic": "rd_lectie",
+          "tip": "Lookup (rd_lectie)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Proiect",
+          "nume_logic": "rd_proiect",
+          "tip": "Lookup (rd_proiect)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Unde s-a folosit",
+          "observatii": "Referential"
+        },
+        {
+          "nume": "Etapa",
+          "nume_logic": "rd_etapa",
+          "tip": "Lookup (rd_etapa)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Persoana",
+          "nume_logic": "rd_persoana",
+          "tip": "Lookup (systemuser)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Cine a folosit-o",
+          "observatii": null
+        },
+        {
+          "nume": "Data",
+          "nume_logic": "rd_data",
+          "tip": "Date Only",
+          "obligatoriu": true,
+          "valori": "Implicit azi",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Cum a fost folosita",
+          "nume_logic": "rd_mod",
+          "tip": "Text Area (1000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Rezultat",
+          "nume_logic": "rd_rezultat",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "A ajutat / Partial / Nu a ajutat / Prea devreme",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Cost evitat estimat",
+          "nume_logic": "rd_costevitat",
+          "tip": "Currency (2)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Optional",
+          "observatii": "Securitate pe coloana"
+        },
+        {
+          "nume": "Zile evitate estimate",
+          "nume_logic": "rd_zileevitate",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 365",
+          "regula": "Optional",
+          "observatii": null
+        },
+        {
+          "nume": "Risc evitat",
+          "nume_logic": "rd_riscevitat",
+          "tip": "Text (300)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        }
+      ]
+    },
+    {
+      "cod": "TBL-56",
+      "nume": "Recomandare de lectie",
+      "nume_logic": "rd_recomandarelectie",
+      "coloana_primara": "rd_name",
+      "categorie": "Cunoastere",
+      "val": 3,
+      "coloane": [
+        {
+          "nume": "Denumire",
+          "nume_logic": "rd_name",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": "Generata",
+          "regula": null,
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Lectie",
+          "nume_logic": "rd_lectie",
+          "tip": "Lookup (rd_lectie)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Proiect",
+          "nume_logic": "rd_proiect",
+          "tip": "Lookup (rd_proiect)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Momentul recomandarii",
+          "nume_logic": "rd_moment",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Acceptare / Alocare linie / Materie prima / Fisa de testare / IPN / Problema",
+          "regula": "Vezi 25.4.2",
+          "observatii": null
+        },
+        {
+          "nume": "Scor de potrivire",
+          "nume_logic": "rd_scorpotrivire",
+          "tip": "Whole Number",
+          "obligatoriu": true,
+          "valori": "0 - 100",
+          "regula": "Vezi 25.4.4",
+          "observatii": null
+        },
+        {
+          "nume": "Motivul potrivirii",
+          "nume_logic": "rd_motivpotrivire",
+          "tip": "Text (300)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Aceeasi linie si categorie de produs",
+          "observatii": "Face recomandarea credibila"
+        },
+        {
+          "nume": "Data recomandarii",
+          "nume_logic": "rd_datarecomandare",
+          "tip": "Date and Time",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Status",
+          "nume_logic": "rd_statusrecomandare",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Afisata / Acceptata / Aplicata / Respinsa / Ignorata",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Motivul respingerii",
+          "nume_logic": "rd_motivrespingere",
+          "tip": "Text (300)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Optional, dar util pentru calibrare",
+          "observatii": null
+        },
+        {
+          "nume": "Utilizare generata",
+          "nume_logic": "rd_utilizare",
+          "tip": "Lookup (rd_utilizarelectie)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "La status Aplicata",
+          "observatii": null
+        }
+      ]
+    },
+    {
+      "cod": "TBL-57",
+      "nume": "Istoric de lead time",
+      "nume_logic": "rd_leadtimeistoric",
+      "coloana_primara": "rd_name",
+      "categorie": "Derivata",
+      "val": 2,
+      "coloane": [
+        {
+          "nume": "Denumire",
+          "nume_logic": "rd_name",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Generata",
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Furnizor",
+          "nume_logic": "rd_furnizor",
+          "tip": "Lookup (rd_furnizor)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Materie prima",
+          "nume_logic": "rd_materieprima",
+          "tip": "Lookup (rd_materieprima)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Materie prima de proiect",
+          "nume_logic": "rd_mpproiect",
+          "tip": "Lookup (rd_mpproiect)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Referential",
+          "observatii": null
+        },
+        {
+          "nume": "Data comenzii",
+          "nume_logic": "rd_datacomanda",
+          "tip": "Date Only",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "ETA initial",
+          "nume_logic": "rd_etainitial",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Primul ETA confirmat",
+          "observatii": null
+        },
+        {
+          "nume": "ETA final",
+          "nume_logic": "rd_etafinal",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Ultimul ETA confirmat",
+          "observatii": null
+        },
+        {
+          "nume": "Data livrarii reale",
+          "nume_logic": "rd_datalivrare",
+          "tip": "Date Only",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Lead time realizat (zile)",
+          "nume_logic": "rd_leadtimerealizat",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 999",
+          "regula": "livrare - comanda",
+          "observatii": null
+        },
+        {
+          "nume": "Abatere fata de ETA initial",
+          "nume_logic": "rd_abatereeta",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "-999 - 999",
+          "regula": "livrare - ETA initial",
+          "observatii": "Masoara increderea in ETA"
+        },
+        {
+          "nume": "Numar modificari ETA",
+          "nume_logic": "rd_modificarieta",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 99",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Livrat complet",
+          "nume_logic": "rd_livratcomplet",
+          "tip": "Yes/No",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Pentru OTIF",
+          "observatii": null
+        },
+        {
+          "nume": "Conform la receptie",
+          "nume_logic": "rd_conform",
+          "tip": "Yes/No",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Tip achizitie",
+          "nume_logic": "rd_tipachizitie",
+          "tip": "Choice",
+          "obligatoriu": false,
+          "valori": "Pe stoc / In portofoliu furnizor / Achizitie noua / Import",
+          "regula": "Pentru calcul pe categorie",
+          "observatii": null
+        }
+      ]
+    },
+    {
+      "cod": "TBL-58",
+      "nume": "Snapshot de sanatate",
+      "nume_logic": "rd_snapshotsanatate",
+      "coloana_primara": "rd_name",
+      "categorie": "Derivata",
+      "val": 3,
+      "coloane": [
+        {
+          "nume": "Denumire",
+          "nume_logic": "rd_name",
+          "tip": "Text (150)",
+          "obligatoriu": true,
+          "valori": "{cod proiect}_{AAAALLZZ}",
+          "regula": "Generata",
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Proiect",
+          "nume_logic": "rd_proiect",
+          "tip": "Lookup (rd_proiect)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Parental",
+          "observatii": "Cascade All"
+        },
+        {
+          "nume": "Data snapshot",
+          "nume_logic": "rd_data",
+          "tip": "Date Only",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Saptamanal, luni",
+          "observatii": "Unic impreuna cu proiectul"
+        },
+        {
+          "nume": "Status la data",
+          "nume_logic": "rd_status",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Choice STATUSPROIECT",
+          "regula": "Copiat, nu referit",
+          "observatii": "Ca sa ramana istoric corect"
+        },
+        {
+          "nume": "Etapa la data",
+          "nume_logic": "rd_etapatext",
+          "tip": "Text (100)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Copiata ca text",
+          "observatii": "Idem"
+        },
+        {
+          "nume": "Scor sanatate",
+          "nume_logic": "rd_scorsanatate",
+          "tip": "Whole Number",
+          "obligatoriu": true,
+          "valori": "0 - 100",
+          "regula": "Vezi 24.3.2",
+          "observatii": null
+        },
+        {
+          "nume": "Nivel",
+          "nume_logic": "rd_nivel",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Verde / Galben / Portocaliu / Rosu / Blocat",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Componenta riscuri",
+          "nume_logic": "rd_compriscuri",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 20",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Componenta livrabile",
+          "nume_logic": "rd_complivrabile",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 20",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Componenta termen",
+          "nume_logic": "rd_comptermen",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 15",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Componenta aprovizionare",
+          "nume_logic": "rd_compaprovizionare",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 15",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Componenta productie",
+          "nume_logic": "rd_compproductie",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 10",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Componenta calitate",
+          "nume_logic": "rd_compcalitate",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 10",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Componenta capacitate",
+          "nume_logic": "rd_compcapacitate",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 10",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Variatie fata de saptamana trecuta",
+          "nume_logic": "rd_variatie",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "-100 - 100",
+          "regula": null,
+          "observatii": "Semnalul cel mai util"
+        },
+        {
+          "nume": "Zile de la ultima activitate",
+          "nume_logic": "rd_zileinactiv",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 999",
+          "regula": "Din rd_ultimaactivitate",
+          "observatii": "Detecteaza proiecte uitate"
+        },
+        {
+          "nume": "Riscuri deschise",
+          "nume_logic": "rd_riscurideschise",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 99",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Probleme deschise",
+          "nume_logic": "rd_problemedeschise",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 99",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Actiuni restante",
+          "nume_logic": "rd_actiunirestante",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 99",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Livrabile depasite",
+          "nume_logic": "rd_livrabiledepasite",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 99",
+          "regula": null,
+          "observatii": null
+        }
+      ]
+    },
+    {
+      "cod": "TBL-59",
+      "nume": "Log de eroare",
+      "nume_logic": "rd_logeroare",
+      "coloana_primara": "rd_name",
+      "categorie": "Tehnic",
+      "val": 1,
+      "coloane": [
+        {
+          "nume": "Denumire",
+          "nume_logic": "rd_name",
+          "tip": "Text (200)",
+          "obligatoriu": true,
+          "valori": "{flux}_{data}",
+          "regula": "Generata",
+          "observatii": "Coloana primara"
+        },
+        {
+          "nume": "Flux",
+          "nume_logic": "rd_flux",
+          "tip": "Text (100)",
+          "obligatoriu": true,
+          "valori": "FLX-nn si denumirea",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Correlation ID",
+          "nume_logic": "rd_correlationid",
+          "tip": "Text (100)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": "Identificator unic de executie",
+          "observatii": "Vezi 22.6"
+        },
+        {
+          "nume": "Data si ora",
+          "nume_logic": "rd_data",
+          "tip": "Date and Time",
+          "obligatoriu": true,
+          "valori": "Implicit acum",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Tabela afectata",
+          "nume_logic": "rd_tabela",
+          "tip": "Text (100)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Inregistrare afectata",
+          "nume_logic": "rd_inregistrare",
+          "tip": "Text (200)",
+          "obligatoriu": false,
+          "valori": "GUID sau cod de business",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Mesaj de eroare",
+          "nume_logic": "rd_mesaj",
+          "tip": "Text Area (4000)",
+          "obligatoriu": true,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Pas al fluxului",
+          "nume_logic": "rd_pas",
+          "tip": "Text (200)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": "Unde anume a esuat",
+          "observatii": null
+        },
+        {
+          "nume": "Numar de reincercari",
+          "nume_logic": "rd_reincercari",
+          "tip": "Whole Number",
+          "obligatoriu": false,
+          "valori": "0 - 10",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Status",
+          "nume_logic": "rd_statuslog",
+          "tip": "Choice",
+          "obligatoriu": true,
+          "valori": "Nou / In analiza / Rezolvat / Ignorat",
+          "regula": null,
+          "observatii": null
+        },
+        {
+          "nume": "Actiune corectiva",
+          "nume_logic": "rd_actiune",
+          "tip": "Text Area (1000)",
+          "obligatoriu": false,
+          "valori": null,
+          "regula": null,
+          "observatii": null
+        }
+      ]
     }
   ]
 }

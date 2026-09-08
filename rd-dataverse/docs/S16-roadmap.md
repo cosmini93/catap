@@ -45,7 +45,7 @@ separare, Valul 0 nu se termina in 2-3 saptamani si tot roadmap-ul aluneca.
 
 ## 16.2 Val 1 - MVP utilizabil (30 de zile)
 
-**Durata**: 4-5 saptamani de la finalul Valului 0. **Efort**: 20-25 de zile-om.
+**Durata**: 5-6 saptamani de la finalul Valului 0. **Efort**: 23-28 de zile-om.
 
 | Ce se livreaza | Module | Detaliu |
 |---|---|---|
@@ -56,7 +56,10 @@ separare, Valul 0 nu se termina in 2-3 saptamani si tot roadmap-ul aluneca.
 | Termenul propus | M06 | FLX-03, cu factorii din A1.2 |
 | Incarcarea si alocarea | M07 | FLX-06, ECR-03 partial |
 | Testarea si masuratorile | M12 | TBL-14, TBL-15, TBL-16, TBL-16b, FLX-11, ECR-11 in canvas |
-| Alertele | - | FLX-08, FLX-14, FLX-22 |
+| Alertele | - | FLX-08, FLX-14, FLX-22, FLX-30 (digest consolidat) |
+| **Gate-urile** | M26 | TBL-43 ... TBL-46, FLX-23. Vezi 22.8.2 |
+| **Actiunile centralizate** | M27 | TBL-49, FLX-27. Vezi 22.8.3 |
+| **Logul de erori** | - | TBL-59, plus alternate keys pe codurile de business (22.6) |
 | Migrarea | M25 | Pasii 1-10 din 15.2 |
 
 **Cine il foloseste**: echipa R&D completa (manager, tehnologi, suport) si KAM-ii pentru
@@ -85,7 +88,7 @@ Toate acestea functioneaza si azi fara sistem; livrabilele si termenele nu.
 
 ## 16.3 Val 2 - Operare completa (90 de zile)
 
-**Durata**: 6-8 saptamani de la Val 1. **Efort**: 25-30 de zile-om.
+**Durata**: 7-9 saptamani de la Val 1. **Efort**: 30-35 de zile-om.
 
 | Ce se livreaza | Module | Detaliu |
 |---|---|---|
@@ -100,6 +103,9 @@ Toate acestea functioneaza si azi fara sistem; livrabilele si termenele nu.
 | Generarea documentelor | M21 | FLX-12, sabloanele Word DOC-01 ... DOC-09 |
 | Aprobarile | - | FLX-18 |
 | Ecranul public | M23 | ECR-04 |
+| **Riscuri si probleme** | M28 | TBL-47, TBL-48, FLX-24, FLX-25 |
+| **Jurnalul de decizii** | M29 | TBL-50 |
+| **Lead time inteligent** | M09 | TBL-57, FLX-28 |
 
 **Cine il foloseste**: toata compania. Achizitiile, Calitatea, Planificarea si Productia
 devin utilizatori activi, nu doar cititori.
@@ -124,7 +130,7 @@ surprize la lansare.
 
 ## 16.4 Val 3 - Maturitate (6 luni)
 
-**Durata**: 8-10 saptamani de la Val 2. **Efort**: 20-25 de zile-om.
+**Durata**: 10-12 saptamani de la Val 2. **Efort**: 28-33 de zile-om.
 
 | Ce se livreaza | Module | Detaliu |
 |---|---|---|
@@ -136,6 +142,10 @@ surprize la lansare.
 | Calibrarea duratelor | M06 | FLX-17, ecranul din 14.4.3 |
 | Arhivarea auditului | - | FLX-20 |
 | Dosarul TDV generat automat | M21 | DOC-10, cu toate anexele |
+| **Stabilizarea pe 3 loturi** | M30 | TBL-51, TBL-52, FLX-31, etapa ETP-12 |
+| **Capabilitatea de proces** | M31 | TBL-53, FLX-32 |
+| **Lectiile invatate** | M32 | TBL-54 ... TBL-56, FLX-26, FLX-33 ... FLX-35 |
+| **Sanatatea proiectului in timp** | M33 | TBL-58, FLX-29 |
 
 **Cine il foloseste**: Head of R&D si conducerea, pentru indicatori si rapoarte; Calitatea,
 pentru alergeni si etichete.
@@ -151,37 +161,79 @@ pentru alergeni si etichete.
 | Timp de raspuns la o intrebare de audit despre un proiect | sub 5 minute |
 | Revizuiri la 30 de zile efectuate la termen | peste 80% |
 
-## 16.5 Ce ramane dupa Val 3
+## 16.5 Val 4 - Client, calitate si furnizor (9-12 luni)
 
-16.5.1 Candidate pentru valuri ulterioare, in ordinea probabila a valorii:
+**Durata**: 8-10 saptamani de la Val 3. **Efort**: 18-22 de zile-om.
 
-| Candidat | De ce nu acum |
-|---|---|
-| Integrarea cu aplicatia de planificare a productiei (sloturi reale de linie) | Cere un API stabil pe partea de planificare; dependenta externa |
-| Import automat de preturi de materie prima din SAP | Cere acces la un export SAP programat; dependenta de IT |
-| Portal pentru clienti (status si mostre) | Cere licentiere Power Pages si o discutie de securitate proprie |
-| Shelf life si planuri de studiu de valabilitate | Proces distinct, cu propriile cerinte de laborator |
-| Managementul ambalajelor ca modul propriu | Astazi se acopera suficient prin livrabile si etichete |
-| Aplicatie de panel senzorial pentru consumatori | Alta populatie de utilizatori, alta discutie |
+| Ce se livreaza | Module | Detaliu |
+|---|---|---|
+| Validare si feedback de client | M34 | `rd_validareclient`, `rd_feedbackclient` |
+| Reclamatii | M35 | `rd_reclamatie`, legate de proiect si de lot |
+| Neconformitati si CAPA | M36 | `rd_neconformitate`, `rd_capa`, cu evaluarea eficacitatii |
+| Performanta furnizorilor | M37 | `rd_performantafurnizor`, `rd_incidentfurnizor`, scorecard din 23.6.3 |
 
-16.5.2 NOTA: dupa Val 3, prioritatea numarul unu nu este un modul nou, ci trecerea in
-mediul de productie (Sectiunea 17) si documentarea suficienta pentru ca solutia sa poata
-fi preluata de altcineva (constrangerea din brief). Ambele se amana usor si costa scump
-cand se amana.
+**Criteriile de activare** sunt in A2.2. Valul 4 **nu incepe** daca ele nu sunt
+indeplinite; se trece direct la intretinere si la consolidarea Valurilor 1-3.
 
-## 16.6 Sinteza efortului
+**Cum se masoara**: reclamatiile se leaga de produsul si lotul care le-a generat, in peste
+80% din cazuri; scorecardul de furnizor se foloseste efectiv in cel putin o negociere.
 
-| Val | Durata | Efort (zile-om) | Cumulat |
-|---|---|---|---|
-| Val 0 | 2-3 saptamani | 8-10 | 8-10 |
-| Val 1 | 4-5 saptamani | 20-25 | 28-35 |
-| Val 2 | 6-8 saptamani | 25-30 | 53-65 |
-| Val 3 | 8-10 saptamani | 20-25 | 73-90 |
-| Trecerea in productie | 2 saptamani | 5-8 | 78-98 |
-| **Total** | **~6-7 luni** | **78-98 zile-om** | |
+## 16.6 Val 5 - Cost real si beneficii (12-15 luni)
 
-16.6.1 La o disponibilitate de 1.5 zile pe saptamana, 90 de zile-om inseamna aproximativ
-60 de saptamani, adica un an si doua luni - nu 6 luni. Calendarul de mai sus presupune
-perioade de constructie concentrata (2-3 zile pe saptamana) in Valurile 0 si 1, cand
-efortul este cel mai dens. Aceasta este cea mai importanta ipoteza a intregului roadmap si
-trebuie confirmata explicit inainte de start, altfel termenele de mai sus sunt fictiune.
+**Durata**: 8-10 saptamani de la Val 4. **Efort**: 18-22 de zile-om.
+
+| Ce se livreaza | Module | Detaliu |
+|---|---|---|
+| Business case si buget de proiect | M38 | `rd_businesscase`, `rd_bugetproiect` |
+| Cost real de productie | M39 | `rd_costproductie`, `rd_giveaway` |
+| Realizarea beneficiilor | M40 | `rd_beneficiu`, la 3, 6, 12 si 24 de luni |
+| Registrul de documente tehnice | M41 | `rd_documenttehnic`, cu ciclu de viata si harta de dependente (22.5.1) |
+
+**Criteriul critic**: costul real pe produs, furnizat lunar de Controlling, demonstrat trei
+luni la rand. Este intrebarea deschisa IQ-05. Fara el, jumatate din Valul 5 nu are date.
+
+## 16.7 Ce ramane dupa Val 5
+
+Tot ce este in Anexa A2, cu criteriile de activare corespunzatoare: predictie, simulare,
+Copilot, sustenabilitate, cost extins, portofoliu, front-end de inovatie.
+
+16.7.1 Regula din A2.5.2: **cel mult doua module pe an dupa Valul 5**, si numai daca
+intretinerea celor existente nu a fost amanata.
+
+## 16.8 Sinteza efortului
+
+| Val | Durata | Efort (zile-om) | Cumulat | Tabele cumulate |
+|---|---|---|---|---|
+| Val 0 | 2-3 saptamani | 8-10 | 8-10 | 12 |
+| Val 1 | 5-6 saptamani | 23-28 | 31-38 | 26 |
+| Val 2 | 7-9 saptamani | 30-35 | 61-73 | 43 |
+| Val 3 | 10-12 saptamani | 28-33 | 89-106 | 60 |
+| Trecerea in productie | 2 saptamani | 5-8 | 94-114 | 60 |
+| Val 4 | 8-10 saptamani | 18-22 | 112-136 | 66 |
+| Val 5 | 8-10 saptamani | 18-22 | 130-158 | 73 |
+
+16.8.1 **Ipoteza de disponibilitate, repetata pentru ca de ea depinde tot**: la 1.5 zile pe
+saptamana, cele 130-158 de zile-om inseamna aproximativ 20 de luni pana la finalul Valului
+5, nu 15. La 3 zile pe saptamana, aproximativ 11 luni.
+
+16.8.2 Calendarul din titlurile de mai sus (9-12 luni pentru Val 4, 12-15 pentru Val 5)
+presupune perioade de constructie concentrata in Valurile 0-1 si un ritm sustinut ulterior.
+Este ipoteza cea mai fragila din tot blueprintul si trebuie confirmata explicit inainte de
+start - intrebarea IQ-10.
+
+16.8.3 **Punctul de oprire acceptabil.** Daca ritmul nu se poate sustine, solutia se poate
+opri dupa Valul 3 si ramane completa si utila: acopera intreg procesul R&D de la SCP la
+revizuire, cu gate-uri, riscuri, stabilizare si lectii. Valurile 4 si 5 adauga vederea
+financiara si pe cea de client, care sunt valoroase, dar nu conditioneaza functionarea
+zilnica. Aceasta este singura proprietate care conteaza intr-un plan executat de o singura
+persoana: **sa fie util si daca se opreste la jumatate.**
+
+## 16.9 Ce nu se schimba fata de planul initial
+
+16.9.1 Valurile 0 si 1 raman neschimbate ca domeniu, in ciuda adaugirilor din sinteza.
+Gate-urile si tabela de actiuni intra in Val 1 pentru ca sunt ieftine si pentru ca fara
+ele modulele urmatoare ar construi fiecare propriul mecanism (22.8.2, 22.8.3). Nimic
+altceva nu se adauga acolo.
+
+16.9.2 Termenul ferm de 30 de zile pentru Valul 1 se mentine. Regula din 16.2.1 ramane:
+tot ce nu incape se amana, nimic din Val 1 nu se amana.
