@@ -1,0 +1,349 @@
+[
+ {
+  "cod": "FLX-01",
+  "nume": "FLX-01 Generarea codului de proiect la acceptare",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-02",
+  "nume": "FLX-02 Generarea arborelui de foldere SharePoint",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_sharepointonline"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-03",
+  "nume": "FLX-03 Propunerea datei estimate de finalizare",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 7
+ },
+ {
+  "cod": "FLX-04",
+  "nume": "FLX-04 Crearea proiectului-copil",
+  "val": 2,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_sharepointonline",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-05",
+  "nume": "FLX-05 Generarea si reevaluarea livrabilelor",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-06",
+  "nume": "FLX-06 Recalcularea incarcarii",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps"
+  ],
+  "pasi_de_implementat": 3
+ },
+ {
+  "cod": "FLX-07",
+  "nume": "FLX-07 Recalcularea la modificarea unui ETA",
+  "val": 2,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365",
+   "shared_teams"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-08",
+  "nume": "FLX-08 Alerte de termen",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps"
+  ],
+  "pasi_de_implementat": 5
+ },
+ {
+  "cod": "FLX-09",
+  "nume": "FLX-09 Calculul impactului blocajelor",
+  "val": 2,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 5
+ },
+ {
+  "cod": "FLX-10",
+  "nume": "FLX-10 Recalcularea scorului de prioritate",
+  "val": 2,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-11",
+  "nume": "FLX-11 Statistica de trial si scorul senzorial",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-12",
+  "nume": "FLX-12 Generarea documentelor din sabloane Word",
+  "val": 2,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_sharepointonline",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-13",
+  "nume": "FLX-13 Recalcularea alergenilor si a nutritionalelor",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-14",
+  "nume": "FLX-14 Solicitari amanate",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 3
+ },
+ {
+  "cod": "FLX-15",
+  "nume": "FLX-15 Declansarea revizuirii post-implementare",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-16",
+  "nume": "FLX-16 Calculul indicatorilor",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 5
+ },
+ {
+  "cod": "FLX-17",
+  "nume": "FLX-17 Propunerea de corectie a duratelor",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps"
+  ],
+  "pasi_de_implementat": 4
+ },
+ {
+  "cod": "FLX-18",
+  "nume": "FLX-18 Aprobarea planului si a antecalculului",
+  "val": 2,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_approvals",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 4
+ },
+ {
+  "cod": "FLX-19",
+  "nume": "FLX-19 Gestionarea documentelor",
+  "val": 2,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_sharepointonline",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-20",
+  "nume": "FLX-20 Arhivarea jurnalului de audit",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_sharepointonline"
+  ],
+  "pasi_de_implementat": 2
+ },
+ {
+  "cod": "FLX-21",
+  "nume": "FLX-21 Alerte de materie prima si de furnizor",
+  "val": 2,
+  "conexiuni": [
+   "shared_commondataserviceforapps"
+  ],
+  "pasi_de_implementat": 5
+ },
+ {
+  "cod": "FLX-22",
+  "nume": "FLX-22 Notificarea schimbarii de status",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_teams",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 3
+ },
+ {
+  "cod": "FLX-23",
+  "nume": "FLX-23 Evaluarea criteriilor automate de gate",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 5
+ },
+ {
+  "cod": "FLX-24",
+  "nume": "FLX-24 Revizuirea lunara a riscurilor",
+  "val": 2,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 3
+ },
+ {
+  "cod": "FLX-25",
+  "nume": "FLX-25 Materializarea riscului in problema",
+  "val": 2,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 3
+ },
+ {
+  "cod": "FLX-26",
+  "nume": "FLX-26 Detectarea cauzelor repetate",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps"
+  ],
+  "pasi_de_implementat": 3
+ },
+ {
+  "cod": "FLX-27",
+  "nume": "FLX-27 Escaladarea actiunilor restante",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps"
+  ],
+  "pasi_de_implementat": 4
+ },
+ {
+  "cod": "FLX-28",
+  "nume": "FLX-28 Lead time forecast si OTIF",
+  "val": 2,
+  "conexiuni": [
+   "shared_commondataserviceforapps"
+  ],
+  "pasi_de_implementat": 5
+ },
+ {
+  "cod": "FLX-29",
+  "nume": "FLX-29 Snapshot de sanatate a proiectului",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 4
+ },
+ {
+  "cod": "FLX-30",
+  "nume": "FLX-30 Consolidarea alertelor in digest",
+  "val": 1,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_teams",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-31",
+  "nume": "FLX-31 Evaluarea loturilor de stabilizare",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 6
+ },
+ {
+  "cod": "FLX-32",
+  "nume": "FLX-32 Calculul capabilitatii de proces",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps"
+  ],
+  "pasi_de_implementat": 5
+ },
+ {
+  "cod": "FLX-33",
+  "nume": "FLX-33 Generarea drafturilor de lectii",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 5
+ },
+ {
+  "cod": "FLX-34",
+  "nume": "FLX-34 Recomandarea lectiilor",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps"
+  ],
+  "pasi_de_implementat": 5
+ },
+ {
+  "cod": "FLX-35",
+  "nume": "FLX-35 Revizuirea lectiilor nereutilizate",
+  "val": 3,
+  "conexiuni": [
+   "shared_commondataserviceforapps",
+   "shared_office365"
+  ],
+  "pasi_de_implementat": 3
+ }
+]

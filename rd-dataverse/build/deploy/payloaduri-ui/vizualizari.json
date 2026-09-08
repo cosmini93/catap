@@ -1,0 +1,1242 @@
+[
+ {
+  "entitate": "rd_solicitare",
+  "nume": "Toate: Solicitare (SCP)",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_solicitare\">\n    <attribute name=\"rd_numarscp\"/>\n    <attribute name=\"rd_client\"/>\n    <attribute name=\"rd_canal\"/>\n    <attribute name=\"rd_kam\"/>\n    <attribute name=\"rd_sursa\"/>\n    <attribute name=\"rd_preluatde\"/>\n    <attribute name=\"rd_produsdorit\"/>\n    <attribute name=\"rd_gramaj\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_numarscp\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_solicitareid\">\n    <cell name=\"rd_numarscp\" width=\"200\"/>\n    <cell name=\"rd_client\" width=\"125\"/>\n    <cell name=\"rd_canal\" width=\"125\"/>\n    <cell name=\"rd_kam\" width=\"125\"/>\n    <cell name=\"rd_sursa\" width=\"125\"/>\n    <cell name=\"rd_preluatde\" width=\"125\"/>\n    <cell name=\"rd_produsdorit\" width=\"125\"/>\n    <cell name=\"rd_gramaj\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_solicitare",
+  "nume": "Active: Solicitare (SCP)",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_solicitare\">\n    <attribute name=\"rd_numarscp\"/>\n    <attribute name=\"rd_client\"/>\n    <attribute name=\"rd_canal\"/>\n    <attribute name=\"rd_kam\"/>\n    <attribute name=\"rd_sursa\"/>\n    <attribute name=\"rd_preluatde\"/>\n    <attribute name=\"rd_produsdorit\"/>\n    <attribute name=\"rd_gramaj\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_numarscp\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_solicitareid\">\n    <cell name=\"rd_numarscp\" width=\"200\"/>\n    <cell name=\"rd_client\" width=\"125\"/>\n    <cell name=\"rd_canal\" width=\"125\"/>\n    <cell name=\"rd_kam\" width=\"125\"/>\n    <cell name=\"rd_sursa\" width=\"125\"/>\n    <cell name=\"rd_preluatde\" width=\"125\"/>\n    <cell name=\"rd_produsdorit\" width=\"125\"/>\n    <cell name=\"rd_gramaj\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_solicitare",
+  "nume": "Cautare: Solicitare (SCP)",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_solicitare\">\n    <attribute name=\"rd_numarscp\"/>\n    <attribute name=\"rd_client\"/>\n    <attribute name=\"rd_canal\"/>\n    <attribute name=\"rd_kam\"/>\n    <attribute name=\"rd_sursa\"/>\n    <attribute name=\"rd_preluatde\"/>\n    <attribute name=\"rd_produsdorit\"/>\n    <attribute name=\"rd_gramaj\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_numarscp\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_solicitareid\">\n    <cell name=\"rd_numarscp\" width=\"200\"/>\n    <cell name=\"rd_client\" width=\"125\"/>\n    <cell name=\"rd_canal\" width=\"125\"/>\n    <cell name=\"rd_kam\" width=\"125\"/>\n    <cell name=\"rd_sursa\" width=\"125\"/>\n    <cell name=\"rd_preluatde\" width=\"125\"/>\n    <cell name=\"rd_produsdorit\" width=\"125\"/>\n    <cell name=\"rd_gramaj\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_proiect",
+  "nume": "Toate: Proiect CDI",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_proiect\">\n    <attribute name=\"rd_codproiect\"/>\n    <attribute name=\"rd_numeprodus\"/>\n    <attribute name=\"rd_solicitare\"/>\n    <attribute name=\"rd_proiectparinte\"/>\n    <attribute name=\"rd_sufixversiune\"/>\n    <attribute name=\"rd_tipproiect\"/>\n    <attribute name=\"rd_client\"/>\n    <attribute name=\"rd_kam\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_codproiect\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_proiectid\">\n    <cell name=\"rd_codproiect\" width=\"200\"/>\n    <cell name=\"rd_numeprodus\" width=\"125\"/>\n    <cell name=\"rd_solicitare\" width=\"125\"/>\n    <cell name=\"rd_proiectparinte\" width=\"125\"/>\n    <cell name=\"rd_sufixversiune\" width=\"125\"/>\n    <cell name=\"rd_tipproiect\" width=\"125\"/>\n    <cell name=\"rd_client\" width=\"125\"/>\n    <cell name=\"rd_kam\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_proiect",
+  "nume": "Active: Proiect CDI",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_proiect\">\n    <attribute name=\"rd_codproiect\"/>\n    <attribute name=\"rd_numeprodus\"/>\n    <attribute name=\"rd_solicitare\"/>\n    <attribute name=\"rd_proiectparinte\"/>\n    <attribute name=\"rd_sufixversiune\"/>\n    <attribute name=\"rd_tipproiect\"/>\n    <attribute name=\"rd_client\"/>\n    <attribute name=\"rd_kam\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_codproiect\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_proiectid\">\n    <cell name=\"rd_codproiect\" width=\"200\"/>\n    <cell name=\"rd_numeprodus\" width=\"125\"/>\n    <cell name=\"rd_solicitare\" width=\"125\"/>\n    <cell name=\"rd_proiectparinte\" width=\"125\"/>\n    <cell name=\"rd_sufixversiune\" width=\"125\"/>\n    <cell name=\"rd_tipproiect\" width=\"125\"/>\n    <cell name=\"rd_client\" width=\"125\"/>\n    <cell name=\"rd_kam\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_proiect",
+  "nume": "Ale mele: Proiect CDI",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_proiect\">\n    <attribute name=\"rd_codproiect\"/>\n    <attribute name=\"rd_numeprodus\"/>\n    <attribute name=\"rd_solicitare\"/>\n    <attribute name=\"rd_proiectparinte\"/>\n    <attribute name=\"rd_sufixversiune\"/>\n    <attribute name=\"rd_tipproiect\"/>\n    <attribute name=\"rd_client\"/>\n    <attribute name=\"rd_kam\"/>\n    <filter type=\"and\">\n      <condition attribute=\"rd_tehnolog\" operator=\"eq-userid\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_codproiect\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_proiectid\">\n    <cell name=\"rd_codproiect\" width=\"200\"/>\n    <cell name=\"rd_numeprodus\" width=\"125\"/>\n    <cell name=\"rd_solicitare\" width=\"125\"/>\n    <cell name=\"rd_proiectparinte\" width=\"125\"/>\n    <cell name=\"rd_sufixversiune\" width=\"125\"/>\n    <cell name=\"rd_tipproiect\" width=\"125\"/>\n    <cell name=\"rd_client\" width=\"125\"/>\n    <cell name=\"rd_kam\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_proiect",
+  "nume": "Cautare: Proiect CDI",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_proiect\">\n    <attribute name=\"rd_codproiect\"/>\n    <attribute name=\"rd_numeprodus\"/>\n    <attribute name=\"rd_solicitare\"/>\n    <attribute name=\"rd_proiectparinte\"/>\n    <attribute name=\"rd_sufixversiune\"/>\n    <attribute name=\"rd_tipproiect\"/>\n    <attribute name=\"rd_client\"/>\n    <attribute name=\"rd_kam\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_codproiect\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_proiectid\">\n    <cell name=\"rd_codproiect\" width=\"200\"/>\n    <cell name=\"rd_numeprodus\" width=\"125\"/>\n    <cell name=\"rd_solicitare\" width=\"125\"/>\n    <cell name=\"rd_proiectparinte\" width=\"125\"/>\n    <cell name=\"rd_sufixversiune\" width=\"125\"/>\n    <cell name=\"rd_tipproiect\" width=\"125\"/>\n    <cell name=\"rd_client\" width=\"125\"/>\n    <cell name=\"rd_kam\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_livrabil",
+  "nume": "Toate: Livrabil de proiect",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_livrabil\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codlivrabil\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sablon\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_rolresponsabil\"/>\n    <attribute name=\"rd_responsabil\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_livrabilid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codlivrabil\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sablon\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_rolresponsabil\" width=\"125\"/>\n    <cell name=\"rd_responsabil\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_livrabil",
+  "nume": "Active: Livrabil de proiect",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_livrabil\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codlivrabil\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sablon\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_rolresponsabil\"/>\n    <attribute name=\"rd_responsabil\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_livrabilid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codlivrabil\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sablon\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_rolresponsabil\" width=\"125\"/>\n    <cell name=\"rd_responsabil\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_livrabil",
+  "nume": "Ale mele: Livrabil de proiect",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_livrabil\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codlivrabil\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sablon\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_rolresponsabil\"/>\n    <attribute name=\"rd_responsabil\"/>\n    <filter type=\"and\">\n      <condition attribute=\"rd_responsabil\" operator=\"eq-userid\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_livrabilid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codlivrabil\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sablon\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_rolresponsabil\" width=\"125\"/>\n    <cell name=\"rd_responsabil\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_livrabil",
+  "nume": "Cautare: Livrabil de proiect",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_livrabil\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codlivrabil\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sablon\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_rolresponsabil\"/>\n    <attribute name=\"rd_responsabil\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_livrabilid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codlivrabil\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sablon\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_rolresponsabil\" width=\"125\"/>\n    <cell name=\"rd_responsabil\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_sablonlivrabil",
+  "nume": "Toate: Sablon de livrabil",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_sablonlivrabil\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codlivrabil\"/>\n    <attribute name=\"rd_tipproiect\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_offsettermen\"/>\n    <attribute name=\"rd_offsetimplementare\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_sablonlivrabilid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codlivrabil\" width=\"125\"/>\n    <cell name=\"rd_tipproiect\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_offsettermen\" width=\"125\"/>\n    <cell name=\"rd_offsetimplementare\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_sablonlivrabil",
+  "nume": "Cautare: Sablon de livrabil",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_sablonlivrabil\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codlivrabil\"/>\n    <attribute name=\"rd_tipproiect\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_offsettermen\"/>\n    <attribute name=\"rd_offsetimplementare\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_sablonlivrabilid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codlivrabil\" width=\"125\"/>\n    <cell name=\"rd_tipproiect\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_offsettermen\" width=\"125\"/>\n    <cell name=\"rd_offsetimplementare\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_etapa",
+  "nume": "Toate: Etapa de proiect",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_etapa\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sablon\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_startplanificat\"/>\n    <attribute name=\"rd_finalplanificat\"/>\n    <attribute name=\"rd_startreal\"/>\n    <attribute name=\"rd_finalreal\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_etapaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sablon\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_startplanificat\" width=\"125\"/>\n    <cell name=\"rd_finalplanificat\" width=\"125\"/>\n    <cell name=\"rd_startreal\" width=\"125\"/>\n    <cell name=\"rd_finalreal\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_etapa",
+  "nume": "Active: Etapa de proiect",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_etapa\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sablon\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_startplanificat\"/>\n    <attribute name=\"rd_finalplanificat\"/>\n    <attribute name=\"rd_startreal\"/>\n    <attribute name=\"rd_finalreal\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_etapaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sablon\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_startplanificat\" width=\"125\"/>\n    <cell name=\"rd_finalplanificat\" width=\"125\"/>\n    <cell name=\"rd_startreal\" width=\"125\"/>\n    <cell name=\"rd_finalreal\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_etapa",
+  "nume": "Cautare: Etapa de proiect",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_etapa\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sablon\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_startplanificat\"/>\n    <attribute name=\"rd_finalplanificat\"/>\n    <attribute name=\"rd_startreal\"/>\n    <attribute name=\"rd_finalreal\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_etapaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sablon\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_startplanificat\" width=\"125\"/>\n    <cell name=\"rd_finalplanificat\" width=\"125\"/>\n    <cell name=\"rd_startreal\" width=\"125\"/>\n    <cell name=\"rd_finalreal\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_sablonetapa",
+  "nume": "Toate: Sablon de etapa",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_sablonetapa\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codetapa\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_tipproiect\"/>\n    <attribute name=\"rd_duratastandard\"/>\n    <attribute name=\"rd_duratapropusa\"/>\n    <attribute name=\"rd_rolresponsabil\"/>\n    <attribute name=\"rd_oprsteceasul\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_sablonetapaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codetapa\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_tipproiect\" width=\"125\"/>\n    <cell name=\"rd_duratastandard\" width=\"125\"/>\n    <cell name=\"rd_duratapropusa\" width=\"125\"/>\n    <cell name=\"rd_rolresponsabil\" width=\"125\"/>\n    <cell name=\"rd_oprsteceasul\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_sablonetapa",
+  "nume": "Cautare: Sablon de etapa",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_sablonetapa\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codetapa\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_tipproiect\"/>\n    <attribute name=\"rd_duratastandard\"/>\n    <attribute name=\"rd_duratapropusa\"/>\n    <attribute name=\"rd_rolresponsabil\"/>\n    <attribute name=\"rd_oprsteceasul\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_sablonetapaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codetapa\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_tipproiect\" width=\"125\"/>\n    <cell name=\"rd_duratastandard\" width=\"125\"/>\n    <cell name=\"rd_duratapropusa\" width=\"125\"/>\n    <cell name=\"rd_rolresponsabil\" width=\"125\"/>\n    <cell name=\"rd_oprsteceasul\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_mpproiect",
+  "nume": "Toate: Materie prima de proiect",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_mpproiect\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_estenoua\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <attribute name=\"rd_furnizor\"/>\n    <attribute name=\"rd_statusmp\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_mpproiectid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_estenoua\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n    <cell name=\"rd_furnizor\" width=\"125\"/>\n    <cell name=\"rd_statusmp\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_mpproiect",
+  "nume": "Active: Materie prima de proiect",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_mpproiect\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_estenoua\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <attribute name=\"rd_furnizor\"/>\n    <attribute name=\"rd_statusmp\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_mpproiectid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_estenoua\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n    <cell name=\"rd_furnizor\" width=\"125\"/>\n    <cell name=\"rd_statusmp\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_mpproiect",
+  "nume": "Cautare: Materie prima de proiect",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_mpproiect\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_estenoua\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <attribute name=\"rd_furnizor\"/>\n    <attribute name=\"rd_statusmp\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_mpproiectid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_estenoua\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n    <cell name=\"rd_furnizor\" width=\"125\"/>\n    <cell name=\"rd_statusmp\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_iteratiefurnizor",
+  "nume": "Toate: Iteratie de furnizor",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_iteratiefurnizor\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_mpproiect\"/>\n    <attribute name=\"rd_numar\"/>\n    <attribute name=\"rd_furnizor\"/>\n    <attribute name=\"rd_denumireoferta\"/>\n    <attribute name=\"rd_datacerere\"/>\n    <attribute name=\"rd_dataprimire\"/>\n    <attribute name=\"rd_rezultat\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_iteratiefurnizorid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_mpproiect\" width=\"125\"/>\n    <cell name=\"rd_numar\" width=\"125\"/>\n    <cell name=\"rd_furnizor\" width=\"125\"/>\n    <cell name=\"rd_denumireoferta\" width=\"125\"/>\n    <cell name=\"rd_datacerere\" width=\"125\"/>\n    <cell name=\"rd_dataprimire\" width=\"125\"/>\n    <cell name=\"rd_rezultat\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_iteratiefurnizor",
+  "nume": "Cautare: Iteratie de furnizor",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_iteratiefurnizor\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_mpproiect\"/>\n    <attribute name=\"rd_numar\"/>\n    <attribute name=\"rd_furnizor\"/>\n    <attribute name=\"rd_denumireoferta\"/>\n    <attribute name=\"rd_datacerere\"/>\n    <attribute name=\"rd_dataprimire\"/>\n    <attribute name=\"rd_rezultat\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_iteratiefurnizorid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_mpproiect\" width=\"125\"/>\n    <cell name=\"rd_numar\" width=\"125\"/>\n    <cell name=\"rd_furnizor\" width=\"125\"/>\n    <cell name=\"rd_denumireoferta\" width=\"125\"/>\n    <cell name=\"rd_datacerere\" width=\"125\"/>\n    <cell name=\"rd_dataprimire\" width=\"125\"/>\n    <cell name=\"rd_rezultat\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_materieprima",
+  "nume": "Toate: Materie prima (catalog)",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_materieprima\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codsap\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_furnizor\"/>\n    <attribute name=\"rd_um\"/>\n    <attribute name=\"rd_datapret\"/>\n    <attribute name=\"rd_alergeni\"/>\n    <attribute name=\"rd_alergeniurme\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_materieprimaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codsap\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_furnizor\" width=\"125\"/>\n    <cell name=\"rd_um\" width=\"125\"/>\n    <cell name=\"rd_datapret\" width=\"125\"/>\n    <cell name=\"rd_alergeni\" width=\"125\"/>\n    <cell name=\"rd_alergeniurme\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_materieprima",
+  "nume": "Active: Materie prima (catalog)",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_materieprima\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codsap\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_furnizor\"/>\n    <attribute name=\"rd_um\"/>\n    <attribute name=\"rd_datapret\"/>\n    <attribute name=\"rd_alergeni\"/>\n    <attribute name=\"rd_alergeniurme\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_materieprimaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codsap\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_furnizor\" width=\"125\"/>\n    <cell name=\"rd_um\" width=\"125\"/>\n    <cell name=\"rd_datapret\" width=\"125\"/>\n    <cell name=\"rd_alergeni\" width=\"125\"/>\n    <cell name=\"rd_alergeniurme\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_materieprima",
+  "nume": "Cautare: Materie prima (catalog)",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_materieprima\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codsap\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_furnizor\"/>\n    <attribute name=\"rd_um\"/>\n    <attribute name=\"rd_datapret\"/>\n    <attribute name=\"rd_alergeni\"/>\n    <attribute name=\"rd_alergeniurme\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_materieprimaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codsap\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_furnizor\" width=\"125\"/>\n    <cell name=\"rd_um\" width=\"125\"/>\n    <cell name=\"rd_datapret\" width=\"125\"/>\n    <cell name=\"rd_alergeni\" width=\"125\"/>\n    <cell name=\"rd_alergeniurme\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_furnizor",
+  "nume": "Toate: Furnizor",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_furnizor\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codsap\"/>\n    <attribute name=\"rd_tipfurnizor\"/>\n    <attribute name=\"rd_aprobat\"/>\n    <attribute name=\"rd_dataaprobare\"/>\n    <attribute name=\"rd_certificari\"/>\n    <attribute name=\"rd_expirarecertificare\"/>\n    <attribute name=\"rd_contact\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_furnizorid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codsap\" width=\"125\"/>\n    <cell name=\"rd_tipfurnizor\" width=\"125\"/>\n    <cell name=\"rd_aprobat\" width=\"125\"/>\n    <cell name=\"rd_dataaprobare\" width=\"125\"/>\n    <cell name=\"rd_certificari\" width=\"125\"/>\n    <cell name=\"rd_expirarecertificare\" width=\"125\"/>\n    <cell name=\"rd_contact\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_furnizor",
+  "nume": "Cautare: Furnizor",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_furnizor\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codsap\"/>\n    <attribute name=\"rd_tipfurnizor\"/>\n    <attribute name=\"rd_aprobat\"/>\n    <attribute name=\"rd_dataaprobare\"/>\n    <attribute name=\"rd_certificari\"/>\n    <attribute name=\"rd_expirarecertificare\"/>\n    <attribute name=\"rd_contact\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_furnizorid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codsap\" width=\"125\"/>\n    <cell name=\"rd_tipfurnizor\" width=\"125\"/>\n    <cell name=\"rd_aprobat\" width=\"125\"/>\n    <cell name=\"rd_dataaprobare\" width=\"125\"/>\n    <cell name=\"rd_certificari\" width=\"125\"/>\n    <cell name=\"rd_expirarecertificare\" width=\"125\"/>\n    <cell name=\"rd_contact\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_blocaj",
+  "nume": "Toate: Blocaj",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_blocaj\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_sursablocaj\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_datastart\"/>\n    <attribute name=\"rd_datasfarsit\"/>\n    <attribute name=\"rd_impactzile\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_blocajid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_sursablocaj\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_datastart\" width=\"125\"/>\n    <cell name=\"rd_datasfarsit\" width=\"125\"/>\n    <cell name=\"rd_impactzile\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_blocaj",
+  "nume": "Ale mele: Blocaj",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_blocaj\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_sursablocaj\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_datastart\"/>\n    <attribute name=\"rd_datasfarsit\"/>\n    <attribute name=\"rd_impactzile\"/>\n    <filter type=\"and\">\n      <condition attribute=\"rd_responsabil\" operator=\"eq-userid\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_blocajid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_sursablocaj\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_datastart\" width=\"125\"/>\n    <cell name=\"rd_datasfarsit\" width=\"125\"/>\n    <cell name=\"rd_impactzile\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_blocaj",
+  "nume": "Cautare: Blocaj",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_blocaj\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_sursablocaj\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_datastart\"/>\n    <attribute name=\"rd_datasfarsit\"/>\n    <attribute name=\"rd_impactzile\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_blocajid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_sursablocaj\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_datastart\" width=\"125\"/>\n    <cell name=\"rd_datasfarsit\" width=\"125\"/>\n    <cell name=\"rd_impactzile\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_ceremostra",
+  "nume": "Toate: Cerere de mostra",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_ceremostra\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_tipmostra\"/>\n    <attribute name=\"rd_mpproiect\"/>\n    <attribute name=\"rd_solicitant\"/>\n    <attribute name=\"rd_rolsolicitant\"/>\n    <attribute name=\"rd_destinatar\"/>\n    <attribute name=\"rd_cantitate\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_ceremostraid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_tipmostra\" width=\"125\"/>\n    <cell name=\"rd_mpproiect\" width=\"125\"/>\n    <cell name=\"rd_solicitant\" width=\"125\"/>\n    <cell name=\"rd_rolsolicitant\" width=\"125\"/>\n    <cell name=\"rd_destinatar\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_ceremostra",
+  "nume": "Active: Cerere de mostra",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_ceremostra\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_tipmostra\"/>\n    <attribute name=\"rd_mpproiect\"/>\n    <attribute name=\"rd_solicitant\"/>\n    <attribute name=\"rd_rolsolicitant\"/>\n    <attribute name=\"rd_destinatar\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_ceremostraid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_tipmostra\" width=\"125\"/>\n    <cell name=\"rd_mpproiect\" width=\"125\"/>\n    <cell name=\"rd_solicitant\" width=\"125\"/>\n    <cell name=\"rd_rolsolicitant\" width=\"125\"/>\n    <cell name=\"rd_destinatar\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_ceremostra",
+  "nume": "Cautare: Cerere de mostra",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_ceremostra\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_tipmostra\"/>\n    <attribute name=\"rd_mpproiect\"/>\n    <attribute name=\"rd_solicitant\"/>\n    <attribute name=\"rd_rolsolicitant\"/>\n    <attribute name=\"rd_destinatar\"/>\n    <attribute name=\"rd_cantitate\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_ceremostraid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_tipmostra\" width=\"125\"/>\n    <cell name=\"rd_mpproiect\" width=\"125\"/>\n    <cell name=\"rd_solicitant\" width=\"125\"/>\n    <cell name=\"rd_rolsolicitant\" width=\"125\"/>\n    <cell name=\"rd_destinatar\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_miscaremostra",
+  "nume": "Toate: Miscare de mostra",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_miscaremostra\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_ceremostra\"/>\n    <attribute name=\"rd_tipmiscare\"/>\n    <attribute name=\"rd_persoana\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <attribute name=\"rd_temperatura\"/>\n    <attribute name=\"rd_conform\"/>\n    <attribute name=\"rd_motiv\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_miscaremostraid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_ceremostra\" width=\"125\"/>\n    <cell name=\"rd_tipmiscare\" width=\"125\"/>\n    <cell name=\"rd_persoana\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n    <cell name=\"rd_temperatura\" width=\"125\"/>\n    <cell name=\"rd_conform\" width=\"125\"/>\n    <cell name=\"rd_motiv\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_miscaremostra",
+  "nume": "Cautare: Miscare de mostra",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_miscaremostra\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_ceremostra\"/>\n    <attribute name=\"rd_tipmiscare\"/>\n    <attribute name=\"rd_persoana\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <attribute name=\"rd_temperatura\"/>\n    <attribute name=\"rd_conform\"/>\n    <attribute name=\"rd_motiv\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_miscaremostraid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_ceremostra\" width=\"125\"/>\n    <cell name=\"rd_tipmiscare\" width=\"125\"/>\n    <cell name=\"rd_persoana\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n    <cell name=\"rd_temperatura\" width=\"125\"/>\n    <cell name=\"rd_conform\" width=\"125\"/>\n    <cell name=\"rd_motiv\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_fisatestare",
+  "nume": "Toate: Fisa de testare",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_fisatestare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_versiunereteta\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_dataplanificata\"/>\n    <attribute name=\"rd_statusfisa\"/>\n    <attribute name=\"rd_aprobator\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_fisatestareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_versiunereteta\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_dataplanificata\" width=\"125\"/>\n    <cell name=\"rd_statusfisa\" width=\"125\"/>\n    <cell name=\"rd_aprobator\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_fisatestare",
+  "nume": "Active: Fisa de testare",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_fisatestare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_versiunereteta\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_dataplanificata\"/>\n    <attribute name=\"rd_statusfisa\"/>\n    <attribute name=\"rd_aprobator\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_fisatestareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_versiunereteta\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_dataplanificata\" width=\"125\"/>\n    <cell name=\"rd_statusfisa\" width=\"125\"/>\n    <cell name=\"rd_aprobator\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_fisatestare",
+  "nume": "Cautare: Fisa de testare",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_fisatestare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_versiunereteta\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_dataplanificata\"/>\n    <attribute name=\"rd_statusfisa\"/>\n    <attribute name=\"rd_aprobator\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_fisatestareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_versiunereteta\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_dataplanificata\" width=\"125\"/>\n    <cell name=\"rd_statusfisa\" width=\"125\"/>\n    <cell name=\"rd_aprobator\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_trial",
+  "nume": "Toate: Trial",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_trial\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_fisatestare\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_numarincercare\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_schimb\"/>\n    <attribute name=\"rd_operator\"/>\n    <attribute name=\"rd_cantitatealuat\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_trialid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_fisatestare\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_numarincercare\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_schimb\" width=\"125\"/>\n    <cell name=\"rd_operator\" width=\"125\"/>\n    <cell name=\"rd_cantitatealuat\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_trial",
+  "nume": "Cautare: Trial",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_trial\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_fisatestare\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_numarincercare\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_schimb\"/>\n    <attribute name=\"rd_operator\"/>\n    <attribute name=\"rd_cantitatealuat\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_trialid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_fisatestare\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_numarincercare\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_schimb\" width=\"125\"/>\n    <cell name=\"rd_operator\" width=\"125\"/>\n    <cell name=\"rd_cantitatealuat\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_masuratoare",
+  "nume": "Toate: Masuratoare",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_masuratoare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_trial\"/>\n    <attribute name=\"rd_tipmasuratoare\"/>\n    <attribute name=\"rd_numarbucata\"/>\n    <attribute name=\"rd_valoare\"/>\n    <attribute name=\"rd_valoarecalitativa\"/>\n    <attribute name=\"rd_um\"/>\n    <attribute name=\"rd_tinta\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_masuratoareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_trial\" width=\"125\"/>\n    <cell name=\"rd_tipmasuratoare\" width=\"125\"/>\n    <cell name=\"rd_numarbucata\" width=\"125\"/>\n    <cell name=\"rd_valoare\" width=\"125\"/>\n    <cell name=\"rd_valoarecalitativa\" width=\"125\"/>\n    <cell name=\"rd_um\" width=\"125\"/>\n    <cell name=\"rd_tinta\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_masuratoare",
+  "nume": "Cautare: Masuratoare",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_masuratoare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_trial\"/>\n    <attribute name=\"rd_tipmasuratoare\"/>\n    <attribute name=\"rd_numarbucata\"/>\n    <attribute name=\"rd_valoare\"/>\n    <attribute name=\"rd_valoarecalitativa\"/>\n    <attribute name=\"rd_um\"/>\n    <attribute name=\"rd_tinta\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_masuratoareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_trial\" width=\"125\"/>\n    <cell name=\"rd_tipmasuratoare\" width=\"125\"/>\n    <cell name=\"rd_numarbucata\" width=\"125\"/>\n    <cell name=\"rd_valoare\" width=\"125\"/>\n    <cell name=\"rd_valoarecalitativa\" width=\"125\"/>\n    <cell name=\"rd_um\" width=\"125\"/>\n    <cell name=\"rd_tinta\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_statisticatrial",
+  "nume": "Toate: Statistica de trial",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_statisticatrial\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_trial\"/>\n    <attribute name=\"rd_tipmasuratoare\"/>\n    <attribute name=\"rd_n\"/>\n    <attribute name=\"rd_medie\"/>\n    <attribute name=\"rd_abaterestandard\"/>\n    <attribute name=\"rd_cv\"/>\n    <attribute name=\"rd_minim\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_statisticatrialid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_trial\" width=\"125\"/>\n    <cell name=\"rd_tipmasuratoare\" width=\"125\"/>\n    <cell name=\"rd_n\" width=\"125\"/>\n    <cell name=\"rd_medie\" width=\"125\"/>\n    <cell name=\"rd_abaterestandard\" width=\"125\"/>\n    <cell name=\"rd_cv\" width=\"125\"/>\n    <cell name=\"rd_minim\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_statisticatrial",
+  "nume": "Cautare: Statistica de trial",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_statisticatrial\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_trial\"/>\n    <attribute name=\"rd_tipmasuratoare\"/>\n    <attribute name=\"rd_n\"/>\n    <attribute name=\"rd_medie\"/>\n    <attribute name=\"rd_abaterestandard\"/>\n    <attribute name=\"rd_cv\"/>\n    <attribute name=\"rd_minim\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_statisticatrialid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_trial\" width=\"125\"/>\n    <cell name=\"rd_tipmasuratoare\" width=\"125\"/>\n    <cell name=\"rd_n\" width=\"125\"/>\n    <cell name=\"rd_medie\" width=\"125\"/>\n    <cell name=\"rd_abaterestandard\" width=\"125\"/>\n    <cell name=\"rd_cv\" width=\"125\"/>\n    <cell name=\"rd_minim\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_evaluaresenzoriala",
+  "nume": "Toate: Evaluare senzoriala",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_evaluaresenzoriala\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_trial\"/>\n    <attribute name=\"rd_tipevaluare\"/>\n    <attribute name=\"rd_data\"/>\n    <attribute name=\"rd_referinta\"/>\n    <attribute name=\"rd_scortotal\"/>\n    <attribute name=\"rd_scorreferinta\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_evaluaresenzorialaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_trial\" width=\"125\"/>\n    <cell name=\"rd_tipevaluare\" width=\"125\"/>\n    <cell name=\"rd_data\" width=\"125\"/>\n    <cell name=\"rd_referinta\" width=\"125\"/>\n    <cell name=\"rd_scortotal\" width=\"125\"/>\n    <cell name=\"rd_scorreferinta\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_evaluaresenzoriala",
+  "nume": "Cautare: Evaluare senzoriala",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_evaluaresenzoriala\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_trial\"/>\n    <attribute name=\"rd_tipevaluare\"/>\n    <attribute name=\"rd_data\"/>\n    <attribute name=\"rd_referinta\"/>\n    <attribute name=\"rd_scortotal\"/>\n    <attribute name=\"rd_scorreferinta\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_evaluaresenzorialaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_trial\" width=\"125\"/>\n    <cell name=\"rd_tipevaluare\" width=\"125\"/>\n    <cell name=\"rd_data\" width=\"125\"/>\n    <cell name=\"rd_referinta\" width=\"125\"/>\n    <cell name=\"rd_scortotal\" width=\"125\"/>\n    <cell name=\"rd_scorreferinta\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_criteriusenzorial",
+  "nume": "Toate: Criteriu senzorial",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_criteriusenzorial\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_grupa\"/>\n    <attribute name=\"rd_pondere\"/>\n    <attribute name=\"rd_categorieprodus\"/>\n    <attribute name=\"rd_ancora1\"/>\n    <attribute name=\"rd_ancora3\"/>\n    <attribute name=\"rd_ancora5\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_criteriusenzorialid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_grupa\" width=\"125\"/>\n    <cell name=\"rd_pondere\" width=\"125\"/>\n    <cell name=\"rd_categorieprodus\" width=\"125\"/>\n    <cell name=\"rd_ancora1\" width=\"125\"/>\n    <cell name=\"rd_ancora3\" width=\"125\"/>\n    <cell name=\"rd_ancora5\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_criteriusenzorial",
+  "nume": "Cautare: Criteriu senzorial",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_criteriusenzorial\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_grupa\"/>\n    <attribute name=\"rd_pondere\"/>\n    <attribute name=\"rd_categorieprodus\"/>\n    <attribute name=\"rd_ancora1\"/>\n    <attribute name=\"rd_ancora3\"/>\n    <attribute name=\"rd_ancora5\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_criteriusenzorialid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_grupa\" width=\"125\"/>\n    <cell name=\"rd_pondere\" width=\"125\"/>\n    <cell name=\"rd_categorieprodus\" width=\"125\"/>\n    <cell name=\"rd_ancora1\" width=\"125\"/>\n    <cell name=\"rd_ancora3\" width=\"125\"/>\n    <cell name=\"rd_ancora5\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_scorsenzorial",
+  "nume": "Toate: Scor senzorial",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_scorsenzorial\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_evaluare\"/>\n    <attribute name=\"rd_criteriu\"/>\n    <attribute name=\"rd_evaluator\"/>\n    <attribute name=\"rd_tintascor\"/>\n    <attribute name=\"rd_scor\"/>\n    <attribute name=\"rd_comentariu\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_scorsenzorialid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_evaluare\" width=\"125\"/>\n    <cell name=\"rd_criteriu\" width=\"125\"/>\n    <cell name=\"rd_evaluator\" width=\"125\"/>\n    <cell name=\"rd_tintascor\" width=\"125\"/>\n    <cell name=\"rd_scor\" width=\"125\"/>\n    <cell name=\"rd_comentariu\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_scorsenzorial",
+  "nume": "Cautare: Scor senzorial",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_scorsenzorial\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_evaluare\"/>\n    <attribute name=\"rd_criteriu\"/>\n    <attribute name=\"rd_evaluator\"/>\n    <attribute name=\"rd_tintascor\"/>\n    <attribute name=\"rd_scor\"/>\n    <attribute name=\"rd_comentariu\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_scorsenzorialid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_evaluare\" width=\"125\"/>\n    <cell name=\"rd_criteriu\" width=\"125\"/>\n    <cell name=\"rd_evaluator\" width=\"125\"/>\n    <cell name=\"rd_tintascor\" width=\"125\"/>\n    <cell name=\"rd_scor\" width=\"125\"/>\n    <cell name=\"rd_comentariu\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_defect",
+  "nume": "Toate: Defect (nomenclator)",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_defect\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_grupa\"/>\n    <attribute name=\"rd_severitate\"/>\n    <attribute name=\"rd_ccp\"/>\n    <attribute name=\"rd_activ\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_defectid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_grupa\" width=\"125\"/>\n    <cell name=\"rd_severitate\" width=\"125\"/>\n    <cell name=\"rd_ccp\" width=\"125\"/>\n    <cell name=\"rd_activ\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_defect",
+  "nume": "Cautare: Defect (nomenclator)",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_defect\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_grupa\"/>\n    <attribute name=\"rd_severitate\"/>\n    <attribute name=\"rd_ccp\"/>\n    <attribute name=\"rd_activ\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_defectid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_grupa\" width=\"125\"/>\n    <cell name=\"rd_severitate\" width=\"125\"/>\n    <cell name=\"rd_ccp\" width=\"125\"/>\n    <cell name=\"rd_activ\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_defectconstatat",
+  "nume": "Toate: Defect constatat",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_defectconstatat\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_evaluare\"/>\n    <attribute name=\"rd_defect\"/>\n    <attribute name=\"rd_severitate\"/>\n    <attribute name=\"rd_bucatiafectate\"/>\n    <attribute name=\"rd_procentafectat\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_defectconstatatid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_evaluare\" width=\"125\"/>\n    <cell name=\"rd_defect\" width=\"125\"/>\n    <cell name=\"rd_severitate\" width=\"125\"/>\n    <cell name=\"rd_bucatiafectate\" width=\"125\"/>\n    <cell name=\"rd_procentafectat\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_defectconstatat",
+  "nume": "Cautare: Defect constatat",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_defectconstatat\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_evaluare\"/>\n    <attribute name=\"rd_defect\"/>\n    <attribute name=\"rd_severitate\"/>\n    <attribute name=\"rd_bucatiafectate\"/>\n    <attribute name=\"rd_procentafectat\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_defectconstatatid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_evaluare\" width=\"125\"/>\n    <cell name=\"rd_defect\" width=\"125\"/>\n    <cell name=\"rd_severitate\" width=\"125\"/>\n    <cell name=\"rd_bucatiafectate\" width=\"125\"/>\n    <cell name=\"rd_procentafectat\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_referinta",
+  "nume": "Toate: Referinta de comparatie",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_referinta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_tipreferinta\"/>\n    <attribute name=\"rd_client\"/>\n    <attribute name=\"rd_producator\"/>\n    <attribute name=\"rd_codprodusactual\"/>\n    <attribute name=\"rd_gramaj\"/>\n    <attribute name=\"rd_gramajmasurat\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_referintaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_tipreferinta\" width=\"125\"/>\n    <cell name=\"rd_client\" width=\"125\"/>\n    <cell name=\"rd_producator\" width=\"125\"/>\n    <cell name=\"rd_codprodusactual\" width=\"125\"/>\n    <cell name=\"rd_gramaj\" width=\"125\"/>\n    <cell name=\"rd_gramajmasurat\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_referinta",
+  "nume": "Cautare: Referinta de comparatie",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_referinta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_tipreferinta\"/>\n    <attribute name=\"rd_client\"/>\n    <attribute name=\"rd_producator\"/>\n    <attribute name=\"rd_codprodusactual\"/>\n    <attribute name=\"rd_gramaj\"/>\n    <attribute name=\"rd_gramajmasurat\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_referintaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_tipreferinta\" width=\"125\"/>\n    <cell name=\"rd_client\" width=\"125\"/>\n    <cell name=\"rd_producator\" width=\"125\"/>\n    <cell name=\"rd_codprodusactual\" width=\"125\"/>\n    <cell name=\"rd_gramaj\" width=\"125\"/>\n    <cell name=\"rd_gramajmasurat\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_antecalcul",
+  "nume": "Toate: Antecalcul",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_antecalcul\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_versiunereteta\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_datacalcul\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_gramaj\"/>\n    <attribute name=\"rd_pierdere\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_antecalculid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_versiunereteta\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_datacalcul\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_gramaj\" width=\"125\"/>\n    <cell name=\"rd_pierdere\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_antecalcul",
+  "nume": "Active: Antecalcul",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_antecalcul\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_versiunereteta\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_datacalcul\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_gramaj\"/>\n    <attribute name=\"rd_pierdere\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_antecalculid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_versiunereteta\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_datacalcul\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_gramaj\" width=\"125\"/>\n    <cell name=\"rd_pierdere\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_antecalcul",
+  "nume": "Cautare: Antecalcul",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_antecalcul\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_versiunereteta\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_datacalcul\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_gramaj\"/>\n    <attribute name=\"rd_pierdere\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_antecalculid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_versiunereteta\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_datacalcul\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_gramaj\" width=\"125\"/>\n    <cell name=\"rd_pierdere\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_linieantecalcul",
+  "nume": "Toate: Linie de antecalcul",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_linieantecalcul\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_antecalcul\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_mpproiect\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <attribute name=\"rd_sursapret\"/>\n    <attribute name=\"rd_datapret\"/>\n    <attribute name=\"rd_observatii\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_linieantecalculid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_antecalcul\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_mpproiect\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n    <cell name=\"rd_sursapret\" width=\"125\"/>\n    <cell name=\"rd_datapret\" width=\"125\"/>\n    <cell name=\"rd_observatii\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_linieantecalcul",
+  "nume": "Cautare: Linie de antecalcul",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_linieantecalcul\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_antecalcul\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_mpproiect\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <attribute name=\"rd_sursapret\"/>\n    <attribute name=\"rd_datapret\"/>\n    <attribute name=\"rd_observatii\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_linieantecalculid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_antecalcul\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_mpproiect\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n    <cell name=\"rd_sursapret\" width=\"125\"/>\n    <cell name=\"rd_datapret\" width=\"125\"/>\n    <cell name=\"rd_observatii\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_reteta",
+  "nume": "Toate: Reteta (antet)",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_reteta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_codreteta\"/>\n    <attribute name=\"rd_categorieprodus\"/>\n    <attribute name=\"rd_versiunecurenta\"/>\n    <attribute name=\"rd_statusreteta\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_retetaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_codreteta\" width=\"125\"/>\n    <cell name=\"rd_categorieprodus\" width=\"125\"/>\n    <cell name=\"rd_versiunecurenta\" width=\"125\"/>\n    <cell name=\"rd_statusreteta\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_reteta",
+  "nume": "Active: Reteta (antet)",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_reteta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_codreteta\"/>\n    <attribute name=\"rd_categorieprodus\"/>\n    <attribute name=\"rd_versiunecurenta\"/>\n    <attribute name=\"rd_statusreteta\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_retetaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_codreteta\" width=\"125\"/>\n    <cell name=\"rd_categorieprodus\" width=\"125\"/>\n    <cell name=\"rd_versiunecurenta\" width=\"125\"/>\n    <cell name=\"rd_statusreteta\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_reteta",
+  "nume": "Cautare: Reteta (antet)",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_reteta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_codreteta\"/>\n    <attribute name=\"rd_categorieprodus\"/>\n    <attribute name=\"rd_versiunecurenta\"/>\n    <attribute name=\"rd_statusreteta\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_retetaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_codreteta\" width=\"125\"/>\n    <cell name=\"rd_categorieprodus\" width=\"125\"/>\n    <cell name=\"rd_versiunecurenta\" width=\"125\"/>\n    <cell name=\"rd_statusreteta\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_versiunereteta",
+  "nume": "Toate: Versiune de reteta",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_versiunereteta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_reteta\"/>\n    <attribute name=\"rd_numarversiune\"/>\n    <attribute name=\"rd_dataversiune\"/>\n    <attribute name=\"rd_autor\"/>\n    <attribute name=\"rd_blocata\"/>\n    <attribute name=\"rd_statusversiune\"/>\n    <attribute name=\"rd_factorrandament\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_versiuneretetaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_reteta\" width=\"125\"/>\n    <cell name=\"rd_numarversiune\" width=\"125\"/>\n    <cell name=\"rd_dataversiune\" width=\"125\"/>\n    <cell name=\"rd_autor\" width=\"125\"/>\n    <cell name=\"rd_blocata\" width=\"125\"/>\n    <cell name=\"rd_statusversiune\" width=\"125\"/>\n    <cell name=\"rd_factorrandament\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_versiunereteta",
+  "nume": "Active: Versiune de reteta",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_versiunereteta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_reteta\"/>\n    <attribute name=\"rd_numarversiune\"/>\n    <attribute name=\"rd_dataversiune\"/>\n    <attribute name=\"rd_autor\"/>\n    <attribute name=\"rd_blocata\"/>\n    <attribute name=\"rd_statusversiune\"/>\n    <attribute name=\"rd_factorrandament\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_versiuneretetaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_reteta\" width=\"125\"/>\n    <cell name=\"rd_numarversiune\" width=\"125\"/>\n    <cell name=\"rd_dataversiune\" width=\"125\"/>\n    <cell name=\"rd_autor\" width=\"125\"/>\n    <cell name=\"rd_blocata\" width=\"125\"/>\n    <cell name=\"rd_statusversiune\" width=\"125\"/>\n    <cell name=\"rd_factorrandament\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_versiunereteta",
+  "nume": "Cautare: Versiune de reteta",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_versiunereteta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_reteta\"/>\n    <attribute name=\"rd_numarversiune\"/>\n    <attribute name=\"rd_dataversiune\"/>\n    <attribute name=\"rd_autor\"/>\n    <attribute name=\"rd_blocata\"/>\n    <attribute name=\"rd_statusversiune\"/>\n    <attribute name=\"rd_factorrandament\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_versiuneretetaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_reteta\" width=\"125\"/>\n    <cell name=\"rd_numarversiune\" width=\"125\"/>\n    <cell name=\"rd_dataversiune\" width=\"125\"/>\n    <cell name=\"rd_autor\" width=\"125\"/>\n    <cell name=\"rd_blocata\" width=\"125\"/>\n    <cell name=\"rd_statusversiune\" width=\"125\"/>\n    <cell name=\"rd_factorrandament\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_liniereteta",
+  "nume": "Toate: Linie de reteta",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_liniereteta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_versiunereteta\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_mpproiect\"/>\n    <attribute name=\"rd_fazaretetare\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_pierdere\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_linieretetaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_versiunereteta\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_mpproiect\" width=\"125\"/>\n    <cell name=\"rd_fazaretetare\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_pierdere\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_liniereteta",
+  "nume": "Cautare: Linie de reteta",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_liniereteta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_versiunereteta\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_mpproiect\"/>\n    <attribute name=\"rd_fazaretetare\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_pierdere\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_linieretetaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_versiunereteta\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_mpproiect\" width=\"125\"/>\n    <cell name=\"rd_fazaretetare\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_pierdere\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_alergen",
+  "nume": "Toate: Alergen",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_alergen\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_denumirelegala\"/>\n    <attribute name=\"rd_grupa\"/>\n    <attribute name=\"rd_evidentiere\"/>\n    <attribute name=\"rd_prag\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_alergenid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_denumirelegala\" width=\"125\"/>\n    <cell name=\"rd_grupa\" width=\"125\"/>\n    <cell name=\"rd_evidentiere\" width=\"125\"/>\n    <cell name=\"rd_prag\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_alergen",
+  "nume": "Cautare: Alergen",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_alergen\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_denumirelegala\"/>\n    <attribute name=\"rd_grupa\"/>\n    <attribute name=\"rd_evidentiere\"/>\n    <attribute name=\"rd_prag\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_alergenid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_denumirelegala\" width=\"125\"/>\n    <cell name=\"rd_grupa\" width=\"125\"/>\n    <cell name=\"rd_evidentiere\" width=\"125\"/>\n    <cell name=\"rd_prag\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_specificatie",
+  "nume": "Toate: Specificatie tehnica",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_specificatie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_tipspecificatie\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_statusst\"/>\n    <attribute name=\"rd_autor\"/>\n    <attribute name=\"rd_aprobatorcalitate\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_specificatieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_tipspecificatie\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_statusst\" width=\"125\"/>\n    <cell name=\"rd_autor\" width=\"125\"/>\n    <cell name=\"rd_aprobatorcalitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_specificatie",
+  "nume": "Active: Specificatie tehnica",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_specificatie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_tipspecificatie\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_statusst\"/>\n    <attribute name=\"rd_autor\"/>\n    <attribute name=\"rd_aprobatorcalitate\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_specificatieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_tipspecificatie\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_statusst\" width=\"125\"/>\n    <cell name=\"rd_autor\" width=\"125\"/>\n    <cell name=\"rd_aprobatorcalitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_specificatie",
+  "nume": "Cautare: Specificatie tehnica",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_specificatie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_tipspecificatie\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_statusst\"/>\n    <attribute name=\"rd_autor\"/>\n    <attribute name=\"rd_aprobatorcalitate\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_specificatieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_tipspecificatie\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_statusst\" width=\"125\"/>\n    <cell name=\"rd_autor\" width=\"125\"/>\n    <cell name=\"rd_aprobatorcalitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_sdp",
+  "nume": "Toate: SDP (Specificatie de produs)",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_sdp\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_versiunereteta\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_statussdp\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_depozitare\"/>\n    <attribute name=\"rd_valabilitate\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_sdpid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_versiunereteta\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_statussdp\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_depozitare\" width=\"125\"/>\n    <cell name=\"rd_valabilitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_sdp",
+  "nume": "Active: SDP (Specificatie de produs)",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_sdp\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_versiunereteta\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_statussdp\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_depozitare\"/>\n    <attribute name=\"rd_valabilitate\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_sdpid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_versiunereteta\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_statussdp\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_depozitare\" width=\"125\"/>\n    <cell name=\"rd_valabilitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_sdp",
+  "nume": "Cautare: SDP (Specificatie de produs)",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_sdp\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_versiunereteta\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_statussdp\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_depozitare\"/>\n    <attribute name=\"rd_valabilitate\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_sdpid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_versiunereteta\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_statussdp\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_depozitare\" width=\"125\"/>\n    <cell name=\"rd_valabilitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_eticheta",
+  "nume": "Toate: Eticheta",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_eticheta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_tipeticheta\"/>\n    <attribute name=\"rd_formatimprimanta\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_statuseticheta\"/>\n    <attribute name=\"rd_limba\"/>\n    <attribute name=\"rd_denumirelegala\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_etichetaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_tipeticheta\" width=\"125\"/>\n    <cell name=\"rd_formatimprimanta\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_statuseticheta\" width=\"125\"/>\n    <cell name=\"rd_limba\" width=\"125\"/>\n    <cell name=\"rd_denumirelegala\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_eticheta",
+  "nume": "Active: Eticheta",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_eticheta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_tipeticheta\"/>\n    <attribute name=\"rd_formatimprimanta\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_statuseticheta\"/>\n    <attribute name=\"rd_limba\"/>\n    <attribute name=\"rd_denumirelegala\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_etichetaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_tipeticheta\" width=\"125\"/>\n    <cell name=\"rd_formatimprimanta\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_statuseticheta\" width=\"125\"/>\n    <cell name=\"rd_limba\" width=\"125\"/>\n    <cell name=\"rd_denumirelegala\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_eticheta",
+  "nume": "Cautare: Eticheta",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_eticheta\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_tipeticheta\"/>\n    <attribute name=\"rd_formatimprimanta\"/>\n    <attribute name=\"rd_versiune\"/>\n    <attribute name=\"rd_statuseticheta\"/>\n    <attribute name=\"rd_limba\"/>\n    <attribute name=\"rd_denumirelegala\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_etichetaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_tipeticheta\" width=\"125\"/>\n    <cell name=\"rd_formatimprimanta\" width=\"125\"/>\n    <cell name=\"rd_versiune\" width=\"125\"/>\n    <cell name=\"rd_statuseticheta\" width=\"125\"/>\n    <cell name=\"rd_limba\" width=\"125\"/>\n    <cell name=\"rd_denumirelegala\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_implementare",
+  "nume": "Toate: Implementare (IPN)",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_implementare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_dataprod0\"/>\n    <attribute name=\"rd_conditiiok\"/>\n    <attribute name=\"rd_planok\"/>\n    <attribute name=\"rd_ilok\"/>\n    <attribute name=\"rd_numaril\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_implementareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_dataprod0\" width=\"125\"/>\n    <cell name=\"rd_conditiiok\" width=\"125\"/>\n    <cell name=\"rd_planok\" width=\"125\"/>\n    <cell name=\"rd_ilok\" width=\"125\"/>\n    <cell name=\"rd_numaril\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_implementare",
+  "nume": "Active: Implementare (IPN)",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_implementare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_dataprod0\"/>\n    <attribute name=\"rd_conditiiok\"/>\n    <attribute name=\"rd_planok\"/>\n    <attribute name=\"rd_ilok\"/>\n    <attribute name=\"rd_numaril\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_implementareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_dataprod0\" width=\"125\"/>\n    <cell name=\"rd_conditiiok\" width=\"125\"/>\n    <cell name=\"rd_planok\" width=\"125\"/>\n    <cell name=\"rd_ilok\" width=\"125\"/>\n    <cell name=\"rd_numaril\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_implementare",
+  "nume": "Cautare: Implementare (IPN)",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_implementare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_dataprod0\"/>\n    <attribute name=\"rd_conditiiok\"/>\n    <attribute name=\"rd_planok\"/>\n    <attribute name=\"rd_ilok\"/>\n    <attribute name=\"rd_numaril\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_implementareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_dataprod0\" width=\"125\"/>\n    <cell name=\"rd_conditiiok\" width=\"125\"/>\n    <cell name=\"rd_planok\" width=\"125\"/>\n    <cell name=\"rd_ilok\" width=\"125\"/>\n    <cell name=\"rd_numaril\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_productie0",
+  "nume": "Toate: Productie 0",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_productie0\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_implementare\"/>\n    <attribute name=\"rd_data\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_schimb\"/>\n    <attribute name=\"rd_cantitateplanificata\"/>\n    <attribute name=\"rd_aluatintrodus\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_productie0id\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_implementare\" width=\"125\"/>\n    <cell name=\"rd_data\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_schimb\" width=\"125\"/>\n    <cell name=\"rd_cantitateplanificata\" width=\"125\"/>\n    <cell name=\"rd_aluatintrodus\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_productie0",
+  "nume": "Cautare: Productie 0",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_productie0\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_implementare\"/>\n    <attribute name=\"rd_data\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_schimb\"/>\n    <attribute name=\"rd_cantitateplanificata\"/>\n    <attribute name=\"rd_aluatintrodus\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_productie0id\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_implementare\" width=\"125\"/>\n    <cell name=\"rd_data\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_schimb\" width=\"125\"/>\n    <cell name=\"rd_cantitateplanificata\" width=\"125\"/>\n    <cell name=\"rd_aluatintrodus\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_inregistrareprod0",
+  "nume": "Toate: Inregistrare de productie 0",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_inregistrareprod0\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_productie0\"/>\n    <attribute name=\"rd_tipinregistrare\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_valoarespecificata\"/>\n    <attribute name=\"rd_valoarereala\"/>\n    <attribute name=\"rd_um\"/>\n    <attribute name=\"rd_intoleranta\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_inregistrareprod0id\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n    <cell name=\"rd_tipinregistrare\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_valoarespecificata\" width=\"125\"/>\n    <cell name=\"rd_valoarereala\" width=\"125\"/>\n    <cell name=\"rd_um\" width=\"125\"/>\n    <cell name=\"rd_intoleranta\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_inregistrareprod0",
+  "nume": "Active: Inregistrare de productie 0",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_inregistrareprod0\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_productie0\"/>\n    <attribute name=\"rd_tipinregistrare\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_valoarespecificata\"/>\n    <attribute name=\"rd_valoarereala\"/>\n    <attribute name=\"rd_um\"/>\n    <attribute name=\"rd_intoleranta\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_inregistrareprod0id\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n    <cell name=\"rd_tipinregistrare\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_valoarespecificata\" width=\"125\"/>\n    <cell name=\"rd_valoarereala\" width=\"125\"/>\n    <cell name=\"rd_um\" width=\"125\"/>\n    <cell name=\"rd_intoleranta\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_inregistrareprod0",
+  "nume": "Ale mele: Inregistrare de productie 0",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_inregistrareprod0\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_productie0\"/>\n    <attribute name=\"rd_tipinregistrare\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_valoarespecificata\"/>\n    <attribute name=\"rd_valoarereala\"/>\n    <attribute name=\"rd_um\"/>\n    <attribute name=\"rd_intoleranta\"/>\n    <filter type=\"and\">\n      <condition attribute=\"rd_responsabil\" operator=\"eq-userid\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_inregistrareprod0id\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n    <cell name=\"rd_tipinregistrare\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_valoarespecificata\" width=\"125\"/>\n    <cell name=\"rd_valoarereala\" width=\"125\"/>\n    <cell name=\"rd_um\" width=\"125\"/>\n    <cell name=\"rd_intoleranta\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_inregistrareprod0",
+  "nume": "Cautare: Inregistrare de productie 0",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_inregistrareprod0\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_productie0\"/>\n    <attribute name=\"rd_tipinregistrare\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_valoarespecificata\"/>\n    <attribute name=\"rd_valoarereala\"/>\n    <attribute name=\"rd_um\"/>\n    <attribute name=\"rd_intoleranta\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_inregistrareprod0id\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n    <cell name=\"rd_tipinregistrare\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_valoarespecificata\" width=\"125\"/>\n    <cell name=\"rd_valoarereala\" width=\"125\"/>\n    <cell name=\"rd_um\" width=\"125\"/>\n    <cell name=\"rd_intoleranta\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_revizuire",
+  "nume": "Toate: Revizuire post-implementare",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_revizuire\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etaparevizuire\"/>\n    <attribute name=\"rd_datascadenta\"/>\n    <attribute name=\"rd_dataefectuare\"/>\n    <attribute name=\"rd_statusrevizuire\"/>\n    <attribute name=\"rd_cantitateprodusa\"/>\n    <attribute name=\"rd_numarloturi\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_revizuireid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etaparevizuire\" width=\"125\"/>\n    <cell name=\"rd_datascadenta\" width=\"125\"/>\n    <cell name=\"rd_dataefectuare\" width=\"125\"/>\n    <cell name=\"rd_statusrevizuire\" width=\"125\"/>\n    <cell name=\"rd_cantitateprodusa\" width=\"125\"/>\n    <cell name=\"rd_numarloturi\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_revizuire",
+  "nume": "Active: Revizuire post-implementare",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_revizuire\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etaparevizuire\"/>\n    <attribute name=\"rd_datascadenta\"/>\n    <attribute name=\"rd_dataefectuare\"/>\n    <attribute name=\"rd_statusrevizuire\"/>\n    <attribute name=\"rd_cantitateprodusa\"/>\n    <attribute name=\"rd_numarloturi\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_revizuireid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etaparevizuire\" width=\"125\"/>\n    <cell name=\"rd_datascadenta\" width=\"125\"/>\n    <cell name=\"rd_dataefectuare\" width=\"125\"/>\n    <cell name=\"rd_statusrevizuire\" width=\"125\"/>\n    <cell name=\"rd_cantitateprodusa\" width=\"125\"/>\n    <cell name=\"rd_numarloturi\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_revizuire",
+  "nume": "Ale mele: Revizuire post-implementare",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_revizuire\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etaparevizuire\"/>\n    <attribute name=\"rd_datascadenta\"/>\n    <attribute name=\"rd_dataefectuare\"/>\n    <attribute name=\"rd_statusrevizuire\"/>\n    <attribute name=\"rd_cantitateprodusa\"/>\n    <attribute name=\"rd_numarloturi\"/>\n    <filter type=\"and\">\n      <condition attribute=\"rd_responsabil\" operator=\"eq-userid\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_revizuireid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etaparevizuire\" width=\"125\"/>\n    <cell name=\"rd_datascadenta\" width=\"125\"/>\n    <cell name=\"rd_dataefectuare\" width=\"125\"/>\n    <cell name=\"rd_statusrevizuire\" width=\"125\"/>\n    <cell name=\"rd_cantitateprodusa\" width=\"125\"/>\n    <cell name=\"rd_numarloturi\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_revizuire",
+  "nume": "Cautare: Revizuire post-implementare",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_revizuire\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etaparevizuire\"/>\n    <attribute name=\"rd_datascadenta\"/>\n    <attribute name=\"rd_dataefectuare\"/>\n    <attribute name=\"rd_statusrevizuire\"/>\n    <attribute name=\"rd_cantitateprodusa\"/>\n    <attribute name=\"rd_numarloturi\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_revizuireid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etaparevizuire\" width=\"125\"/>\n    <cell name=\"rd_datascadenta\" width=\"125\"/>\n    <cell name=\"rd_dataefectuare\" width=\"125\"/>\n    <cell name=\"rd_statusrevizuire\" width=\"125\"/>\n    <cell name=\"rd_cantitateprodusa\" width=\"125\"/>\n    <cell name=\"rd_numarloturi\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_linie",
+  "nume": "Toate: Linie de productie",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_linie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codlinie\"/>\n    <attribute name=\"rd_amplasament\"/>\n    <attribute name=\"rd_tiplinie\"/>\n    <attribute name=\"rd_echipament\"/>\n    <attribute name=\"rd_capabilitati\"/>\n    <attribute name=\"rd_alergeniilinie\"/>\n    <attribute name=\"rd_gramajmin\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_linieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codlinie\" width=\"125\"/>\n    <cell name=\"rd_amplasament\" width=\"125\"/>\n    <cell name=\"rd_tiplinie\" width=\"125\"/>\n    <cell name=\"rd_echipament\" width=\"125\"/>\n    <cell name=\"rd_capabilitati\" width=\"125\"/>\n    <cell name=\"rd_alergeniilinie\" width=\"125\"/>\n    <cell name=\"rd_gramajmin\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_linie",
+  "nume": "Cautare: Linie de productie",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_linie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codlinie\"/>\n    <attribute name=\"rd_amplasament\"/>\n    <attribute name=\"rd_tiplinie\"/>\n    <attribute name=\"rd_echipament\"/>\n    <attribute name=\"rd_capabilitati\"/>\n    <attribute name=\"rd_alergeniilinie\"/>\n    <attribute name=\"rd_gramajmin\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_linieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codlinie\" width=\"125\"/>\n    <cell name=\"rd_amplasament\" width=\"125\"/>\n    <cell name=\"rd_tiplinie\" width=\"125\"/>\n    <cell name=\"rd_echipament\" width=\"125\"/>\n    <cell name=\"rd_capabilitati\" width=\"125\"/>\n    <cell name=\"rd_alergeniilinie\" width=\"125\"/>\n    <cell name=\"rd_gramajmin\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_profiltehnolog",
+  "nume": "Toate: Profil de tehnolog",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_profiltehnolog\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_utilizator\"/>\n    <attribute name=\"rd_rolprincipal\"/>\n    <attribute name=\"rd_amplasament\"/>\n    <attribute name=\"rd_specializare\"/>\n    <attribute name=\"rd_linii\"/>\n    <attribute name=\"rd_capacitatemax\"/>\n    <attribute name=\"rd_proiecteactive\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_profiltehnologid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_utilizator\" width=\"125\"/>\n    <cell name=\"rd_rolprincipal\" width=\"125\"/>\n    <cell name=\"rd_amplasament\" width=\"125\"/>\n    <cell name=\"rd_specializare\" width=\"125\"/>\n    <cell name=\"rd_linii\" width=\"125\"/>\n    <cell name=\"rd_capacitatemax\" width=\"125\"/>\n    <cell name=\"rd_proiecteactive\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_profiltehnolog",
+  "nume": "Cautare: Profil de tehnolog",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_profiltehnolog\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_utilizator\"/>\n    <attribute name=\"rd_rolprincipal\"/>\n    <attribute name=\"rd_amplasament\"/>\n    <attribute name=\"rd_specializare\"/>\n    <attribute name=\"rd_linii\"/>\n    <attribute name=\"rd_capacitatemax\"/>\n    <attribute name=\"rd_proiecteactive\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_profiltehnologid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_utilizator\" width=\"125\"/>\n    <cell name=\"rd_rolprincipal\" width=\"125\"/>\n    <cell name=\"rd_amplasament\" width=\"125\"/>\n    <cell name=\"rd_specializare\" width=\"125\"/>\n    <cell name=\"rd_linii\" width=\"125\"/>\n    <cell name=\"rd_capacitatemax\" width=\"125\"/>\n    <cell name=\"rd_proiecteactive\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_client",
+  "nume": "Toate: Client",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_client\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codsap\"/>\n    <attribute name=\"rd_clasificare\"/>\n    <attribute name=\"rd_dataclasificare\"/>\n    <attribute name=\"rd_canal\"/>\n    <attribute name=\"rd_tara\"/>\n    <attribute name=\"rd_kam\"/>\n    <attribute name=\"rd_proiecteactive\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_clientid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codsap\" width=\"125\"/>\n    <cell name=\"rd_clasificare\" width=\"125\"/>\n    <cell name=\"rd_dataclasificare\" width=\"125\"/>\n    <cell name=\"rd_canal\" width=\"125\"/>\n    <cell name=\"rd_tara\" width=\"125\"/>\n    <cell name=\"rd_kam\" width=\"125\"/>\n    <cell name=\"rd_proiecteactive\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_client",
+  "nume": "Cautare: Client",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_client\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codsap\"/>\n    <attribute name=\"rd_clasificare\"/>\n    <attribute name=\"rd_dataclasificare\"/>\n    <attribute name=\"rd_canal\"/>\n    <attribute name=\"rd_tara\"/>\n    <attribute name=\"rd_kam\"/>\n    <attribute name=\"rd_proiecteactive\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_clientid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codsap\" width=\"125\"/>\n    <cell name=\"rd_clasificare\" width=\"125\"/>\n    <cell name=\"rd_dataclasificare\" width=\"125\"/>\n    <cell name=\"rd_canal\" width=\"125\"/>\n    <cell name=\"rd_tara\" width=\"125\"/>\n    <cell name=\"rd_kam\" width=\"125\"/>\n    <cell name=\"rd_proiecteactive\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_indicator",
+  "nume": "Toate: Indicator",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_indicator\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_tip\"/>\n    <attribute name=\"rd_nivel\"/>\n    <attribute name=\"rd_tinta\"/>\n    <attribute name=\"rd_pragalerta\"/>\n    <attribute name=\"rd_um\"/>\n    <attribute name=\"rd_frecventa\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_indicatorid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_tip\" width=\"125\"/>\n    <cell name=\"rd_nivel\" width=\"125\"/>\n    <cell name=\"rd_tinta\" width=\"125\"/>\n    <cell name=\"rd_pragalerta\" width=\"125\"/>\n    <cell name=\"rd_um\" width=\"125\"/>\n    <cell name=\"rd_frecventa\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_indicator",
+  "nume": "Cautare: Indicator",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_indicator\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_tip\"/>\n    <attribute name=\"rd_nivel\"/>\n    <attribute name=\"rd_tinta\"/>\n    <attribute name=\"rd_pragalerta\"/>\n    <attribute name=\"rd_um\"/>\n    <attribute name=\"rd_frecventa\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_indicatorid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_tip\" width=\"125\"/>\n    <cell name=\"rd_nivel\" width=\"125\"/>\n    <cell name=\"rd_tinta\" width=\"125\"/>\n    <cell name=\"rd_pragalerta\" width=\"125\"/>\n    <cell name=\"rd_um\" width=\"125\"/>\n    <cell name=\"rd_frecventa\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_masurareindicator",
+  "nume": "Toate: Masurare de indicator",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_masurareindicator\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_indicator\"/>\n    <attribute name=\"rd_perioada\"/>\n    <attribute name=\"rd_datainceput\"/>\n    <attribute name=\"rd_datasfarsit\"/>\n    <attribute name=\"rd_nivel\"/>\n    <attribute name=\"rd_persoana\"/>\n    <attribute name=\"rd_rol\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_masurareindicatorid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_indicator\" width=\"125\"/>\n    <cell name=\"rd_perioada\" width=\"125\"/>\n    <cell name=\"rd_datainceput\" width=\"125\"/>\n    <cell name=\"rd_datasfarsit\" width=\"125\"/>\n    <cell name=\"rd_nivel\" width=\"125\"/>\n    <cell name=\"rd_persoana\" width=\"125\"/>\n    <cell name=\"rd_rol\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_masurareindicator",
+  "nume": "Cautare: Masurare de indicator",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_masurareindicator\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_indicator\"/>\n    <attribute name=\"rd_perioada\"/>\n    <attribute name=\"rd_datainceput\"/>\n    <attribute name=\"rd_datasfarsit\"/>\n    <attribute name=\"rd_nivel\"/>\n    <attribute name=\"rd_persoana\"/>\n    <attribute name=\"rd_rol\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_masurareindicatorid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_indicator\" width=\"125\"/>\n    <cell name=\"rd_perioada\" width=\"125\"/>\n    <cell name=\"rd_datainceput\" width=\"125\"/>\n    <cell name=\"rd_datasfarsit\" width=\"125\"/>\n    <cell name=\"rd_nivel\" width=\"125\"/>\n    <cell name=\"rd_persoana\" width=\"125\"/>\n    <cell name=\"rd_rol\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_motiv",
+  "nume": "Toate: Motiv",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_motiv\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_tipmotiv\"/>\n    <attribute name=\"rd_necesitacomentariu\"/>\n    <attribute name=\"rd_activ\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_motivid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_tipmotiv\" width=\"125\"/>\n    <cell name=\"rd_necesitacomentariu\" width=\"125\"/>\n    <cell name=\"rd_activ\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_motiv",
+  "nume": "Cautare: Motiv",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_motiv\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_tipmotiv\"/>\n    <attribute name=\"rd_necesitacomentariu\"/>\n    <attribute name=\"rd_activ\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_motivid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_tipmotiv\" width=\"125\"/>\n    <cell name=\"rd_necesitacomentariu\" width=\"125\"/>\n    <cell name=\"rd_activ\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_tipdocument",
+  "nume": "Toate: Tip document",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_tipdocument\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_extensie\"/>\n    <attribute name=\"rd_necesitaaprobare\"/>\n    <attribute name=\"rd_rolaprobator\"/>\n    <attribute name=\"rd_retentie\"/>\n    <attribute name=\"rd_sablonword\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_tipdocumentid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_extensie\" width=\"125\"/>\n    <cell name=\"rd_necesitaaprobare\" width=\"125\"/>\n    <cell name=\"rd_rolaprobator\" width=\"125\"/>\n    <cell name=\"rd_retentie\" width=\"125\"/>\n    <cell name=\"rd_sablonword\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_tipdocument",
+  "nume": "Cautare: Tip document",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_tipdocument\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_faza\"/>\n    <attribute name=\"rd_extensie\"/>\n    <attribute name=\"rd_necesitaaprobare\"/>\n    <attribute name=\"rd_rolaprobator\"/>\n    <attribute name=\"rd_retentie\"/>\n    <attribute name=\"rd_sablonword\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_tipdocumentid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_faza\" width=\"125\"/>\n    <cell name=\"rd_extensie\" width=\"125\"/>\n    <cell name=\"rd_necesitaaprobare\" width=\"125\"/>\n    <cell name=\"rd_rolaprobator\" width=\"125\"/>\n    <cell name=\"rd_retentie\" width=\"125\"/>\n    <cell name=\"rd_sablonword\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_sablongate",
+  "nume": "Toate: Sablon de gate",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_sablongate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codgate\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_sablonetapa\"/>\n    <attribute name=\"rd_tipproiect\"/>\n    <attribute name=\"rd_roldecident\"/>\n    <attribute name=\"rd_rolcoaprobator\"/>\n    <attribute name=\"rd_blocheaza\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_sablongateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codgate\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_sablonetapa\" width=\"125\"/>\n    <cell name=\"rd_tipproiect\" width=\"125\"/>\n    <cell name=\"rd_roldecident\" width=\"125\"/>\n    <cell name=\"rd_rolcoaprobator\" width=\"125\"/>\n    <cell name=\"rd_blocheaza\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_sablongate",
+  "nume": "Cautare: Sablon de gate",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_sablongate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_codgate\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_sablonetapa\"/>\n    <attribute name=\"rd_tipproiect\"/>\n    <attribute name=\"rd_roldecident\"/>\n    <attribute name=\"rd_rolcoaprobator\"/>\n    <attribute name=\"rd_blocheaza\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_sablongateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_codgate\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_sablonetapa\" width=\"125\"/>\n    <cell name=\"rd_tipproiect\" width=\"125\"/>\n    <cell name=\"rd_roldecident\" width=\"125\"/>\n    <cell name=\"rd_rolcoaprobator\" width=\"125\"/>\n    <cell name=\"rd_blocheaza\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_criteriugate",
+  "nume": "Toate: Criteriu de gate",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_criteriugate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_sablongate\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_tipverificare\"/>\n    <attribute name=\"rd_sursaauto\"/>\n    <attribute name=\"rd_codlivrabil\"/>\n    <attribute name=\"rd_obligatoriu\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_criteriugateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_sablongate\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_tipverificare\" width=\"125\"/>\n    <cell name=\"rd_sursaauto\" width=\"125\"/>\n    <cell name=\"rd_codlivrabil\" width=\"125\"/>\n    <cell name=\"rd_obligatoriu\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_criteriugate",
+  "nume": "Cautare: Criteriu de gate",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_criteriugate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_cod\"/>\n    <attribute name=\"rd_sablongate\"/>\n    <attribute name=\"rd_ordine\"/>\n    <attribute name=\"rd_tipverificare\"/>\n    <attribute name=\"rd_sursaauto\"/>\n    <attribute name=\"rd_codlivrabil\"/>\n    <attribute name=\"rd_obligatoriu\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_criteriugateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_cod\" width=\"125\"/>\n    <cell name=\"rd_sablongate\" width=\"125\"/>\n    <cell name=\"rd_ordine\" width=\"125\"/>\n    <cell name=\"rd_tipverificare\" width=\"125\"/>\n    <cell name=\"rd_sursaauto\" width=\"125\"/>\n    <cell name=\"rd_codlivrabil\" width=\"125\"/>\n    <cell name=\"rd_obligatoriu\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_gate",
+  "nume": "Toate: Gate de proiect",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_gate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sablongate\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_dataplanificata\"/>\n    <attribute name=\"rd_statusgate\"/>\n    <attribute name=\"rd_decizie\"/>\n    <attribute name=\"rd_decident\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_gateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sablongate\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_dataplanificata\" width=\"125\"/>\n    <cell name=\"rd_statusgate\" width=\"125\"/>\n    <cell name=\"rd_decizie\" width=\"125\"/>\n    <cell name=\"rd_decident\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_gate",
+  "nume": "Active: Gate de proiect",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_gate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sablongate\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_dataplanificata\"/>\n    <attribute name=\"rd_statusgate\"/>\n    <attribute name=\"rd_decizie\"/>\n    <attribute name=\"rd_decident\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_gateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sablongate\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_dataplanificata\" width=\"125\"/>\n    <cell name=\"rd_statusgate\" width=\"125\"/>\n    <cell name=\"rd_decizie\" width=\"125\"/>\n    <cell name=\"rd_decident\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_gate",
+  "nume": "Cautare: Gate de proiect",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_gate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sablongate\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_dataplanificata\"/>\n    <attribute name=\"rd_statusgate\"/>\n    <attribute name=\"rd_decizie\"/>\n    <attribute name=\"rd_decident\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_gateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sablongate\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_dataplanificata\" width=\"125\"/>\n    <cell name=\"rd_statusgate\" width=\"125\"/>\n    <cell name=\"rd_decizie\" width=\"125\"/>\n    <cell name=\"rd_decident\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_verificaregate",
+  "nume": "Toate: Verificare de gate",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_verificaregate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_gate\"/>\n    <attribute name=\"rd_criteriu\"/>\n    <attribute name=\"rd_rezultat\"/>\n    <attribute name=\"rd_automat\"/>\n    <attribute name=\"rd_verificatde\"/>\n    <attribute name=\"rd_actiune\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_verificaregateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_gate\" width=\"125\"/>\n    <cell name=\"rd_criteriu\" width=\"125\"/>\n    <cell name=\"rd_rezultat\" width=\"125\"/>\n    <cell name=\"rd_automat\" width=\"125\"/>\n    <cell name=\"rd_verificatde\" width=\"125\"/>\n    <cell name=\"rd_actiune\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_verificaregate",
+  "nume": "Cautare: Verificare de gate",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_verificaregate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_gate\"/>\n    <attribute name=\"rd_criteriu\"/>\n    <attribute name=\"rd_rezultat\"/>\n    <attribute name=\"rd_automat\"/>\n    <attribute name=\"rd_verificatde\"/>\n    <attribute name=\"rd_actiune\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_verificaregateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_gate\" width=\"125\"/>\n    <cell name=\"rd_criteriu\" width=\"125\"/>\n    <cell name=\"rd_rezultat\" width=\"125\"/>\n    <cell name=\"rd_automat\" width=\"125\"/>\n    <cell name=\"rd_verificatde\" width=\"125\"/>\n    <cell name=\"rd_actiune\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_risc",
+  "nume": "Toate: Risc de proiect",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_risc\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_probabilitate\"/>\n    <attribute name=\"rd_impact\"/>\n    <attribute name=\"rd_detectabilitate\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_riscid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_probabilitate\" width=\"125\"/>\n    <cell name=\"rd_impact\" width=\"125\"/>\n    <cell name=\"rd_detectabilitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_risc",
+  "nume": "Active: Risc de proiect",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_risc\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_probabilitate\"/>\n    <attribute name=\"rd_impact\"/>\n    <attribute name=\"rd_detectabilitate\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_riscid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_probabilitate\" width=\"125\"/>\n    <cell name=\"rd_impact\" width=\"125\"/>\n    <cell name=\"rd_detectabilitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_risc",
+  "nume": "Ale mele: Risc de proiect",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_risc\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_probabilitate\"/>\n    <attribute name=\"rd_impact\"/>\n    <attribute name=\"rd_detectabilitate\"/>\n    <filter type=\"and\">\n      <condition attribute=\"rd_proprietar\" operator=\"eq-userid\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_riscid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_probabilitate\" width=\"125\"/>\n    <cell name=\"rd_impact\" width=\"125\"/>\n    <cell name=\"rd_detectabilitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_risc",
+  "nume": "Cautare: Risc de proiect",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_risc\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_probabilitate\"/>\n    <attribute name=\"rd_impact\"/>\n    <attribute name=\"rd_detectabilitate\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_riscid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_probabilitate\" width=\"125\"/>\n    <cell name=\"rd_impact\" width=\"125\"/>\n    <cell name=\"rd_detectabilitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_problema",
+  "nume": "Toate: Problema de proiect",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_problema\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_sursa\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_severitate\"/>\n    <attribute name=\"rd_impacttermen\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_problemaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_sursa\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_severitate\" width=\"125\"/>\n    <cell name=\"rd_impacttermen\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_problema",
+  "nume": "Active: Problema de proiect",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_problema\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_sursa\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_severitate\"/>\n    <attribute name=\"rd_impacttermen\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_problemaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_sursa\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_severitate\" width=\"125\"/>\n    <cell name=\"rd_impacttermen\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_problema",
+  "nume": "Ale mele: Problema de proiect",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_problema\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_sursa\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_severitate\"/>\n    <attribute name=\"rd_impacttermen\"/>\n    <filter type=\"and\">\n      <condition attribute=\"rd_proprietar\" operator=\"eq-userid\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_problemaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_sursa\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_severitate\" width=\"125\"/>\n    <cell name=\"rd_impacttermen\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_problema",
+  "nume": "Cautare: Problema de proiect",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_problema\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_sursa\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_severitate\"/>\n    <attribute name=\"rd_impacttermen\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_problemaid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_sursa\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_severitate\" width=\"125\"/>\n    <cell name=\"rd_impacttermen\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_actiune",
+  "nume": "Toate: Actiune",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_actiune\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sursaactiune\"/>\n    <attribute name=\"rd_risc\"/>\n    <attribute name=\"rd_problema\"/>\n    <attribute name=\"rd_gate\"/>\n    <attribute name=\"rd_productie0\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_actiuneid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sursaactiune\" width=\"125\"/>\n    <cell name=\"rd_risc\" width=\"125\"/>\n    <cell name=\"rd_problema\" width=\"125\"/>\n    <cell name=\"rd_gate\" width=\"125\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_actiune",
+  "nume": "Active: Actiune",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_actiune\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sursaactiune\"/>\n    <attribute name=\"rd_risc\"/>\n    <attribute name=\"rd_problema\"/>\n    <attribute name=\"rd_gate\"/>\n    <attribute name=\"rd_productie0\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_actiuneid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sursaactiune\" width=\"125\"/>\n    <cell name=\"rd_risc\" width=\"125\"/>\n    <cell name=\"rd_problema\" width=\"125\"/>\n    <cell name=\"rd_gate\" width=\"125\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_actiune",
+  "nume": "Ale mele: Actiune",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_actiune\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sursaactiune\"/>\n    <attribute name=\"rd_risc\"/>\n    <attribute name=\"rd_problema\"/>\n    <attribute name=\"rd_gate\"/>\n    <attribute name=\"rd_productie0\"/>\n    <filter type=\"and\">\n      <condition attribute=\"rd_proprietar\" operator=\"eq-userid\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_actiuneid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sursaactiune\" width=\"125\"/>\n    <cell name=\"rd_risc\" width=\"125\"/>\n    <cell name=\"rd_problema\" width=\"125\"/>\n    <cell name=\"rd_gate\" width=\"125\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_actiune",
+  "nume": "Cautare: Actiune",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_actiune\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_sursaactiune\"/>\n    <attribute name=\"rd_risc\"/>\n    <attribute name=\"rd_problema\"/>\n    <attribute name=\"rd_gate\"/>\n    <attribute name=\"rd_productie0\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_actiuneid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_sursaactiune\" width=\"125\"/>\n    <cell name=\"rd_risc\" width=\"125\"/>\n    <cell name=\"rd_problema\" width=\"125\"/>\n    <cell name=\"rd_gate\" width=\"125\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_decizie",
+  "nume": "Toate: Decizie de proiect",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_decizie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_decident\"/>\n    <attribute name=\"rd_datadecizie\"/>\n    <attribute name=\"rd_consultati\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_decizieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_decident\" width=\"125\"/>\n    <cell name=\"rd_datadecizie\" width=\"125\"/>\n    <cell name=\"rd_consultati\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_decizie",
+  "nume": "Cautare: Decizie de proiect",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_decizie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_decident\"/>\n    <attribute name=\"rd_datadecizie\"/>\n    <attribute name=\"rd_consultati\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_decizieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_decident\" width=\"125\"/>\n    <cell name=\"rd_datadecizie\" width=\"125\"/>\n    <cell name=\"rd_consultati\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_stabilizare",
+  "nume": "Toate: Stabilizare",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_stabilizare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_productie0\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_datainceput\"/>\n    <attribute name=\"rd_loturinecesare\"/>\n    <attribute name=\"rd_loturiconforme\"/>\n    <attribute name=\"rd_schimburi\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_stabilizareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_datainceput\" width=\"125\"/>\n    <cell name=\"rd_loturinecesare\" width=\"125\"/>\n    <cell name=\"rd_loturiconforme\" width=\"125\"/>\n    <cell name=\"rd_schimburi\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_stabilizare",
+  "nume": "Active: Stabilizare",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_stabilizare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_productie0\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_datainceput\"/>\n    <attribute name=\"rd_loturinecesare\"/>\n    <attribute name=\"rd_loturiconforme\"/>\n    <attribute name=\"rd_schimburi\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_stabilizareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_datainceput\" width=\"125\"/>\n    <cell name=\"rd_loturinecesare\" width=\"125\"/>\n    <cell name=\"rd_loturiconforme\" width=\"125\"/>\n    <cell name=\"rd_schimburi\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_stabilizare",
+  "nume": "Ale mele: Stabilizare",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_stabilizare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_productie0\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_datainceput\"/>\n    <attribute name=\"rd_loturinecesare\"/>\n    <attribute name=\"rd_loturiconforme\"/>\n    <attribute name=\"rd_schimburi\"/>\n    <filter type=\"and\">\n      <condition attribute=\"rd_responsabil\" operator=\"eq-userid\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_stabilizareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_datainceput\" width=\"125\"/>\n    <cell name=\"rd_loturinecesare\" width=\"125\"/>\n    <cell name=\"rd_loturiconforme\" width=\"125\"/>\n    <cell name=\"rd_schimburi\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_stabilizare",
+  "nume": "Cautare: Stabilizare",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_stabilizare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_productie0\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_datainceput\"/>\n    <attribute name=\"rd_loturinecesare\"/>\n    <attribute name=\"rd_loturiconforme\"/>\n    <attribute name=\"rd_schimburi\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_stabilizareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_productie0\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_datainceput\" width=\"125\"/>\n    <cell name=\"rd_loturinecesare\" width=\"125\"/>\n    <cell name=\"rd_loturiconforme\" width=\"125\"/>\n    <cell name=\"rd_schimburi\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_lotstabilizare",
+  "nume": "Toate: Lot de stabilizare",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_lotstabilizare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_stabilizare\"/>\n    <attribute name=\"rd_numarordine\"/>\n    <attribute name=\"rd_dataproductie\"/>\n    <attribute name=\"rd_schimb\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <attribute name=\"rd_randament\"/>\n    <attribute name=\"rd_rebut\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_lotstabilizareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_stabilizare\" width=\"125\"/>\n    <cell name=\"rd_numarordine\" width=\"125\"/>\n    <cell name=\"rd_dataproductie\" width=\"125\"/>\n    <cell name=\"rd_schimb\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n    <cell name=\"rd_randament\" width=\"125\"/>\n    <cell name=\"rd_rebut\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_lotstabilizare",
+  "nume": "Cautare: Lot de stabilizare",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_lotstabilizare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_stabilizare\"/>\n    <attribute name=\"rd_numarordine\"/>\n    <attribute name=\"rd_dataproductie\"/>\n    <attribute name=\"rd_schimb\"/>\n    <attribute name=\"rd_cantitate\"/>\n    <attribute name=\"rd_randament\"/>\n    <attribute name=\"rd_rebut\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_lotstabilizareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_stabilizare\" width=\"125\"/>\n    <cell name=\"rd_numarordine\" width=\"125\"/>\n    <cell name=\"rd_dataproductie\" width=\"125\"/>\n    <cell name=\"rd_schimb\" width=\"125\"/>\n    <cell name=\"rd_cantitate\" width=\"125\"/>\n    <cell name=\"rd_randament\" width=\"125\"/>\n    <cell name=\"rd_rebut\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_capabilitateproces",
+  "nume": "Toate: Capabilitate de proces",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_capabilitateproces\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_stabilizare\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_parametru\"/>\n    <attribute name=\"rd_perioadadela\"/>\n    <attribute name=\"rd_perioadapanala\"/>\n    <attribute name=\"rd_n\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_capabilitateprocesid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_stabilizare\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_parametru\" width=\"125\"/>\n    <cell name=\"rd_perioadadela\" width=\"125\"/>\n    <cell name=\"rd_perioadapanala\" width=\"125\"/>\n    <cell name=\"rd_n\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_capabilitateproces",
+  "nume": "Cautare: Capabilitate de proces",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_capabilitateproces\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_stabilizare\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_parametru\"/>\n    <attribute name=\"rd_perioadadela\"/>\n    <attribute name=\"rd_perioadapanala\"/>\n    <attribute name=\"rd_n\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_capabilitateprocesid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_stabilizare\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_parametru\" width=\"125\"/>\n    <cell name=\"rd_perioadadela\" width=\"125\"/>\n    <cell name=\"rd_perioadapanala\" width=\"125\"/>\n    <cell name=\"rd_n\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_lectie",
+  "nume": "Toate: Lectie invatata",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_lectie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_severitate\"/>\n    <attribute name=\"rd_nivelreutilizare\"/>\n    <attribute name=\"rd_categorieprodus\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_materieprima\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_lectieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_severitate\" width=\"125\"/>\n    <cell name=\"rd_nivelreutilizare\" width=\"125\"/>\n    <cell name=\"rd_categorieprodus\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_lectie",
+  "nume": "Active: Lectie invatata",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_lectie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_severitate\"/>\n    <attribute name=\"rd_nivelreutilizare\"/>\n    <attribute name=\"rd_categorieprodus\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_lectieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_severitate\" width=\"125\"/>\n    <cell name=\"rd_nivelreutilizare\" width=\"125\"/>\n    <cell name=\"rd_categorieprodus\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_lectie",
+  "nume": "Cautare: Lectie invatata",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_lectie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_titlu\"/>\n    <attribute name=\"rd_categorie\"/>\n    <attribute name=\"rd_severitate\"/>\n    <attribute name=\"rd_nivelreutilizare\"/>\n    <attribute name=\"rd_categorieprodus\"/>\n    <attribute name=\"rd_linie\"/>\n    <attribute name=\"rd_materieprima\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_lectieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_titlu\" width=\"125\"/>\n    <cell name=\"rd_categorie\" width=\"125\"/>\n    <cell name=\"rd_severitate\" width=\"125\"/>\n    <cell name=\"rd_nivelreutilizare\" width=\"125\"/>\n    <cell name=\"rd_categorieprodus\" width=\"125\"/>\n    <cell name=\"rd_linie\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_utilizarelectie",
+  "nume": "Toate: Utilizare de lectie",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_utilizarelectie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_lectie\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_persoana\"/>\n    <attribute name=\"rd_data\"/>\n    <attribute name=\"rd_rezultat\"/>\n    <attribute name=\"rd_zileevitate\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_utilizarelectieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_lectie\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_persoana\" width=\"125\"/>\n    <cell name=\"rd_data\" width=\"125\"/>\n    <cell name=\"rd_rezultat\" width=\"125\"/>\n    <cell name=\"rd_zileevitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_utilizarelectie",
+  "nume": "Cautare: Utilizare de lectie",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_utilizarelectie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_lectie\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_etapa\"/>\n    <attribute name=\"rd_persoana\"/>\n    <attribute name=\"rd_data\"/>\n    <attribute name=\"rd_rezultat\"/>\n    <attribute name=\"rd_zileevitate\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_utilizarelectieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_lectie\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_etapa\" width=\"125\"/>\n    <cell name=\"rd_persoana\" width=\"125\"/>\n    <cell name=\"rd_data\" width=\"125\"/>\n    <cell name=\"rd_rezultat\" width=\"125\"/>\n    <cell name=\"rd_zileevitate\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_recomandarelectie",
+  "nume": "Toate: Recomandare de lectie",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_recomandarelectie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_lectie\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_moment\"/>\n    <attribute name=\"rd_scorpotrivire\"/>\n    <attribute name=\"rd_motivpotrivire\"/>\n    <attribute name=\"rd_statusrecomandare\"/>\n    <attribute name=\"rd_motivrespingere\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_recomandarelectieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_lectie\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_moment\" width=\"125\"/>\n    <cell name=\"rd_scorpotrivire\" width=\"125\"/>\n    <cell name=\"rd_motivpotrivire\" width=\"125\"/>\n    <cell name=\"rd_statusrecomandare\" width=\"125\"/>\n    <cell name=\"rd_motivrespingere\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_recomandarelectie",
+  "nume": "Active: Recomandare de lectie",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_recomandarelectie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_lectie\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_moment\"/>\n    <attribute name=\"rd_scorpotrivire\"/>\n    <attribute name=\"rd_motivpotrivire\"/>\n    <attribute name=\"rd_statusrecomandare\"/>\n    <attribute name=\"rd_motivrespingere\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_recomandarelectieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_lectie\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_moment\" width=\"125\"/>\n    <cell name=\"rd_scorpotrivire\" width=\"125\"/>\n    <cell name=\"rd_motivpotrivire\" width=\"125\"/>\n    <cell name=\"rd_statusrecomandare\" width=\"125\"/>\n    <cell name=\"rd_motivrespingere\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_recomandarelectie",
+  "nume": "Cautare: Recomandare de lectie",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_recomandarelectie\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_lectie\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_moment\"/>\n    <attribute name=\"rd_scorpotrivire\"/>\n    <attribute name=\"rd_motivpotrivire\"/>\n    <attribute name=\"rd_statusrecomandare\"/>\n    <attribute name=\"rd_motivrespingere\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_recomandarelectieid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_lectie\" width=\"125\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_moment\" width=\"125\"/>\n    <cell name=\"rd_scorpotrivire\" width=\"125\"/>\n    <cell name=\"rd_motivpotrivire\" width=\"125\"/>\n    <cell name=\"rd_statusrecomandare\" width=\"125\"/>\n    <cell name=\"rd_motivrespingere\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_leadtimeistoric",
+  "nume": "Toate: Istoric de lead time",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_leadtimeistoric\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_furnizor\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_mpproiect\"/>\n    <attribute name=\"rd_datacomanda\"/>\n    <attribute name=\"rd_etainitial\"/>\n    <attribute name=\"rd_etafinal\"/>\n    <attribute name=\"rd_datalivrare\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_leadtimeistoricid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_furnizor\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_mpproiect\" width=\"125\"/>\n    <cell name=\"rd_datacomanda\" width=\"125\"/>\n    <cell name=\"rd_etainitial\" width=\"125\"/>\n    <cell name=\"rd_etafinal\" width=\"125\"/>\n    <cell name=\"rd_datalivrare\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_leadtimeistoric",
+  "nume": "Cautare: Istoric de lead time",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_leadtimeistoric\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_furnizor\"/>\n    <attribute name=\"rd_materieprima\"/>\n    <attribute name=\"rd_mpproiect\"/>\n    <attribute name=\"rd_datacomanda\"/>\n    <attribute name=\"rd_etainitial\"/>\n    <attribute name=\"rd_etafinal\"/>\n    <attribute name=\"rd_datalivrare\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_leadtimeistoricid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_furnizor\" width=\"125\"/>\n    <cell name=\"rd_materieprima\" width=\"125\"/>\n    <cell name=\"rd_mpproiect\" width=\"125\"/>\n    <cell name=\"rd_datacomanda\" width=\"125\"/>\n    <cell name=\"rd_etainitial\" width=\"125\"/>\n    <cell name=\"rd_etafinal\" width=\"125\"/>\n    <cell name=\"rd_datalivrare\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_snapshotsanatate",
+  "nume": "Toate: Snapshot de sanatate",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_snapshotsanatate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_data\"/>\n    <attribute name=\"rd_status\"/>\n    <attribute name=\"rd_etapatext\"/>\n    <attribute name=\"rd_scorsanatate\"/>\n    <attribute name=\"rd_nivel\"/>\n    <attribute name=\"rd_compriscuri\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_snapshotsanatateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_data\" width=\"125\"/>\n    <cell name=\"rd_status\" width=\"125\"/>\n    <cell name=\"rd_etapatext\" width=\"125\"/>\n    <cell name=\"rd_scorsanatate\" width=\"125\"/>\n    <cell name=\"rd_nivel\" width=\"125\"/>\n    <cell name=\"rd_compriscuri\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_snapshotsanatate",
+  "nume": "Active: Snapshot de sanatate",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_snapshotsanatate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_data\"/>\n    <attribute name=\"rd_status\"/>\n    <attribute name=\"rd_etapatext\"/>\n    <attribute name=\"rd_scorsanatate\"/>\n    <attribute name=\"rd_nivel\"/>\n    <attribute name=\"rd_compriscuri\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_snapshotsanatateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_data\" width=\"125\"/>\n    <cell name=\"rd_status\" width=\"125\"/>\n    <cell name=\"rd_etapatext\" width=\"125\"/>\n    <cell name=\"rd_scorsanatate\" width=\"125\"/>\n    <cell name=\"rd_nivel\" width=\"125\"/>\n    <cell name=\"rd_compriscuri\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_snapshotsanatate",
+  "nume": "Cautare: Snapshot de sanatate",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_snapshotsanatate\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_proiect\"/>\n    <attribute name=\"rd_data\"/>\n    <attribute name=\"rd_status\"/>\n    <attribute name=\"rd_etapatext\"/>\n    <attribute name=\"rd_scorsanatate\"/>\n    <attribute name=\"rd_nivel\"/>\n    <attribute name=\"rd_compriscuri\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_snapshotsanatateid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_proiect\" width=\"125\"/>\n    <cell name=\"rd_data\" width=\"125\"/>\n    <cell name=\"rd_status\" width=\"125\"/>\n    <cell name=\"rd_etapatext\" width=\"125\"/>\n    <cell name=\"rd_scorsanatate\" width=\"125\"/>\n    <cell name=\"rd_nivel\" width=\"125\"/>\n    <cell name=\"rd_compriscuri\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_logeroare",
+  "nume": "Toate: Log de eroare",
+  "querytype": 0,
+  "isdefault": true,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_logeroare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_flux\"/>\n    <attribute name=\"rd_correlationid\"/>\n    <attribute name=\"rd_tabela\"/>\n    <attribute name=\"rd_inregistrare\"/>\n    <attribute name=\"rd_pas\"/>\n    <attribute name=\"rd_reincercari\"/>\n    <attribute name=\"rd_statuslog\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_logeroareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_flux\" width=\"125\"/>\n    <cell name=\"rd_correlationid\" width=\"125\"/>\n    <cell name=\"rd_tabela\" width=\"125\"/>\n    <cell name=\"rd_inregistrare\" width=\"125\"/>\n    <cell name=\"rd_pas\" width=\"125\"/>\n    <cell name=\"rd_reincercari\" width=\"125\"/>\n    <cell name=\"rd_statuslog\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_logeroare",
+  "nume": "Active: Log de eroare",
+  "querytype": 0,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_logeroare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_flux\"/>\n    <attribute name=\"rd_correlationid\"/>\n    <attribute name=\"rd_tabela\"/>\n    <attribute name=\"rd_inregistrare\"/>\n    <attribute name=\"rd_pas\"/>\n    <attribute name=\"rd_reincercari\"/>\n    <attribute name=\"rd_statuslog\"/>\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n    </filter>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_logeroareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_flux\" width=\"125\"/>\n    <cell name=\"rd_correlationid\" width=\"125\"/>\n    <cell name=\"rd_tabela\" width=\"125\"/>\n    <cell name=\"rd_inregistrare\" width=\"125\"/>\n    <cell name=\"rd_pas\" width=\"125\"/>\n    <cell name=\"rd_reincercari\" width=\"125\"/>\n    <cell name=\"rd_statuslog\" width=\"125\"/>\n  </row>\n</grid>"
+ },
+ {
+  "entitate": "rd_logeroare",
+  "nume": "Cautare: Log de eroare",
+  "querytype": 4,
+  "isdefault": false,
+  "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" no-lock=\"true\">\n  <entity name=\"rd_logeroare\">\n    <attribute name=\"rd_name\"/>\n    <attribute name=\"rd_flux\"/>\n    <attribute name=\"rd_correlationid\"/>\n    <attribute name=\"rd_tabela\"/>\n    <attribute name=\"rd_inregistrare\"/>\n    <attribute name=\"rd_pas\"/>\n    <attribute name=\"rd_reincercari\"/>\n    <attribute name=\"rd_statuslog\"/>\n  </entity>\n</fetch>",
+  "layoutxml": "<grid name=\"resultset\" object=\"1\" jump=\"rd_name\" select=\"1\" icon=\"1\" preview=\"1\">\n  <row name=\"result\" id=\"rd_logeroareid\">\n    <cell name=\"rd_name\" width=\"200\"/>\n    <cell name=\"rd_flux\" width=\"125\"/>\n    <cell name=\"rd_correlationid\" width=\"125\"/>\n    <cell name=\"rd_tabela\" width=\"125\"/>\n    <cell name=\"rd_inregistrare\" width=\"125\"/>\n    <cell name=\"rd_pas\" width=\"125\"/>\n    <cell name=\"rd_reincercari\" width=\"125\"/>\n    <cell name=\"rd_statuslog\" width=\"125\"/>\n  </row>\n</grid>"
+ }
+]

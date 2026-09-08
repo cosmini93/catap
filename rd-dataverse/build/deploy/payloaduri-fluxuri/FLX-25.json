@@ -1,0 +1,142 @@
+{
+ "cod": "FLX-25",
+ "nume": "FLX-25 Materializarea riscului in problema",
+ "val": 2,
+ "conexiuni_necesare": [
+  "shared_commondataserviceforapps",
+  "shared_office365"
+ ],
+ "definitie": {
+  "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+   "$connections": {
+    "defaultValue": {},
+    "type": "Object"
+   },
+   "rd_EmailAdministrator": {
+    "type": "String",
+    "metadata": {
+     "variabila_de_mediu": true
+    }
+   }
+  },
+  "triggers": {
+   "cand_se_modifica": {
+    "type": "OpenApiConnectionWebhook",
+    "inputs": {
+     "host": {
+      "connectionName": "shared_commondataserviceforapps",
+      "operationId": "SubscribeWebhookTrigger"
+     },
+     "parameters": {
+      "subscriptionRequest/message": 3,
+      "subscriptionRequest/entityname": "rd_risc",
+      "subscriptionRequest/scope": 4
+     }
+    }
+   }
+  },
+  "actions": {
+   "Correlation_ID": {
+    "type": "Compose",
+    "runAfter": {},
+    "inputs": "@{guid()}",
+    "description": "Correlation ID pentru trasabilitate (22.6)"
+   },
+   "Try": {
+    "type": "Scope",
+    "runAfter": {
+     "Correlation_ID": [
+      "Succeeded"
+     ]
+    },
+    "actions": {
+     "Pas_01": {
+      "type": "Compose",
+      "runAfter": {},
+      "inputs": "DE IMPLEMENTAT: La status Produs: creeaza rd_problema precompletata din risc",
+      "description": "La status Produs: creeaza rd_problema precompletata din risc"
+     },
+     "Pas_02": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_01": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Leaga in ambele sensuri",
+      "description": "Leaga in ambele sensuri"
+     },
+     "Pas_03": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_02": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: NU inchide riscul - ramane inregistrat ca materializat",
+      "description": "NU inchide riscul - ramane inregistrat ca materializat"
+     }
+    },
+    "runtimeConfiguration": {
+     "retryPolicy": {
+      "type": "exponential",
+      "count": 4,
+      "interval": "PT10S"
+     }
+    }
+   },
+   "Catch": {
+    "type": "Scope",
+    "runAfter": {
+     "Try": [
+      "Failed",
+      "Skipped",
+      "TimedOut"
+     ]
+    },
+    "actions": {
+     "Scrie_in_log": {
+      "type": "OpenApiConnection",
+      "runAfter": {},
+      "inputs": {
+       "host": {
+        "connectionName": "shared_commondataserviceforapps",
+        "operationId": "CreateRecord"
+       },
+       "parameters": {
+        "entityName": "rd_logeroares",
+        "item/rd_flux": "FLX-25 Materializarea riscului in problema",
+        "item/rd_correlationid": "@{outputs('Correlation_ID')}",
+        "item/rd_mesaj": "@{result('Try')}",
+        "item/rd_statuslog": 100000000
+       }
+      },
+      "description": "TBL-59, cerinta 12.1.3"
+     },
+     "Notifica_administratorul": {
+      "type": "OpenApiConnection",
+      "runAfter": {
+       "Scrie_in_log": [
+        "Succeeded",
+        "Failed"
+       ]
+      },
+      "inputs": {
+       "host": {
+        "connectionName": "shared_office365",
+        "operationId": "SendEmailV2"
+       },
+       "parameters": {
+        "emailMessage/To": "@parameters('rd_EmailAdministrator')",
+        "emailMessage/Subject": "Esec FLX-25",
+        "emailMessage/Body": "@{result('Try')}"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

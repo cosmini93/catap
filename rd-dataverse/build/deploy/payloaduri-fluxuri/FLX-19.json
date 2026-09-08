@@ -1,0 +1,171 @@
+{
+ "cod": "FLX-19",
+ "nume": "FLX-19 Gestionarea documentelor",
+ "val": 2,
+ "conexiuni_necesare": [
+  "shared_commondataserviceforapps",
+  "shared_sharepointonline",
+  "shared_office365"
+ ],
+ "definitie": {
+  "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+   "$connections": {
+    "defaultValue": {},
+    "type": "Object"
+   },
+   "rd_EmailAdministrator": {
+    "type": "String",
+    "metadata": {
+     "variabila_de_mediu": true
+    }
+   }
+  },
+  "triggers": {
+   "cand_se_creeaza": {
+    "type": "OpenApiConnectionWebhook",
+    "inputs": {
+     "host": {
+      "connectionName": "shared_sharepointonline",
+      "operationId": "OnNewFileV2"
+     }
+    },
+    "metadata": {
+     "tinta": "SharePoint"
+    }
+   }
+  },
+  "actions": {
+   "Correlation_ID": {
+    "type": "Compose",
+    "runAfter": {},
+    "inputs": "@{guid()}",
+    "description": "Correlation ID pentru trasabilitate (22.6)"
+   },
+   "Try": {
+    "type": "Scope",
+    "runAfter": {
+     "Correlation_ID": [
+      "Succeeded"
+     ]
+    },
+    "actions": {
+     "Pas_01": {
+      "type": "Compose",
+      "runAfter": {},
+      "inputs": "DE IMPLEMENTAT: Extrage codul de proiect si tipul din numele fisierului",
+      "description": "Extrage codul de proiect si tipul din numele fisierului"
+     },
+     "Pas_02": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_01": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Completeaza cele 13 metadate din inregistrarea de proiect",
+      "description": "Completeaza cele 13 metadate din inregistrarea de proiect"
+     },
+     "Pas_03": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_02": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Leaga fisierul de livrabil si treci livrabilul in In lucru",
+      "description": "Leaga fisierul de livrabil si treci livrabilul in In lucru"
+     },
+     "Pas_04": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_03": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: La status Aprobat: publica versiune majora, aplica blocarea din 5.4.3",
+      "description": "La status Aprobat: publica versiune majora, aplica blocarea din 5.4.3"
+     },
+     "Pas_05": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_04": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Pentru fisierele confidentiale: permisiuni unice",
+      "description": "Pentru fisierele confidentiale: permisiuni unice"
+     },
+     "Pas_06": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_05": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Nume neconform: marcheaza Neclasificat si notifica autorul cu formatul corect",
+      "description": "Nume neconform: marcheaza Neclasificat si notifica autorul cu formatul corect"
+     }
+    },
+    "runtimeConfiguration": {
+     "retryPolicy": {
+      "type": "exponential",
+      "count": 4,
+      "interval": "PT10S"
+     }
+    }
+   },
+   "Catch": {
+    "type": "Scope",
+    "runAfter": {
+     "Try": [
+      "Failed",
+      "Skipped",
+      "TimedOut"
+     ]
+    },
+    "actions": {
+     "Scrie_in_log": {
+      "type": "OpenApiConnection",
+      "runAfter": {},
+      "inputs": {
+       "host": {
+        "connectionName": "shared_commondataserviceforapps",
+        "operationId": "CreateRecord"
+       },
+       "parameters": {
+        "entityName": "rd_logeroares",
+        "item/rd_flux": "FLX-19 Gestionarea documentelor",
+        "item/rd_correlationid": "@{outputs('Correlation_ID')}",
+        "item/rd_mesaj": "@{result('Try')}",
+        "item/rd_statuslog": 100000000
+       }
+      },
+      "description": "TBL-59, cerinta 12.1.3"
+     },
+     "Notifica_administratorul": {
+      "type": "OpenApiConnection",
+      "runAfter": {
+       "Scrie_in_log": [
+        "Succeeded",
+        "Failed"
+       ]
+      },
+      "inputs": {
+       "host": {
+        "connectionName": "shared_office365",
+        "operationId": "SendEmailV2"
+       },
+       "parameters": {
+        "emailMessage/To": "@parameters('rd_EmailAdministrator')",
+        "emailMessage/Subject": "Esec FLX-19",
+        "emailMessage/Body": "@{result('Try')}"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

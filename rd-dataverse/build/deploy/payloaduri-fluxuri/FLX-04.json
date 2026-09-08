@@ -1,0 +1,174 @@
+{
+ "cod": "FLX-04",
+ "nume": "FLX-04 Crearea proiectului-copil",
+ "val": 2,
+ "conexiuni_necesare": [
+  "shared_commondataserviceforapps",
+  "shared_sharepointonline",
+  "shared_office365"
+ ],
+ "definitie": {
+  "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+   "$connections": {
+    "defaultValue": {},
+    "type": "Object"
+   },
+   "rd_EmailAdministrator": {
+    "type": "String",
+    "metadata": {
+     "variabila_de_mediu": true
+    }
+   }
+  },
+  "triggers": {
+   "manual": {
+    "type": "Request",
+    "kind": "Button",
+    "inputs": {
+     "schema": {
+      "type": "object",
+      "properties": {
+       "recordId": {
+        "type": "string",
+        "title": "ID inregistrare"
+       }
+      }
+     }
+    }
+   }
+  },
+  "actions": {
+   "Correlation_ID": {
+    "type": "Compose",
+    "runAfter": {},
+    "inputs": "@{guid()}",
+    "description": "Correlation ID pentru trasabilitate (22.6)"
+   },
+   "Try": {
+    "type": "Scope",
+    "runAfter": {
+     "Correlation_ID": [
+      "Succeeded"
+     ]
+    },
+    "actions": {
+     "Pas_01": {
+      "type": "Compose",
+      "runAfter": {},
+      "inputs": "DE IMPLEMENTAT: Determina sufixul urmator disponibil",
+      "description": "Determina sufixul urmator disponibil"
+     },
+     "Pas_02": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_01": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Creeaza proiectul cu rd_proiectparinte completat",
+      "description": "Creeaza proiectul cu rd_proiectparinte completat"
+     },
+     "Pas_03": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_02": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Copiaza client, KAM, linie, tip, referinta, tehnolog",
+      "description": "Copiaza client, KAM, linie, tip, referinta, tehnolog"
+     },
+     "Pas_04": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_03": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Copiaza versiunea curenta de reteta cu toate liniile",
+      "description": "Copiaza versiunea curenta de reteta cu toate liniile"
+     },
+     "Pas_05": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_04": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Creeaza folderul ca subfolder al parintelui",
+      "description": "Creeaza folderul ca subfolder al parintelui"
+     },
+     "Pas_06": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_05": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Genereaza livrabilele conform sablonului de tip Abatere",
+      "description": "Genereaza livrabilele conform sablonului de tip Abatere"
+     }
+    },
+    "runtimeConfiguration": {
+     "retryPolicy": {
+      "type": "exponential",
+      "count": 4,
+      "interval": "PT10S"
+     }
+    }
+   },
+   "Catch": {
+    "type": "Scope",
+    "runAfter": {
+     "Try": [
+      "Failed",
+      "Skipped",
+      "TimedOut"
+     ]
+    },
+    "actions": {
+     "Scrie_in_log": {
+      "type": "OpenApiConnection",
+      "runAfter": {},
+      "inputs": {
+       "host": {
+        "connectionName": "shared_commondataserviceforapps",
+        "operationId": "CreateRecord"
+       },
+       "parameters": {
+        "entityName": "rd_logeroares",
+        "item/rd_flux": "FLX-04 Crearea proiectului-copil",
+        "item/rd_correlationid": "@{outputs('Correlation_ID')}",
+        "item/rd_mesaj": "@{result('Try')}",
+        "item/rd_statuslog": 100000000
+       }
+      },
+      "description": "TBL-59, cerinta 12.1.3"
+     },
+     "Notifica_administratorul": {
+      "type": "OpenApiConnection",
+      "runAfter": {
+       "Scrie_in_log": [
+        "Succeeded",
+        "Failed"
+       ]
+      },
+      "inputs": {
+       "host": {
+        "connectionName": "shared_office365",
+        "operationId": "SendEmailV2"
+       },
+       "parameters": {
+        "emailMessage/To": "@parameters('rd_EmailAdministrator')",
+        "emailMessage/Subject": "Esec FLX-04",
+        "emailMessage/Body": "@{result('Try')}"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

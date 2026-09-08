@@ -1,0 +1,156 @@
+{
+ "cod": "FLX-29",
+ "nume": "FLX-29 Snapshot de sanatate a proiectului",
+ "val": 3,
+ "conexiuni_necesare": [
+  "shared_commondataserviceforapps",
+  "shared_office365"
+ ],
+ "definitie": {
+  "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+   "$connections": {
+    "defaultValue": {},
+    "type": "Object"
+   },
+   "rd_EmailAdministrator": {
+    "type": "String",
+    "metadata": {
+     "variabila_de_mediu": true
+    }
+   }
+  },
+  "triggers": {
+   "Recurrence": {
+    "type": "Recurrence",
+    "recurrence": {
+     "frequency": "Day",
+     "interval": 1,
+     "schedule": {
+      "hours": [
+       "7"
+      ],
+      "minutes": [
+       0
+      ]
+     }
+    },
+    "metadata": {
+     "frecventa_ceruta": "luni"
+    }
+   }
+  },
+  "actions": {
+   "Correlation_ID": {
+    "type": "Compose",
+    "runAfter": {},
+    "inputs": "@{guid()}",
+    "description": "Correlation ID pentru trasabilitate (22.6)"
+   },
+   "Try": {
+    "type": "Scope",
+    "runAfter": {
+     "Correlation_ID": [
+      "Succeeded"
+     ]
+    },
+    "actions": {
+     "Pas_01": {
+      "type": "Compose",
+      "runAfter": {},
+      "inputs": "DE IMPLEMENTAT: Pentru fiecare proiect activ: calculeaza cele 7 componente din 24.3.2",
+      "description": "Pentru fiecare proiect activ: calculeaza cele 7 componente din 24.3.2"
+     },
+     "Pas_02": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_01": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Scrie rd_snapshotsanatate; inregistrarea nu se mai modifica",
+      "description": "Scrie rd_snapshotsanatate; inregistrarea nu se mai modifica"
+     },
+     "Pas_03": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_02": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Calculeaza variatia fata de saptamana trecuta",
+      "description": "Calculeaza variatia fata de saptamana trecuta"
+     },
+     "Pas_04": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_03": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Alerta la scadere de peste 15 puncte sau 3 saptamani consecutive de scadere",
+      "description": "Alerta la scadere de peste 15 puncte sau 3 saptamani consecutive de scadere"
+     }
+    },
+    "runtimeConfiguration": {
+     "retryPolicy": {
+      "type": "exponential",
+      "count": 4,
+      "interval": "PT10S"
+     }
+    }
+   },
+   "Catch": {
+    "type": "Scope",
+    "runAfter": {
+     "Try": [
+      "Failed",
+      "Skipped",
+      "TimedOut"
+     ]
+    },
+    "actions": {
+     "Scrie_in_log": {
+      "type": "OpenApiConnection",
+      "runAfter": {},
+      "inputs": {
+       "host": {
+        "connectionName": "shared_commondataserviceforapps",
+        "operationId": "CreateRecord"
+       },
+       "parameters": {
+        "entityName": "rd_logeroares",
+        "item/rd_flux": "FLX-29 Snapshot de sanatate a proiectului",
+        "item/rd_correlationid": "@{outputs('Correlation_ID')}",
+        "item/rd_mesaj": "@{result('Try')}",
+        "item/rd_statuslog": 100000000
+       }
+      },
+      "description": "TBL-59, cerinta 12.1.3"
+     },
+     "Notifica_administratorul": {
+      "type": "OpenApiConnection",
+      "runAfter": {
+       "Scrie_in_log": [
+        "Succeeded",
+        "Failed"
+       ]
+      },
+      "inputs": {
+       "host": {
+        "connectionName": "shared_office365",
+        "operationId": "SendEmailV2"
+       },
+       "parameters": {
+        "emailMessage/To": "@parameters('rd_EmailAdministrator')",
+        "emailMessage/Subject": "Esec FLX-29",
+        "emailMessage/Body": "@{result('Try')}"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

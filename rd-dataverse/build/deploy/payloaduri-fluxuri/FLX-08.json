@@ -1,0 +1,165 @@
+{
+ "cod": "FLX-08",
+ "nume": "FLX-08 Alerte de termen",
+ "val": 1,
+ "conexiuni_necesare": [
+  "shared_commondataserviceforapps"
+ ],
+ "definitie": {
+  "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+   "$connections": {
+    "defaultValue": {},
+    "type": "Object"
+   },
+   "rd_EmailAdministrator": {
+    "type": "String",
+    "metadata": {
+     "variabila_de_mediu": true
+    }
+   }
+  },
+  "triggers": {
+   "Recurrence": {
+    "type": "Recurrence",
+    "recurrence": {
+     "frequency": "Day",
+     "interval": 1,
+     "schedule": {
+      "hours": [
+       "7"
+      ],
+      "minutes": [
+       0
+      ]
+     }
+    },
+    "metadata": {
+     "frecventa_ceruta": "zilnic 07:00"
+    }
+   }
+  },
+  "actions": {
+   "Correlation_ID": {
+    "type": "Compose",
+    "runAfter": {},
+    "inputs": "@{guid()}",
+    "description": "Correlation ID pentru trasabilitate (22.6)"
+   },
+   "Try": {
+    "type": "Scope",
+    "runAfter": {
+     "Correlation_ID": [
+      "Succeeded"
+     ]
+    },
+    "actions": {
+     "Pas_01": {
+      "type": "Compose",
+      "runAfter": {},
+      "inputs": "DE IMPLEMENTAT: Livrabile cu termen peste 3 zile lucratoare: scrie in coada de alerte",
+      "description": "Livrabile cu termen peste 3 zile lucratoare: scrie in coada de alerte"
+     },
+     "Pas_02": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_01": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Livrabile depasite: scrie rd_zileintarziere si adauga in coada",
+      "description": "Livrabile depasite: scrie rd_zileintarziere si adauga in coada"
+     },
+     "Pas_03": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_02": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Depasite peste 10 zile: marcheaza pentru escaladare",
+      "description": "Depasite peste 10 zile: marcheaza pentru escaladare"
+     },
+     "Pas_04": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_03": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Proiecte cu termen negociat in 5 zile, fara implementare: adauga in coada",
+      "description": "Proiecte cu termen negociat in 5 zile, fara implementare: adauga in coada"
+     },
+     "Pas_05": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_04": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: NU trimite direct - FLX-30 consolideaza si trimite",
+      "description": "NU trimite direct - FLX-30 consolideaza si trimite"
+     }
+    },
+    "runtimeConfiguration": {
+     "retryPolicy": {
+      "type": "exponential",
+      "count": 4,
+      "interval": "PT10S"
+     }
+    }
+   },
+   "Catch": {
+    "type": "Scope",
+    "runAfter": {
+     "Try": [
+      "Failed",
+      "Skipped",
+      "TimedOut"
+     ]
+    },
+    "actions": {
+     "Scrie_in_log": {
+      "type": "OpenApiConnection",
+      "runAfter": {},
+      "inputs": {
+       "host": {
+        "connectionName": "shared_commondataserviceforapps",
+        "operationId": "CreateRecord"
+       },
+       "parameters": {
+        "entityName": "rd_logeroares",
+        "item/rd_flux": "FLX-08 Alerte de termen",
+        "item/rd_correlationid": "@{outputs('Correlation_ID')}",
+        "item/rd_mesaj": "@{result('Try')}",
+        "item/rd_statuslog": 100000000
+       }
+      },
+      "description": "TBL-59, cerinta 12.1.3"
+     },
+     "Notifica_administratorul": {
+      "type": "OpenApiConnection",
+      "runAfter": {
+       "Scrie_in_log": [
+        "Succeeded",
+        "Failed"
+       ]
+      },
+      "inputs": {
+       "host": {
+        "connectionName": "shared_office365",
+        "operationId": "SendEmailV2"
+       },
+       "parameters": {
+        "emailMessage/To": "@parameters('rd_EmailAdministrator')",
+        "emailMessage/Subject": "Esec FLX-08",
+        "emailMessage/Body": "@{result('Try')}"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

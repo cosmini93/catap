@@ -1,0 +1,98 @@
+[
+ {
+  "cod": "SCP",
+  "titlu": "Solicitare cerinta produs",
+  "document": "DOC-01",
+  "sectiuni": 9,
+  "campuri": 27,
+  "fisier": "SCP.docx"
+ },
+ {
+  "cod": "PLAN",
+  "titlu": "Plan de dezvoltare produs",
+  "document": "DOC-02",
+  "sectiuni": 10,
+  "campuri": 20,
+  "fisier": "PLAN.docx"
+ },
+ {
+  "cod": "FTEST",
+  "titlu": "Fisa de testare",
+  "document": "DOC-03",
+  "sectiuni": 8,
+  "campuri": 13,
+  "fisier": "FTEST.docx"
+ },
+ {
+  "cod": "RTEST",
+  "titlu": "Raport de testare",
+  "document": "DOC-04",
+  "sectiuni": 10,
+  "campuri": 21,
+  "fisier": "RTEST.docx"
+ },
+ {
+  "cod": "FSENZ",
+  "titlu": "Fisa de evaluare senzoriala",
+  "document": "DOC-05",
+  "sectiuni": 7,
+  "campuri": 15,
+  "fisier": "FSENZ.docx"
+ },
+ {
+  "cod": "ANTECALC",
+  "titlu": "Antecalcul",
+  "document": "DOC-06",
+  "sectiuni": 12,
+  "campuri": 22,
+  "fisier": "ANTECALC.docx"
+ },
+ {
+  "cod": "SDP",
+  "titlu": "Specificatie de produs",
+  "document": "DOC-07",
+  "sectiuni": 13,
+  "campuri": 22,
+  "fisier": "SDP.docx"
+ },
+ {
+  "cod": "CONDIPN",
+  "titlu": "Conditii IPN",
+  "document": "DOC-08a",
+  "sectiuni": 3,
+  "campuri": 6,
+  "fisier": "CONDIPN.docx"
+ },
+ {
+  "cod": "PLANIPN",
+  "titlu": "Plan IPN",
+  "document": "DOC-08b",
+  "sectiuni": 9,
+  "campuri": 19,
+  "fisier": "PLANIPN.docx"
+ },
+ {
+  "cod": "RPROD0",
+  "titlu": "Raport de productie 0",
+  "document": "DOC-09",
+  "sectiuni": 9,
+  "campuri": 27,
+  "fisier": "RPROD0.docx"
+ },
+ {
+  "cod": "TDV",
+  "titlu": "Dosar TDV validat",
+  "document": "DOC-10",
+  "sectiuni": 14,
+  "campuri": 30,
+  "fisier": "TDV.docx"
+ },
+ {
+  "cod": "RPI",
+  "titlu": "Raport de revizuire post-implementare",
+  "document": "DOC-11",
+  "sectiuni": 9,
+  "campuri": 27,
+  "fisier": "RPI.docx"
+ }
+]

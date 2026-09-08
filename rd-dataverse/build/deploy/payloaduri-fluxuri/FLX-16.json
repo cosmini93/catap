@@ -1,0 +1,166 @@
+{
+ "cod": "FLX-16",
+ "nume": "FLX-16 Calculul indicatorilor",
+ "val": 3,
+ "conexiuni_necesare": [
+  "shared_commondataserviceforapps",
+  "shared_office365"
+ ],
+ "definitie": {
+  "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+   "$connections": {
+    "defaultValue": {},
+    "type": "Object"
+   },
+   "rd_EmailAdministrator": {
+    "type": "String",
+    "metadata": {
+     "variabila_de_mediu": true
+    }
+   }
+  },
+  "triggers": {
+   "Recurrence": {
+    "type": "Recurrence",
+    "recurrence": {
+     "frequency": "Day",
+     "interval": 1,
+     "schedule": {
+      "hours": [
+       "7"
+      ],
+      "minutes": [
+       0
+      ]
+     }
+    },
+    "metadata": {
+     "frecventa_ceruta": "zilnic si lunar"
+    }
+   }
+  },
+  "actions": {
+   "Correlation_ID": {
+    "type": "Compose",
+    "runAfter": {},
+    "inputs": "@{guid()}",
+    "description": "Correlation ID pentru trasabilitate (22.6)"
+   },
+   "Try": {
+    "type": "Scope",
+    "runAfter": {
+     "Correlation_ID": [
+      "Succeeded"
+     ]
+    },
+    "actions": {
+     "Pas_01": {
+      "type": "Compose",
+      "runAfter": {},
+      "inputs": "DE IMPLEMENTAT: Zilnic: rd_zilecoada, rd_ttotalnet, rd_abateretermen, rd_ultimaactivitate",
+      "description": "Zilnic: rd_zilecoada, rd_ttotalnet, rd_abateretermen, rd_ultimaactivitate"
+     },
+     "Pas_02": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_01": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Lunar: T-Total prin reuniune de intervale de blocaj, nu prin suma (13.2.2)",
+      "description": "Lunar: T-Total prin reuniune de intervale de blocaj, nu prin suma (13.2.2)"
+     },
+     "Pas_03": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_02": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Lunar: Q-Corect ponderat pe cele 5 componente din 13.3.3",
+      "description": "Lunar: Q-Corect ponderat pe cele 5 componente din 13.3.3"
+     },
+     "Pas_04": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_03": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Lunar: Q-Complet la inchidere si in curs",
+      "description": "Lunar: Q-Complet la inchidere si in curs"
+     },
+     "Pas_05": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_04": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Scrie rd_masurareindicator; masuratorile nu se recalculeaza retroactiv",
+      "description": "Scrie rd_masurareindicator; masuratorile nu se recalculeaza retroactiv"
+     }
+    },
+    "runtimeConfiguration": {
+     "retryPolicy": {
+      "type": "exponential",
+      "count": 4,
+      "interval": "PT10S"
+     }
+    }
+   },
+   "Catch": {
+    "type": "Scope",
+    "runAfter": {
+     "Try": [
+      "Failed",
+      "Skipped",
+      "TimedOut"
+     ]
+    },
+    "actions": {
+     "Scrie_in_log": {
+      "type": "OpenApiConnection",
+      "runAfter": {},
+      "inputs": {
+       "host": {
+        "connectionName": "shared_commondataserviceforapps",
+        "operationId": "CreateRecord"
+       },
+       "parameters": {
+        "entityName": "rd_logeroares",
+        "item/rd_flux": "FLX-16 Calculul indicatorilor",
+        "item/rd_correlationid": "@{outputs('Correlation_ID')}",
+        "item/rd_mesaj": "@{result('Try')}",
+        "item/rd_statuslog": 100000000
+       }
+      },
+      "description": "TBL-59, cerinta 12.1.3"
+     },
+     "Notifica_administratorul": {
+      "type": "OpenApiConnection",
+      "runAfter": {
+       "Scrie_in_log": [
+        "Succeeded",
+        "Failed"
+       ]
+      },
+      "inputs": {
+       "host": {
+        "connectionName": "shared_office365",
+        "operationId": "SendEmailV2"
+       },
+       "parameters": {
+        "emailMessage/To": "@parameters('rd_EmailAdministrator')",
+        "emailMessage/Subject": "Esec FLX-16",
+        "emailMessage/Body": "@{result('Try')}"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

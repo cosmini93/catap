@@ -1,0 +1,4437 @@
+[
+ {
+  "nume": "RD Head",
+  "privilegii": {
+   "rd_solicitare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_proiect": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_livrabil": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_sablonlivrabil": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_etapa": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_sablonetapa": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_mpproiect": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_iteratiefurnizor": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_materieprima": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_furnizor": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_blocaj": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_ceremostra": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_miscaremostra": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_fisatestare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_trial": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_masuratoare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_statisticatrial": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_evaluaresenzoriala": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_criteriusenzorial": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_scorsenzorial": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_defect": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_defectconstatat": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_referinta": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_antecalcul": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_linieantecalcul": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_reteta": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_versiunereteta": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_liniereteta": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_alergen": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_specificatie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_sdp": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_eticheta": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_implementare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_productie0": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_inregistrareprod0": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_revizuire": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_linie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_profiltehnolog": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_client": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_indicator": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_masurareindicator": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_motiv": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_tipdocument": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_sablongate": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_criteriugate": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_gate": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_verificaregate": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_risc": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_problema": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_actiune": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_decizie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_stabilizare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_lotstabilizare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_capabilitateproces": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_lectie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_utilizarelectie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_recomandarelectie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_leadtimeistoric": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_snapshotsanatate": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_logeroare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   }
+  },
+  "numar_tabele_cu_acces": 60
+ },
+ {
+  "nume": "RD Administrator",
+  "privilegii": {
+   "rd_solicitare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_proiect": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_livrabil": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_sablonlivrabil": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_etapa": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_sablonetapa": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_mpproiect": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_iteratiefurnizor": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_materieprima": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_furnizor": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_blocaj": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_ceremostra": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_miscaremostra": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_fisatestare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_trial": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_masuratoare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_statisticatrial": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_evaluaresenzoriala": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_criteriusenzorial": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_scorsenzorial": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_defect": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_defectconstatat": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_referinta": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_antecalcul": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_linieantecalcul": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_reteta": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_versiunereteta": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_liniereteta": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_alergen": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_specificatie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_sdp": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_eticheta": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_implementare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_productie0": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_inregistrareprod0": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_revizuire": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_linie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_profiltehnolog": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_client": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_indicator": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_masurareindicator": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_motiv": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_tipdocument": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_sablongate": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_criteriugate": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_gate": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_verificaregate": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_risc": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_problema": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_actiune": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_decizie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_stabilizare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_lotstabilizare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_capabilitateproces": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_lectie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_utilizarelectie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_recomandarelectie": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_leadtimeistoric": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_snapshotsanatate": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   },
+   "rd_logeroare": {
+    "Create": 4,
+    "Read": 4,
+    "Write": 4,
+    "Delete": 4,
+    "Append": 4,
+    "AppendTo": 4,
+    "Assign": 4,
+    "Share": 4
+   }
+  },
+  "numar_tabele_cu_acces": 60
+ },
+ {
+  "nume": "RD Manager",
+  "privilegii": {
+   "rd_solicitare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_proiect": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_livrabil": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_sablonlivrabil": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_etapa": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_sablonetapa": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_mpproiect": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_iteratiefurnizor": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_materieprima": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_furnizor": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_blocaj": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Delete": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_ceremostra": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_miscaremostra": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_fisatestare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_trial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_masuratoare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_statisticatrial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_evaluaresenzoriala": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_criteriusenzorial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_scorsenzorial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_defect": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_defectconstatat": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_referinta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_antecalcul": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_linieantecalcul": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_reteta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_versiunereteta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_liniereteta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_alergen": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_specificatie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_sdp": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_eticheta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_implementare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_productie0": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_inregistrareprod0": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_revizuire": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_linie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_profiltehnolog": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_client": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_indicator": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_masurareindicator": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_motiv": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_tipdocument": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_sablongate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_criteriugate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_gate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_verificaregate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_risc": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_problema": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_actiune": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_decizie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_stabilizare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_lotstabilizare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_capabilitateproces": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_lectie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_utilizarelectie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_recomandarelectie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_leadtimeistoric": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_snapshotsanatate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   },
+   "rd_logeroare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Assign": 2,
+    "Share": 2
+   }
+  },
+  "numar_tabele_cu_acces": 60
+ },
+ {
+  "nume": "RD Tehnolog",
+  "privilegii": {
+   "rd_solicitare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_proiect": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_livrabil": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_sablonlivrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_etapa": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_sablonetapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_mpproiect": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_iteratiefurnizor": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_materieprima": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_furnizor": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_blocaj": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_ceremostra": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_miscaremostra": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_fisatestare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_trial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_masuratoare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_statisticatrial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_evaluaresenzoriala": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_criteriusenzorial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_scorsenzorial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_defect": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_defectconstatat": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_referinta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_antecalcul": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_linieantecalcul": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_reteta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_versiunereteta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_liniereteta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_alergen": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_specificatie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_sdp": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_eticheta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_implementare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_productie0": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_inregistrareprod0": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_revizuire": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_linie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_profiltehnolog": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_client": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_indicator": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_masurareindicator": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_motiv": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_tipdocument": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_sablongate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriugate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_gate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_verificaregate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_risc": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_problema": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_actiune": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_decizie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_stabilizare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_lotstabilizare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_capabilitateproces": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_lectie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_utilizarelectie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_recomandarelectie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_leadtimeistoric": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_snapshotsanatate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   },
+   "rd_logeroare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2,
+    "Share": 2
+   }
+  },
+  "numar_tabele_cu_acces": 60
+ },
+ {
+  "nume": "RD Suport",
+  "privilegii": {
+   "rd_solicitare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_proiect": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_livrabil": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonlivrabil": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_etapa": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonetapa": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_mpproiect": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_iteratiefurnizor": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_materieprima": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_furnizor": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_blocaj": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_ceremostra": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_miscaremostra": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_fisatestare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_trial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_masuratoare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_statisticatrial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_evaluaresenzoriala": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriusenzorial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_scorsenzorial": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_defect": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_defectconstatat": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_referinta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_reteta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_versiunereteta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_liniereteta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_alergen": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_specificatie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_sdp": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_eticheta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_implementare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_productie0": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_inregistrareprod0": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_revizuire": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_linie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_profiltehnolog": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_client": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_indicator": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_masurareindicator": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_motiv": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_tipdocument": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_sablongate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriugate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_gate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_verificaregate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_risc": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_problema": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_actiune": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_decizie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_stabilizare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_lotstabilizare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_capabilitateproces": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_lectie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_utilizarelectie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_recomandarelectie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_leadtimeistoric": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_snapshotsanatate": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_logeroare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   }
+  },
+  "numar_tabele_cu_acces": 58
+ },
+ {
+  "nume": "KAM",
+  "privilegii": {
+   "rd_solicitare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 1,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_proiect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_livrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonlivrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_etapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonetapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_mpproiect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_iteratiefurnizor": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_materieprima": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_furnizor": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_blocaj": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_ceremostra": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 1,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_miscaremostra": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_fisatestare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_trial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masuratoare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_statisticatrial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_evaluaresenzoriala": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriusenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_scorsenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_defect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_defectconstatat": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_referinta": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_reteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_alergen": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_specificatie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sdp": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_eticheta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_implementare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_productie0": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_inregistrareprod0": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_revizuire": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_profiltehnolog": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_client": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_indicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masurareindicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_motiv": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_tipdocument": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablongate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriugate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_gate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_verificaregate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_risc": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_problema": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_actiune": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_decizie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_stabilizare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lotstabilizare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_capabilitateproces": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_utilizarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_recomandarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_leadtimeistoric": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_snapshotsanatate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_logeroare": {
+    "Read": 2,
+    "AppendTo": 2
+   }
+  },
+  "numar_tabele_cu_acces": 56
+ },
+ {
+  "nume": "Comercial Manager",
+  "privilegii": {
+   "rd_solicitare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_proiect": {
+    "Read": 2,
+    "Write": 2,
+    "AppendTo": 2
+   },
+   "rd_livrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonlivrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_etapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonetapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_mpproiect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_iteratiefurnizor": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_materieprima": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_furnizor": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_blocaj": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_ceremostra": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_miscaremostra": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_fisatestare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_trial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masuratoare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_statisticatrial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_evaluaresenzoriala": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriusenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_scorsenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_defect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_defectconstatat": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_referinta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_antecalcul": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linieantecalcul": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_reteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_versiunereteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_liniereteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_alergen": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_specificatie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sdp": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_eticheta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_implementare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_productie0": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_inregistrareprod0": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_revizuire": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_profiltehnolog": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_client": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_indicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masurareindicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_motiv": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_tipdocument": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablongate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriugate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_gate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_verificaregate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_risc": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_problema": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_actiune": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_decizie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_stabilizare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lotstabilizare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_capabilitateproces": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_utilizarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_recomandarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_leadtimeistoric": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_snapshotsanatate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_logeroare": {
+    "Read": 2,
+    "AppendTo": 2
+   }
+  },
+  "numar_tabele_cu_acces": 60
+ },
+ {
+  "nume": "Achizitii",
+  "privilegii": {
+   "rd_solicitare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_proiect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_livrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonlivrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_etapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonetapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_mpproiect": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_iteratiefurnizor": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_materieprima": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_furnizor": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_blocaj": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_ceremostra": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_miscaremostra": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_fisatestare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_trial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masuratoare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_statisticatrial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_evaluaresenzoriala": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriusenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_scorsenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_defect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_defectconstatat": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_referinta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linieantecalcul": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_reteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_versiunereteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_liniereteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_alergen": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_specificatie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sdp": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_eticheta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_implementare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_productie0": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_inregistrareprod0": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_revizuire": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_profiltehnolog": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_client": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_indicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masurareindicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_motiv": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_tipdocument": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablongate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriugate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_gate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_verificaregate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_risc": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_problema": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_actiune": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_decizie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_stabilizare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lotstabilizare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_capabilitateproces": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_utilizarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_recomandarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_leadtimeistoric": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_snapshotsanatate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_logeroare": {
+    "Read": 2,
+    "AppendTo": 2
+   }
+  },
+  "numar_tabele_cu_acces": 59
+ },
+ {
+  "nume": "Calitate",
+  "privilegii": {
+   "rd_solicitare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_proiect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_livrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonlivrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_etapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonetapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_mpproiect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_iteratiefurnizor": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_materieprima": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_furnizor": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_blocaj": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_ceremostra": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_miscaremostra": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_fisatestare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_trial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masuratoare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_statisticatrial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_evaluaresenzoriala": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriusenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_scorsenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_defect": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_defectconstatat": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_referinta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linieantecalcul": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_reteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_versiunereteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_liniereteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_alergen": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_specificatie": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Delete": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_sdp": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_eticheta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_implementare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_productie0": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_inregistrareprod0": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_revizuire": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_profiltehnolog": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_client": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_indicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masurareindicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_motiv": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_tipdocument": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablongate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriugate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_gate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_verificaregate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_risc": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_problema": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_actiune": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_decizie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_stabilizare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lotstabilizare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_capabilitateproces": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_utilizarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_recomandarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_leadtimeistoric": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_snapshotsanatate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_logeroare": {
+    "Read": 2,
+    "AppendTo": 2
+   }
+  },
+  "numar_tabele_cu_acces": 59
+ },
+ {
+  "nume": "Planificare",
+  "privilegii": {
+   "rd_solicitare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_proiect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_livrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonlivrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_etapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonetapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_mpproiect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_iteratiefurnizor": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_materieprima": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_furnizor": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_blocaj": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_ceremostra": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_miscaremostra": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_fisatestare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_trial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masuratoare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_statisticatrial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_evaluaresenzoriala": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriusenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_scorsenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_defect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_defectconstatat": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_referinta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linieantecalcul": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_reteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_versiunereteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_liniereteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_alergen": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_specificatie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sdp": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_eticheta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_implementare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_productie0": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_inregistrareprod0": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_revizuire": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_profiltehnolog": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_client": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_indicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masurareindicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_motiv": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_tipdocument": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablongate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriugate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_gate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_verificaregate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_risc": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_problema": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_actiune": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_decizie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_stabilizare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lotstabilizare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_capabilitateproces": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_utilizarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_recomandarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_leadtimeistoric": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_snapshotsanatate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_logeroare": {
+    "Read": 2,
+    "AppendTo": 2
+   }
+  },
+  "numar_tabele_cu_acces": 59
+ },
+ {
+  "nume": "Productie",
+  "privilegii": {
+   "rd_solicitare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_proiect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_livrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonlivrabil": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_etapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablonetapa": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_mpproiect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_iteratiefurnizor": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_materieprima": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_furnizor": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_blocaj": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_ceremostra": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_miscaremostra": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_fisatestare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_trial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masuratoare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 1,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_statisticatrial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_evaluaresenzoriala": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriusenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_scorsenzorial": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_defect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_defectconstatat": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_referinta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linieantecalcul": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_reteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_versiunereteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_liniereteta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_alergen": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_specificatie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sdp": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_eticheta": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_implementare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_productie0": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_inregistrareprod0": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_revizuire": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_profiltehnolog": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_client": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_indicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_masurareindicator": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_motiv": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_tipdocument": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_sablongate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_criteriugate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_gate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_verificaregate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_risc": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_problema": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_actiune": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_decizie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_stabilizare": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lotstabilizare": {
+    "Create": 2,
+    "Read": 2,
+    "Write": 2,
+    "Append": 2,
+    "AppendTo": 2
+   },
+   "rd_capabilitateproces": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_lectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_utilizarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_recomandarelectie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_leadtimeistoric": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_snapshotsanatate": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_logeroare": {
+    "Read": 2,
+    "AppendTo": 2
+   }
+  },
+  "numar_tabele_cu_acces": 59
+ },
+ {
+  "nume": "Cititor companie",
+  "privilegii": {
+   "rd_proiect": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_linie": {
+    "Read": 2,
+    "AppendTo": 2
+   },
+   "rd_client": {
+    "Read": 2,
+    "AppendTo": 2
+   }
+  },
+  "numar_tabele_cu_acces": 3
+ },
+ {
+  "nume": "RD Auditor",
+  "privilegii": {
+   "rd_solicitare": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_proiect": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_livrabil": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_sablonlivrabil": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_etapa": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_sablonetapa": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_mpproiect": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_iteratiefurnizor": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_materieprima": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_furnizor": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_blocaj": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_ceremostra": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_miscaremostra": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_fisatestare": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_trial": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_masuratoare": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_statisticatrial": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_evaluaresenzoriala": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_criteriusenzorial": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_scorsenzorial": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_defect": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_defectconstatat": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_referinta": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_antecalcul": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_linieantecalcul": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_reteta": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_versiunereteta": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_liniereteta": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_alergen": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_specificatie": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_sdp": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_eticheta": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_implementare": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_productie0": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_inregistrareprod0": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_revizuire": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_linie": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_profiltehnolog": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_client": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_indicator": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_masurareindicator": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_motiv": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_tipdocument": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_sablongate": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_criteriugate": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_gate": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_verificaregate": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_risc": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_problema": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_actiune": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_decizie": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_stabilizare": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_lotstabilizare": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_capabilitateproces": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_lectie": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_utilizarelectie": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_recomandarelectie": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_leadtimeistoric": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_snapshotsanatate": {
+    "Read": 4,
+    "AppendTo": 4
+   },
+   "rd_logeroare": {
+    "Read": 4,
+    "AppendTo": 4
+   }
+  },
+  "numar_tabele_cu_acces": 60
+ }
+]

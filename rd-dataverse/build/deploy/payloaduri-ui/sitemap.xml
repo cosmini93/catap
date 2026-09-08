@@ -1,0 +1,212 @@
+<SiteMap>
+  <Area Id="area_Lucrulmeu" ResourceId="Home" ShowGroups="true">
+    <Titles><Title LCID="1048" Title="Lucrul meu"/></Titles>
+    <Group Id="grp_Lucrulmeu">
+      <Titles><Title LCID="1048" Title="Lucrul meu"/></Titles>
+        <SubArea Id="sa_Proiectelemele_rd_proiect" Entity="rd_proiect">
+          <Titles><Title LCID="1048" Title="Proiectele mele"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Livrabilelemele_rd_livrabil" Entity="rd_livrabil">
+          <Titles><Title LCID="1048" Title="Livrabilele mele"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Actiunilemele_rd_actiune" Entity="rd_actiune">
+          <Titles><Title LCID="1048" Title="Actiunile mele"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Gateurideevaluat_rd_gate" Entity="rd_gate">
+          <Titles><Title LCID="1048" Title="Gate-uri de evaluat"/></Titles>
+        </SubArea>
+    </Group>
+  </Area>
+  <Area Id="area_Solicitari" ResourceId="Sales" ShowGroups="true">
+    <Titles><Title LCID="1048" Title="Solicitari"/></Titles>
+    <Group Id="grp_Solicitari">
+      <Titles><Title LCID="1048" Title="Solicitari"/></Titles>
+        <SubArea Id="sa_Solicitari_rd_solicitare" Entity="rd_solicitare">
+          <Titles><Title LCID="1048" Title="Solicitari"/></Titles>
+        </SubArea>
+    </Group>
+  </Area>
+  <Area Id="area_Proiecte" ResourceId="Service" ShowGroups="true">
+    <Titles><Title LCID="1048" Title="Proiecte"/></Titles>
+    <Group Id="grp_Proiecte">
+      <Titles><Title LCID="1048" Title="Proiecte"/></Titles>
+        <SubArea Id="sa_Proiecte_rd_proiect" Entity="rd_proiect">
+          <Titles><Title LCID="1048" Title="Proiecte"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Etape_rd_etapa" Entity="rd_etapa">
+          <Titles><Title LCID="1048" Title="Etape"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Livrabile_rd_livrabil" Entity="rd_livrabil">
+          <Titles><Title LCID="1048" Title="Livrabile"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Gateuri_rd_gate" Entity="rd_gate">
+          <Titles><Title LCID="1048" Title="Gate-uri"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Riscuri_rd_risc" Entity="rd_risc">
+          <Titles><Title LCID="1048" Title="Riscuri"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Probleme_rd_problema" Entity="rd_problema">
+          <Titles><Title LCID="1048" Title="Probleme"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Blocaje_rd_blocaj" Entity="rd_blocaj">
+          <Titles><Title LCID="1048" Title="Blocaje"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Decizii_rd_decizie" Entity="rd_decizie">
+          <Titles><Title LCID="1048" Title="Decizii"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Actiuni_rd_actiune" Entity="rd_actiune">
+          <Titles><Title LCID="1048" Title="Actiuni"/></Titles>
+        </SubArea>
+    </Group>
+  </Area>
+  <Area Id="area_Executie" ResourceId="Marketing" ShowGroups="true">
+    <Titles><Title LCID="1048" Title="Executie"/></Titles>
+    <Group Id="grp_Executie">
+      <Titles><Title LCID="1048" Title="Executie"/></Titles>
+        <SubArea Id="sa_Fisedetestare_rd_fisatestare" Entity="rd_fisatestare">
+          <Titles><Title LCID="1048" Title="Fise de testare"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Trialuri_rd_trial" Entity="rd_trial">
+          <Titles><Title LCID="1048" Title="Trialuri"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Evaluarisenzoriale_rd_evaluaresenzoriala" Entity="rd_evaluaresenzoriala">
+          <Titles><Title LCID="1048" Title="Evaluari senzoriale"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Retete_rd_reteta" Entity="rd_reteta">
+          <Titles><Title LCID="1048" Title="Retete"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Versiunidereteta_rd_versiunereteta" Entity="rd_versiunereteta">
+          <Titles><Title LCID="1048" Title="Versiuni de reteta"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Antecalcule_rd_antecalcul" Entity="rd_antecalcul">
+          <Titles><Title LCID="1048" Title="Antecalcule"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Referinte_rd_referinta" Entity="rd_referinta">
+          <Titles><Title LCID="1048" Title="Referinte"/></Titles>
+        </SubArea>
+    </Group>
+  </Area>
+  <Area Id="area_Materiiprime" ResourceId="Settings" ShowGroups="true">
+    <Titles><Title LCID="1048" Title="Materii prime"/></Titles>
+    <Group Id="grp_Materiiprime">
+      <Titles><Title LCID="1048" Title="Materii prime"/></Titles>
+        <SubArea Id="sa_MPdeproiect_rd_mpproiect" Entity="rd_mpproiect">
+          <Titles><Title LCID="1048" Title="MP de proiect"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_CatalogMP_rd_materieprima" Entity="rd_materieprima">
+          <Titles><Title LCID="1048" Title="Catalog MP"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Furnizori_rd_furnizor" Entity="rd_furnizor">
+          <Titles><Title LCID="1048" Title="Furnizori"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Iteratiidefurnizor_rd_iteratiefurnizor" Entity="rd_iteratiefurnizor">
+          <Titles><Title LCID="1048" Title="Iteratii de furnizor"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Istoricleadtime_rd_leadtimeistoric" Entity="rd_leadtimeistoric">
+          <Titles><Title LCID="1048" Title="Istoric lead time"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Cereridemostra_rd_ceremostra" Entity="rd_ceremostra">
+          <Titles><Title LCID="1048" Title="Cereri de mostra"/></Titles>
+        </SubArea>
+    </Group>
+  </Area>
+  <Area Id="area_Industrializare" ResourceId="Service" ShowGroups="true">
+    <Titles><Title LCID="1048" Title="Industrializare"/></Titles>
+    <Group Id="grp_Industrializare">
+      <Titles><Title LCID="1048" Title="Industrializare"/></Titles>
+        <SubArea Id="sa_ImplementariIPN_rd_implementare" Entity="rd_implementare">
+          <Titles><Title LCID="1048" Title="Implementari IPN"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Productii_rd_productie0" Entity="rd_productie0">
+          <Titles><Title LCID="1048" Title="Productii 0"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Stabilizari_rd_stabilizare" Entity="rd_stabilizare">
+          <Titles><Title LCID="1048" Title="Stabilizari"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Capabilitatedeproces_rd_capabilitateproces" Entity="rd_capabilitateproces">
+          <Titles><Title LCID="1048" Title="Capabilitate de proces"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Revizuiri_rd_revizuire" Entity="rd_revizuire">
+          <Titles><Title LCID="1048" Title="Revizuiri"/></Titles>
+        </SubArea>
+    </Group>
+  </Area>
+  <Area Id="area_Specificatii" ResourceId="Settings" ShowGroups="true">
+    <Titles><Title LCID="1048" Title="Specificatii"/></Titles>
+    <Group Id="grp_Specificatii">
+      <Titles><Title LCID="1048" Title="Specificatii"/></Titles>
+        <SubArea Id="sa_Specificatiitehnice_rd_specificatie" Entity="rd_specificatie">
+          <Titles><Title LCID="1048" Title="Specificatii tehnice"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_SDP_rd_sdp" Entity="rd_sdp">
+          <Titles><Title LCID="1048" Title="SDP"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Etichete_rd_eticheta" Entity="rd_eticheta">
+          <Titles><Title LCID="1048" Title="Etichete"/></Titles>
+        </SubArea>
+    </Group>
+  </Area>
+  <Area Id="area_Cunoastere" ResourceId="Marketing" ShowGroups="true">
+    <Titles><Title LCID="1048" Title="Cunoastere"/></Titles>
+    <Group Id="grp_Cunoastere">
+      <Titles><Title LCID="1048" Title="Cunoastere"/></Titles>
+        <SubArea Id="sa_Lectiiinvatate_rd_lectie" Entity="rd_lectie">
+          <Titles><Title LCID="1048" Title="Lectii invatate"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Utilizaridelectii_rd_utilizarelectie" Entity="rd_utilizarelectie">
+          <Titles><Title LCID="1048" Title="Utilizari de lectii"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Recomandari_rd_recomandarelectie" Entity="rd_recomandarelectie">
+          <Titles><Title LCID="1048" Title="Recomandari"/></Titles>
+        </SubArea>
+    </Group>
+  </Area>
+  <Area Id="area_Configurare" ResourceId="Settings" ShowGroups="true">
+    <Titles><Title LCID="1048" Title="Configurare"/></Titles>
+    <Group Id="grp_Configurare">
+      <Titles><Title LCID="1048" Title="Configurare"/></Titles>
+        <SubArea Id="sa_Sabloanedelivrabile_rd_sablonlivrabil" Entity="rd_sablonlivrabil">
+          <Titles><Title LCID="1048" Title="Sabloane de livrabile"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Sabloanedeetape_rd_sablonetapa" Entity="rd_sablonetapa">
+          <Titles><Title LCID="1048" Title="Sabloane de etape"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Sabloanedegate_rd_sablongate" Entity="rd_sablongate">
+          <Titles><Title LCID="1048" Title="Sabloane de gate"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Criteriidegate_rd_criteriugate" Entity="rd_criteriugate">
+          <Titles><Title LCID="1048" Title="Criterii de gate"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Liniideproductie_rd_linie" Entity="rd_linie">
+          <Titles><Title LCID="1048" Title="Linii de productie"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Clienti_rd_client" Entity="rd_client">
+          <Titles><Title LCID="1048" Title="Clienti"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Profiluridetehnolog_rd_profiltehnolog" Entity="rd_profiltehnolog">
+          <Titles><Title LCID="1048" Title="Profiluri de tehnolog"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Criteriisenzoriale_rd_criteriusenzorial" Entity="rd_criteriusenzorial">
+          <Titles><Title LCID="1048" Title="Criterii senzoriale"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Defecte_rd_defect" Entity="rd_defect">
+          <Titles><Title LCID="1048" Title="Defecte"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Motive_rd_motiv" Entity="rd_motiv">
+          <Titles><Title LCID="1048" Title="Motive"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Tipuridedocumente_rd_tipdocument" Entity="rd_tipdocument">
+          <Titles><Title LCID="1048" Title="Tipuri de documente"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Alergeni_rd_alergen" Entity="rd_alergen">
+          <Titles><Title LCID="1048" Title="Alergeni"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Indicatori_rd_indicator" Entity="rd_indicator">
+          <Titles><Title LCID="1048" Title="Indicatori"/></Titles>
+        </SubArea>
+        <SubArea Id="sa_Logdeerori_rd_logeroare" Entity="rd_logeroare">
+          <Titles><Title LCID="1048" Title="Log de erori"/></Titles>
+        </SubArea>
+    </Group>
+  </Area>
+</SiteMap>

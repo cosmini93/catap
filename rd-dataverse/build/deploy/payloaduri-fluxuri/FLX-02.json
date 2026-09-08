@@ -1,0 +1,172 @@
+{
+ "cod": "FLX-02",
+ "nume": "FLX-02 Generarea arborelui de foldere SharePoint",
+ "val": 1,
+ "conexiuni_necesare": [
+  "shared_commondataserviceforapps",
+  "shared_sharepointonline"
+ ],
+ "definitie": {
+  "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+   "$connections": {
+    "defaultValue": {},
+    "type": "Object"
+   },
+   "rd_EmailAdministrator": {
+    "type": "String",
+    "metadata": {
+     "variabila_de_mediu": true
+    }
+   }
+  },
+  "triggers": {
+   "manual": {
+    "type": "Request",
+    "kind": "Skill",
+    "inputs": {
+     "schema": {
+      "type": "object",
+      "properties": {
+       "proiectId": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   }
+  },
+  "actions": {
+   "Correlation_ID": {
+    "type": "Compose",
+    "runAfter": {},
+    "inputs": "@{guid()}",
+    "description": "Correlation ID pentru trasabilitate (22.6)"
+   },
+   "Try": {
+    "type": "Scope",
+    "runAfter": {
+     "Correlation_ID": [
+      "Succeeded"
+     ]
+    },
+    "actions": {
+     "Pas_01": {
+      "type": "Compose",
+      "runAfter": {},
+      "inputs": "DE IMPLEMENTAT: Creeaza folderul de an daca nu exista",
+      "description": "Creeaza folderul de an daca nu exista"
+     },
+     "Pas_02": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_01": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Curata numele produsului de caractere interzise si trunchiaza la 100",
+      "description": "Curata numele produsului de caractere interzise si trunchiaza la 100"
+     },
+     "Pas_03": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_02": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Creeaza folderul de proiect {cod}_{nume produs}",
+      "description": "Creeaza folderul de proiect {cod}_{nume produs}"
+     },
+     "Pas_04": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_03": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Creeaza cele 10 subfoldere din 5.1.1",
+      "description": "Creeaza cele 10 subfoldere din 5.1.1"
+     },
+     "Pas_05": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_04": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Creeaza SharePointDocumentLocation catre folderul radacina",
+      "description": "Creeaza SharePointDocumentLocation catre folderul radacina"
+     },
+     "Pas_06": {
+      "type": "Compose",
+      "runAfter": {
+       "Pas_05": [
+        "Succeeded"
+       ]
+      },
+      "inputs": "DE IMPLEMENTAT: Scrie URL-ul in rd_folderurl",
+      "description": "Scrie URL-ul in rd_folderurl"
+     }
+    },
+    "runtimeConfiguration": {
+     "retryPolicy": {
+      "type": "exponential",
+      "count": 4,
+      "interval": "PT10S"
+     }
+    }
+   },
+   "Catch": {
+    "type": "Scope",
+    "runAfter": {
+     "Try": [
+      "Failed",
+      "Skipped",
+      "TimedOut"
+     ]
+    },
+    "actions": {
+     "Scrie_in_log": {
+      "type": "OpenApiConnection",
+      "runAfter": {},
+      "inputs": {
+       "host": {
+        "connectionName": "shared_commondataserviceforapps",
+        "operationId": "CreateRecord"
+       },
+       "parameters": {
+        "entityName": "rd_logeroares",
+        "item/rd_flux": "FLX-02 Generarea arborelui de foldere SharePoint",
+        "item/rd_correlationid": "@{outputs('Correlation_ID')}",
+        "item/rd_mesaj": "@{result('Try')}",
+        "item/rd_statuslog": 100000000
+       }
+      },
+      "description": "TBL-59, cerinta 12.1.3"
+     },
+     "Notifica_administratorul": {
+      "type": "OpenApiConnection",
+      "runAfter": {
+       "Scrie_in_log": [
+        "Succeeded",
+        "Failed"
+       ]
+      },
+      "inputs": {
+       "host": {
+        "connectionName": "shared_office365",
+        "operationId": "SendEmailV2"
+       },
+       "parameters": {
+        "emailMessage/To": "@parameters('rd_EmailAdministrator')",
+        "emailMessage/Subject": "Esec FLX-02",
+        "emailMessage/Body": "@{result('Try')}"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
