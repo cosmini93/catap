@@ -1,0 +1,789 @@
+<title>Suita R&D Preview</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#EEF0F3; --surface:#FFFFFF; --surface2:#F7F8FA; --surface3:#EAEDF1;
+  --ink:#171A20; --ink2:#3D444F; --muted:#697588; --line:#D7DBE1; --line2:#C3C9D2;
+  --accent:#9E5A18; --accent-soft:#F2E4D4;
+  --ok:#2E7A50; --ok-soft:#DFF0E6; --warn:#B0730A; --warn-soft:#FAEDD3;
+  --bad:#B02A24; --bad-soft:#F8E0DE; --info:#2B5CA6; --info-soft:#DEE8F7;
+  --shadow:0 1px 2px rgba(20,26,36,.06),0 4px 12px rgba(20,26,36,.05);
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101318; --surface:#191D23; --surface2:#20252C; --surface3:#272D36;
+  --ink:#E6E9ED; --ink2:#B9C0CA; --muted:#8C97A6; --line:#2B323B; --line2:#3A424D;
+  --accent:#D4914C; --accent-soft:#3A2A18;
+  --ok:#5FBE8A; --ok-soft:#17301F; --warn:#DDA53C; --warn-soft:#332612;
+  --bad:#E4756C; --bad-soft:#341A18; --info:#6E9EE0; --info-soft:#15243A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --ground:#101318; --surface:#191D23; --surface2:#20252C; --surface3:#272D36;
+  --ink:#E6E9ED; --ink2:#B9C0CA; --muted:#8C97A6; --line:#2B323B; --line2:#3A424D;
+  --accent:#D4914C; --accent-soft:#3A2A18;
+  --ok:#5FBE8A; --ok-soft:#17301F; --warn:#DDA53C; --warn-soft:#332612;
+  --bad:#E4756C; --bad-soft:#341A18; --info:#6E9EE0; --info-soft:#15243A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+  font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3{text-wrap:balance;margin:0}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---------- intro ---------- */
+.intro{max-width:1180px;margin:0 auto;padding:36px 24px 20px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);font-weight:600;margin-bottom:12px}
+.intro h1{font-size:30px;font-weight:600;letter-spacing:-.02em;max-width:22ch}
+.intro p{color:var(--ink2);max-width:68ch;margin:12px 0 0;font-size:15px}
+.counts{display:flex;flex-wrap:wrap;gap:0;margin-top:22px;border:1px solid var(--line);
+  border-radius:6px;background:var(--surface);overflow:hidden}
+.count{flex:1 1 110px;padding:12px 16px;border-right:1px solid var(--line)}
+.count:last-child{border-right:0}
+.count b{display:block;font-family:var(--mono);font-size:19px;font-weight:600;letter-spacing:-.02em}
+.count span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+
+/* ---------- screen switcher ---------- */
+.switch{max-width:1180px;margin:0 auto;padding:0 24px;display:flex;gap:2px;flex-wrap:wrap}
+.switch button{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted);
+  background:none;border:0;border-bottom:2px solid transparent;padding:10px 14px;cursor:pointer}
+.switch button:hover{color:var(--ink)}
+.switch button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.switch button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:3px}
+
+/* ---------- app shell ---------- */
+.stage{max-width:1180px;margin:0 auto 44px;padding:0 24px}
+.app{border:1px solid var(--line2);border-radius:8px;overflow:hidden;background:var(--surface);
+  box-shadow:var(--shadow);display:grid;grid-template-columns:214px 1fr;min-height:560px}
+.rail{background:var(--surface2);border-right:1px solid var(--line);padding:10px 0;
+  overflow-y:auto;max-height:640px}
+.rail .brand{padding:8px 14px 12px;font-weight:600;font-size:13px;display:flex;align-items:center;gap:7px}
+.rail .brand i{width:16px;height:16px;border-radius:3px;background:var(--accent);display:block;flex:none}
+.area{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);padding:12px 14px 4px}
+.rail a{display:block;padding:5px 14px 5px 20px;color:var(--ink2);text-decoration:none;font-size:13px}
+.rail a:hover{background:var(--surface3);color:var(--ink)}
+.rail a.on{background:var(--accent-soft);color:var(--accent);font-weight:600;
+  box-shadow:inset 3px 0 0 var(--accent)}
+.pane{overflow:hidden;display:flex;flex-direction:column}
+.cmdbar{display:flex;align-items:center;gap:8px;padding:9px 16px;border-bottom:1px solid var(--line);
+  background:var(--surface);flex-wrap:wrap}
+.cmd{font-size:12.5px;color:var(--ink2);padding:4px 9px;border:1px solid var(--line);
+  border-radius:4px;background:var(--surface2);white-space:nowrap}
+.cmd.primary{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:500}
+:root[data-theme="dark"] .cmd.primary{color:#1A1207}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cmd.primary{color:#1A1207}}
+.body{padding:16px;overflow-y:auto;max-height:592px}
+
+/* ---------- record header ---------- */
+.rechead{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  padding-bottom:14px;border-bottom:1px solid var(--line)}
+.rechead h2{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.rechead .sub{color:var(--muted);font-size:12.5px;margin-top:3px}
+.hdrfields{display:flex;gap:22px;flex-wrap:wrap}
+.hf{min-width:96px}
+.hf span{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.hf b{font-weight:500;font-size:13.5px}
+
+/* ---------- tabs inside form ---------- */
+.ftabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin:0 -16px 16px;padding:0 16px;
+  overflow-x:auto}
+.ftabs button{font-family:var(--sans);font-size:12.5px;color:var(--muted);background:none;border:0;
+  border-bottom:2px solid transparent;padding:9px 12px;cursor:pointer;white-space:nowrap}
+.ftabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink);font-weight:500}
+.ftabs button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+
+/* ---------- field grid ---------- */
+.sect{margin-bottom:20px}
+.sect > h3{font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);
+  font-weight:600;padding-bottom:7px;border-bottom:1px solid var(--line);margin-bottom:11px}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:9px 26px}
+.f{display:grid;grid-template-columns:142px 1fr;gap:10px;align-items:baseline;
+  padding:4px 0;border-bottom:1px dotted var(--line)}
+.f > span{color:var(--muted);font-size:12.5px}
+.f > div{font-size:13px}
+.f .ro{color:var(--ink2);background:var(--surface3);border-radius:3px;padding:1px 6px;
+  display:inline-block;font-size:12px}
+.f .lk{color:var(--info);text-decoration:underline;text-decoration-color:var(--line2);
+  text-underline-offset:2px}
+
+/* ---------- pills ---------- */
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:500;
+  padding:2px 8px;border-radius:20px;white-space:nowrap}
+.pill i{width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
+.p-ok{background:var(--ok-soft);color:var(--ok)}
+.p-warn{background:var(--warn-soft);color:var(--warn)}
+.p-bad{background:var(--bad-soft);color:var(--bad)}
+.p-info{background:var(--info-soft);color:var(--info)}
+.p-mut{background:var(--surface3);color:var(--muted)}
+.band{font-family:var(--mono);font-weight:600;font-size:11.5px;padding:2px 7px;border-radius:3px}
+.b1{background:var(--bad-soft);color:var(--bad)}
+.b2{background:var(--warn-soft);color:var(--warn)}
+.b3{background:var(--info-soft);color:var(--info)}
+.b4{background:var(--surface3);color:var(--muted)}
+
+/* ---------- grid / table ---------- */
+.gridwrap{overflow-x:auto;border:1px solid var(--line);border-radius:5px}
+table{border-collapse:collapse;width:100%;font-size:12.5px;min-width:640px}
+th{text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--muted);padding:8px 11px;background:var(--surface2);border-bottom:1px solid var(--line);
+  white-space:nowrap;position:sticky;top:0}
+td{padding:8px 11px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:var(--surface2)}
+td.num{font-family:var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+td.code{font-family:var(--mono);font-size:12px}
+
+/* ---------- gate ---------- */
+.gatehead{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+.meter{flex:1 1 260px;min-width:200px}
+.meter .bar{height:9px;border-radius:5px;background:var(--surface3);overflow:hidden;margin-top:6px}
+.meter .bar i{display:block;height:100%;background:var(--warn);border-radius:5px}
+.meter .lbl{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.meter .lbl b{color:var(--ink);font-family:var(--mono)}
+.crit{display:flex;gap:11px;padding:9px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.crit:last-child{border-bottom:0}
+.mark{width:17px;height:17px;border-radius:4px;flex:none;display:grid;place-items:center;
+  font-size:11px;font-weight:700;margin-top:1px}
+.m-ok{background:var(--ok-soft);color:var(--ok)}
+.m-no{background:var(--bad-soft);color:var(--bad)}
+.m-na{background:var(--surface3);color:var(--muted)}
+.crit .t{flex:1}
+.crit .t b{font-weight:500;font-size:13px;display:block}
+.crit .t span{font-size:11.5px;color:var(--muted)}
+.auto{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;
+  padding:1px 6px;border-radius:3px;background:var(--surface3);color:var(--muted);white-space:nowrap;
+  align-self:center}
+.decisions{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px;padding-top:15px;border-top:1px solid var(--line)}
+.dec{font-size:12.5px;font-weight:500;padding:6px 13px;border-radius:5px;border:1px solid var(--line2);
+  background:var(--surface2);color:var(--ink2)}
+.dec.no{opacity:.45}
+.dec.go{background:var(--ok);border-color:var(--ok);color:#fff}
+:root[data-theme="dark"] .dec.go{color:#0B1A11}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dec.go{color:#0B1A11}}
+
+/* ---------- public board ---------- */
+.board{background:var(--surface2);margin:-16px;padding:22px;min-height:100%}
+.bignums{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:20px}
+.bn{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:15px 17px}
+.bn b{display:block;font-family:var(--mono);font-size:31px;font-weight:600;letter-spacing:-.03em;line-height:1.1}
+.bn span{font-size:12px;color:var(--muted)}
+.bn.alert b{color:var(--bad)}
+.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:13px}
+.filters .fl{font-size:12.5px;padding:5px 11px;border:1px solid var(--line2);border-radius:5px;
+  background:var(--surface);color:var(--ink2)}
+
+/* ---------- phone ---------- */
+.phonewrap{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;padding:22px 0}
+.phone{width:274px;flex:none;border:9px solid var(--ink);border-radius:30px;background:var(--surface);
+  overflow:hidden;box-shadow:var(--shadow)}
+.pbar{background:var(--ink);color:var(--ground);font-size:10px;padding:3px 14px 5px;
+  display:flex;justify-content:space-between;font-family:var(--mono)}
+.ptop{padding:11px 14px;border-bottom:1px solid var(--line);background:var(--surface2)}
+.ptop b{font-size:14px;display:block}
+.ptop span{font-size:11.5px;color:var(--muted)}
+.pbody{padding:14px}
+.bignum{text-align:center;padding:6px 0 12px}
+.bignum b{font-family:var(--mono);font-size:46px;font-weight:600;letter-spacing:-.03em;line-height:1;
+  display:block;color:var(--ok)}
+.bignum span{font-size:12px;color:var(--muted)}
+.target{display:flex;justify-content:space-between;font-size:12px;padding:8px 11px;
+  background:var(--surface2);border-radius:5px;margin-bottom:11px}
+.target b{font-family:var(--mono)}
+.keys{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.keys div{height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:6px;
+  font-family:var(--mono);font-size:17px;background:var(--surface2)}
+.bigbtn{margin-top:11px;height:52px;border-radius:8px;background:var(--ok);color:#fff;
+  display:grid;place-items:center;font-weight:600;font-size:15px}
+:root[data-theme="dark"] .bigbtn{color:#0B1A11}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bigbtn{color:#0B1A11}}
+.counter{text-align:center;font-size:12px;color:var(--muted);margin-top:9px}
+.crits{margin-top:11px;display:flex;flex-direction:column;gap:6px}
+.critrow{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;
+  padding:8px 10px;border:1px solid var(--line);border-radius:6px}
+.anchor{font-size:11.5px;color:var(--muted);padding:7px 9px;background:var(--surface2);
+  border-radius:5px;margin-bottom:9px;line-height:1.45}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.scores div{height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:6px;
+  font-family:var(--mono);font-size:16px;background:var(--surface2)}
+.scores div.sel{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600}
+:root[data-theme="dark"] .scores div.sel{color:#1A1207}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .scores div.sel{color:#1A1207}}
+.phcap{font-size:12px;color:var(--muted);text-align:center;margin-top:11px;max-width:274px}
+
+/* ---------- notes ---------- */
+.note{max-width:1180px;margin:0 auto 40px;padding:0 24px}
+.note .inner{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;
+  background:var(--surface);padding:16px 20px}
+.note h3{font-size:14px;font-weight:600;margin-bottom:9px}
+.note p{color:var(--ink2);margin:0 0 9px;font-size:13.5px;max-width:78ch}
+.note p:last-child{margin-bottom:0}
+.note code{font-family:var(--mono);font-size:12.5px;background:var(--surface3);padding:1px 5px;border-radius:3px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:12.5px;color:var(--muted)}
+.legend b{color:var(--ink);font-weight:500}
+
+[hidden]{display:none!important}
+@media (max-width:820px){
+  .app{grid-template-columns:1fr}
+  .rail{display:none}
+  .f{grid-template-columns:1fr;gap:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="intro">
+  <div class="eyebrow">Preview teoretic &middot; generat din model</div>
+  <h1>Cum arata suita R&amp;D inainte de a fi construita</h1>
+  <p>Fiecare ecran de mai jos este desenat din artefactele reale ale blueprintului: harta
+  de site din <span class="mono">sitemap.xml</span>, campurile din <span class="mono">tabele.json</span>,
+  criteriile de gate din Sectiunea 23. Nu este o captura dintr-un sistem care ruleaza &mdash;
+  este ce va produce importul artefactelor generate.</p>
+  <div class="counts">
+    <div class="count"><b>60</b><span>tabele</span></div>
+    <div class="count"><b>985</b><span>coloane</span></div>
+    <div class="count"><b>151</b><span>relatii</span></div>
+    <div class="count"><b>59</b><span>formulare</span></div>
+    <div class="count"><b>155</b><span>vizualizari</span></div>
+    <div class="count"><b>2931</b><span>privilegii</span></div>
+    <div class="count"><b>35</b><span>fluxuri</span></div>
+  </div>
+</div>
+
+<div class="switch" role="tablist">
+  <button role="tab" aria-selected="true" data-s="form">Formular de proiect</button>
+  <button role="tab" aria-selected="false" data-s="coada">Coada pe prioritate</button>
+  <button role="tab" aria-selected="false" data-s="gate">Gate G3</button>
+  <button role="tab" aria-selected="false" data-s="public">Ecran public</button>
+  <button role="tab" aria-selected="false" data-s="canvas">Aplicatia de hala</button>
+</div>
+
+<div class="stage">
+  <div class="app">
+    <nav class="rail">
+      <div class="brand"><i></i> R&amp;D Birou</div>
+      <div class="area">Lucrul meu</div>
+      <a href="#" class="on">Proiectele mele</a>
+      <a href="#">Livrabilele mele</a>
+      <a href="#">Actiunile mele</a>
+      <a href="#">Gate-uri de evaluat</a>
+      <div class="area">Solicitari</div>
+      <a href="#">Solicitari</a>
+      <div class="area">Proiecte</div>
+      <a href="#">Proiecte</a><a href="#">Etape</a><a href="#">Livrabile</a>
+      <a href="#">Gate-uri</a><a href="#">Riscuri</a><a href="#">Probleme</a>
+      <a href="#">Blocaje</a><a href="#">Decizii</a><a href="#">Actiuni</a>
+      <div class="area">Executie</div>
+      <a href="#">Fise de testare</a><a href="#">Trialuri</a>
+      <a href="#">Evaluari senzoriale</a><a href="#">Retete</a><a href="#">Antecalcule</a>
+      <div class="area">Materii prime</div>
+      <a href="#">MP de proiect</a><a href="#">Catalog MP</a><a href="#">Furnizori</a>
+      <a href="#">Istoric lead time</a>
+      <div class="area">Industrializare</div>
+      <a href="#">Implementari IPN</a><a href="#">Productii 0</a>
+      <a href="#">Stabilizari</a><a href="#">Capabilitate de proces</a>
+      <div class="area">Cunoastere</div>
+      <a href="#">Lectii invatate</a><a href="#">Recomandari</a>
+      <div class="area">Configurare</div>
+      <a href="#">Sabloane</a><a href="#">Linii de productie</a><a href="#">Log de erori</a>
+    </nav>
+
+    <div class="pane">
+      <!-- ============ FORMULAR ============ -->
+      <div data-screen="form">
+        <div class="cmdbar">
+          <span class="cmd primary">Salveaza</span>
+          <span class="cmd">Creeaza proiect-copil</span>
+          <span class="cmd">Adauga blocaj</span>
+          <span class="cmd">Genereaza dosar TDV</span>
+          <span class="cmd">Recalculeaza termenul</span>
+        </div>
+        <div class="body">
+          <div class="rechead">
+            <div>
+              <h2>Croissant unt 80 g &mdash; Profi</h2>
+              <div class="sub">Proiect CDI &middot; Produs nou &middot; deschis 14.01.2026</div>
+            </div>
+            <div class="hdrfields">
+              <div class="hf"><span>Cod proiect</span><b class="mono">26025</b></div>
+              <div class="hf"><span>Status</span><b><span class="pill p-info"><i></i>In testare</span></b></div>
+              <div class="hf"><span>Tehnolog</span><b>A. Munteanu</b></div>
+              <div class="hf"><span>Termen negociat</span><b class="mono">06.02.2026</b></div>
+              <div class="hf"><span>Banda</span><b><span class="band b2">P2</span> <span class="mono" style="color:var(--muted)">68</span></b></div>
+            </div>
+          </div>
+
+          <div class="ftabs" role="tablist">
+            <button role="tab" aria-selected="true" data-t="sinteza">Sinteza</button>
+            <button role="tab" aria-selected="false" data-t="livrabile">Livrabile</button>
+            <button role="tab" aria-selected="false" data-t="gates">Gate-uri</button>
+            <button role="tab" aria-selected="false" data-t="riscuri">Riscuri si probleme</button>
+            <button role="tab" aria-selected="false" data-t="mp">Materii prime</button>
+            <button role="tab" aria-selected="false" data-t="lectii">Cunoastere</button>
+          </div>
+
+          <div data-tab="sinteza">
+            <div class="sect">
+              <h3>Identificare</h3>
+              <div class="fields">
+                <div class="f"><span>Cod proiect</span><div><span class="ro mono">26025</span></div></div>
+                <div class="f"><span>Nume produs</span><div>Croissant unt 80 g</div></div>
+                <div class="f"><span>Tip proiect</span><div>Produs nou</div></div>
+                <div class="f"><span>Client</span><div><a class="lk" href="#">Profi Rom Food</a> &middot; A</div></div>
+                <div class="f"><span>KAM</span><div><a class="lk" href="#">D. Iliescu</a></div></div>
+                <div class="f"><span>Linie de productie</span><div><a class="lk" href="#">L03 Fritsch laminare</a></div></div>
+                <div class="f"><span>Gramaj (g)</span><div class="mono">80,0</div></div>
+                <div class="f"><span>Tip ambalare</span><div>Flow-pack</div></div>
+                <div class="f"><span>Volum estimat anual</span><div class="mono">240 000 kg</div></div>
+                <div class="f"><span>Cod material SAP</span><div><span class="ro">nu s-a creat inca</span></div></div>
+              </div>
+            </div>
+            <div class="sect">
+              <h3>Termene si ceas</h3>
+              <div class="fields">
+                <div class="f"><span>Termen propus</span><div><span class="ro mono">03.02.2026</span></div></div>
+                <div class="f"><span>Termen negociat</span><div class="mono">06.02.2026</div></div>
+                <div class="f"><span>Termen realizat</span><div><span class="ro">&mdash;</span></div></div>
+                <div class="f"><span>Zile blocate cumulat</span><div><span class="ro mono">4</span></div></div>
+                <div class="f"><span>T-Total zile nete</span><div><span class="ro mono">17</span></div></div>
+                <div class="f"><span>Zile in coada</span><div><span class="ro mono">2</span></div></div>
+              </div>
+            </div>
+            <div class="sect">
+              <h3>Urmatorul pas</h3>
+              <div class="fields">
+                <div class="f"><span>Urmatorul livrabil</span><div>LIV-13 Evaluare produs</div></div>
+                <div class="f"><span>Cine il datoreaza</span><div>A. Munteanu &middot; scadent in <b>2 zile</b></div></div>
+                <div class="f"><span>Livrabile realizate</span><div><span class="ro mono">62 %</span> &middot; 21 din 34 aplicabile</div></div>
+                <div class="f"><span>Sanatate</span><div><span class="pill p-warn"><i></i>Galben 78</span> <span style="color:var(--muted);font-size:12px">&minus;6 fata de saptamana trecuta</span></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div data-tab="livrabile" hidden>
+            <div class="gridwrap"><table>
+              <thead><tr><th>Cod</th><th>Livrabil</th><th>Faza</th><th>Responsabil</th>
+                <th>Termen</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td class="code">LIV-06</td><td>Plan de dezvoltare produs</td><td>01 Plan</td>
+                  <td>A. Munteanu</td><td class="num">16.01</td><td><span class="pill p-ok"><i></i>Realizat</span></td></tr>
+                <tr><td class="code">LIV-07</td><td>Cerere achizitii mostra MP noua</td><td>01 Plan</td>
+                  <td>Achizitii</td><td class="num">17.01</td><td><span class="pill p-ok"><i></i>Realizat</span></td></tr>
+                <tr><td class="code">LIV-10</td><td>Fisa de test</td><td>02 Testare</td>
+                  <td>A. Munteanu</td><td class="num">21.01</td><td><span class="pill p-ok"><i></i>Realizat</span></td></tr>
+                <tr><td class="code">LIV-11</td><td>Testare realizata</td><td>02 Testare</td>
+                  <td>A. Munteanu</td><td class="num">26.01</td><td><span class="pill p-ok"><i></i>Realizat</span></td></tr>
+                <tr><td class="code">LIV-12</td><td>Raport de testare cu statistica</td><td>02 Testare</td>
+                  <td>A. Munteanu</td><td class="num">27.01</td><td><span class="pill p-info"><i></i>In lucru</span></td></tr>
+                <tr><td class="code">LIV-13</td><td>Evaluare produs (senzoriala)</td><td>02 Testare</td>
+                  <td>A. Munteanu</td><td class="num">27.01</td><td><span class="pill p-warn"><i></i>Neinceput</span></td></tr>
+                <tr><td class="code">LIV-22</td><td>ST interna pentru MP noua</td><td>05 Specificatii</td>
+                  <td>Calitate</td><td class="num">26.01</td><td><span class="pill p-bad"><i></i>Depasit 2 zile</span></td></tr>
+                <tr><td class="code">LIV-28</td><td>Eticheta realizata</td><td>06 Eticheta</td>
+                  <td>Suport R&amp;D</td><td class="num">04.02</td><td><span class="pill p-mut"><i></i>Neinceput</span></td></tr>
+                <tr><td class="code">LIV-29</td><td>Fisier imprimanta Colos</td><td>06 Eticheta</td>
+                  <td>Suport R&amp;D</td><td class="num">05.02</td><td><span class="pill p-mut"><i></i>Nu se aplica</span></td></tr>
+              </tbody>
+            </table></div>
+          </div>
+
+          <div data-tab="gates" hidden>
+            <div class="gridwrap"><table>
+              <thead><tr><th>Gate</th><th>Denumire</th><th>Planificat</th><th>Pregatire</th>
+                <th>Decizie</th><th>Reveniri</th></tr></thead>
+              <tbody>
+                <tr><td class="code">G0</td><td>SCP acceptat</td><td class="num">14.01</td>
+                  <td class="num">100 %</td><td><span class="pill p-ok"><i></i>GO</span></td><td class="num">0</td></tr>
+                <tr><td class="code">G1</td><td>Concept si plan aprobate</td><td class="num">16.01</td>
+                  <td class="num">100 %</td><td><span class="pill p-ok"><i></i>GO</span></td><td class="num">0</td></tr>
+                <tr><td class="code">G2</td><td>Materii prime fezabile</td><td class="num">22.01</td>
+                  <td class="num">100 %</td><td><span class="pill p-warn"><i></i>GO cu conditii</span></td><td class="num">1</td></tr>
+                <tr><td class="code">G3</td><td>Reteta si trial validate</td><td class="num">28.01</td>
+                  <td class="num">71 %</td><td><span class="pill p-mut"><i></i>In pregatire</span></td><td class="num">0</td></tr>
+                <tr><td class="code">G4</td><td>Cost si comercial aprobate</td><td class="num">30.01</td>
+                  <td class="num">40 %</td><td><span class="pill p-mut"><i></i>Neevaluat</span></td><td class="num">0</td></tr>
+                <tr><td class="code">G5</td><td>Factory Ready</td><td class="num">05.02</td>
+                  <td class="num">0 %</td><td><span class="pill p-mut"><i></i>Neevaluat</span></td><td class="num">0</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+
+          <div data-tab="riscuri" hidden>
+            <div class="sect">
+              <h3>Riscuri deschise</h3>
+              <div class="gridwrap"><table>
+                <thead><tr><th>Nr</th><th>Titlu</th><th>Categorie</th><th>P</th><th>I</th><th>D</th>
+                  <th>RPN</th><th>Nivel</th><th>Proprietar</th></tr></thead>
+                <tbody>
+                  <tr><td class="code">RSK-26-0031</td><td>Unt cu punct de topire variabil intre loturi</td>
+                    <td>Materie prima</td><td class="num">4</td><td class="num">4</td><td class="num">3</td>
+                    <td class="num"><b>48</b></td><td><span class="pill p-bad"><i></i>Ridicat</span></td><td>A. Munteanu</td></tr>
+                  <tr><td class="code">RSK-26-0034</td><td>Slotul de pe L03 se suprapune cu sezonul de Paste</td>
+                    <td>Planificare</td><td class="num">3</td><td class="num">3</td><td class="num">2</td>
+                    <td class="num">18</td><td><span class="pill p-warn"><i></i>Mediu</span></td><td>Manager R&amp;D</td></tr>
+                  <tr><td class="code">RSK-26-0039</td><td>Gramajul la 80 g e sub minimul reglat al divizorului</td>
+                    <td>Productie</td><td class="num">3</td><td class="num">4</td><td class="num">1</td>
+                    <td class="num">12</td><td><span class="pill p-warn"><i></i>Mediu</span></td><td>Sef linie L03</td></tr>
+                </tbody>
+              </table></div>
+              <p style="font-size:12.5px;color:var(--muted);margin:9px 0 0">
+                RSK-26-0031 are RPN 48, egal cu pragul sablonului de gate. Blocheaza decizia GO la G3
+                pana la mitigare sau derogare aprobata.</p>
+            </div>
+            <div class="sect">
+              <h3>Probleme</h3>
+              <div class="gridwrap"><table>
+                <thead><tr><th>Nr</th><th>Titlu</th><th>Sursa</th><th>Severitate</th>
+                  <th>Cauza radacina</th><th>Termen</th></tr></thead>
+                <tbody>
+                  <tr><td class="code">ISS-26-0018</td><td>Foietare neuniforma pe latura scurta</td>
+                    <td>Trial</td><td><span class="pill p-warn"><i></i>Majora</span></td>
+                    <td>Temperatura grasimii de laminare</td><td class="num">29.01</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </div>
+
+          <div data-tab="mp" hidden>
+            <div class="gridwrap"><table>
+              <thead><tr><th>Materie prima</th><th>Noua</th><th>Furnizor</th><th>Status ciclu</th>
+                <th>Lead time</th><th>ETA</th><th>Iteratii</th></tr></thead>
+              <tbody>
+                <tr><td>Faina T550 W300</td><td><span class="pill p-mut"><i></i>Existenta</span></td>
+                  <td>Boromir</td><td>Receptionata</td><td class="num">7 z</td><td class="num">&mdash;</td><td class="num">&mdash;</td></tr>
+                <tr><td>Unt de laminare 82 % foaie</td><td><span class="pill p-info"><i></i>Noua</span></td>
+                  <td>Corman</td><td>Aprobata Calitate</td><td class="num">21 z</td>
+                  <td class="num">28.01</td><td class="num">3</td></tr>
+                <tr><td>Drojdie uscata instant</td><td><span class="pill p-mut"><i></i>Existenta</span></td>
+                  <td>Lesaffre</td><td>Receptionata</td><td class="num">7 z</td><td class="num">&mdash;</td><td class="num">&mdash;</td></tr>
+              </tbody>
+            </table></div>
+            <p style="font-size:12.5px;color:var(--muted);margin:10px 0 0">
+              Lead time-ul afisat este cel <b>forecast</b>, calculat din ultimele livrari, nu cel
+              contractual. Corman a declarat 14 zile; media ultimelor 3 livrari plus o abatere
+              standard da 21.</p>
+          </div>
+
+          <div data-tab="lectii" hidden>
+            <div class="sect">
+              <h3>Lectii recomandate pentru acest proiect</h3>
+              <div class="crits">
+                <div class="critrow" style="align-items:flex-start;gap:12px">
+                  <div style="flex:1">
+                    <b style="font-weight:500">Untul de laminare sub 82 % grasime nu tine foietarea la grosimi sub 2,2 mm pe Fritsch</b>
+                    <div style="font-size:11.5px;color:var(--muted);margin-top:3px">
+                      LSN-24-0112 &middot; potrivire 85 &mdash; aceeasi linie, aceeasi categorie de produs, aceeasi materie prima</div>
+                  </div>
+                  <span class="pill p-info"><i></i>Aplicata</span>
+                </div>
+                <div class="critrow" style="align-items:flex-start;gap:12px">
+                  <div style="flex:1">
+                    <b style="font-weight:500">Profi cere codul EAN cu 3 saptamani inainte de listare, nu la lansare</b>
+                    <div style="font-size:11.5px;color:var(--muted);margin-top:3px">
+                      LSN-25-0067 &middot; potrivire 55 &mdash; acelasi client</div>
+                  </div>
+                  <span class="pill p-mut"><i></i>Afisata</span>
+                </div>
+              </div>
+              <p style="font-size:12.5px;color:var(--muted);margin:12px 0 0">
+                Se afiseaza maximum 3 lectii cu scor peste 40, la momentele definite in 25.4.2.
+                Motivul potrivirii este afisat mereu &mdash; fara el, recomandarea nu e credibila.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ COADA ============ -->
+      <div data-screen="coada" hidden>
+        <div class="cmdbar">
+          <span class="cmd primary">Recalculeaza scorul</span>
+          <span class="cmd">Suprascrie prioritatea</span>
+          <span class="cmd">Exporta in Excel</span>
+        </div>
+        <div class="body">
+          <div class="rechead" style="border:0;padding-bottom:10px">
+            <div><h2>Coada pe prioritate</h2>
+              <div class="sub">31 de proiecte active &middot; recalculat luni, 09.02.2026, 06:00</div></div>
+          </div>
+          <div class="gridwrap"><table>
+            <thead><tr><th>Banda</th><th>Cod</th><th>Produs</th><th>Client</th><th>Tehnolog</th>
+              <th>Linie</th><th>Scor</th><th>Volum t/an</th><th>Termen</th><th>Sanatate</th></tr></thead>
+            <tbody>
+              <tr><td><span class="band b1">P1</span></td><td class="code">26011</td>
+                <td>Foietaj cu branza 100 g</td><td>Kaufland</td><td>A. Munteanu</td><td>L03</td>
+                <td class="num"><b>87</b></td><td class="num">520</td><td class="num">28.01</td>
+                <td><span class="pill p-bad"><i></i>54</span></td></tr>
+              <tr><td><span class="band b1">P1</span></td><td class="code">26019</td>
+                <td>Cornuri cu ciocolata 70 g</td><td>Lidl</td><td>M. Stanciu</td><td>L01</td>
+                <td class="num"><b>83</b></td><td class="num">410</td><td class="num">02.02</td>
+                <td><span class="pill p-warn"><i></i>77</span></td></tr>
+              <tr><td><span class="band b2">P2</span></td><td class="code">26025</td>
+                <td>Croissant unt 80 g</td><td>Profi</td><td>A. Munteanu</td><td>L03</td>
+                <td class="num">68</td><td class="num">240</td><td class="num">06.02</td>
+                <td><span class="pill p-warn"><i></i>78</span></td></tr>
+              <tr><td><span class="band b2">P2</span></td><td class="code">26031</td>
+                <td>Chifla burger brioche 60 g</td><td>McDonald's</td><td>R. Popa</td><td>L05</td>
+                <td class="num">64</td><td class="num">180</td><td class="num">11.02</td>
+                <td><span class="pill p-ok"><i></i>91</span></td></tr>
+              <tr><td><span class="band b3">P3</span></td><td class="code">26008</td>
+                <td>Placinta cu mere 150 g</td><td>Mega Image</td><td>M. Stanciu</td><td>L07</td>
+                <td class="num">51</td><td class="num">85</td><td class="num">19.02</td>
+                <td><span class="pill p-ok"><i></i>88</span></td></tr>
+              <tr><td><span class="band b3">P3</span></td><td class="code">25142</td>
+                <td>Covrig cu susan 90 g</td><td>Carrefour</td><td>R. Popa</td><td>L02</td>
+                <td class="num">47</td><td class="num">60</td><td class="num">24.02</td>
+                <td><span class="pill p-warn"><i></i>72</span></td></tr>
+              <tr><td><span class="band b4">P4</span></td><td class="code">26004</td>
+                <td>Mini-danish asortat 35 g</td><td>Selgros</td><td>&mdash;</td><td>L03</td>
+                <td class="num">33</td><td class="num">22</td><td class="num">&mdash;</td>
+                <td><span class="pill p-mut"><i></i>&mdash;</span></td></tr>
+            </tbody>
+          </table></div>
+          <div class="legend">
+            <span><b>P1</b> 80&ndash;100, slot rezervat</span>
+            <span><b>P2</b> 60&ndash;79, urmatoarele 2 saptamani</span>
+            <span><b>P3</b> 35&ndash;59, in coada</span>
+            <span><b>P4</b> sub 35, cand exista capacitate</span>
+          </div>
+          <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0;max-width:76ch">
+            Proiectul 26004 asteapta de 47 de zile lucratoare si a primit +8 puncte de imbatranire.
+            Fara acest mecanism ar sta la infinit in spatele celor de volum mare.
+            D. Iliescu are deja 2 proiecte in P1 &mdash; o a treia promovare cere retrogradarea uneia,
+            cu motiv.</p>
+        </div>
+      </div>
+
+      <!-- ============ GATE ============ -->
+      <div data-screen="gate" hidden>
+        <div class="cmdbar">
+          <span class="cmd">Reevalueaza criteriile</span>
+          <span class="cmd">Cere derogare</span>
+          <span class="cmd">Istoric</span>
+        </div>
+        <div class="body">
+          <div class="rechead">
+            <div><h2>G3 &mdash; Reteta si trial validate</h2>
+              <div class="sub">Proiect 26025 Croissant unt 80 g &middot; planificat 28.01.2026 &middot; decident: Manager R&amp;D</div></div>
+            <div class="hdrfields">
+              <div class="hf"><span>Status</span><b><span class="pill p-warn"><i></i>In pregatire</span></b></div>
+              <div class="hf"><span>Zile in gate</span><b class="mono">0</b></div>
+            </div>
+          </div>
+          <div class="gatehead">
+            <div class="meter">
+              <div class="lbl"><span>Pregatire</span><b>5 din 7 criterii</b></div>
+              <div class="bar"><i style="width:71%"></i></div>
+            </div>
+          </div>
+
+          <div class="sect">
+            <h3>Criterii de iesire</h3>
+            <div class="crit"><span class="mark m-ok">&#10003;</span>
+              <div class="t"><b>Exista cel putin un trial cu rezultat Reusit</b>
+                <span>TR-26-0079, 26.01.2026</span></div>
+              <span class="auto">automat</span></div>
+            <div class="crit"><span class="mark m-ok">&#10003;</span>
+              <div class="t"><b>Masuratorile de gramaj sunt conforme</b>
+                <span>n = 10, medie 80,4 g, CV 2,1 %, conformitate 100 %</span></div>
+              <span class="auto">automat</span></div>
+            <div class="crit"><span class="mark m-ok">&#10003;</span>
+              <div class="t"><b>Toate materiile prime critice sunt receptionate</b>
+                <span>3 din 3</span></div>
+              <span class="auto">automat</span></div>
+            <div class="crit"><span class="mark m-ok">&#10003;</span>
+              <div class="t"><b>Versiunea de reteta este marcata In testare sau Validata</b>
+                <span>v3, In testare</span></div>
+              <span class="auto">automat</span></div>
+            <div class="crit"><span class="mark m-ok">&#10003;</span>
+              <div class="t"><b>LIV-12 Raport de testare este incarcat</b>
+                <span>26025_RTEST_v01_20260127.pdf</span></div>
+              <span class="auto">automat</span></div>
+            <div class="crit"><span class="mark m-no">&#10007;</span>
+              <div class="t"><b>Evaluarea senzoriala are verdict Acceptat sau Acceptat cu observatii</b>
+                <span>LIV-13 neinceput &mdash; nu exista evaluare inregistrata</span></div>
+              <span class="auto">automat</span></div>
+            <div class="crit"><span class="mark m-no">&#10007;</span>
+              <div class="t"><b>Niciun risc cu RPN peste 48 nu este deschis</b>
+                <span>RSK-26-0031 &laquo;Unt cu punct de topire variabil&raquo;, RPN 48 &mdash; criteriu sever</span></div>
+              <span class="auto">automat</span></div>
+          </div>
+
+          <div class="decisions">
+            <span class="dec go">GO</span>
+            <span class="dec no">GO cu conditii</span>
+            <span class="dec">HOLD</span>
+            <span class="dec">REWORK</span>
+            <span class="dec">STOP</span>
+          </div>
+          <p style="font-size:12.5px;color:var(--muted);margin:13px 0 0;max-width:76ch">
+            <b style="color:var(--ink)">GO cu conditii este indisponibil</b> pentru ca RSK-26-0031 este
+            marcat criteriu sever, iar sablonul G3 nu admite trecerea peste un criteriu sever.
+            Raman doua drumuri: mitigarea riscului pana sub RPN 48, sau o derogare scrisa,
+            aprobata de Head of R&amp;D si inregistrata pe gate.
+          </p>
+        </div>
+      </div>
+
+      <!-- ============ PUBLIC ============ -->
+      <div data-screen="public" hidden>
+        <div class="cmdbar"><span class="cmd">Vizibil intregii companii &middot; numai citire</span></div>
+        <div class="body">
+          <div class="board">
+            <div class="bignums">
+              <div class="bn"><b>31</b><span>proiecte active</span></div>
+              <div class="bn"><b>7</b><span>finalizate luna aceasta</span></div>
+              <div class="bn alert"><b>4</b><span>in intarziere</span></div>
+              <div class="bn alert"><b>2</b><span>blocate</span></div>
+            </div>
+            <div class="filters">
+              <span class="fl">Client: toti</span>
+              <span class="fl">Linie: toate</span>
+              <span class="fl">Tehnolog: toti</span>
+              <span class="fl">Status: active</span>
+            </div>
+            <div class="gridwrap"><table>
+              <thead><tr><th>Cod</th><th>Produs</th><th>Client</th><th>Status</th>
+                <th>Termen</th><th>Responsabil</th><th>Urmatorul pas</th></tr></thead>
+              <tbody>
+                <tr><td class="code">26011</td><td>Foietaj cu branza 100 g</td><td>Kaufland</td>
+                  <td><span class="pill p-bad"><i></i>Blocat</span></td><td class="num">28.01</td>
+                  <td>A. Munteanu</td><td>Asteapta decizie client</td></tr>
+                <tr><td class="code">26019</td><td>Cornuri cu ciocolata 70 g</td><td>Lidl</td>
+                  <td><span class="pill p-info"><i></i>In implementare</span></td><td class="num">02.02</td>
+                  <td>M. Stanciu</td><td>Plan IPN</td></tr>
+                <tr><td class="code">26025</td><td>Croissant unt 80 g</td><td>Profi</td>
+                  <td><span class="pill p-info"><i></i>In testare</span></td><td class="num">06.02</td>
+                  <td>A. Munteanu</td><td>Evaluare senzoriala</td></tr>
+                <tr><td class="code">26031</td><td>Chifla burger brioche 60 g</td><td>McDonald's</td>
+                  <td><span class="pill p-info"><i></i>In dezvoltare</span></td><td class="num">11.02</td>
+                  <td>R. Popa</td><td>Antecalcul</td></tr>
+                <tr><td class="code">25138</td><td>Baghetta rustica 250 g</td><td>Auchan</td>
+                  <td><span class="pill p-warn"><i></i>Stabilizare</span></td><td class="num">14.02</td>
+                  <td>M. Stanciu</td><td>Lotul 3 din 3</td></tr>
+                <tr><td class="code">25121</td><td>Chec cu stafide 400 g</td><td>Penny</td>
+                  <td><span class="pill p-ok"><i></i>Finalizat</span></td><td class="num">22.01</td>
+                  <td>R. Popa</td><td>Revizuire la 30 de zile</td></tr>
+              </tbody>
+            </table></div>
+            <p style="font-size:12.5px;color:var(--muted);margin:15px 0 0;max-width:76ch">
+              Sapte coloane, patru filtre, patru numere. Nimic despre cost, marja, reteta sau
+              furnizor &mdash; acelea sunt ascunse prin securitate pe coloana, nu doar scoase din
+              vizualizare. Criteriul de acceptanta CA-104: doua persoane din afara R&amp;D
+              gasesc statusul unui produs in sub 15 secunde, fara instruire.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ CANVAS ============ -->
+      <div data-screen="canvas" hidden>
+        <div class="cmdbar"><span class="cmd">R&amp;D Linie &middot; aplicatie canvas &middot; functioneaza offline</span></div>
+        <div class="body">
+          <div class="phonewrap">
+            <div>
+              <div class="phone">
+                <div class="pbar"><span>07:42</span><span>&#9679; offline &middot; 3 in coada</span></div>
+                <div class="ptop"><b>Greutate</b><span>26025 Croissant &middot; TR-26-0079</span></div>
+                <div class="pbody">
+                  <div class="target"><span>Tinta 80,0 g</span><b>78,4 &ndash; 81,6</b></div>
+                  <div class="bignum"><b>80,4</b><span>bucata 7 din 10</span></div>
+                  <div class="keys"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+                    <div>6</div><div>7</div><div>8</div><div>9</div><div>,</div><div>0</div><div>&#9003;</div></div>
+                  <div class="bigbtn">Salveaza si urmatoarea</div>
+                  <div class="counter">medie 80,2 &middot; CV 2,1 % &middot; toate conforme</div>
+                </div>
+              </div>
+              <p class="phcap">Trei atingeri pe bucata: citesti cantarul, tastezi, apesi.
+                Verde inseamna in toleranta, instant.</p>
+            </div>
+
+            <div>
+              <div class="phone">
+                <div class="pbar"><span>11:15</span><span>&#9679;&#9679;&#9679; online</span></div>
+                <div class="ptop"><b>Evaluare senzoriala</b><span>CR-04 &middot; criteriul 4 din 9</span></div>
+                <div class="pbody">
+                  <div style="font-weight:600;font-size:14px;margin-bottom:9px">Straturi vizibile in sectiune</div>
+                  <div class="anchor"><b>1</b> &mdash; straturile nu se disting, sectiune compacta<br>
+                    <b>3</b> &mdash; straturi vizibile dar neuniforme, zone lipite<br>
+                    <b>5</b> &mdash; straturi numeroase, subtiri, clar separate</div>
+                  <div class="scores"><div>1</div><div>2</div><div>3</div><div class="sel">4</div><div>5</div></div>
+                  <div style="font-size:11.5px;color:var(--muted);margin-top:9px">
+                    Pondere 20 % &middot; eliminatoriu sub 2</div>
+                  <div class="bigbtn" style="background:var(--info)">Urmatorul criteriu</div>
+                </div>
+              </div>
+              <p class="phcap">Ancorele descriptive sunt pe ecran, la fiecare criteriu.
+                Nimeni nu retine 17 seturi de ancore, dar le citeste in doua secunde.</p>
+            </div>
+
+            <div>
+              <div class="phone">
+                <div class="pbar"><span>05:58</span><span>&#9679;&#9679; slab</span></div>
+                <div class="ptop"><b>Conditii IPN</b><span>26019 Cornuri &middot; L01 &middot; schimb 07&ndash;15</span></div>
+                <div class="pbody">
+                  <div class="crits">
+                    <div class="critrow"><span>ST finala aprobata</span><span class="pill p-ok"><i></i>Da</span></div>
+                    <div class="critrow"><span>Cod material SAP creat</span><span class="pill p-ok"><i></i>Da</span></div>
+                    <div class="critrow"><span>MP receptionate si eliberate</span><span class="pill p-ok"><i></i>Da</span></div>
+                    <div class="critrow"><span>Ambalaj disponibil</span><span class="pill p-ok"><i></i>Da</span></div>
+                    <div class="critrow"><span>Plan HACCP actualizat</span><span class="pill p-ok"><i></i>Da</span></div>
+                    <div class="critrow"><span>IL afisata la linie</span><span class="pill p-ok"><i></i>Da</span></div>
+                    <div class="critrow" style="border-color:var(--bad)">
+                      <span>Operatorii instruiti</span><span class="pill p-bad"><i></i>Nu</span></div>
+                  </div>
+                  <div class="bigbtn" style="background:var(--surface3);color:var(--muted)">
+                    Nu se poate porni</div>
+                  <div class="counter">12 din 13 conditii &middot; lipseste lista de prezenta</div>
+                </div>
+              </div>
+              <p class="phcap">Productia 0 nu porneste cu o conditie nebifata. Blocajul este
+                in aplicatie, la 6 dimineata, nu intr-o discutie de dupa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  <div class="inner">
+    <h3>Ce este real si ce este ilustrativ in acest preview</h3>
+    <p><b>Real, generat din blueprint:</b> harta de site din stanga (9 arii, 52 de subarii,
+    din <code>sitemap.xml</code>); numele si etichetele campurilor, cu exact aceleasi denumiri
+    ca in <code>tabele.json</code>; campurile marcate gri sunt cele pe care blueprintul le
+    declara scrise de flux, deci apar read-only si in <code>FormXml</code>; benzile de
+    prioritate, pragurile de RPN, regulile de gate si ancorele senzoriale sunt cele din
+    Sectiunile 23, 24 si A1.</p>
+    <p><b>Ilustrativ:</b> proiectele, clientii, tehnologii si cifrele. Sunt inventate ca sa
+    arate cum se comporta ecranele cu date plauzibile. Niciun numar de aici nu vine din
+    sistemele companiei.</p>
+    <p><b>Ce nu arata:</b> aspectul final in Power Apps. Model-driven impune propriul lui
+    chrome &mdash; bara de comenzi, cautarea, panoul lateral. Structura, filele, campurile si
+    ordinea lor vor fi cele de aici; incadrarea va fi a platformei.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var sw=document.querySelectorAll('.switch button');
+  var screens=document.querySelectorAll('[data-screen]');
+  sw.forEach(function(b){
+    b.addEventListener('click',function(){
+      sw.forEach(function(x){x.setAttribute('aria-selected','false')});
+      b.setAttribute('aria-selected','true');
+      screens.forEach(function(s){s.hidden = s.dataset.screen!==b.dataset.s});
+    });
+  });
+  var ft=document.querySelectorAll('.ftabs button');
+  var tabs=document.querySelectorAll('[data-tab]');
+  ft.forEach(function(b){
+    b.addEventListener('click',function(){
+      ft.forEach(function(x){x.setAttribute('aria-selected','false')});
+      b.setAttribute('aria-selected','true');
+      tabs.forEach(function(t){t.hidden = t.dataset.tab!==b.dataset.t});
+    });
+  });
+})();
+</script>

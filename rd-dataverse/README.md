@@ -77,6 +77,10 @@ sau consumate de un script de provizionare.
 | [build/genereaza-import.py](build/genereaza-import.py) | Regenereaza fisierele CSV din `data/*.json`, ca sa ramana sincronizate cu blueprintul |
 | [build/genereaza-model.py](build/genereaza-model.py) | Sursa unica pentru `data/tabele.json`: cele 60 de tabele si 985 de coloane |
 | [build/deploy/](build/deploy/) | Provizionarea modelului in Dataverse prin Web API: 31 de optionsets, 60 de tabele, 738 de coloane, 151 de relatii |
+| [build/deploy/genereaza-ui.py](build/deploy/genereaza-ui.py) | 59 de formulare, 155 de vizualizari, harta de site, 13 roluri cu 2931 de privilegii |
+| [build/deploy/genereaza-fluxuri.py](build/deploy/genereaza-fluxuri.py) | Scheletele celor 35 de fluxuri, cu correlation id, Try/Catch si retry |
+| [build/deploy/genereaza-sabloane-word.py](build/deploy/genereaza-sabloane-word.py) | Cele 12 sabloane .docx cu 249 de content controls |
+| [build/preview-ecrane.html](build/preview-ecrane.html) | Preview vizual al celor 5 ecrane principale, desenat din artefactele generate |
 
 Fisierele de import gata de folosit: 40 de motive, 31 de tipuri de documente, 14
 alergeni, 22 de defecte, 17 criterii senzoriale cu ancore, 11 etape, 43 de livrabile cu
