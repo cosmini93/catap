@@ -57,6 +57,7 @@ referinta ulterioara (exemplu: 2.4.3, TBL-07, LIV-14, FLX-05).
 | A2 | [A2-backlog-enterprise.md](docs/A2-backlog-enterprise.md) | Anexa: backlogul amanat, cu criterii de activare |
 | 26 | [S26-constructie-asistata.md](docs/S26-constructie-asistata.md) | Ce se genereaza automat, ce nu, si efortul recalculat |
 | 27 | [S27-unde-traieste-ce.md](docs/S27-unde-traieste-ce.md) | Ce ruleaza in Microsoft, ce este schela, unde se face trecerea |
+| 28 | [S28-acces-si-licentiere.md](docs/S28-acces-si-licentiere.md) | Cum ajunge echipa la aplicatie, cine are nevoie de licenta, cat costa |
 
 ## Artefacte pentru constructie
 

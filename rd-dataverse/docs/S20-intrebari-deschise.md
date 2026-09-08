@@ -33,6 +33,10 @@ proiectata.
 *Valoare implicita*: se construieste pentru 30 de utilizatori. Daca se aproba mai putine,
 prioritatea este: R&D complet, apoi Calitate, apoi Achizitii, apoi Productie.
 
+*RASPUNS PARTIAL, Sectiunea 28*: costul este cunoscut - 30 de licente Power Apps Premium
+inseamna aproximativ 7 200 USD pe an la pretul de lista. Se pot cumpara etapizat, 10-12
+pentru Val 1 si restul la Val 2. Ce ramane deschis este aprobarea, nu cifra.
+
 ---
 
 **IQ-03. Cum se rezolva accesul de citire pentru cei ~200 de angajati?**
@@ -45,6 +49,13 @@ lista SharePoint.
 
 *Valoare implicita*: se construieste varianta B (aplicatie separata, licenta per
 aplicatie), pentru ca varianta C se poate deriva din ea in doua zile, dar nu si invers.
+
+*RASPUNS REVIZUIT, Sectiunea 28.5.6*: aplicatia separata se construieste, ca in
+recomandarea initiala, dar **lansarea se face prin varianta C**, cu lista SharePoint,
+la cost zero. Motivul: accesul de citire pentru cei 200 costa aproximativ 12 000 USD pe
+an, adica mai mult decat licentele intregului departament care lucreaza efectiv in sistem.
+Se masoara intai cati oameni deschid ecranul, apoi se cumpara licentele, pe aplicatia
+deja construita.
 
 ---
 
